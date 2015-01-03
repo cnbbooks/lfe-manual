@@ -10,4 +10,5 @@ In this LFE quick start, we will cover the following:
 * Looking at LFE code in the REPL and in modules
 * More info on LFE resources and where to go next
 
-In essence, this guide will give you what you need in order to jump into LFE at ludicrous speed.
+In essence, this guide will give you what you need in order to jump into LFE at
+ludicrous speed.
