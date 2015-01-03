@@ -1,0 +1,20 @@
+{
+    "title": "LFE Quick Start",
+    "description": "An Introduction to LFE Going Ludicrous Speed",
+    "pluginsConfig": {
+        "fontSettings": {
+            "theme": "night",
+            "family": "serif",
+            "size": 1
+        }
+    },
+    "links": {
+        "sidebar": {
+            "LFE Documentation Site": "http://docs.lfe.io/"
+        }
+    },
+    "pdf": {
+        "pageNumbers": true,
+        "paperSize": "a4"
+    }
+}
