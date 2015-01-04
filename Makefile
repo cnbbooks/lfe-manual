@@ -20,6 +20,6 @@ staging: $(STAGE_DIR)
 	make clean
 
 publish: build
-	git commit -a && git push origin master
+	-git commit -a && git push origin master
 	git subtree push --prefix $(PROD_DIR) origin gh-pages
 
