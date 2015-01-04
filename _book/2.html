@@ -1,0 +1,365 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <title>Creating a New Project | LFE Quick Start</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.5.0">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+        
+    
+    
+    <link rel="next" href="./3.html" />
+    
+    
+    <link rel="prev" href="./1.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="gitbook/style.css">
+
+
+        
+    <div class="book" data-level="2" data-basepath="." data-revision="1420340814688">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	    
+            <li>
+                <a href="http://docs.lfe.io/" target="blank" class="custom-link">LFE Documentation Site</a>
+            </li>
+    	
+    	
+
+        
+        <li class="divider"></li>
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="1.html">
+            
+                
+                    <a href="./1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         Tooling for LFE
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="2" data-path="2.html">
+            
+                
+                    <a href="./2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         Creating a New Project
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="3.html">
+            
+                
+                    <a href="./3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         LFE Code
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4" data-path="4.html">
+            
+                
+                    <a href="./4.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                         Behind the Scenes
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >LFE Quick Start</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_1">
+                    
+                        <h1 id="creating-a-new-project">Creating a New Project</h1>
+<h2 id="2-your-first-lfe-project">2 Your First LFE Project</h2>
+<p><img src="https://raw.github.com/lfe/docs/master/images/barf.jpg"
+     style="float: left; padding-right: 1em;">A project? Already?! It sounds daunting, but it&#39;s easier than you might think. Open up a terminal window and do this in a directory of your choosing:</p>
+<pre><code class="lang-bash">$ lfetool new library my-test-lib
+</code></pre>
+<p>It might take a minute or two to download and compile everything. Here&#39;s what <code>lfetool</code> is doing:</p>
+<ul>
+<li>Creating a skeleton project (of the &quot;library&quot; type)</li>
+<li>Downloading all the dependencies listed in the new
+<code>rebar.config</code> file that was just created for your project</li>
+<li>Compiling all the downloaded dependendencies</li>
+<li>Initializing the project as a git repository</li>
+<li>Running the stubbed unit tests (which will fail -- intentionally!)</li>
+</ul>
+<h3 id="21-tdd-with-lfe">2.1 TDD with LFE</h3>
+<p><code>lfetool</code> encourages you to engage in TDD by including a broken test in the stubbed unit tests for the project. So, first things first, let&#39;s get that failing unit test passing.</p>
+<p>Be sure you are in your project directory:</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">cd</span> my-test-lib
+</code></pre>
+<p>Here&#39;s the output we saw when the unit test failed:</p>
+<pre><code class="lang-erlang">======================== <span class="hljs-variable">EUnit</span> ========================
+unit-my-test-lib-tests: my-adder-test ...[failed]
+in function 'unit-my-test-lib-tests':'my-adder-test'/<span class="hljs-number">0</span>
+**error:<span class="hljs-tuple">{assert<span class="hljs-variable">Equal</span>-failed,[<span class="hljs-tuple">{module,'unit-my-test-lib-tests'}</span>,
+          <span class="hljs-tuple">{line,<span class="hljs-number">11</span>}</span>,
+          <span class="hljs-tuple">{expression,<span class="hljs-string">"(: my-test-lib my-adder 2 2)"</span>}</span>,
+          <span class="hljs-tuple">{expected,<span class="hljs-number">4</span>}</span>,
+          <span class="hljs-tuple">{value,<span class="hljs-number">5</span>}</span>]}</span>
+=======================================================
+  <span class="hljs-variable">Failed</span>: <span class="hljs-number">1</span>.  <span class="hljs-variable">Skipped</span>: <span class="hljs-number">0</span>.  <span class="hljs-variable">Passed</span>: <span class="hljs-number">0</span>.
+</code></pre>
+<p>We can see that our test expected 4 but it got 5.</p>
+<p>Let&#39;s look at the test by opening up <code>test/my-test-lib_tests.lfe</code>. Well, things there look good -- we should get 4 when 2 and 2 are added.</p>
+<p>Let&#39;s take a look at the source module: <code>src/my-test-lib.lfe</code>. Ah-ha! a
+bug :-) There&#39;s an extra operation that&#39;s being done which we don&#39;t want.</p>
+<p>To fix it, change this line:</p>
+<pre><code class="lang-lisp">  (+ x (+ y 1)))
+</code></pre>
+<p>to this:</p>
+<pre><code class="lang-lisp">  (+ x y))
+</code></pre>
+<p>Now re-run the unit tests:</p>
+<pre><code class="lang-bash">$ make check-unit
+</code></pre>
+<p>And you should get a passing test:</p>
+<pre><code>==&gt; my-test-lib (eunit)
+======================== EUnit ========================
+unit-my-test-lib-tests: my-adder-test ...[0.002 s] [ok]
+=======================================================
+  Test passed.
+</code></pre><p>The <code>make</code> target we executed above executes the unit test runner without recompiling all the dependencies; it just re-compiles our project <code>./src</code> and <code>./test</code> files.</p>
+<p>We&#39;ll talk about the <code>make</code> targets at the end of the Quick Start.</p>
+<h3 id="22-project-inventory">2.2 Project Inventory</h3>
+<p>Okay, we&#39;ve got our tests passing and our project looks healthy. But what does
+it have in it?</p>
+<ul>
+<li>a README file in Markdown</li>
+<li>a <code>Makefile</code></li>
+<li>the <code>rebar.config</code> file we mentioned earlier (this has all your project
+dependencies in it)</li>
+<li>a <code>package.exs</code> file for uploading your project to
+<a href="http://expm.co">expm.co</a></li>
+<li>the <code>src</code> directory which holds your project code, and</li>
+<li>the <code>test</code> directory which holds the tests</li>
+</ul>
+<p>There are some other things there (e.g., the <code>deps</code> directory created by <code>rebar</code>
+and the <code>ebin</code> directory that&#39;s created when everything is compiled).</p>
+<h3 id="23-repo-ready-to-go">2.3 Repo Ready to Go</h3>
+<p>As mentioned above, <code>lfetool</code> also <code>init</code>&#39;ed the project with <code>git</code>
+and added all the files:</p>
+<pre><code class="lang-bash">$ git status
+<span class="hljs-comment"># On branch master</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Initial commit</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Changes to be committed:</span>
+<span class="hljs-comment">#   (use "git rm --cached &lt;file&gt;..." to unstage)</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">#    new file:   .gitignore</span>
+<span class="hljs-comment">#    new file:   .travis.yml</span>
+<span class="hljs-comment">#    new file:   Makefile</span>
+<span class="hljs-comment">#    new file:   README.md</span>
+<span class="hljs-comment">#    new file:   package.exs</span>
+<span class="hljs-comment">#    new file:   rebar.config</span>
+<span class="hljs-comment">#    new file:   resources/make/common.mk</span>
+<span class="hljs-comment">#    new file:   src/my-test-lib-util.lfe</span>
+<span class="hljs-comment">#    new file:   src/my-test-lib.app.src</span>
+<span class="hljs-comment">#    new file:   src/my-test-lib.lfe</span>
+<span class="hljs-comment">#    new file:   test/unit-my-test-lib-tests.lfe</span>
+<span class="hljs-comment">#</span>
+</code></pre>
+<p>Once your remote origin is configured for the repo, you can execute <code>git commit -a &amp;&amp; git push --all</code> and have your initial files available on the remote server.</p>
+<h3 id="next-stop">Next Stop</h3>
+<p>You can taste it, can&#39;t you? That LFE flavor coming your way? Yup, you&#39;re right.
+You&#39;re going to be looking at LFE code next ...</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./1.html" class="navigation navigation-prev " aria-label="Previous page: Tooling for LFE"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./3.html" class="navigation navigation-next " aria-label="Next page: LFE Code"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":"night","family":"serif","size":1}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
