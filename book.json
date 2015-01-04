@@ -1,11 +1,15 @@
 {
     "title": "LFE Quick Start",
     "description": "An Introduction to LFE Going Ludicrous Speed",
+    "plugins": ["ga"],
     "pluginsConfig": {
         "fontSettings": {
             "theme": "night",
             "family": "serif",
             "size": 1
+        },
+        "ga": {
+            "token": "UA-38274766-4"
         }
     },
     "links": {
