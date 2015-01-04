@@ -14,10 +14,9 @@ build:
 run:
 	gitbook serve $(SRC)
 
-staging: $(STAGE_DIR)
-	git pull --all && \
+staging: build
+	git pull origin master && \
 	rsync -azP ./$(STAGE_DIR)/* $(STAGING_HOST):$(STAGING_PATH)
-	make clean
 
 publish: build
 	-git commit -a && git push origin master

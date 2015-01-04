@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="3" data-basepath="." data-revision="1420341440571">
+    <div class="book" data-level="3" data-basepath="." data-revision="1420345276134">
     
 
 <div class="book-summary">
@@ -307,7 +307,7 @@ tests, which we&#39;ve already seen:</p>
 </code></pre>
 <p>Let&#39;s fill that out a little more with a few more tests. We can
 also get rid of the imports we&#39;re not using. And we can update
-the calls to use the now-supported <code>(mod:func ...)</code> syntax:</p>
+the calls to use the new <code>(mod:func ...)</code> syntax:</p>
 <pre><code class="lang-lisp"><span class="hljs-list">(<span class="hljs-keyword">defmodule</span> unit-my-test-lib-tests
   <span class="hljs-list">(<span class="hljs-keyword">behaviour</span> ltest-unit)</span>
   <span class="hljs-list">(<span class="hljs-keyword">export</span> all)</span>)</span>
@@ -355,19 +355,39 @@ LFE source code:</p>
     <span class="hljs-list">(! spawned-pid <span class="hljs-list">(<span class="hljs-keyword">tuple</span> calling-pid msg)</span>)</span>)</span>)</span>
 </code></pre>
 <p>That bit of code demonstrates one of Erlang&#39;s core features in lovely Lisp
-syntax :-) (For those that don&#39;t read Erlang yet, when loaded into the REPL,
-that example shows some bidirectional message passing between the LFE shell
-and a spawned process.)</p>
-<p>If you&#39;d like to learn more about using the LFE REPL, be sure to read the
-<a href="http://docs.lfe.io/user-guide/intro/2.html">REPL Section</a> of the
-User Guide.</p>
-<p>If you want to step through a tutorial on Erlang&#39;s light-weight threds (per the
-example code above), you&#39;ll want to read
-<a href="http://docs.lfe.io/tutorials/processes/1.html">this tutorial</a>.</p>
+syntax: message passing. When loaded into the REPL, that example shows some
+bidirectional message passing between the LFE shell and a spawned process.</p>
+<p>Want to give it a try? Start by compiling the example module:</p>
+<pre><code class="lang-lisp">&gt; (c "deps/lfe/examples/messenger-back.lfe")
+#(module messenger-back)
+</code></pre>
+<p>Next, let&#39;s send two messages to another Erlang process (in this case, we&#39;ll
+send it to our REPL process, <code>(self)</code>:</p>
+<pre><code class="lang-lisp">&gt; (messenger-back:send-message (self) "And what does it say now?")
+#(&lt;0.26.0&gt; "And what does it say now?")
+Received message: 'And what does it say now?'
+Sending message to process &lt;0.26.0&gt; ...
+&gt; (messenger-back:send-message (self) "Mostly harmless.")
+#(&lt;0.26.0&gt; "Mostly harmless.")
+Received message: 'Mostly harmless.'
+Sending message to process &lt;0.26.0&gt; ...
+</code></pre>
+<p>In the above calls, for each message sent we got a reply acknowledging the
+message (because the example was coded like that). But what about the receiver
+itself? What did it, our REPL process, see? We can flush the message
+queue in the REPL to find out:</p>
+<pre><code class="lang-lisp">&gt; (c:flush)
+Shell got {"And what does it say now?"}
+Shell got {"Mostly harmless."}
+ok
+</code></pre>
+<p>If you found this last bit interesting and want to step through a tutorial on
+Erlang&#39;s light-weight threads in more detail, you may enjoy
+<a href="http://docs.lfe.io/tutorials/processes/1.html" target="_blank">this tutorial</a>.</p>
 <h3 id="next-stop">Next Stop</h3>
 <p>We did promise a bit more information, so we&#39;re going to do that
-next and then wrap up the quick start and point you in the
-direction of your next LFE adventure ...</p>
+next and then wrap up the quick start and point you in some
+directions for your next LFE adventures ...</p>
 
                     
                     </section>

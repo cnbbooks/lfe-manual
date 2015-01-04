@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="2" data-basepath="." data-revision="1420341440571">
+    <div class="book" data-level="2" data-basepath="." data-revision="1420345276134">
     
 
 <div class="book-summary">
@@ -230,10 +230,13 @@
                         <h1 id="creating-a-new-project">Creating a New Project</h1>
 <h2 id="2-your-first-lfe-project">2 Your First LFE Project</h2>
 <p><img src="https://raw.github.com/lfe/docs/master/images/barf.jpg"
-     style="float: left; padding-right: 1em;">A project? Already?! It sounds daunting, but it&#39;s easier than you might think. Open up a terminal window and do this in a directory of your choosing:</p>
+     style="float: left; padding-right: 1em;">A project? Already?! It sounds
+daunting, but it&#39;s easier than you might think. Open up a terminal window
+and do this in a directory of your choosing:</p>
 <pre><code class="lang-bash">$ lfetool new library my-test-lib
 </code></pre>
-<p>It might take a minute or two to download and compile everything. Here&#39;s what <code>lfetool</code> is doing:</p>
+<p>It might take a minute or two to download and compile everything. Here&#39;s what
+<code>lfetool</code> is doing:</p>
 <ul>
 <li>Creating a skeleton project (of the &quot;library&quot; type)</li>
 <li>Downloading all the dependencies listed in the new
@@ -243,7 +246,10 @@
 <li>Running the stubbed unit tests (which will fail -- intentionally!)</li>
 </ul>
 <h3 id="21-tdd-with-lfe">2.1 TDD with LFE</h3>
-<p><code>lfetool</code> encourages you to engage in TDD by including a broken test in the stubbed unit tests for the project. So, first things first, let&#39;s get that failing unit test passing.</p>
+<p><code>lfetool</code> encourages you to engage in
+<a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank">test-driven development</a>
+by including a broken test in the stubbed unit tests for the project. So, first
+things first, let&#39;s get that failing unit test passing.</p>
 <p>Be sure you are in your project directory:</p>
 <pre><code class="lang-bash">$ <span class="hljs-built_in">cd</span> my-test-lib
 </code></pre>
@@ -260,9 +266,11 @@ in function 'unit-my-test-lib-tests':'my-adder-test'/<span class="hljs-number">0
   <span class="hljs-variable">Failed</span>: <span class="hljs-number">1</span>.  <span class="hljs-variable">Skipped</span>: <span class="hljs-number">0</span>.  <span class="hljs-variable">Passed</span>: <span class="hljs-number">0</span>.
 </code></pre>
 <p>We can see that our test expected 4 but it got 5.</p>
-<p>Let&#39;s look at the test by opening up <code>test/my-test-lib_tests.lfe</code>. Well, things there look good -- we should get 4 when 2 and 2 are added.</p>
-<p>Let&#39;s take a look at the source module: <code>src/my-test-lib.lfe</code>. Ah-ha! a
-bug :-) There&#39;s an extra operation that&#39;s being done which we don&#39;t want.</p>
+<p>Let&#39;s look at the test by opening up <code>test/unit-my-test-lib-tests.lfe.</code>.
+Well, things there look good -- we should get 4 when 2 and 2 are added.</p>
+<p>Let&#39;s take a look at the source module: src/my-test-lib.lfe. Ah-ha! There&#39;s an
+extra operation that&#39;s being done which isn&#39;t at all simple addition. We found
+our bug :-)</p>
 <p>To fix it, change this line:</p>
 <pre><code class="lang-lisp">  (+ x (+ y 1)))
 </code></pre>
@@ -278,7 +286,9 @@ bug :-) There&#39;s an extra operation that&#39;s being done which we don&#39;t 
 unit-my-test-lib-tests: my-adder-test ...[0.002 s] [ok]
 =======================================================
   Test passed.
-</code></pre><p>The <code>make</code> target we executed above executes the unit test runner without recompiling all the dependencies; it just re-compiles our project <code>./src</code> and <code>./test</code> files.</p>
+</code></pre><p>The <code>make</code> target we executed above executes the unit test runner without
+recompiling all the dependencies; it just re-compiles our project <code>./src</code> and
+<code>./test</code> files.</p>
 <p>We&#39;ll talk about the <code>make</code> targets at the end of the Quick Start.</p>
 <h3 id="22-project-inventory">2.2 Project Inventory</h3>
 <p>Okay, we&#39;ve got our tests passing and our project looks healthy. But what does
@@ -293,8 +303,9 @@ dependencies in it)</li>
 <li>the <code>src</code> directory which holds your project code, and</li>
 <li>the <code>test</code> directory which holds the tests</li>
 </ul>
-<p>There are some other things there (e.g., the <code>deps</code> directory created by <code>rebar</code>
-and the <code>ebin</code> directory that&#39;s created when everything is compiled).</p>
+<p>There are some other things there (e.g., the <code>deps</code> directory created by
+<code>rebar</code> and the <code>ebin</code> directory that&#39;s created when everything is
+compiled).</p>
 <h3 id="23-repo-ready-to-go">2.3 Repo Ready to Go</h3>
 <p>As mentioned above, <code>lfetool</code> also <code>init</code>&#39;ed the project with <code>git</code>
 and added all the files:</p>
@@ -319,10 +330,12 @@ and added all the files:</p>
 <span class="hljs-comment">#    new file:   test/unit-my-test-lib-tests.lfe</span>
 <span class="hljs-comment">#</span>
 </code></pre>
-<p>Once your remote origin is configured for the repo, you can execute <code>git commit -a &amp;&amp; git push --all</code> and have your initial files available on the remote server.</p>
+<p>Once your remote origin is configured for the repo, you can execute
+<code>git commit -a &amp;&amp; git push --all</code> and have your initial files available on
+the remote server.</p>
 <h3 id="next-stop">Next Stop</h3>
-<p>You can taste it, can&#39;t you? That LFE flavor coming your way? Yup, you&#39;re right.
-You&#39;re going to be looking at LFE code next ...</p>
+<p>You can taste it, can&#39;t you? That <em>LFE flavor</em> coming your way? Yup, you&#39;re
+right.  You&#39;re going to be looking at LFE code next ...</p>
 
                     
                     </section>

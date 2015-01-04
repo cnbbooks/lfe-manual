@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="1" data-basepath="." data-revision="1420341440571">
+    <div class="book" data-level="1" data-basepath="." data-revision="1420345276134">
     
 
 <div class="book-summary">
@@ -231,19 +231,27 @@
 <h2 id="1-going-plaid">1 Going Plaid</h2>
 <p><img src="https://raw.github.com/lfe/docs/master/images/plaid.jpg"
      style="float: right;">
-This is a quick-start, a blur of color. You&#39;re not going to get very many details here, but you <em>will</em> get to jump into the LFE REPL and see a little code in action.</p>
-<p>For those that would enjoy a more gradual introduction (with a bit more Erlang) thus having the time to see the stars (and not just stunning plaid), you may be interested in checking out the
+This is a quick-start, a blur of color. You&#39;re not going to get very many
+details here, but you <em>will</em> get to jump into the LFE REPL and see a little
+code in action.</p>
+<p>For those that would enjoy a more gradual introduction (with a bit more Erlang)
+thus having the time to see the stars (and not just stunning plaid), you may be
+interested in checking out the
 <a href="http://docs.lfe.io/user-guide/intro/1.html">User Guide</a>.</p>
 <h3 id="11-lfetool">1.1 lfetool</h3>
-<p>Many in the LFE community use <code>lfetool</code>, a utility specifically designed for creating LFE projects of various types, complete with stubbed code and unit tests.
-For the purposes of a quick start, all of your LFE workflow needs can be met by  <code>lfetool</code>. This guide will use it almost exclusively -- all in the interst of
-sending you a week and a half into the future.</p>
-<p>You can install <code>lfetool</code> with the following, which will install it into <code>/usr/local/bin</code>:</p>
+<p>Many in the LFE community use <code>lfetool</code>, a utility specifically designed for
+creating LFE projects of various types, complete with stubbed code and unit
+tests. For the purposes of a quick start, all of your LFE workflow needs can be
+met by  <code>lfetool</code>. This guide will use it almost exclusively -- all in the
+interst of sending you a week and a half into the future.</p>
+<p>You can install <code>lfetool</code> with the following, which will install it into
+<code>/usr/local/bin</code>:</p>
 <pre><code class="lang-bash">$ curl -L -o ./lfetool \
     https://raw.github.com/lfe/lfetool/stable/lfetool
 $ bash ./lfetool install
 </code></pre>
-<p>If you would like to instal it in a different directory, you may use the following verbose command form:</p>
+<p>If you would like to instal it in a different directory, you may use the
+following verbose command form:</p>
 <pre><code class="lang-bash">$ bash ./lfetool install lfetool /opt/scripts/bin
 </code></pre>
 <p>Note that <code>lfetool</code> supports Erlang R15, R16, and 17.</p>
@@ -265,15 +273,25 @@ download page</a> or from the
 <a href="https://www.erlang-solutions.com/downloads/download-erlang-otp">Erlang
 Solutions page</a> (which supports many more package types).</p>
 <h4 id="rebar">rebar</h4>
-<p><code>rebar</code> is a tool for managing project dependencies, compiling them, and compiling your project&#39;s source code. Most recent Erlang projects have a <code>rebar.config</code> file in them, indicating their support of <code>rebar</code>.</p>
-<p><code>lfetool</code> uses <code>rebar</code> to build LFE as well as managing dependencies for your projects, so go ahead and get that set up:
-<a href="https://github.com/basho/rebar">download rebar</a> and follow the instructions in the project project <code>README</code> on Github.</p>
+<p><code>rebar</code> is a tool for managing project dependencies, compiling them, and
+compiling your project&#39;s source code. Most recent Erlang projects have a
+<code>rebar.config</code> file in them, indicating their support of <code>rebar</code>.</p>
+<p><code>lfetool</code> uses <code>rebar</code> to build LFE as well as managing dependencies for
+your projects, so go ahead and get that set up:
+<a href="https://github.com/basho/rebar">download rebar</a> and follow the
+instructions in the project <code>README</code> on Github.</p>
 <h4 id="git">git</h4>
-<p>You will also need to <a href="http://git-scm.com/downloads">download git</a> or
-install it using your favourite OS package manager.</p>
+<p>You will also need to <a href="http://git-scm.com/downloads">download git</a>
+or install it using your favourite OS package manager.</p>
 <h4 id="optional">Optional</h4>
-<p>If you would like to easily have multiple versions of Erlang installed (or be available for installation) on your system, <a href="https://github.com/spawngrid/kerl">kerl</a> might be the tool for you. If you have used such tools as <code>virtualenv</code> in Python or Ruby&#39;s RVM, then you should be quite comfortable with the concepts behind kerl.</p>
-<p>Most people don&#39;t need to work with multiple versions of Erlang, however; please consider carefully before unnecessarily complicating your development environment.</p>
+<p>If you would like to easily have multiple versions of Erlang installed (or be
+available for installation) on your system,
+<a href="https://github.com/spawngrid/kerl" target="_blank">kerl</a> might be the tool for you. If
+you have used such tools as <code>virtualenv</code> in Python or Ruby&#39;s RVM, then you
+should be quite comfortable with the concepts behind kerl.</p>
+<p>Most people don&#39;t need to work with multiple versions of Erlang, however;
+please consider carefully before unnecessarily complicating your development
+environment.</p>
 <h3 id="next-stop">Next Stop</h3>
 <p>Ready for some LFE? Next you&#39;ll learn how to create a new LFE project with
 just one command ...</p>
