@@ -4,10 +4,10 @@ or
 
 ## A Guide for Users of the Lisp Flavoured Erlang Language
 
-### For the Programming of Digital Computing Devices
+for
 
-#### Being the Adventures in a Wonderland of Metaprogramming Mystery and Distributed Systems
+### The Programming of Digital Computing Devices
 
-##### Comprising a Series of Lisp Flavoured Anecdotes as they Pertain to the Edification of the Gentle Reader in Her Mastery of Systems of a Timely Sort and Dispositions Quite Tolerant of Faults
+comprising
 
-###### Which the Authors Have Become Acquainted Over the Course of Varying Years During Their Abiding on This Earth and Pursuant to All Activities Digital Otherwise Being the Realm of the Unseen But Genuinely Conceived
+#### A Series of Lisp Flavoured Metaprogramming Mystery and Distributed Systems Adventures as they Pertain to the Edification of the Gentle Reader in Her Mastery of Systems of a Timely Sort and Dispositions Quite Tolerant of Faults
