@@ -4,6 +4,7 @@
 * Front Matter
    * [Title Page](fm/title-page.md)
    * [Copyright Page](fm/copyright.md)
+   * [About the Cover](fm/about-cover.md)
    * [Dedication](fm/dedication.md)
    * [Forward](fm/forward.md)
    * [Acknowledgments](fm/acknowledgments.md)
