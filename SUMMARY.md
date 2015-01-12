@@ -5,11 +5,15 @@
   * [Copyright Page](fm/copyright.md)
   * [Dedication](fm/dedication.md)
   * [Forward](fm/forward.md)
-  * [Preface](fm/preface.md)
+  * [Acknowledgments](fm/acknowledgments.md)
+  * [Preface](fm/README.md)
 * ## Introduction
-  * [Preface](README.md)
-  * [Background](intro/background.md)
+  * [About the Book](intro/about.md)
   * [Prerequisites](intro/prereq.md)
+  * [An Amazingly Brief History of Computing](intro/computing-history.md)
+  * [The Origins of Lisp](intro/lisp-history.md)
+  * [The Origins of Erlang](intro/erlang-history.md)
+  * [An Overview of LFE](intro/lfe-overview.md)
 * ## Part I - Erlang and Lisp Basics
   * [Erlang and Lisp Basics](p1/erl-lisp-basics.md)
 * ## Part II - Elementary LFE
