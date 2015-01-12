@@ -15,7 +15,7 @@
    * [The Origins of Lisp](intro/lisp-history.md)
    * [The Origins of Erlang](intro/erlang-history.md)
    * [An Overview of LFE](intro/lfe-overview.md)
-* Part I - Erlang and Lisp Basics
+* Part I - Lisp and Erlang Basics
    * [Lisp and Erlang Basics](p1/lisp-erlang-basics.md)
 * Part II - Elementary LFE
    * [Elementary LFE](p2/lfe-elemnts.md)
