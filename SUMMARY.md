@@ -1,13 +1,12 @@
 # Summary
 
-* [Introduction](README.md)
 * Front Matter
    * [Title Page](fm/title-page.md)
    * [Copyright Page](fm/copyright.md)
    * [Dedication](fm/dedication.md)
    * [Forward](fm/forward.md)
    * [Acknowledgments](fm/acknowledgments.md)
-   * [Preface](fm/README.md)
+   * [Preface](README.md)
 * Introduction
    * [About the Book](intro/about.md)
    * [Prerequisites](intro/prereq.md)
