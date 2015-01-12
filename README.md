@@ -1,7 +1,4 @@
-# LFE User Guide
-
-
-## Preface
+# Preface
 
 This Gitbook (available [here](http://lfe.gitbooks.io/user-guide/))
 is a work in progress, attempting to synthesize the following elements:
