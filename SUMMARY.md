@@ -8,7 +8,7 @@
    * [Forward](fm/forward.md)
    * [Acknowledgments](fm/acknowledgments.md)
    * [Preface](README.md)
-* Introduction
+* (car lfeug)
    * [About the Book](intro/about.md)
    * [Prerequisites](intro/prereq.md)
    * [An Amazingly Brief History of Computing](intro/computing-history.md)
@@ -22,5 +22,6 @@
 * Part III - Intermediate LFE
    * [Intermediate LFE](p3/intermed-lfe.md)
 * Part IV - Advanced LFE
-   * [Advanced LFE](p4/advanced-lfe.md)
+   * [Advanced Techniques in Lisp](p4/advanced-lfe.md)
+   * [Advanced OTP Systems](p4/advanced-otp.md)
 
