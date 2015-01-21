@@ -1,5 +1,5 @@
 {
-    "title": "LFE Quick Start",
+    "title": "LFE Quick Start with lfetool",
     "description": "An Introduction to LFE Going Ludicrous Speed",
     "plugins": ["ga"],
     "pluginsConfig": {

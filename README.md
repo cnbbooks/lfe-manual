@@ -3,7 +3,9 @@
 
 ## Introduction
 
-In this LFE quick start, we will cover the following:
+In this a version of the LFE quick start created with lfetool in mind.
+
+We will cover the following:
 
 * The tools necessary to get going quickly on LFE
 * Creating a new LFE project
