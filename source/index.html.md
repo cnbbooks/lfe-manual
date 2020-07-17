@@ -443,7 +443,7 @@ rebar3 lfe versions
 
 ```lisp
 (#(apps
-   (#(prod-app git)))
+   (#(prod-lfe git)))
  #(languages
    (#(lfe "1.3-dev")
     #(erlang "23")
@@ -451,7 +451,7 @@ rebar3 lfe versions
     #(driver_version "3.3")))
  #(tooling
    (#(rebar "3.10.0")
-    #(rebar3_lfe "0.1.0"))))
+    #(rebar3_lfe "0.2.0"))))
 ```
 
 <!-- Named page links below: /-->
