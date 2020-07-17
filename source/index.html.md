@@ -1,14 +1,11 @@
 ---
-title: API Reference
+title: rebar3_lfe Documentation
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
-  - ruby
-  - python
-  - javascript
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='https://github.com/lfe-rebar3/rebar3_lfe'>rebar3_lfe on Github</a>
   - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
 
 includes:

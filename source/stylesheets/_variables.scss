@@ -98,6 +98,11 @@ $search-box-border-color: #666 !default;
 // These settings are probably best left alone.
 
 %break-words {
-    word-break: break-all;
-    hyphens: auto;
+  word-break: break-all;
+  hyphens: auto;
+}
+
+.logo {
+  padding-left: 35px;
+  padding-top: 20px;
 }

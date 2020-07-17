@@ -19,7 +19,7 @@ publish:
 run:
 	docker run -d --rm --name $(CONTAINER_NAME) \
 		-p 4567:4567 \
-		-v `pwd`/../../docs:/srv/slate/build \
+		-v `pwd`/docs:/srv/slate/build \
 		-v `pwd`/source:/srv/slate/source $(DOCKER_TAG)
 
 stop:
