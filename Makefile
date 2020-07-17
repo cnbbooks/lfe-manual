@@ -31,6 +31,7 @@ regen:
 
 publish:
 	-@cd $(PUBLISH_DIR) && \
+	git add images/* && \
 	git commit -am "Regenerated documentation site." > /dev/null && \
 	git push origin master
 	-@git add $(PUBLISH_DIR) && \
