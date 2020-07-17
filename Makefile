@@ -7,12 +7,13 @@ FULL_VERSION = $(VERSION)-$(BASE_DOCKER_VERSION)
 DOCKER_TAG = $(DOCKER_TAG_PREFIX):$(FULL_VERSION)
 DOCKER_LATEST = $(DOCKER_TAG_PREFIX):latest
 CONTAINER_NAME = lfe-rebar3-docs
+PUBLISH_DIR = site
 
 image:
 	docker build . -t $(DOCKER_TAG)
 	docker tag $(DOCKER_TAG) $(DOCKER_LATEST)
 
-publish:
+publish-image:
 	docker push $(DOCKER_TAG)
 	docker push $(DOCKER_LATEST)
 
@@ -27,3 +28,14 @@ stop:
 
 regen:
 	docker exec -it $(CONTAINER_NAME) /bin/bash -c "bundle exec middleman build"
+
+publish:
+	-@cd $(PUBLISH_DIR) && \
+	git commit -am "Regenerated documentation site." > /dev/null && \
+	git push origin master
+	-@git add $(PUBLISH_DIR) && \
+	git commit -am "Updated submodule for recently published site content." && \
+	git submodule update && \
+	git push origin site-builder
+
+regen-pub: regen publish
