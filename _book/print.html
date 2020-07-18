@@ -1,0 +1,682 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>LFE Quick Start with lfetool</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="An Introduction to LFE Going Ludicrous Speed">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="custom.css">
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="1.html"><strong aria-hidden="true">2.</strong> Tooling for LFE</a></li><li class="chapter-item expanded "><a href="2.html"><strong aria-hidden="true">3.</strong> Creating a New Project</a></li><li class="chapter-item expanded "><a href="3.html"><strong aria-hidden="true">4.</strong> LFE Code</a></li><li class="chapter-item expanded "><a href="4.html"><strong aria-hidden="true">5.</strong> Behind the Scenes</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">LFE Quick Start with lfetool</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#quick-start" id="quick-start">Quick Start</a></h1>
+<p><a href="images/cover.jpg"><img src="images/cover_small.jpg" alt="" /></a></p>
+<h2><a class="header" href="#introduction" id="introduction">Introduction</a></h2>
+<p>In this a version of the LFE quick start created with lfetool in mind.</p>
+<p>We will cover the following:</p>
+<ul>
+<li>The tools necessary to get going quickly on LFE</li>
+<li>Creating a new LFE project</li>
+<li>Looking at LFE code in the REPL and in modules</li>
+<li>More info on LFE resources and where to go next</li>
+</ul>
+<p>In essence, this guide will give you what you need in order to jump into LFE at
+ludicrous speed.</p>
+<p>[](Named page links below ...)</p>
+<h1><a class="header" href="#tooling-for-lfe" id="tooling-for-lfe">Tooling for LFE</a></h1>
+<h2><a class="header" href="#1-going-plaid" id="1-going-plaid">1 Going Plaid</a></h2>
+<p><img src="https://raw.github.com/lfe/docs/master/images/plaid.jpg"
+     style="float: right;">
+This is a quick-start, a blur of color. You're not going to get very many
+details here, but you <em>will</em> get to jump into the LFE REPL and see a little
+code in action.</p>
+<p>For those that would enjoy a more gradual introduction (with a bit more Erlang)
+thus having the time to see the stars (and not just stunning plaid), you may be
+interested in checking out the
+<a href="http://docs.lfe.io/user-guide/intro/1.html">User Guide</a>.</p>
+<h3><a class="header" href="#11-lfe" id="11-lfe">1.1 LFE</a></h3>
+<p>LFE, or &quot;Lisp Flavored Erlang&quot;, is a Lisp-2 (similar to Common Lisp in that way) that runs on top of the Erlang VM or &quot;BEAM&quot;. It is the oldest sibling of the many BEAM languages that have been released since its inception (e.g., Elixir, Joxa, Luerl, Erlog, Haskerl, etc.).</p>
+<p>As a Lisp-2, LFE has different namespaces for functions and variables. Furthermore, LFE has Erlang's notion of arity, so functions with different arity may share the same name.</p>
+<p>Before we jump into LFE, though, you'll need to have the minimal set of dependencies installed on your machine.</p>
+<h3><a class="header" href="#12-lfetool" id="12-lfetool">1.2 lfetool</a></h3>
+<p>Many in the LFE community use <code>lfetool</code>, a utility specifically designed for
+creating LFE projects of various types, complete with stubbed code and unit
+tests. For the purposes of a quick start, all of your LFE workflow needs can be
+met by  <code>lfetool</code>. This guide will use it almost exclusively -- all in the
+interst of sending you a week and a half into the future.</p>
+<p>You can install <code>lfetool</code> with the following, which will install it into
+<code>/usr/local/bin</code>:</p>
+<pre><code class="language-bash">$ curl -L -o ./lfetool \
+    https://raw.github.com/lfe/lfetool/stable/lfetool
+$ bash ./lfetool install
+</code></pre>
+<p>If you would like to instal it in a different directory, you may use the
+following verbose command form:</p>
+<pre><code class="language-bash">$ bash ./lfetool install lfetool /opt/scripts/bin
+</code></pre>
+<p>Note that <code>lfetool</code> supports Erlang R15, R16, and 17.</p>
+<p>If you need <code>sudo</code> to put the script there, be sure to set the ownership:</p>
+<pre><code class="language-bash">$ chown $USER /usr/local/bin/lfetool
+</code></pre>
+<p>That way you'll be able to use the <code>update</code> command to get the latest version
+of <code>lfetool</code> in the future.</p>
+<h3><a class="header" href="#13-other-dependencies" id="13-other-dependencies">1.3 Other Dependencies</a></h3>
+<h4><a class="header" href="#erlang" id="erlang">Erlang</a></h4>
+<p>First and foremost, you will need Erlang installed.</p>
+<ul>
+<li>On Mac OS X, this is as easy as executing <code>brew install erlang</code></li>
+<li>On Ubuntu <code>apt-get install erlang</code>.</li>
+</ul>
+<p>You can also install Erlang from the various pre-built packages
+provided on the <a href="http://www.erlang.org/download.html">official Erlang
+download page</a> or from the
+<a href="https://www.erlang-solutions.com/downloads/download-erlang-otp">Erlang
+Solutions page</a> (which supports many more package types).</p>
+<h4><a class="header" href="#make" id="make">make</a></h4>
+<p>In order to use LFE, you will be calling <code>make</code> to compile it. To cover your bases, you'll want to make sure you have the basic development tools installed for your platform.</p>
+<p>Ubuntu:</p>
+<pre><code class="language-bash">$ sudo apt-get install build-essential
+</code></pre>
+<p>CentOS/Fedora:</p>
+<pre><code class="language-bash">$ sudo yum groupinstall &quot;Development Tools&quot;
+</code></pre>
+<p>For Mac OS X, you will need to install the &quot;Developer Tools&quot; from the AppStore.</p>
+<h4><a class="header" href="#git" id="git">git</a></h4>
+<p>You will also need <code>git</code> to continue with this quick-start. If <code>git</code> doesn't come installed on your system and it wansn't installed as part of your systems basic development tools package, you can <a href="http://git-scm.com/downloads">download it here</a>
+or install it using your favourite OS package manager.</p>
+<h4><a class="header" href="#rebar" id="rebar">rebar</a></h4>
+<p><code>rebar</code> is a tool for managing project dependencies, compiling them, and
+compiling your project's source code. Most recent Erlang projects have a
+<code>rebar.config</code> file in them, indicating their support of <code>rebar</code>.</p>
+<p><code>lfetool</code> uses <code>rebar</code> to build LFE as well as managing dependencies for
+your projects, so go ahead and get that set up:
+<a href="https://github.com/basho/rebar">download rebar</a> and follow the
+instructions in the project <code>README</code> on Github.</p>
+<h4><a class="header" href="#optional" id="optional">Optional</a></h4>
+<p>If you would like to easily have multiple versions of Erlang installed (or be
+available for installation) on your system,
+<a href="https://github.com/spawngrid/kerl">kerl</a> might be the tool for you. If
+you have used such tools as <code>virtualenv</code> in Python or Ruby's RVM, then you
+should be quite comfortable with the concepts behind kerl.</p>
+<p>Most people don't need to work with multiple versions of Erlang, however;
+please consider carefully before unnecessarily complicating your development
+environment.</p>
+<h3><a class="header" href="#next-stop" id="next-stop">Next Stop</a></h3>
+<p>Ready for some LFE? Next you'll learn how to create a new LFE project with
+just one command ...</p>
+<h1><a class="header" href="#creating-a-new-project" id="creating-a-new-project">Creating a New Project</a></h1>
+<h2><a class="header" href="#2-your-first-lfe-project" id="2-your-first-lfe-project">2 Your First LFE Project</a></h2>
+<p><img src="https://raw.github.com/lfe/docs/master/images/barf.jpg"
+     style="float: left; padding-right: 1em;">A project? Already?! It sounds
+daunting, but it's easier than you might think. Open up a terminal window
+and do this in a directory of your choosing:</p>
+<pre><code class="language-bash">$ lfetool new library my-test-lib
+</code></pre>
+<p>It might take a minute or two to download and compile everything. Here's what
+<code>lfetool</code> is doing:</p>
+<ul>
+<li>Creating a skeleton project (of the &quot;library&quot; type)</li>
+<li>Downloading all the dependencies listed in the new
+<code>rebar.config</code> file that was just created for your project</li>
+<li>Compiling all the downloaded dependendencies</li>
+<li>Initializing the project as a git repository</li>
+<li>Running the stubbed unit tests (which will fail -- intentionally!)</li>
+</ul>
+<h3><a class="header" href="#21-tdd-with-lfe" id="21-tdd-with-lfe">2.1 TDD with LFE</a></h3>
+<p><code>lfetool</code> encourages you to engage in
+<a href="https://en.wikipedia.org/wiki/Test-driven_development">test-driven development</a>
+by including a broken test in the stubbed unit tests for the project. So, first
+things first, let's get that failing unit test passing.</p>
+<p>Be sure you are in your project directory:</p>
+<pre><code class="language-bash">$ cd my-test-lib
+</code></pre>
+<p>Here's the output we saw when the unit test failed:</p>
+<pre><code class="language-erlang">======================== EUnit ========================
+unit-my-test-lib-tests: my-adder-test ...[failed]
+in function 'unit-my-test-lib-tests':'my-adder-test'/0
+**error:{assertEqual-failed,[{module,'unit-my-test-lib-tests'},
+          {line,11},
+          {expression,&quot;(: my-test-lib my-adder 2 2)&quot;},
+          {expected,4},
+          {value,5}]}
+=======================================================
+  Failed: 1.  Skipped: 0.  Passed: 0.
+</code></pre>
+<p>We can see that our test expected 4 but it got 5.</p>
+<p>Let's look at the test by opening up <code>test/unit-my-test-lib-tests.lfe.</code>.
+Well, things there look good -- we should get 4 when 2 and 2 are added.</p>
+<p>Let's take a look at the source module: src/my-test-lib.lfe. Ah-ha! There's an
+extra operation that's being done which isn't at all simple addition. We found
+our bug :-)</p>
+<p>To fix it, change this line:</p>
+<pre><code class="language-lisp">  (+ x (+ y 1)))
+</code></pre>
+<p>to this:</p>
+<pre><code class="language-lisp">  (+ x y))
+</code></pre>
+<p>Now re-run the unit tests:</p>
+<pre><code class="language-bash">$ make check-unit
+</code></pre>
+<p>And you should get a passing test:</p>
+<pre><code>==&gt; my-test-lib (eunit)
+======================== EUnit ========================
+unit-my-test-lib-tests: my-adder-test ...[0.002 s] [ok]
+=======================================================
+  Test passed.
+</code></pre>
+<p>The <code>make</code> target we executed above executes the unit test runner without
+recompiling all the dependencies; it just re-compiles our project <code>./src</code> and
+<code>./test</code> files.</p>
+<p>We'll talk about the <code>make</code> targets at the end of the Quick Start.</p>
+<h3><a class="header" href="#22-project-inventory" id="22-project-inventory">2.2 Project Inventory</a></h3>
+<p>Okay, we've got our tests passing and our project looks healthy. But what does
+it have in it?</p>
+<ul>
+<li>a README file in Markdown</li>
+<li>a <code>Makefile</code></li>
+<li>the <code>rebar.config</code> file we mentioned earlier (this has all your project
+dependencies in it)</li>
+<li>a <code>package.exs</code> file for uploading your project to
+<a href="http://expm.co">expm.co</a></li>
+<li>the <code>src</code> directory which holds your project code, and</li>
+<li>the <code>test</code> directory which holds the tests</li>
+</ul>
+<p>There are some other things there (e.g., the <code>deps</code> directory created by
+<code>rebar</code> and the <code>ebin</code> directory that's created when everything is
+compiled).</p>
+<h3><a class="header" href="#23-repo-ready-to-go" id="23-repo-ready-to-go">2.3 Repo Ready to Go</a></h3>
+<p>As mentioned above, <code>lfetool</code> also <code>init</code>'ed the project with <code>git</code>
+and added all the files:</p>
+<pre><code class="language-bash">$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+#
+#	new file:   .gitignore
+#	new file:   .travis.yml
+#	new file:   Makefile
+#	new file:   README.md
+#	new file:   package.exs
+#	new file:   rebar.config
+#	new file:   resources/make/common.mk
+#	new file:   src/my-test-lib-util.lfe
+#	new file:   src/my-test-lib.app.src
+#	new file:   src/my-test-lib.lfe
+#	new file:   test/unit-my-test-lib-tests.lfe
+#
+</code></pre>
+<p>Once your remote origin is configured for the repo, you can execute
+<code>git commit -a &amp;&amp; git push --all</code> and have your initial files available on
+the remote server.</p>
+<h3><a class="header" href="#next-stop-1" id="next-stop-1">Next Stop</a></h3>
+<p>You can taste it, can't you? That <em>LFE flavor</em> coming your way? Yup, you're
+right.  You're going to be looking at LFE code next ...</p>
+<h1><a class="header" href="#lfe-code" id="lfe-code">LFE Code</a></h1>
+<h2><a class="header" href="#3-hitting-the-code" id="3-hitting-the-code">3 Hitting the Code</a></h2>
+<p><img src="https://raw.github.com/lfe/docs/master/images/smash.jpg"
+     style="float: right; padding-left: 1em;">It may not seem like it,
+but we're off to a pretty fast start. If you had to do everything we've
+done, manually, you'd have given up by now. Seriously.</p>
+<p>Time to put the brakes on, though, 'cause you're gonna want to see this next
+part in slow motion.</p>
+<h3><a class="header" href="#31-repl-me-up" id="31-repl-me-up">3.1 REPL Me Up!</a></h3>
+<p>Sure thing :-) Just do this from your new LFE project directory:</p>
+<pre><code class="language-bash">$ make repl-no-deps
+</code></pre>
+<p>This should give you something that looks like the following:</p>
+<pre><code>Erlang R16B (erts-5.10.1) [source] [smp:8:8] ...
+
+LFE Shell V5.10.1 (abort with ^G)
+&gt;
+</code></pre>
+<p>We're not going to spend a lot of time in the REPL right now, but feel free to
+take it for a spin. Try setting a variable:</p>
+<pre><code class="language-lisp">&gt; (set my-list (lists:seq 1 6))
+(1 2 3 4 5 6)
+</code></pre>
+<p>Here are some operations:</p>
+<pre><code class="language-lisp">&gt; (* 2 (lists:sum my-list))
+42
+&gt; (* 2 (lists:foldl (lambda (n acc) (+ n acc)) 0 my-list))
+42
+</code></pre>
+<p>Turn that into a function:</p>
+<pre><code class="language-lisp">&gt; (defun my-sum (start stop)
+    (let ((my-list (lists:seq start stop)))
+      (* 2 (lists:foldl
+             (lambda (n acc)
+               (+ n acc))
+             0 my-list))))
+my-sum
+</code></pre>
+<p>And try it out!</p>
+<pre><code class="language-lisp">&gt; (my-sum 1 6)
+42
+</code></pre>
+<p>Enough fancy stuff ... What about some <em>real</em> code? What does a <strong>project</strong>
+look like?</p>
+<h3><a class="header" href="#32-sample-code" id="32-sample-code">3.2 Sample Code</a></h3>
+<p>Well, you've already seen one! Let's print it here for your viewing pleasure,
+though. Here's the starter project you have, with just the one module:</p>
+<pre><code class="language-lisp">(defmodule my-test-lib
+  (export all))
+
+(defun my-adder (x y)
+  (+ x y))
+</code></pre>
+<p>Let's go ahead and add our new <code>my-sum</code> function to that module in another
+terminal window. Once you've done that, come back into the REPL and re-compile
+the module:</p>
+<pre><code class="language-lisp">&gt; (c &quot;src/my-test-lib.lfe&quot;)
+#(module my-test-lib)
+&gt; (my-test-lib:my-sum 1 6)
+42
+&gt; (my-test-lib:my-sum 1 60)
+3660
+&gt;
+</code></pre>
+<p>The other code that a generated LFE library project comes with is the unit
+tests, which we've already seen:</p>
+<pre><code class="language-lisp">(defmodule unit-my-test-lib-tests
+  (behaviour ltest-unit)
+  (export all)
+  (import
+    (from ltest
+      (check-failed-assert 2)
+      (check-wrong-assert-exception 2))))
+
+(include-lib &quot;ltest/include/ltest-macros.lfe&quot;)
+
+(deftest my-adder
+  (is-equal 4 (: my-test-lib my-adder 2 2)))
+</code></pre>
+<p>Let's fill that out a little more with a few more tests. We can
+also get rid of the imports we're not using. And we can update
+the calls to use the new <code>(mod:func ...)</code> syntax:</p>
+<pre><code class="language-lisp">(defmodule unit-my-test-lib-tests
+  (behaviour ltest-unit)
+  (export all))
+
+(include-lib &quot;ltest/include/ltest-macros.lfe&quot;)
+
+(deftest my-adder
+  (is-equal 4 (my-test-lib:my-adder 2 2)))
+
+(deftest my-sum
+  (is-equal 42 (my-test-lib:my-sum 1 6))
+  (is-equal 3660 (my-test-lib:my-sum 1 60)))
+
+(deftest my-sum-zeros
+  (is-equal 0 (my-test-lib:my-sum 0 0)))
+</code></pre>
+<p>Let's make sure our tests pass:</p>
+<pre><code class="language-bash">$ make check-unit
+...
+======================== EUnit ========================
+module 'unit-my-test-lib-tests'
+  my-adder ............................. [0.002 s] [ok]
+  my-sum ......................................... [ok]
+  my-sum-zeros ................................... [ok]
+  Total module test time: 0.012 s
+=======================================================
+  All 3 tests passed.
+</code></pre>
+<p>Looking good :-)</p>
+<p>Here's something a little more involved you may enjoy, from the examples in the
+LFE source code:</p>
+<pre><code class="language-lisp">(defmodule messenger-back
+ (export (print-result 0) (send-message 2)))
+
+(defun print-result ()
+  (receive
+    ((tuple pid msg)
+      (io:format &quot;Received message: '~s'~n&quot; (list msg))
+      (io:format &quot;Sending message to process ~p ...~n&quot; (list pid))
+      (! pid (tuple msg))
+      (print-result))))
+
+(defun send-message (calling-pid msg)
+  (let ((spawned-pid (spawn 'messenger-back 'print-result ())))
+    (! spawned-pid (tuple calling-pid msg))))
+</code></pre>
+<p>That bit of code demonstrates one of Erlang's core features in lovely Lisp
+syntax: message passing. When loaded into the REPL, that example shows some
+bidirectional message passing between the LFE shell and a spawned process.</p>
+<p>Want to give it a try? Start by compiling the example module:</p>
+<pre><code class="language-lisp">&gt; (c &quot;deps/lfe/examples/messenger-back.lfe&quot;)
+#(module messenger-back)
+</code></pre>
+<p>Next, let's send two messages to another Erlang process (in this case, we'll
+send it to our REPL process, <code>(self)</code>:</p>
+<pre><code class="language-lisp">&gt; (messenger-back:send-message (self) &quot;And what does it say now?&quot;)
+#(&lt;0.26.0&gt; &quot;And what does it say now?&quot;)
+Received message: 'And what does it say now?'
+Sending message to process &lt;0.26.0&gt; ...
+&gt; (messenger-back:send-message (self) &quot;Mostly harmless.&quot;)
+#(&lt;0.26.0&gt; &quot;Mostly harmless.&quot;)
+Received message: 'Mostly harmless.'
+Sending message to process &lt;0.26.0&gt; ...
+</code></pre>
+<p>In the above calls, for each message sent we got a reply acknowledging the
+message (because the example was coded like that). But what about the receiver
+itself? What did it, our REPL process, see? We can flush the message
+queue in the REPL to find out:</p>
+<pre><code class="language-lisp">&gt; (c:flush)
+Shell got {&quot;And what does it say now?&quot;}
+Shell got {&quot;Mostly harmless.&quot;}
+ok
+</code></pre>
+<p>If you found this last bit interesting and want to step through a tutorial on
+Erlang's light-weight threads in more detail, you may enjoy
+<a href="http://docs.lfe.io/tutorials/processes/1.html">this tutorial</a>.</p>
+<h3><a class="header" href="#next-stop-2" id="next-stop-2">Next Stop</a></h3>
+<p>We did promise a bit more information, so we're going to do that
+next and then wrap up the quick start and point you in some
+directions for your next LFE adventures ...</p>
+<h1><a class="header" href="#behind-the-scenes" id="behind-the-scenes">Behind the Scenes</a></h1>
+<h2><a class="header" href="#4-the-magic-behind-the-mystery" id="4-the-magic-behind-the-mystery">4 The Magic Behind the Mystery</a></h2>
+<p><img src="https://raw.github.com/lfe/docs/master/images/doubles.jpg"
+     style="float: right; padding-left: 1em;"></p>
+<p>As we warned in the beginning, there's a lot going on behind the scenes: in <code>lfetool</code>, <code>rebar</code>, and even LFE itself. This guide just gives you a quick taste of the LFE flavour :-) Before parting ways, though, there are some more bits we should share.</p>
+<h3><a class="header" href="#41-using-make-in-lfetool-projects" id="41-using-make-in-lfetool-projects">4.1 Using <code>make</code> in <code>lfetool</code> Projects</a></h3>
+<p>We promised to come back to <code>make</code>, so here we are.</p>
+<p>Eventually, the <code>Makefile</code> will be replaced with a combination of <code>rebar</code>
+scripts and updates to <code>lfetool</code>, but for now it's what we've got.</p>
+<p>There are some convenient targets available for you in the <code>Makefile</code>:</p>
+<ul>
+<li><code>upload</code> - when your project's ready for release, this will push it up to
+<a href="http://expm.co/">expm.co</a> for you</li>
+<li><code>compile</code> - rebuilds all your <code>.beam</code>s, including the dependencies</li>
+<li><code>install</code> - should you wish to install your project system-wide (we recommend
+against it), you could use this target to do it</li>
+<li><code>check</code> - run your unit, integration, and system tests after recompiling all <code>*.lfe</code> files <code>*.beam</code></li>
+<li><code>repl</code> - start up the LFE REPL after recompiling all <code>*.lfe</code> files</li>
+<li><code>shell</code> - start up the Erlang shell after recompiling all <code>*.lfe</code> files</li>
+<li><code>get-deps</code> - ensure that all your dependencies have been downloaded; you can update these later with <code>$ lfetool update deps</code></li>
+<li><code>get-version</code> - get project and component version numbers</li>
+</ul>
+<p>If you do not need to recompile dependencies (and most of the time, you don't),
+you can skip the deps with the following targets:</p>
+<ul>
+<li><code>compile-no-deps</code></li>
+<li><code>repl-no-deps</code></li>
+<li><code>shell-no-deps</code></li>
+<li><code>check-unit</code></li>
+</ul>
+<p>There are other interesting <code>make</code> targets tucked in the <code>Makefile</code>, and
+you can learn more about how to manage LFE projects by checking them out.</p>
+<h3><a class="header" href="#42-the-lfe-repl" id="42-the-lfe-repl">4.2 The LFE REPL</a></h3>
+<p>We barely touched upon the LFE REPL in this guide; if you're like many other Lispers, you will spend a considerable amount of your dev (or at least planning) time in the REPL. More information on the LFE REPL is available in the following locations:</p>
+<ul>
+<li><a href="https://github.com/rvirding/lfe/blob/develop/doc/lfe_shell.txt">LFE codebase docs - Lisp Flavoured Erlang shell</a></li>
+<li><a href="http://docs.lfe.io/user-guide/intro/2.html">User Guide - The LFE REPL</a></li>
+</ul>
+<h3><a class="header" href="#43-additional-resources" id="43-additional-resources">4.3 Additional Resources</a></h3>
+<p>If this guide has left you feeling thirsty, then welcome to LFE! Here's some more to drink:</p>
+<ul>
+<li>The official <a href="https://github.com/rvirding/lfe/blob/develop/doc/user_guide.txt">User Guide</a> from the LFE codebase</li>
+<li>The LFE <a href="http://docs.lfe.io/">Documentation Site<a/></li>
+<li><a href="https://github.com/rvirding/lfe/tree/develop/examples">Example code</a> in the LFE repository</li>
+<li>Tutorials
+<ul>
+<li><a href="http://docs.lfe.io/tutorials/processes/1.html">Light-weight Erlang processes in LFE</a></li>
+<li>Building <a href="https://github.com/lfe/yaws-rest-starter">RESTful web services on YAWS with LFE</a></li>
+<li>Community-contributed <a href="http://blog.lfe.io/categories.html#tutorials-ref">tutorials</a></li>
+</ul>
+</li>
+<li>Github Organisations
+<ul>
+<li><a href="https://github.com/lfex">LFEX</a> - Community-contributed libraries</li>
+<li><a href="https://github.com/lfe">LFE</a> - Core code, tools, and on-line resources (docs, blog, etc.)</li>
+</ul>
+</li>
+</ul>
+<h3><a class="header" href="#44-feedback-and-docs-bugs" id="44-feedback-and-docs-bugs">4.4 Feedback and Docs Bugs</a></h3>
+<p>If you would like to provide feedback about this guide, we would welcome the chance to improve the experience for everyone. Please
+<a href="https://github.com/lfe/docs/issues">create a ticket</a> in the Github issue tracker. Be
+sure to give a full description so that we can best help you!</p>
+<h3><a class="header" href="#next-stop-3" id="next-stop-3">Next Stop</a></h3>
+<p>There are any number of things you could tackle next, depending upon your general programming experience, learning style, and interest in LFE. Here are some ideas:</p>
+<ul>
+<li>Read up on Erlang itself -- <a href="http://erlang.org/">the site</a> has links to great Erlang books</li>
+<li>Read the source code for various projects in the <a href="https://github.com/lfex">LFEX</a> organisation on Github</li>
+<li><a href="http://docs.lfe.io/presentations.html">Watch LFE presentations</a></li>
+<li>Read up on <a href="http://docs.lfe.io/history.html">Lisp, Erlang, and LFE history</a></li>
+<li>Fix a bug in:
+<ul>
+<li><a href="https://github.com/lfe/docs/issues">LFE Docs</a></li>
+<li>An <a href="https://github.com/lfex">LFEX</a> project</li>
+<li><a href="https://github.com/rvirding/lfe/">LFE itself</a>!</li>
+</ul>
+</li>
+<li>Create a project of your own :-D</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

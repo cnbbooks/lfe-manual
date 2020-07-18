@@ -1,241 +1,171 @@
 <!DOCTYPE HTML>
-<html lang="en-US" >
-    
+<html lang="en" class="sidebar-visible no-js light">
     <head>
-        
+        <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>Creating a New Project | LFE Quick Start</title>
+        <title>Creating a New Project - LFE Quick Start with lfetool</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 1.5.0">
-        <meta name="HandheldFriendly" content="true"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
-        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        <meta name="description" content="An Introduction to LFE Going Ludicrous Speed">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
         
+        <link rel="stylesheet" href="fonts/fonts.css">
         
-    
-    
-    <link rel="next" href="./3.html" />
-    
-    
-    <link rel="prev" href="./1.html" />
-    
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="custom.css">
+        
 
         
     </head>
     <body>
-        
-        
-<link rel="stylesheet" href="gitbook/style.css">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
 
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
 
-        
-    <div class="book" data-level="2" data-basepath="." data-revision="1420346318996">
-    
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
 
-<div class="book-summary">
-    <div class="book-search">
-        <input type="text" placeholder="Type to search" class="form-control" />
-    </div>
-    <ul class="summary">
-        
-    	
-    	
-    	    
-            <li>
-                <a href="http://docs.lfe.io/" target="blank" class="custom-link">LFE Documentation Site</a>
-            </li>
-    	
-    	
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
 
-        
-        <li class="divider"></li>
-        
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
 
-        
-    
-        
-        <li class="chapter " data-level="0" data-path="index.html">
-            
-                
-                    <a href="./index.html">
-                        <i class="fa fa-check"></i>
-                        
-                         Introduction
-                    </a>
-                
-            
-            
-        </li>
-    
-        
-        <li class="chapter " data-level="1" data-path="1.html">
-            
-                
-                    <a href="./1.html">
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.</b>
-                        
-                         Tooling for LFE
-                    </a>
-                
-            
-            
-        </li>
-    
-        
-        <li class="chapter active" data-level="2" data-path="2.html">
-            
-                
-                    <a href="./2.html">
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.</b>
-                        
-                         Creating a New Project
-                    </a>
-                
-            
-            
-        </li>
-    
-        
-        <li class="chapter " data-level="3" data-path="3.html">
-            
-                
-                    <a href="./3.html">
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.</b>
-                        
-                         LFE Code
-                    </a>
-                
-            
-            
-        </li>
-    
-        
-        <li class="chapter " data-level="4" data-path="4.html">
-            
-                
-                    <a href="./4.html">
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.</b>
-                        
-                         Behind the Scenes
-                    </a>
-                
-            
-            
-        </li>
-    
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
 
-
-        
-        <li class="divider"></li>
-        <li>
-            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
-        </li>
-        
-    </ul>
-</div>
-
-    <div class="book-body">
-        <div class="body-inner">
-            <div class="book-header">
-    <!-- Actions Left -->
-    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
-    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
-    
-    <div id="font-settings-wrapper" class="dropdown pull-left">
-        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
-        </a>
-        <div class="dropdown-menu font-settings">
-    <div class="dropdown-caret">
-        <span class="caret-outer"></span>
-        <span class="caret-inner"></span>
-    </div>
-
-    <div class="buttons">
-        <button type="button" id="reduce-font-size" class="button size-2">A</button>
-        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
-    </div>
-
-    <div class="buttons font-family-list">
-        <button type="button" data-font="0" class="button">Serif</button>
-        <button type="button" data-font="1" class="button">Sans</button>
-    </div>
-
-    <div class="buttons color-theme-list">
-        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
-        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
-        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
-    </div>
-</div>
-
-    </div>
-
-    <!-- Actions Right -->
-    
-    <div class="dropdown pull-right">
-        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
-        </a>
-        <div class="dropdown-menu font-settings dropdown-left">
-            <div class="dropdown-caret">
-                <span class="caret-outer"></span>
-                <span class="caret-inner"></span>
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="1.html"><strong aria-hidden="true">2.</strong> Tooling for LFE</a></li><li class="chapter-item expanded "><a href="2.html" class="active"><strong aria-hidden="true">3.</strong> Creating a New Project</a></li><li class="chapter-item expanded "><a href="3.html"><strong aria-hidden="true">4.</strong> LFE Code</a></li><li class="chapter-item expanded "><a href="4.html"><strong aria-hidden="true">5.</strong> Behind the Scenes</a></li></ol>
             </div>
-            <div class="buttons">
-                <button type="button" data-sharing="twitter" class="button">Twitter</button>
-                <button type="button" data-sharing="google-plus" class="button">Google</button>
-                <button type="button" data-sharing="facebook" class="button">Facebook</button>
-                <button type="button" data-sharing="weibo" class="button">Weibo</button>
-                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
-            </div>
-        </div>
-    </div>
-    
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
 
-    
-    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
-    
-    
-    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
-    
-    
-    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
-    
-    
+        <div id="page-wrapper" class="page-wrapper">
 
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="./" >LFE Quick Start</a>
-    </h1>
-</div>
-
-            <div class="page-wrapper" tabindex="-1">
-                <div class="page-inner">
+            <div class="page">
                 
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">LFE Quick Start with lfetool</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
                 
-                    <section class="normal" id="section-gitbook_1">
-                    
-                        <h1 id="creating-a-new-project">Creating a New Project</h1>
-<h2 id="2-your-first-lfe-project">2 Your First LFE Project</h2>
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#creating-a-new-project" id="creating-a-new-project">Creating a New Project</a></h1>
+<h2><a class="header" href="#2-your-first-lfe-project" id="2-your-first-lfe-project">2 Your First LFE Project</a></h2>
 <p><img src="https://raw.github.com/lfe/docs/master/images/barf.jpg"
      style="float: left; padding-right: 1em;">A project? Already?! It sounds
-daunting, but it&#39;s easier than you might think. Open up a terminal window
+daunting, but it's easier than you might think. Open up a terminal window
 and do this in a directory of your choosing:</p>
-<pre><code class="lang-bash">$ lfetool new library my-test-lib
+<pre><code class="language-bash">$ lfetool new library my-test-lib
 </code></pre>
-<p>It might take a minute or two to download and compile everything. Here&#39;s what
+<p>It might take a minute or two to download and compile everything. Here's what
 <code>lfetool</code> is doing:</p>
 <ul>
 <li>Creating a skeleton project (of the &quot;library&quot; type)</li>
@@ -245,40 +175,40 @@ and do this in a directory of your choosing:</p>
 <li>Initializing the project as a git repository</li>
 <li>Running the stubbed unit tests (which will fail -- intentionally!)</li>
 </ul>
-<h3 id="21-tdd-with-lfe">2.1 TDD with LFE</h3>
+<h3><a class="header" href="#21-tdd-with-lfe" id="21-tdd-with-lfe">2.1 TDD with LFE</a></h3>
 <p><code>lfetool</code> encourages you to engage in
-<a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank">test-driven development</a>
+<a href="https://en.wikipedia.org/wiki/Test-driven_development">test-driven development</a>
 by including a broken test in the stubbed unit tests for the project. So, first
-things first, let&#39;s get that failing unit test passing.</p>
+things first, let's get that failing unit test passing.</p>
 <p>Be sure you are in your project directory:</p>
-<pre><code class="lang-bash">$ <span class="hljs-built_in">cd</span> my-test-lib
+<pre><code class="language-bash">$ cd my-test-lib
 </code></pre>
-<p>Here&#39;s the output we saw when the unit test failed:</p>
-<pre><code class="lang-erlang">======================== <span class="hljs-variable">EUnit</span> ========================
+<p>Here's the output we saw when the unit test failed:</p>
+<pre><code class="language-erlang">======================== EUnit ========================
 unit-my-test-lib-tests: my-adder-test ...[failed]
-in function 'unit-my-test-lib-tests':'my-adder-test'/<span class="hljs-number">0</span>
-**error:<span class="hljs-tuple">{assert<span class="hljs-variable">Equal</span>-failed,[<span class="hljs-tuple">{module,'unit-my-test-lib-tests'}</span>,
-          <span class="hljs-tuple">{line,<span class="hljs-number">11</span>}</span>,
-          <span class="hljs-tuple">{expression,<span class="hljs-string">"(: my-test-lib my-adder 2 2)"</span>}</span>,
-          <span class="hljs-tuple">{expected,<span class="hljs-number">4</span>}</span>,
-          <span class="hljs-tuple">{value,<span class="hljs-number">5</span>}</span>]}</span>
+in function 'unit-my-test-lib-tests':'my-adder-test'/0
+**error:{assertEqual-failed,[{module,'unit-my-test-lib-tests'},
+          {line,11},
+          {expression,&quot;(: my-test-lib my-adder 2 2)&quot;},
+          {expected,4},
+          {value,5}]}
 =======================================================
-  <span class="hljs-variable">Failed</span>: <span class="hljs-number">1</span>.  <span class="hljs-variable">Skipped</span>: <span class="hljs-number">0</span>.  <span class="hljs-variable">Passed</span>: <span class="hljs-number">0</span>.
+  Failed: 1.  Skipped: 0.  Passed: 0.
 </code></pre>
 <p>We can see that our test expected 4 but it got 5.</p>
-<p>Let&#39;s look at the test by opening up <code>test/unit-my-test-lib-tests.lfe.</code>.
+<p>Let's look at the test by opening up <code>test/unit-my-test-lib-tests.lfe.</code>.
 Well, things there look good -- we should get 4 when 2 and 2 are added.</p>
-<p>Let&#39;s take a look at the source module: src/my-test-lib.lfe. Ah-ha! There&#39;s an
-extra operation that&#39;s being done which isn&#39;t at all simple addition. We found
+<p>Let's take a look at the source module: src/my-test-lib.lfe. Ah-ha! There's an
+extra operation that's being done which isn't at all simple addition. We found
 our bug :-)</p>
 <p>To fix it, change this line:</p>
-<pre><code class="lang-lisp">  (+ x (+ y 1)))
+<pre><code class="language-lisp">  (+ x (+ y 1)))
 </code></pre>
 <p>to this:</p>
-<pre><code class="lang-lisp">  (+ x y))
+<pre><code class="language-lisp">  (+ x y))
 </code></pre>
 <p>Now re-run the unit tests:</p>
-<pre><code class="lang-bash">$ make check-unit
+<pre><code class="language-bash">$ make check-unit
 </code></pre>
 <p>And you should get a passing test:</p>
 <pre><code>==&gt; my-test-lib (eunit)
@@ -286,12 +216,13 @@ our bug :-)</p>
 unit-my-test-lib-tests: my-adder-test ...[0.002 s] [ok]
 =======================================================
   Test passed.
-</code></pre><p>The <code>make</code> target we executed above executes the unit test runner without
+</code></pre>
+<p>The <code>make</code> target we executed above executes the unit test runner without
 recompiling all the dependencies; it just re-compiles our project <code>./src</code> and
 <code>./test</code> files.</p>
-<p>We&#39;ll talk about the <code>make</code> targets at the end of the Quick Start.</p>
-<h3 id="22-project-inventory">2.2 Project Inventory</h3>
-<p>Okay, we&#39;ve got our tests passing and our project looks healthy. But what does
+<p>We'll talk about the <code>make</code> targets at the end of the Quick Start.</p>
+<h3><a class="header" href="#22-project-inventory" id="22-project-inventory">2.2 Project Inventory</a></h3>
+<p>Okay, we've got our tests passing and our project looks healthy. But what does
 it have in it?</p>
 <ul>
 <li>a README file in Markdown</li>
@@ -304,79 +235,119 @@ dependencies in it)</li>
 <li>the <code>test</code> directory which holds the tests</li>
 </ul>
 <p>There are some other things there (e.g., the <code>deps</code> directory created by
-<code>rebar</code> and the <code>ebin</code> directory that&#39;s created when everything is
+<code>rebar</code> and the <code>ebin</code> directory that's created when everything is
 compiled).</p>
-<h3 id="23-repo-ready-to-go">2.3 Repo Ready to Go</h3>
-<p>As mentioned above, <code>lfetool</code> also <code>init</code>&#39;ed the project with <code>git</code>
+<h3><a class="header" href="#23-repo-ready-to-go" id="23-repo-ready-to-go">2.3 Repo Ready to Go</a></h3>
+<p>As mentioned above, <code>lfetool</code> also <code>init</code>'ed the project with <code>git</code>
 and added all the files:</p>
-<pre><code class="lang-bash">$ git status
-<span class="hljs-comment"># On branch master</span>
-<span class="hljs-comment">#</span>
-<span class="hljs-comment"># Initial commit</span>
-<span class="hljs-comment">#</span>
-<span class="hljs-comment"># Changes to be committed:</span>
-<span class="hljs-comment">#   (use "git rm --cached &lt;file&gt;..." to unstage)</span>
-<span class="hljs-comment">#</span>
-<span class="hljs-comment">#    new file:   .gitignore</span>
-<span class="hljs-comment">#    new file:   .travis.yml</span>
-<span class="hljs-comment">#    new file:   Makefile</span>
-<span class="hljs-comment">#    new file:   README.md</span>
-<span class="hljs-comment">#    new file:   package.exs</span>
-<span class="hljs-comment">#    new file:   rebar.config</span>
-<span class="hljs-comment">#    new file:   resources/make/common.mk</span>
-<span class="hljs-comment">#    new file:   src/my-test-lib-util.lfe</span>
-<span class="hljs-comment">#    new file:   src/my-test-lib.app.src</span>
-<span class="hljs-comment">#    new file:   src/my-test-lib.lfe</span>
-<span class="hljs-comment">#    new file:   test/unit-my-test-lib-tests.lfe</span>
-<span class="hljs-comment">#</span>
+<pre><code class="language-bash">$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+#
+#	new file:   .gitignore
+#	new file:   .travis.yml
+#	new file:   Makefile
+#	new file:   README.md
+#	new file:   package.exs
+#	new file:   rebar.config
+#	new file:   resources/make/common.mk
+#	new file:   src/my-test-lib-util.lfe
+#	new file:   src/my-test-lib.app.src
+#	new file:   src/my-test-lib.lfe
+#	new file:   test/unit-my-test-lib-tests.lfe
+#
 </code></pre>
 <p>Once your remote origin is configured for the repo, you can execute
 <code>git commit -a &amp;&amp; git push --all</code> and have your initial files available on
 the remote server.</p>
-<h3 id="next-stop">Next Stop</h3>
-<p>You can taste it, can&#39;t you? That <em>LFE flavor</em> coming your way? Yup, you&#39;re
-right.  You&#39;re going to be looking at LFE code next ...</p>
+<h3><a class="header" href="#next-stop" id="next-stop">Next Stop</a></h3>
+<p>You can taste it, can't you? That <em>LFE flavor</em> coming your way? Yup, you're
+right.  You're going to be looking at LFE code next ...</p>
 
-                    
-                    </section>
-                
-                
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
                 </div>
             </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
         </div>
 
         
-        <a href="./1.html" class="navigation navigation-prev " aria-label="Previous page: Tooling for LFE"><i class="fa fa-angle-left"></i></a>
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
-        
-        <a href="./3.html" class="navigation navigation-next " aria-label="Next page: LFE Code"><i class="fa fa-angle-right"></i></a>
-        
-    </div>
-</div>
 
         
-<script src="gitbook/app.js"></script>
 
-    
-    <script src="gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
-    
+        
 
-    
-    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
 
-    
-    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
-    
+        
 
-<script>
-require(["gitbook"], function(gitbook) {
-    var config = {"fontSettings":{"theme":"night","family":"serif","size":1},"ga":{"token":"UA-38274766-4"}};
-    gitbook.start(config);
-});
-</script>
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
 
-        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-38274766-4', 'auto');ga('send', 'pageview');</script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
     </body>
-    
 </html>

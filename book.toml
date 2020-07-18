@@ -1,0 +1,17 @@
+[book]
+title = "LFE Quick Start with lfetool"
+author = "Duncan McGreggor"
+description = "An Introduction to LFE Going Ludicrous Speed"
+
+[build]
+build-dir = "_book"
+
+[preprocessor.index]
+
+[preprocessor.links]
+
+[output.html]
+additional-css = ["custom.css"]
+
+[output.html.search]
+limit-results = 15

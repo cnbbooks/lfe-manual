@@ -1,262 +1,193 @@
 <!DOCTYPE HTML>
-<html lang="en-US" >
-    
+<html lang="en" class="sidebar-visible no-js light">
     <head>
-        
+        <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>LFE Code | LFE Quick Start</title>
+        <title>LFE Code - LFE Quick Start with lfetool</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 1.5.0">
-        <meta name="HandheldFriendly" content="true"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
-        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        <meta name="description" content="An Introduction to LFE Going Ludicrous Speed">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
         
+        <link rel="stylesheet" href="fonts/fonts.css">
         
-    
-    
-    <link rel="next" href="./4.html" />
-    
-    
-    <link rel="prev" href="./2.html" />
-    
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="custom.css">
+        
 
         
     </head>
     <body>
-        
-        
-<link rel="stylesheet" href="gitbook/style.css">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
 
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
 
-        
-    <div class="book" data-level="3" data-basepath="." data-revision="1420346318996">
-    
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
 
-<div class="book-summary">
-    <div class="book-search">
-        <input type="text" placeholder="Type to search" class="form-control" />
-    </div>
-    <ul class="summary">
-        
-    	
-    	
-    	    
-            <li>
-                <a href="http://docs.lfe.io/" target="blank" class="custom-link">LFE Documentation Site</a>
-            </li>
-    	
-    	
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
 
-        
-        <li class="divider"></li>
-        
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
 
-        
-    
-        
-        <li class="chapter " data-level="0" data-path="index.html">
-            
-                
-                    <a href="./index.html">
-                        <i class="fa fa-check"></i>
-                        
-                         Introduction
-                    </a>
-                
-            
-            
-        </li>
-    
-        
-        <li class="chapter " data-level="1" data-path="1.html">
-            
-                
-                    <a href="./1.html">
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.</b>
-                        
-                         Tooling for LFE
-                    </a>
-                
-            
-            
-        </li>
-    
-        
-        <li class="chapter " data-level="2" data-path="2.html">
-            
-                
-                    <a href="./2.html">
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.</b>
-                        
-                         Creating a New Project
-                    </a>
-                
-            
-            
-        </li>
-    
-        
-        <li class="chapter active" data-level="3" data-path="3.html">
-            
-                
-                    <a href="./3.html">
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.</b>
-                        
-                         LFE Code
-                    </a>
-                
-            
-            
-        </li>
-    
-        
-        <li class="chapter " data-level="4" data-path="4.html">
-            
-                
-                    <a href="./4.html">
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.</b>
-                        
-                         Behind the Scenes
-                    </a>
-                
-            
-            
-        </li>
-    
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
 
-
-        
-        <li class="divider"></li>
-        <li>
-            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
-        </li>
-        
-    </ul>
-</div>
-
-    <div class="book-body">
-        <div class="body-inner">
-            <div class="book-header">
-    <!-- Actions Left -->
-    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
-    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
-    
-    <div id="font-settings-wrapper" class="dropdown pull-left">
-        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
-        </a>
-        <div class="dropdown-menu font-settings">
-    <div class="dropdown-caret">
-        <span class="caret-outer"></span>
-        <span class="caret-inner"></span>
-    </div>
-
-    <div class="buttons">
-        <button type="button" id="reduce-font-size" class="button size-2">A</button>
-        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
-    </div>
-
-    <div class="buttons font-family-list">
-        <button type="button" data-font="0" class="button">Serif</button>
-        <button type="button" data-font="1" class="button">Sans</button>
-    </div>
-
-    <div class="buttons color-theme-list">
-        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
-        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
-        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
-    </div>
-</div>
-
-    </div>
-
-    <!-- Actions Right -->
-    
-    <div class="dropdown pull-right">
-        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
-        </a>
-        <div class="dropdown-menu font-settings dropdown-left">
-            <div class="dropdown-caret">
-                <span class="caret-outer"></span>
-                <span class="caret-inner"></span>
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="1.html"><strong aria-hidden="true">2.</strong> Tooling for LFE</a></li><li class="chapter-item expanded "><a href="2.html"><strong aria-hidden="true">3.</strong> Creating a New Project</a></li><li class="chapter-item expanded "><a href="3.html" class="active"><strong aria-hidden="true">4.</strong> LFE Code</a></li><li class="chapter-item expanded "><a href="4.html"><strong aria-hidden="true">5.</strong> Behind the Scenes</a></li></ol>
             </div>
-            <div class="buttons">
-                <button type="button" data-sharing="twitter" class="button">Twitter</button>
-                <button type="button" data-sharing="google-plus" class="button">Google</button>
-                <button type="button" data-sharing="facebook" class="button">Facebook</button>
-                <button type="button" data-sharing="weibo" class="button">Weibo</button>
-                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
-            </div>
-        </div>
-    </div>
-    
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
 
-    
-    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
-    
-    
-    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
-    
-    
-    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
-    
-    
+        <div id="page-wrapper" class="page-wrapper">
 
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="./" >LFE Quick Start</a>
-    </h1>
-</div>
-
-            <div class="page-wrapper" tabindex="-1">
-                <div class="page-inner">
+            <div class="page">
                 
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">LFE Quick Start with lfetool</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
                 
-                    <section class="normal" id="section-gitbook_2">
-                    
-                        <h1 id="lfe-code">LFE Code</h1>
-<h2 id="3-hitting-the-code">3 Hitting the Code</h2>
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#lfe-code" id="lfe-code">LFE Code</a></h1>
+<h2><a class="header" href="#3-hitting-the-code" id="3-hitting-the-code">3 Hitting the Code</a></h2>
 <p><img src="https://raw.github.com/lfe/docs/master/images/smash.jpg"
      style="float: right; padding-left: 1em;">It may not seem like it,
-but we&#39;re off to a pretty fast start. If you had to do everything we&#39;ve
-done, manually, you&#39;d have given up by now. Seriously.</p>
-<p>Time to put the brakes on, though, &#39;cause you&#39;re gonna want to see this next
+but we're off to a pretty fast start. If you had to do everything we've
+done, manually, you'd have given up by now. Seriously.</p>
+<p>Time to put the brakes on, though, 'cause you're gonna want to see this next
 part in slow motion.</p>
-<h3 id="31-repl-me-up">3.1 REPL Me Up!</h3>
+<h3><a class="header" href="#31-repl-me-up" id="31-repl-me-up">3.1 REPL Me Up!</a></h3>
 <p>Sure thing :-) Just do this from your new LFE project directory:</p>
-<pre><code class="lang-bash">$ make repl-no-deps
+<pre><code class="language-bash">$ make repl-no-deps
 </code></pre>
 <p>This should give you something that looks like the following:</p>
 <pre><code>Erlang R16B (erts-5.10.1) [source] [smp:8:8] ...
 
 LFE Shell V5.10.1 (abort with ^G)
 &gt;
-</code></pre><p>We&#39;re not going to spend a lot of time in the REPL right now, but feel free to
+</code></pre>
+<p>We're not going to spend a lot of time in the REPL right now, but feel free to
 take it for a spin. Try setting a variable:</p>
-<pre><code class="lang-lisp">&gt; (set my-list (lists:seq 1 6))
+<pre><code class="language-lisp">&gt; (set my-list (lists:seq 1 6))
 (1 2 3 4 5 6)
 </code></pre>
 <p>Here are some operations:</p>
-<pre><code class="lang-lisp">&gt; (* 2 (lists:sum my-list))
+<pre><code class="language-lisp">&gt; (* 2 (lists:sum my-list))
 42
 &gt; (* 2 (lists:foldl (lambda (n acc) (+ n acc)) 0 my-list))
 42
 </code></pre>
 <p>Turn that into a function:</p>
-<pre><code class="lang-lisp">&gt; (defun my-sum (start stop)
+<pre><code class="language-lisp">&gt; (defun my-sum (start stop)
     (let ((my-list (lists:seq start stop)))
       (* 2 (lists:foldl
              (lambda (n acc)
@@ -265,24 +196,24 @@ take it for a spin. Try setting a variable:</p>
 my-sum
 </code></pre>
 <p>And try it out!</p>
-<pre><code class="lang-lisp">&gt; (my-sum 1 6)
+<pre><code class="language-lisp">&gt; (my-sum 1 6)
 42
 </code></pre>
 <p>Enough fancy stuff ... What about some <em>real</em> code? What does a <strong>project</strong>
 look like?</p>
-<h3 id="32-sample-code">3.2 Sample Code</h3>
-<p>Well, you&#39;ve already seen one! Let&#39;s print it here for your viewing pleasure,
-though. Here&#39;s the starter project you have, with just the one module:</p>
-<pre><code class="lang-lisp"><span class="hljs-list">(<span class="hljs-keyword">defmodule</span> my-test-lib
-  <span class="hljs-list">(<span class="hljs-keyword">export</span> all)</span>)</span>
+<h3><a class="header" href="#32-sample-code" id="32-sample-code">3.2 Sample Code</a></h3>
+<p>Well, you've already seen one! Let's print it here for your viewing pleasure,
+though. Here's the starter project you have, with just the one module:</p>
+<pre><code class="language-lisp">(defmodule my-test-lib
+  (export all))
 
-<span class="hljs-list">(<span class="hljs-keyword">defun</span> my-adder <span class="hljs-list">(<span class="hljs-keyword">x</span> y)</span>
-  <span class="hljs-list">(<span class="hljs-keyword">+</span> x y)</span>)</span>
+(defun my-adder (x y)
+  (+ x y))
 </code></pre>
-<p>Let&#39;s go ahead and add our new <code>my-sum</code> function to that module in another
-terminal window. Once you&#39;ve done that, come back into the REPL and re-compile
+<p>Let's go ahead and add our new <code>my-sum</code> function to that module in another
+terminal window. Once you've done that, come back into the REPL and re-compile
 the module:</p>
-<pre><code class="lang-lisp">&gt; (c "src/my-test-lib.lfe")
+<pre><code class="language-lisp">&gt; (c &quot;src/my-test-lib.lfe&quot;)
 #(module my-test-lib)
 &gt; (my-test-lib:my-sum 1 6)
 42
@@ -291,84 +222,84 @@ the module:</p>
 &gt;
 </code></pre>
 <p>The other code that a generated LFE library project comes with is the unit
-tests, which we&#39;ve already seen:</p>
-<pre><code class="lang-lisp"><span class="hljs-list">(<span class="hljs-keyword">defmodule</span> unit-my-test-lib-tests
-  <span class="hljs-list">(<span class="hljs-keyword">behaviour</span> ltest-unit)</span>
-  <span class="hljs-list">(<span class="hljs-keyword">export</span> all)</span>
-  <span class="hljs-list">(<span class="hljs-keyword">import</span>
-    <span class="hljs-list">(<span class="hljs-keyword">from</span> ltest
-      <span class="hljs-list">(<span class="hljs-keyword">check-failed-assert</span> <span class="hljs-number">2</span>)</span>
-      <span class="hljs-list">(<span class="hljs-keyword">check-wrong-assert-exception</span> <span class="hljs-number">2</span>)</span>)</span>)</span>)</span>
+tests, which we've already seen:</p>
+<pre><code class="language-lisp">(defmodule unit-my-test-lib-tests
+  (behaviour ltest-unit)
+  (export all)
+  (import
+    (from ltest
+      (check-failed-assert 2)
+      (check-wrong-assert-exception 2))))
 
-<span class="hljs-list">(<span class="hljs-keyword">include-lib</span> <span class="hljs-string">"ltest/include/ltest-macros.lfe"</span>)</span>
+(include-lib &quot;ltest/include/ltest-macros.lfe&quot;)
 
-<span class="hljs-list">(<span class="hljs-keyword">deftest</span> my-adder
-  <span class="hljs-list">(<span class="hljs-keyword">is-equal</span> <span class="hljs-number">4</span> <span class="hljs-list">(: my-test-lib my-adder <span class="hljs-number">2</span> <span class="hljs-number">2</span>)</span>)</span>)</span>
+(deftest my-adder
+  (is-equal 4 (: my-test-lib my-adder 2 2)))
 </code></pre>
-<p>Let&#39;s fill that out a little more with a few more tests. We can
-also get rid of the imports we&#39;re not using. And we can update
+<p>Let's fill that out a little more with a few more tests. We can
+also get rid of the imports we're not using. And we can update
 the calls to use the new <code>(mod:func ...)</code> syntax:</p>
-<pre><code class="lang-lisp"><span class="hljs-list">(<span class="hljs-keyword">defmodule</span> unit-my-test-lib-tests
-  <span class="hljs-list">(<span class="hljs-keyword">behaviour</span> ltest-unit)</span>
-  <span class="hljs-list">(<span class="hljs-keyword">export</span> all)</span>)</span>
+<pre><code class="language-lisp">(defmodule unit-my-test-lib-tests
+  (behaviour ltest-unit)
+  (export all))
 
-<span class="hljs-list">(<span class="hljs-keyword">include-lib</span> <span class="hljs-string">"ltest/include/ltest-macros.lfe"</span>)</span>
+(include-lib &quot;ltest/include/ltest-macros.lfe&quot;)
 
-<span class="hljs-list">(<span class="hljs-keyword">deftest</span> my-adder
-  <span class="hljs-list">(<span class="hljs-keyword">is-equal</span> <span class="hljs-number">4</span> <span class="hljs-list">(<span class="hljs-keyword">my-test-lib</span><span class="hljs-keyword">:my-adder</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span>)</span>)</span>)</span>
+(deftest my-adder
+  (is-equal 4 (my-test-lib:my-adder 2 2)))
 
-<span class="hljs-list">(<span class="hljs-keyword">deftest</span> my-sum
-  <span class="hljs-list">(<span class="hljs-keyword">is-equal</span> <span class="hljs-number">42</span> <span class="hljs-list">(<span class="hljs-keyword">my-test-lib</span><span class="hljs-keyword">:my-sum</span> <span class="hljs-number">1</span> <span class="hljs-number">6</span>)</span>)</span>
-  <span class="hljs-list">(<span class="hljs-keyword">is-equal</span> <span class="hljs-number">3660</span> <span class="hljs-list">(<span class="hljs-keyword">my-test-lib</span><span class="hljs-keyword">:my-sum</span> <span class="hljs-number">1</span> <span class="hljs-number">60</span>)</span>)</span>)</span>
+(deftest my-sum
+  (is-equal 42 (my-test-lib:my-sum 1 6))
+  (is-equal 3660 (my-test-lib:my-sum 1 60)))
 
-<span class="hljs-list">(<span class="hljs-keyword">deftest</span> my-sum-zeros
-  <span class="hljs-list">(<span class="hljs-keyword">is-equal</span> <span class="hljs-number">0</span> <span class="hljs-list">(<span class="hljs-keyword">my-test-lib</span><span class="hljs-keyword">:my-sum</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>)</span>)</span>)</span>
+(deftest my-sum-zeros
+  (is-equal 0 (my-test-lib:my-sum 0 0)))
 </code></pre>
-<p>Let&#39;s make sure our tests pass:</p>
-<pre><code class="lang-bash">$ make check-unit
+<p>Let's make sure our tests pass:</p>
+<pre><code class="language-bash">$ make check-unit
 ...
 ======================== EUnit ========================
-module <span class="hljs-string">'unit-my-test-lib-tests'</span>
-  my-adder ............................. [<span class="hljs-number">0.002</span> s] [ok]
+module 'unit-my-test-lib-tests'
+  my-adder ............................. [0.002 s] [ok]
   my-sum ......................................... [ok]
   my-sum-zeros ................................... [ok]
-  Total module test time: <span class="hljs-number">0.012</span> s
+  Total module test time: 0.012 s
 =======================================================
-  All <span class="hljs-number">3</span> tests passed.
+  All 3 tests passed.
 </code></pre>
 <p>Looking good :-)</p>
-<p>Here&#39;s something a little more involved you may enjoy, from the examples in the
+<p>Here's something a little more involved you may enjoy, from the examples in the
 LFE source code:</p>
-<pre><code class="lang-lisp"><span class="hljs-list">(<span class="hljs-keyword">defmodule</span> messenger-back
- <span class="hljs-list">(<span class="hljs-keyword">export</span> <span class="hljs-list">(<span class="hljs-keyword">print-result</span> <span class="hljs-number">0</span>)</span> <span class="hljs-list">(<span class="hljs-keyword">send-message</span> <span class="hljs-number">2</span>)</span>)</span>)</span>
+<pre><code class="language-lisp">(defmodule messenger-back
+ (export (print-result 0) (send-message 2)))
 
-<span class="hljs-list">(<span class="hljs-keyword">defun</span> print-result <span class="hljs-list">()</span>
-  <span class="hljs-list">(<span class="hljs-keyword">receive</span>
-    <span class="hljs-list">(<span class="hljs-list">(<span class="hljs-keyword">tuple</span> pid msg)</span>
-      <span class="hljs-list">(<span class="hljs-keyword">io</span><span class="hljs-keyword">:format</span> <span class="hljs-string">"Received message: '~s'~n"</span> <span class="hljs-list">(<span class="hljs-keyword">list</span> msg)</span>)</span>
-      <span class="hljs-list">(<span class="hljs-keyword">io</span><span class="hljs-keyword">:format</span> <span class="hljs-string">"Sending message to process ~p ...~n"</span> <span class="hljs-list">(<span class="hljs-keyword">list</span> pid)</span>)</span>
-      <span class="hljs-list">(! pid <span class="hljs-list">(<span class="hljs-keyword">tuple</span> msg)</span>)</span>
-      <span class="hljs-list">(<span class="hljs-keyword">print-result</span>)</span>)</span>)</span>)</span>
+(defun print-result ()
+  (receive
+    ((tuple pid msg)
+      (io:format &quot;Received message: '~s'~n&quot; (list msg))
+      (io:format &quot;Sending message to process ~p ...~n&quot; (list pid))
+      (! pid (tuple msg))
+      (print-result))))
 
-<span class="hljs-list">(<span class="hljs-keyword">defun</span> send-message <span class="hljs-list">(<span class="hljs-keyword">calling-pid</span> msg)</span>
-  <span class="hljs-list">(<span class="hljs-keyword">let</span> <span class="hljs-list">(<span class="hljs-list">(<span class="hljs-keyword">spawned-pid</span> <span class="hljs-list">(<span class="hljs-keyword">spawn</span> <span class="hljs-quoted">'messenger-back</span> <span class="hljs-quoted">'print-result</span> <span class="hljs-list">()</span>)</span>)</span>)</span>
-    <span class="hljs-list">(! spawned-pid <span class="hljs-list">(<span class="hljs-keyword">tuple</span> calling-pid msg)</span>)</span>)</span>)</span>
+(defun send-message (calling-pid msg)
+  (let ((spawned-pid (spawn 'messenger-back 'print-result ())))
+    (! spawned-pid (tuple calling-pid msg))))
 </code></pre>
-<p>That bit of code demonstrates one of Erlang&#39;s core features in lovely Lisp
+<p>That bit of code demonstrates one of Erlang's core features in lovely Lisp
 syntax: message passing. When loaded into the REPL, that example shows some
 bidirectional message passing between the LFE shell and a spawned process.</p>
 <p>Want to give it a try? Start by compiling the example module:</p>
-<pre><code class="lang-lisp">&gt; (c "deps/lfe/examples/messenger-back.lfe")
+<pre><code class="language-lisp">&gt; (c &quot;deps/lfe/examples/messenger-back.lfe&quot;)
 #(module messenger-back)
 </code></pre>
-<p>Next, let&#39;s send two messages to another Erlang process (in this case, we&#39;ll
+<p>Next, let's send two messages to another Erlang process (in this case, we'll
 send it to our REPL process, <code>(self)</code>:</p>
-<pre><code class="lang-lisp">&gt; (messenger-back:send-message (self) "And what does it say now?")
-#(&lt;0.26.0&gt; "And what does it say now?")
+<pre><code class="language-lisp">&gt; (messenger-back:send-message (self) &quot;And what does it say now?&quot;)
+#(&lt;0.26.0&gt; &quot;And what does it say now?&quot;)
 Received message: 'And what does it say now?'
 Sending message to process &lt;0.26.0&gt; ...
-&gt; (messenger-back:send-message (self) "Mostly harmless.")
-#(&lt;0.26.0&gt; "Mostly harmless.")
+&gt; (messenger-back:send-message (self) &quot;Mostly harmless.&quot;)
+#(&lt;0.26.0&gt; &quot;Mostly harmless.&quot;)
 Received message: 'Mostly harmless.'
 Sending message to process &lt;0.26.0&gt; ...
 </code></pre>
@@ -376,59 +307,99 @@ Sending message to process &lt;0.26.0&gt; ...
 message (because the example was coded like that). But what about the receiver
 itself? What did it, our REPL process, see? We can flush the message
 queue in the REPL to find out:</p>
-<pre><code class="lang-lisp">&gt; (c:flush)
-Shell got {"And what does it say now?"}
-Shell got {"Mostly harmless."}
+<pre><code class="language-lisp">&gt; (c:flush)
+Shell got {&quot;And what does it say now?&quot;}
+Shell got {&quot;Mostly harmless.&quot;}
 ok
 </code></pre>
 <p>If you found this last bit interesting and want to step through a tutorial on
-Erlang&#39;s light-weight threads in more detail, you may enjoy
-<a href="http://docs.lfe.io/tutorials/processes/1.html" target="_blank">this tutorial</a>.</p>
-<h3 id="next-stop">Next Stop</h3>
-<p>We did promise a bit more information, so we&#39;re going to do that
+Erlang's light-weight threads in more detail, you may enjoy
+<a href="http://docs.lfe.io/tutorials/processes/1.html">this tutorial</a>.</p>
+<h3><a class="header" href="#next-stop" id="next-stop">Next Stop</a></h3>
+<p>We did promise a bit more information, so we're going to do that
 next and then wrap up the quick start and point you in some
 directions for your next LFE adventures ...</p>
 
-                    
-                    </section>
-                
-                
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
                 </div>
             </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
         </div>
 
         
-        <a href="./2.html" class="navigation navigation-prev " aria-label="Previous page: Creating a New Project"><i class="fa fa-angle-left"></i></a>
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
-        
-        <a href="./4.html" class="navigation navigation-next " aria-label="Next page: Behind the Scenes"><i class="fa fa-angle-right"></i></a>
-        
-    </div>
-</div>
 
         
-<script src="gitbook/app.js"></script>
 
-    
-    <script src="gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
-    
+        
 
-    
-    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
 
-    
-    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
-    
+        
 
-<script>
-require(["gitbook"], function(gitbook) {
-    var config = {"fontSettings":{"theme":"night","family":"serif","size":1},"ga":{"token":"UA-38274766-4","configuration":"auto"}};
-    gitbook.start(config);
-});
-</script>
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
 
-        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-38274766-4', 'auto');ga('send', 'pageview');</script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
     </body>
-    
 </html>
