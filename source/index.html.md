@@ -134,13 +134,11 @@ library locations for use by shells and REPLs.
 rebar3 lfe repl
 ```
 
-## Creating Projects
+## Creating Libraries
 
 The `rebar3_lfe` plugin is capable of creating several common project layouts.
-The following sub-sections provide details on those that are currently
+This and following sections provide details on those that are currently
 supported.
-
-### Library
 
 Library projects are those with no running applications or scripts; they simply
 provide some core bit of functionality intended for use by applications,
@@ -197,7 +195,7 @@ lfe> (mything:my-fun)
 hello-world
 ```
 
-### `main` Script
+## Creating `main` Scripts
 
 LFE supports the creation of scripts, and these can be integrated with
 libraries, allowing for the best of both worlds: a simple collection of
@@ -236,15 +234,13 @@ Running script '/usr/local/bin/rebar3' with args [<<"42">>] ...
 'hello-worl
 ```
 
-> To create an escript-based project:
-
-### escript
+## Creating escripts
 
 The LFE rebar3 plugin also supports generating escript-based projects
 *in LFE*. This is similar in nature to the `main`-based project, but is more
 standard in the BEAM family of languages.
 
-> Generate the project:
+> To create an escript-based project:
 
 ```shell
 rebar3 new lfe-escript myapp
@@ -280,7 +276,7 @@ Got args: ("1" "2" "5" "no" "3!")
 Answer: 42
 ```
 
-### OTP Application
+## Creating OTP Applications
 
 In the wider Erlang community, it is very common to see applications that
 run one or more `gen_server`s (or other server behaviours) managed by a
@@ -325,7 +321,7 @@ lfe> (myapp:echo "testing the supervised gen_server ...")
 "testing the supervised gen_server ..."
 ```
 
-### OTP Release
+### Creating OTP Releases
 
 If you're going to be running an LFE application in production, you will very
 likely want to do so using the "release" functionality provided by OTP.
@@ -399,7 +395,7 @@ Eshell V11.0  (abort with ^G)
 "testing from production!"
 ```
 
-## Cleanup
+## Cleanup Commands
 
 There are a handful of tasks the author of the plugin as found useful when
 debugging LFE applications, rebar3 plugins, etc. These include various
@@ -430,10 +426,12 @@ rebar3 lfe clean-cache
 rebar3 lfe clean-all
 ```
 
-## Metadata
+## Versions
 
-The tasks in this section relate to obtaining metadata about a project, LFE,
-the LFE rebar3 plugin, and the Erlang release installed/active on your machine.
+It can be very useful to obtain all the important version info for a project:
+your project, LFE, the LFE rebar3 plugin, and the Erlang release
+installed/active on your machine. When submiting a bug or asking for help on
+the LFE Slack, you might very well be asked for this information.
 
 > Get versions:
 
