@@ -20,7 +20,7 @@ publish-image:
 run:
 	docker run -d --rm --name $(CONTAINER_NAME) \
 		-p 4567:4567 \
-		-v `pwd`/site:/srv/slate/build \
+		-v `pwd`/site/current:/srv/slate/build \
 		-v `pwd`/source:/srv/slate/source $(DOCKER_TAG)
 
 stop:
