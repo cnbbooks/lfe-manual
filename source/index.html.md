@@ -58,6 +58,8 @@ project, with many updates and using all the latest approaches developed in
   * `rebar3 lfe repl`
 * Compile LFE source code:
   * `rebar3 lfe compile`
+* Run eunit tests
+  * `rebar3 eunit`
 * Run an LFE project's `main/1` function as an lfescript (run `rebar3 new lfe-main` to see an example):
   * `rebar3 lfe run`
   * `rebar3 lfe run -- 1 2 5`
@@ -142,6 +144,38 @@ library locations for use by shells and REPLs.
 ```shell
 rebar3 lfe repl
 ```
+
+## Testing with `eunit`
+
+If you have written `eunit` tests in Erlang or LFE, they will be compiled by
+either the `rebar3 compile` or `rebar3 lfe compile` command and thus be
+available and ready to run using rebar3 as-is.
+
+> Run compiled `eunit` tests:
+
+```shell
+rebar3 eunit
+```
+
+## Testing with `ltest`
+
+The `ltest` library provides a Lispy wrapping around `eunit`, but it also has
+other offerings:
+
+* a means of separating tests into integration, system, and unit tests
+* a pretty test running
+* a nicely readable test report / summary
+
+To include `ltest` in your project, it needs to be added as a dependency in
+`rebar.config`:
+
+```erlang
+TBD
+```
+
+## Testing with `ct`
+
+TBD
 
 ## Creating Libraries
 
