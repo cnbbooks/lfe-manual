@@ -15,7 +15,7 @@ code_clipboard: true
 
 # `rebar3_lfe` v0.3.0-dev
 
-This is the documentation for `rebar3_lfe` v0.3.0-dev, released 2020-xx-xx.
+This is the documentation for `rebar3_lfe` v0.3.0-dev (unreleased).
 
 Previos versions of the documentation:
 
@@ -100,7 +100,7 @@ advantage of the LFE rebar3 plugin is add it to the plugins in your global
 ```erlang
 {plugins, [
   {rebar3_lfe,
-    {git, "https://github.com/lfe-rebar3/rebar2_lfe.git", {tag, "0.3.0-dev"}}}
+    {git, "https://github.com/lfe-rebar3/rebar2_lfe.git", {branch, "release/0.3.x"}}}
 ]}.
 ```
 
