@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>LFE Quick Start with lfetool</title>
+        <title>LFE Quick Start with rebar3</title>
         
         <meta name="robots" content="noindex" />
         
@@ -15,7 +15,7 @@
 
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="An Introduction to LFE Going Ludicrous Speed">
+        <meta name="description" content="An Introduction to LFE: Going Ludicrous Speed">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
@@ -125,11 +125,15 @@
                         
                     </div>
 
-                    <h1 class="menu-title">LFE Quick Start with lfetool</h1>
+                    <h1 class="menu-title">LFE Quick Start with rebar3</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        <a href="https://github.com/lfe/rebar3-quick-start" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
                         
                     </div>
@@ -175,7 +179,7 @@ ludicrous speed.</p>
 <p>[](Named page links below ...)</p>
 <h1><a class="header" href="#tooling-for-lfe" id="tooling-for-lfe">Tooling for LFE</a></h1>
 <h2><a class="header" href="#1-going-plaid" id="1-going-plaid">1 Going Plaid</a></h2>
-<p><img src="https://raw.github.com/lfe/docs/master/images/plaid.jpg"
+<p><img src="https://raw.githubusercontent.com/lfe/docs/master/docs/current/images/plaid.jpg"
      style="float: right;">
 This is a quick-start, a blur of color. You're not going to get very many
 details here, but you <em>will</em> get to jump into the LFE REPL and see a little
@@ -256,7 +260,7 @@ environment.</p>
 just one command ...</p>
 <h1><a class="header" href="#creating-a-new-project" id="creating-a-new-project">Creating a New Project</a></h1>
 <h2><a class="header" href="#2-your-first-lfe-project" id="2-your-first-lfe-project">2 Your First LFE Project</a></h2>
-<p><img src="https://raw.github.com/lfe/docs/master/images/barf.jpg"
+<p><img src="https://raw.githubusercontent.com/lfe/docs/master/docs/current/images/barf.jpg"
      style="float: left; padding-right: 1em;">A project? Already?! It sounds
 daunting, but it's easier than you might think. Open up a terminal window
 and do this in a directory of your choosing:</p>
@@ -366,7 +370,7 @@ the remote server.</p>
 right.  You're going to be looking at LFE code next ...</p>
 <h1><a class="header" href="#lfe-code" id="lfe-code">LFE Code</a></h1>
 <h2><a class="header" href="#3-hitting-the-code" id="3-hitting-the-code">3 Hitting the Code</a></h2>
-<p><img src="https://raw.github.com/lfe/docs/master/images/smash.jpg"
+<p><img src="https://raw.githubusercontent.com/lfe/docs/master/docs/current/images/smash.jpg"
      style="float: right; padding-left: 1em;">It may not seem like it,
 but we're off to a pretty fast start. If you had to do everything we've
 done, manually, you'd have given up by now. Seriously.</p>
@@ -528,7 +532,7 @@ next and then wrap up the quick start and point you in some
 directions for your next LFE adventures ...</p>
 <h1><a class="header" href="#behind-the-scenes" id="behind-the-scenes">Behind the Scenes</a></h1>
 <h2><a class="header" href="#4-the-magic-behind-the-mystery" id="4-the-magic-behind-the-mystery">4 The Magic Behind the Mystery</a></h2>
-<p><img src="https://raw.github.com/lfe/docs/master/images/doubles.jpg"
+<p><img src="https://raw.githubusercontent.com/lfe/docs/master/docs/current/images/doubles.jpg"
      style="float: right; padding-left: 1em;"></p>
 <p>As we warned in the beginning, there's a lot going on behind the scenes: in <code>lfetool</code>, <code>rebar</code>, and even LFE itself. This guide just gives you a quick taste of the LFE flavour :-) Before parting ways, though, there are some more bits we should share.</p>
 <h3><a class="header" href="#41-using-make-in-lfetool-projects" id="41-using-make-in-lfetool-projects">4.1 Using <code>make</code> in <code>lfetool</code> Projects</a></h3>
@@ -627,22 +631,24 @@ sure to give a full description so that we can best help you!</p>
         </div>
 
         
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
 
-            window.onbeforeunload = function() {
-                socket.close();
+        
+        <!-- Google Analytics Tag -->
+        <script type="text/javascript">
+            var localAddrs = ["localhost", "127.0.0.1", ""];
+
+            // make sure we don't activate google analytics if the developer is
+            // inspecting the book locally...
+            if (localAddrs.indexOf(document.location.hostname) === -1) {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-38274766-4', 'auto');
+                ga('send', 'pageview');
             }
         </script>
-        
-
         
 
         

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Tooling for LFE - LFE Quick Start with lfetool</title>
+        <title>Tooling for LFE - LFE Quick Start with rebar3</title>
         
         
 
@@ -13,7 +13,7 @@
 
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="An Introduction to LFE Going Ludicrous Speed">
+        <meta name="description" content="An Introduction to LFE: Going Ludicrous Speed">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
@@ -123,11 +123,15 @@
                         
                     </div>
 
-                    <h1 class="menu-title">LFE Quick Start with lfetool</h1>
+                    <h1 class="menu-title">LFE Quick Start with rebar3</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        <a href="https://github.com/lfe/rebar3-quick-start" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
                         
                     </div>
@@ -159,7 +163,7 @@
                     <main>
                         <h1><a class="header" href="#tooling-for-lfe" id="tooling-for-lfe">Tooling for LFE</a></h1>
 <h2><a class="header" href="#1-going-plaid" id="1-going-plaid">1 Going Plaid</a></h2>
-<p><img src="https://raw.github.com/lfe/docs/master/images/plaid.jpg"
+<p><img src="https://raw.githubusercontent.com/lfe/docs/master/docs/current/images/plaid.jpg"
      style="float: right;">
 This is a quick-start, a blur of color. You're not going to get very many
 details here, but you <em>will</em> get to jump into the LFE REPL and see a little
@@ -277,22 +281,24 @@ just one command ...</p>
         </div>
 
         
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
 
-            window.onbeforeunload = function() {
-                socket.close();
+        
+        <!-- Google Analytics Tag -->
+        <script type="text/javascript">
+            var localAddrs = ["localhost", "127.0.0.1", ""];
+
+            // make sure we don't activate google analytics if the developer is
+            // inspecting the book locally...
+            if (localAddrs.indexOf(document.location.hostname) === -1) {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-38274766-4', 'auto');
+                ga('send', 'pageview');
             }
         </script>
-        
-
         
 
         
