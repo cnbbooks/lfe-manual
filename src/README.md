@@ -16,7 +16,7 @@ We will cover the following:
 In essence, this guide will give you what you need in order to jump into LFE at
 ludicrous speed.
 
-[](Named page links below ...)
+<!-- Named page links below: /-->
 
 [cover]: images/cover_small.jpg
 [cover-large]: images/cover.jpg
