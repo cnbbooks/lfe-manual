@@ -1,0 +1,5 @@
+code,
+:not(pre):not(a)>.hljs {
+    background-color: var(--inline-code-background-color);
+    color: var(--inline-code-color);
+}
