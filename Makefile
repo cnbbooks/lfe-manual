@@ -1,6 +1,7 @@
 BIN = mdbook
 GEN := $(shell which $(BIN) 2> /dev/null)
 DOWNLOAD = https://github.com/rust-lang/mdBook/releases
+PUBLISH_DIR = book
 
 define BINARY_ERROR
 
@@ -23,7 +24,6 @@ run: serve
 
 publish:
 	-@cd $(PUBLISH_DIR) && \
-	git add images/* && \
 	git commit -am "Regenerated documentation site." > /dev/null && \
 	git push origin master
 	-@git add $(PUBLISH_DIR) && \
