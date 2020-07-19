@@ -38,12 +38,29 @@ rebar3 lfe run-release ping
 pong
 ```
 
-> If your `ping` doesn't get a `pong` after starting the release, this is a known
-> issue that is being investigated in the following ticket:
+<div class="alert alert-warning">
+  <h4 class="alert-heading">
+    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+    Known Issue!
+  </h4>
+  <p class="mb-0">
+    If your <code>ping</code> doesn't get a <code>pong</code> after starting the
+    release, this is a known issue that is being investigated in the following ticket:
+  </p>
+</div>
 
-* [https://github.com/lfe-rebar3/rebar3_lfe/issues/33](https://github.com/lfe-rebar3/rebar3_lfe/issues/33)
+[https://github.com/lfe-rebar3/rebar3_lfe/issues/33](https://github.com/lfe-rebar3/rebar3_lfe/issues/33)
 
-> The current workaround for a relese that doesn't start is simply to run the following again:
+<div class="alert alert-info">
+  <h4 class="alert-heading">
+    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    Workaround
+  </h4>
+  <p class="mb-0">
+    The current workaround for a relese that doesn't start is simply to run the following again:
+  </p>
+</div>
+
 
 ```shell
 rebar3 release

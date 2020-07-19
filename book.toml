@@ -1,5 +1,5 @@
 [book]
-title = "rebar3_lfe Command Reference"
+title = "The LFE rebar3 Plugin Command Reference"
 author = "Duncan McGreggor"
 description = "The reference documentation for the LFE rebar3 plugin"
 language = "en"
