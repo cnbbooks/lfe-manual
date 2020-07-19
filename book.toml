@@ -5,7 +5,7 @@ description = "The reference documentation for the LFE rebar3 plugin"
 language = "en"
 
 [build]
-build-dir = "docs/current"
+build-dir = "book/current"
 
 [preprocessor.index]
 

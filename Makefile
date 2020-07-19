@@ -20,3 +20,13 @@ serve:
 	@$(GEN) serve
 
 run: serve
+
+publish:
+	-@cd $(PUBLISH_DIR) && \
+	git add images/* && \
+	git commit -am "Regenerated documentation site." > /dev/null && \
+	git push origin master
+	-@git add $(PUBLISH_DIR) && \
+	git commit -am "Updated submodule for recently published site content." && \
+	git submodule update && \
+	git push origin site-builder
