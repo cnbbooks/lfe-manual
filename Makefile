@@ -25,6 +25,9 @@ run: serve
 clean:
 	@rm $(PUBLISH_DIR)/README.md
 
+book-init:
+	@git submodule update --init --recursive
+
 $(PUBLISH_DIR)/README.md:
 	@echo '# Content for `rebar3_lfe` Command Reference' > $(PUBLISH_DIR)/README.md
 	@echo 'Published at [lfe-rebar3.github.io](https://lfe-rebar3.github.io/)' >> $(PUBLISH_DIR)/README.md
