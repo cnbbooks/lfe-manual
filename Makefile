@@ -1,42 +1,22 @@
-PROJ = slate
-VERSION = 2.7.0
-BASE_DOCKER_VERSION = ruby2.6
-DOCKER_ORG = lfex
-DOCKER_TAG_PREFIX = $(DOCKER_ORG)/$(PROJ)
-FULL_VERSION = $(VERSION)-$(BASE_DOCKER_VERSION)
-DOCKER_TAG = $(DOCKER_TAG_PREFIX):$(FULL_VERSION)
-DOCKER_LATEST = $(DOCKER_TAG_PREFIX):latest
-CONTAINER_NAME = lfe-rebar3-docs
-PUBLISH_DIR = site
+BIN = mdbook
+GEN := $(shell which $(BIN) 2> /dev/null)
+DOWNLOAD = https://github.com/rust-lang/mdBook/releases
 
-image:
-	docker build . -t $(DOCKER_TAG)
-	docker tag $(DOCKER_TAG) $(DOCKER_LATEST)
+define BINARY_ERROR
 
-publish-image:
-	docker push $(DOCKER_TAG)
-	docker push $(DOCKER_LATEST)
+No $(BIN) found in Path.
 
-run:
-	docker run -d --rm --name $(CONTAINER_NAME) \
-		-p 4567:4567 \
-		-v `pwd`/site/current:/srv/slate/build \
-		-v `pwd`/source:/srv/slate/source $(DOCKER_TAG)
+Download $(BIN) from $(DOWNLOAD).
 
-stop:
-	docker stop $(CONTAINER_NAME)
+endef
 
-regen:
-	docker exec -it $(CONTAINER_NAME) /bin/bash -c "bundle exec middleman build"
+build:
+ifndef GEN
+	$(error $(BINARY_ERROR))
+endif
+	@$(GEN) build
 
-publish:
-	-@cd $(PUBLISH_DIR) && \
-	git add images/* && \
-	git commit -am "Regenerated documentation site." > /dev/null && \
-	git push origin master
-	-@git add $(PUBLISH_DIR) && \
-	git commit -am "Updated submodule for recently published site content." && \
-	git submodule update && \
-	git push origin site-builder
+serve:
+	@$(GEN) serve
 
-regen-pub: regen publish
+run: serve

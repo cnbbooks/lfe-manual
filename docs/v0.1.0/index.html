@@ -1,0 +1,540 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>rebar3_lfe Documentation</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-85664f05.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-6a2d984b.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-e9bde216.js"></script>
+
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-c034c1fd.png" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#rebar3_lfe-v0-1-0" class="toc-h1 toc-link" data-title="rebar3_lfe v0.1.0"><code>rebar3_lfe</code> v0.1.0</a>
+          </li>
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#background" class="toc-h1 toc-link" data-title="Background">Background</a>
+          </li>
+          <li>
+            <a href="#features" class="toc-h1 toc-link" data-title="Features">Features</a>
+          </li>
+          <li>
+            <a href="#setup" class="toc-h1 toc-link" data-title="Setup">Setup</a>
+          </li>
+          <li>
+            <a href="#command-reference" class="toc-h1 toc-link" data-title="Command Reference">Command Reference</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#compiling" class="toc-h2 toc-link" data-title="Compiling">Compiling</a>
+                  </li>
+                  <li>
+                    <a href="#running-the-repl" class="toc-h2 toc-link" data-title="Running the REPL">Running the REPL</a>
+                  </li>
+                  <li>
+                    <a href="#creating-libraries" class="toc-h2 toc-link" data-title="Creating Libraries">Creating Libraries</a>
+                  </li>
+                  <li>
+                    <a href="#creating-main-scripts" class="toc-h2 toc-link" data-title="Creating main Scripts">Creating <code>main</code> Scripts</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://github.com/lfe-rebar3/rebar3_lfe'>rebar3_lfe on Github</a></li>
+            <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='rebar3_lfe-v0-1-0'><code>rebar3_lfe</code> v0.1.0</h1>
+<p>This is the documentation for <code>rebar3_lfe</code> v0.1.0, released 2020-07-14.</p>
+<h1 id='introduction'>Introduction</h1>
+<p>The <code>rebar3_lfe</code> project is a rebar3 plugin for the <a href="https://en.wikipedia.org/wiki/LFE_(programming_language)">LFE language</a>.
+It provides many of the conveniences one has come to expext of a programming
+language&#39;s build tool:</p>
+
+<ul>
+<li>Project Creation</li>
+<li>A REPL</li>
+<li>Compilation</li>
+<li>Maintenane Tasks (e.g., file cleanup)</li>
+<li>Metadata</li>
+</ul>
+<h1 id='background'>Background</h1>
+<p>This plugin originally started life as a shell script (<code>lfetool</code> -- there&#39;s
+even a T-shirt for it!), then it toyed with integrating with <code>rebar</code> (the
+original). Around that time, though, <code>rebar3</code> was under initial development,
+and LFE took a chance on it as an early adopter. This lead to a whole series of
+LFE plugins, but after a few years momentum was lost. </p>
+
+<p>Those early <code>rebar3</code> efforts have been combined into a single plugin in this
+project, with many updates and using all the latest approaches developed in
+<code>rebar3</code>&#39;s now mature ecosystem.</p>
+<h1 id='features'>Features</h1>
+<ul>
+<li>Create new LFE projects:
+
+<ul>
+<li><code>rebar3 new lfe-lib</code></li>
+<li><code>rebar3 new lfe-main</code></li>
+</ul></li>
+<li>Start up an LFE REPL:
+
+<ul>
+<li><code>rebar3 lfe repl</code></li>
+</ul></li>
+<li>Compile LFE source code:
+
+<ul>
+<li><code>rebar3 lfe compile</code></li>
+</ul></li>
+<li>Run an LFE project&#39;s <code>main/1</code> function as an lfescript (run <code>rebar3 new lfe-main</code> to see an example):
+
+<ul>
+<li><code>rebar3 lfe run</code></li>
+<li><code>rebar3 lfe run -- 1 2 5</code></li>
+<li><code>rebar3 lfe run -main some/path/main.lfe</code></li>
+</ul></li>
+</ul>
+
+<p><a href="https://github.com/lfe-rebar3/rebar3_lfe/issues?q=is%3Aissue+is%3Aopen+label%3Afeature">More coming soon!</a></p>
+<h1 id='setup'>Setup</h1>
+<p>After installing <code>rebar3</code>, the only thing you need to do in order to take full
+advantage of the LFE rebar3 plugin is add it to the plugins in your global
+<code>rebar.config</code> file.</p>
+
+<blockquote>
+<p>To use the latest stable release, update your <code>rebar.config</code> to:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight erlang tab-erlang"><code><span class="p">{</span><span class="n">plugins</span><span class="p">,</span> <span class="p">[</span>
+  <span class="p">{</span><span class="n">rebar3_lfe</span><span class="p">,</span>
+    <span class="p">{</span><span class="n">git</span><span class="p">,</span> <span class="s">"https://github.com/lfe-rebar3/rebar2_lfe.git"</span><span class="p">,</span> <span class="p">{</span><span class="n">tag</span><span class="p">,</span> <span class="s">"0.1.0"</span><span class="p">}}}</span>
+<span class="p">]}.</span>
+</code></pre></div><h1 id='command-reference'>Command Reference</h1><h2 id='compiling'>Compiling</h2>
+<p>The single most imporant convenience provided by the LFE rebar3 plugin is
+arguably the compiler. This allows any LFE project to be downloaded,
+compile, and used by any BEAM language that is also using rebar3 to manage
+its dependencies, etc.</p>
+
+<blockquote>
+<p>To compile an LFE project:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>rebar3 lfe compile
+</code></pre></div>
+<p>If you are publishing your LFE code, or using it in another project, you&#39;ll
+want to update your <code>rebar.config</code> file so that it is compile when a user
+(or script) executes the regular <code>rebar3 compile</code> command.</p>
+
+<blockquote>
+<p>To ensure your LFE code will compile in other projects, add the following to your project&#39;s <code>rebar.config</code>:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight erlang tab-erlang"><code><span class="p">{</span><span class="n">provider_hooks</span><span class="p">,</span> <span class="p">[</span>
+  <span class="p">{</span><span class="n">pre</span><span class="p">,</span> <span class="p">[{</span><span class="n">compile</span><span class="p">,</span> <span class="p">{</span><span class="n">lfe</span><span class="p">,</span> <span class="n">compile</span><span class="p">}}]}</span>
+  <span class="p">]}.</span>
+</code></pre></div><h2 id='running-the-repl'>Running the REPL</h2>
+<p>An LFE project and all of its dependencies may be interacted with via a REPL
+that is started with the LFE rebar3 plguin, as rebar3 sets all of the correct
+library locations for use by shells and REPLs.</p>
+
+<blockquote>
+<p>To start up a REPL:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>rebar3 lfe repl
+</code></pre></div><h2 id='creating-libraries'>Creating Libraries</h2>
+<p>The <code>rebar3_lfe</code> plugin is capable of creating several common project layouts.
+This and following sections provide details on those that are currently
+supported.</p>
+
+<p>Library projects are those with no running applications or scripts; they simply
+provide some core bit of functionality intended for use by applications,
+scripts, or other libraries.</p>
+
+<blockquote>
+<p>To create a library project with the default name:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>rebar3 new lfe-lib
+</code></pre></div>
+<blockquote>
+<p>This will generate the following output:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>===&gt; Writing my-lfe-lib/README.md
+===&gt; Writing my-lfe-lib/LICENSE
+===&gt; Writing my-lfe-lib/rebar.config
+===&gt; Writing my-lfe-lib/.gitignore
+===&gt; Writing my-lfe-lib/src/my-lfe-lib.lfe
+===&gt; Writing my-lfe-lib/src/my-lfe-lib.app.src
+</code></pre></div>
+<blockquote>
+<p>You can also explicitely name your project:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>rebar3 new lfe-lib forty-two
+</code></pre></div>
+<blockquote>
+<p>Which will produce the following:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>===&gt; Writing forty-two/README.md
+===&gt; Writing forty-two/LICENSE
+===&gt; Writing forty-two/rebar.config
+===&gt; Writing forty-two/.gitignore
+===&gt; Writing forty-two/src/forty-two.lfe
+===&gt; Writing forty-two/src/forty-two.app.src
+</code></pre></div>
+<p>As mentioned abouve, the REPL offers a nice way to quickly interact your new
+project.</p>
+
+<blockquote>
+<p>Start the REPL:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nb">cd </span>forty-two
+rebar3 lfe repl
+</code></pre></div>
+<blockquote>
+<p>Call the generated/sample LFE function:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight common_lisp"><code><span class="nv">lfe&gt;</span> <span class="p">(</span><span class="nv">mything:my-fun</span><span class="p">)</span>
+<span class="nv">hello-world</span>
+</code></pre></div><h2 id='creating-main-scripts'>Creating <code>main</code> Scripts</h2>
+<p>LFE supports the creation of scripts, and these can be integrated with
+libraries, allowing for the best of both worlds: a simple collection of
+useful functions (library) and a means of running them from the command
+line.</p>
+
+<blockquote>
+<p>Create a library that also has a script with a <code>main</code> function:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nv">$ </span>rebar3 new lfe-main special-proj
+</code></pre></div>
+<blockquote>
+<p>Which generates:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>===&gt; Writing special-proj/README.md
+===&gt; Writing special-proj/LICENSE
+===&gt; Writing special-proj/rebar.config
+===&gt; Writing special-proj/.gitignore
+===&gt; Writing special-proj/src/special-proj.lfe
+===&gt; Writing special-proj/scripts/main.lfe
+===&gt; Writing special-proj/src/special-proj.app.src
+</code></pre></div>
+<blockquote>
+<p>The generated project&#39;s <code>main</code> script + function may then be run with:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nb">cd </span>mymain
+rebar3 lfe run <span class="nt">--</span> 42
+</code></pre></div>
+<blockquote>
+<p>Which will produce the following output:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>Running script '/usr/local/bin/rebar3' with args [&lt;&lt;"42"&gt;&gt;] ...
+'hello-worl
+</code></pre></div>
+<!-- Named page links below: /-->
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
