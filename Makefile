@@ -22,7 +22,12 @@ serve:
 
 run: serve
 
-publish:
+$(PUBLISH_DIR)/README.md:
+	echo '# Content for `rebar3_lfe` Command Reference' > $(PUBLISH_DIR)/README.md
+	echo 'Published at [lfe-rebar3.github.io](https://lfe-rebar3.github.io/)' >> $(PUBLISH_DIR)/README.md
+	cd $(PUBLISH_DIR) && git add README.md
+
+publish: $(PUBLISH_DIR)/README.md
 	-@cd $(PUBLISH_DIR) && \
 	git commit -am "Regenerated documentation site." > /dev/null && \
 	git push origin master
