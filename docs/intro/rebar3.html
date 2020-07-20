@@ -4,10 +4,8 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title></title>
+    <title>rebar3 - LFE Quick Start with rebar3</title>
     
-    
-    <base href="/">
     
 
 
@@ -20,27 +18,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff" />
 
-    <link rel="icon" href="favicon.svg">
-    <link rel="shortcut icon" href="favicon.png">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/chrome.css">
-    <link rel="stylesheet" href="css/print.css" media="print">
+    <link rel="icon" href="../favicon.svg">
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/chrome.css">
+    <link rel="stylesheet" href="../css/print.css" media="print">
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
     
-    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
     
 
     <!-- Highlight.js Stylesheets -->
-    <link rel="stylesheet" href="highlight.css">
-    <link rel="stylesheet" href="tomorrow-night.css">
-    <link rel="stylesheet" href="ayu-highlight.css">
+    <link rel="stylesheet" href="../highlight.css">
+    <link rel="stylesheet" href="../tomorrow-night.css">
+    <link rel="stylesheet" href="../ayu-highlight.css">
 
     <!-- Custom theme stylesheets -->
     
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="../css/custom.css">
     
 
     
@@ -49,7 +47,7 @@
 <body>
     <!-- Provide site root to javascript -->
     <script type="text/javascript">
-        var path_to_root = "";
+        var path_to_root = "../";
         var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
     </script>
 
@@ -95,7 +93,7 @@
 
     <nav id="sidebar" class="sidebar" aria-label="Table of contents">
         <div class="sidebar-scrollbox">
-            <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> LFE Quick Start with rebar3</a></li><li class="chapter-item expanded "><a href="intro/index.html"><strong aria-hidden="true">2.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="intro/lfe.html"><strong aria-hidden="true">2.1.</strong> LFE</a></li><li class="chapter-item expanded "><a href="intro/erlang.html"><strong aria-hidden="true">2.2.</strong> Erlang</a></li><li class="chapter-item expanded "><a href="intro/rebar3.html"><strong aria-hidden="true">2.3.</strong> rebar3</a></li></ol></li><li class="chapter-item expanded "><a href="plaid.html"><strong aria-hidden="true">3.</strong> Going Plaid</a></li><li class="chapter-item expanded "><a href="proj.html"><strong aria-hidden="true">4.</strong> Creating a New Project</a></li><li class="chapter-item expanded "><a href="code.html"><strong aria-hidden="true">5.</strong> LFE Code</a></li><li class="chapter-item expanded "><a href="behind.html"><strong aria-hidden="true">6.</strong> Behind the Scenes</a></li><li class="chapter-item expanded "><a href="next.html"><strong aria-hidden="true">7.</strong> Where Next?</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="feedback.html">Feedback</a></li><li class="chapter-item expanded affix "><a href="redirects/docs.html">LFE Documentation</a></li><li class="chapter-item expanded affix "><a href="redirects/rebar3.html">LFE rebar3 Plugin</a></li><li class="chapter-item expanded affix "><a href="redirects/mdbook.html">Built with mdBook</a></li></ol>
+            <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> LFE Quick Start with rebar3</a></li><li class="chapter-item expanded "><a href="../intro/index.html"><strong aria-hidden="true">2.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../intro/lfe.html"><strong aria-hidden="true">2.1.</strong> LFE</a></li><li class="chapter-item expanded "><a href="../intro/erlang.html"><strong aria-hidden="true">2.2.</strong> Erlang</a></li><li class="chapter-item expanded "><a href="../intro/rebar3.html" class="active"><strong aria-hidden="true">2.3.</strong> rebar3</a></li></ol></li><li class="chapter-item expanded "><a href="../plaid.html"><strong aria-hidden="true">3.</strong> Going Plaid</a></li><li class="chapter-item expanded "><a href="../proj.html"><strong aria-hidden="true">4.</strong> Creating a New Project</a></li><li class="chapter-item expanded "><a href="../code.html"><strong aria-hidden="true">5.</strong> LFE Code</a></li><li class="chapter-item expanded "><a href="../behind.html"><strong aria-hidden="true">6.</strong> Behind the Scenes</a></li><li class="chapter-item expanded "><a href="../next.html"><strong aria-hidden="true">7.</strong> Where Next?</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../feedback.html">Feedback</a></li><li class="chapter-item expanded affix "><a href="../redirects/docs.html">LFE Documentation</a></li><li class="chapter-item expanded affix "><a href="../redirects/rebar3.html">LFE rebar3 Plugin</a></li><li class="chapter-item expanded affix "><a href="../redirects/mdbook.html">Built with mdBook</a></li></ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -141,7 +139,7 @@
                 <h1 class="menu-title">LFE Quick Start with rebar3</h1>
 
                 <div class="right-buttons">
-                    <a href="print.html" title="Print this book" aria-label="Print this book">
+                    <a href="../print.html" title="Print this book" aria-label="Print this book">
                         <i id="print-button" class="fa fa-print"></i>
                     </a>
                     
@@ -178,15 +176,43 @@
 
             <div id="content" class="content">
                 <main>
-                    <h1><a class="header" href="#document-not-found-404" id="document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                    <h1><a class="header" href="#about-rebar3" id="about-rebar3">About <code>rebar3</code></a></h1>
+<p>Rebar3 is an Erlang tool that makes it easy to create, develop, and release Erlang libraries, applications, and systems in a repeatable manner.</p>
+<p>Rebar3 will:</p>
+<ul>
+<li>respect and enforce standard Erlang/OTP conventions for project
+structure so they are easily reusable by the community;</li>
+<li>manage source dependencies and Erlang <a href="https://hex.pm">packages</a>
+while ensuring repeatable builds;</li>
+<li>handle build artifacts, paths, and libraries such that standard
+development tools can be used without a headache;</li>
+<li>adapt to projects of all sizes on almost any platform;</li>
+<li>treat <a href="https://www.rebar3.org/docs/">documentation</a> as a feature,
+and errors or lack of documentation as a bug.</li>
+</ul>
+<p>Rebar3 is also a self-contained Erlang script. It is easy to distribute or
+embed directly in a project. Tasks or behaviours can be modified or expanded
+with a <a href="https://www.rebar3.org/docs/using-available-plugins">plugin system</a>
+<a href="https://www.rebar3.org/docs/plugins">flexible enough</a> that even other languages
+on the Erlang VM will use it as a build tool.</p>
+<p>The <a href="https://www.rebar3.org/docs/getting-started#installing-binary">rebar3 site</a> provids some nice instructions on installing <code>rebar3</code>.</p>
 
                 </main>
 
                 <nav class="nav-wrapper" aria-label="Page navigation">
                     <!-- Mobile navigation buttons -->
                     
+                    <a rel="prev" href="../intro/erlang.html" class="mobile-nav-chapters previous"
+                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    
 
+                    
+                    <a rel="next" href="../plaid.html" class="mobile-nav-chapters next"
+                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                     
 
                     <div style="clear: both"></div>
@@ -196,7 +222,17 @@
 
         <nav class="nav-wide-wrapper" aria-label="Page navigation">
             
+            <a rel="prev" href="../intro/erlang.html" class="nav-chapters previous" title="Previous chapter"
+                aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            
 
+            
+            <a rel="next" href="../plaid.html" class="nav-chapters next" title="Next chapter"
+                aria-label="Next chapter" aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
             
         </nav>
 
@@ -236,14 +272,14 @@
     
 
     
-    <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
     
 
-    <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-    <script src="book.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
     <!-- Custom JS scripts -->
     

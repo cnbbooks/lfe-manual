@@ -4,10 +4,8 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title></title>
+    <title>Behind the Scenes - LFE Quick Start with rebar3</title>
     
-    
-    <base href="/">
     
 
 
@@ -95,7 +93,7 @@
 
     <nav id="sidebar" class="sidebar" aria-label="Table of contents">
         <div class="sidebar-scrollbox">
-            <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> LFE Quick Start with rebar3</a></li><li class="chapter-item expanded "><a href="intro/index.html"><strong aria-hidden="true">2.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="intro/lfe.html"><strong aria-hidden="true">2.1.</strong> LFE</a></li><li class="chapter-item expanded "><a href="intro/erlang.html"><strong aria-hidden="true">2.2.</strong> Erlang</a></li><li class="chapter-item expanded "><a href="intro/rebar3.html"><strong aria-hidden="true">2.3.</strong> rebar3</a></li></ol></li><li class="chapter-item expanded "><a href="plaid.html"><strong aria-hidden="true">3.</strong> Going Plaid</a></li><li class="chapter-item expanded "><a href="proj.html"><strong aria-hidden="true">4.</strong> Creating a New Project</a></li><li class="chapter-item expanded "><a href="code.html"><strong aria-hidden="true">5.</strong> LFE Code</a></li><li class="chapter-item expanded "><a href="behind.html"><strong aria-hidden="true">6.</strong> Behind the Scenes</a></li><li class="chapter-item expanded "><a href="next.html"><strong aria-hidden="true">7.</strong> Where Next?</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="feedback.html">Feedback</a></li><li class="chapter-item expanded affix "><a href="redirects/docs.html">LFE Documentation</a></li><li class="chapter-item expanded affix "><a href="redirects/rebar3.html">LFE rebar3 Plugin</a></li><li class="chapter-item expanded affix "><a href="redirects/mdbook.html">Built with mdBook</a></li></ol>
+            <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> LFE Quick Start with rebar3</a></li><li class="chapter-item expanded "><a href="intro/index.html"><strong aria-hidden="true">2.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="intro/lfe.html"><strong aria-hidden="true">2.1.</strong> LFE</a></li><li class="chapter-item expanded "><a href="intro/erlang.html"><strong aria-hidden="true">2.2.</strong> Erlang</a></li><li class="chapter-item expanded "><a href="intro/rebar3.html"><strong aria-hidden="true">2.3.</strong> rebar3</a></li></ol></li><li class="chapter-item expanded "><a href="plaid.html"><strong aria-hidden="true">3.</strong> Going Plaid</a></li><li class="chapter-item expanded "><a href="proj.html"><strong aria-hidden="true">4.</strong> Creating a New Project</a></li><li class="chapter-item expanded "><a href="code.html"><strong aria-hidden="true">5.</strong> LFE Code</a></li><li class="chapter-item expanded "><a href="behind.html" class="active"><strong aria-hidden="true">6.</strong> Behind the Scenes</a></li><li class="chapter-item expanded "><a href="next.html"><strong aria-hidden="true">7.</strong> Where Next?</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="feedback.html">Feedback</a></li><li class="chapter-item expanded affix "><a href="redirects/docs.html">LFE Documentation</a></li><li class="chapter-item expanded affix "><a href="redirects/rebar3.html">LFE rebar3 Plugin</a></li><li class="chapter-item expanded affix "><a href="redirects/mdbook.html">Built with mdBook</a></li></ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -178,15 +176,54 @@
 
             <div id="content" class="content">
                 <main>
-                    <h1><a class="header" href="#document-not-found-404" id="document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                    <h1><a class="header" href="#behind-the-scenes" id="behind-the-scenes">Behind the Scenes</a></h1>
+<p><img src="https://raw.githubusercontent.com/lfe/docs/master/docs/current/images/doubles.jpg"
+     style="float: right; padding-left: 1em;"></p>
+<p>As we warned in the beginning, there's a lot going on behind the scenes: in <code>rebar3</code> as well as LFE and Erlang (we haven't even <em>touched</em> OTP here ...!). This guide just gives you a quick taste of the LFE flavour :-) Before parting ways, though, there are some more bits we should share.</p>
+<p>Some of those things are hinted at when just checking the current versions you are
+running using the LFE plugin's <code>versions</code> command (from a terminal where you have
+<code>cd</code>ed into your project directory):</p>
+<pre><code class="language-shell">rebar3 lfe versions
+</code></pre>
+<pre><code class="language-lisp">(#(apps (#(my-test-lib git)))
+ #(languages
+   (#(lfe &quot;1.3-dev&quot;)
+    #(erlang &quot;23&quot;)
+    #(emulator &quot;11.0.2&quot;)
+    #(driver_version &quot;3.3&quot;)))
+ #(tooling (#(rebar &quot;3.10.0&quot;) #(rebar3_lfe &quot;0.2.0&quot;))))
+</code></pre>
+<p>To give a sense of what you'll entcounter in the cuture: very often Erlamg,
+LFE, and other BEAM language apps include more than just themselves when they
+are shipped. For instance, if you're in the REPL and you type <code>(regs)</code> you will
+see a list of applications that have been registered by name, currently running
+in support of the REPL. Usually, each app will have its own version. There is an
+<a href="http://blog.lfe.io/tutorials/2015/05/23/1720-new-series-lfe-otp-tutorials/">LFE blog series</a>
+on such things, showing you how to create and mess around with different types
+of LFE apps.</p>
+<p>The LFE rebar3 plugin will also help you create OTP apps in LFE and perform
+other key tasks you may wish to integrate into your development workflow.
+You can learn more about those in the plugin's
+<a href="https://lfe-rebar3.github.io/">Command Referencce</a></p>
+<h2><a class="header" href="#next-stop" id="next-stop">Next Stop</a></h2>
+<p>Where to go from here ...</p>
 
                 </main>
 
                 <nav class="nav-wrapper" aria-label="Page navigation">
                     <!-- Mobile navigation buttons -->
                     
+                    <a rel="prev" href="code.html" class="mobile-nav-chapters previous"
+                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    
 
+                    
+                    <a rel="next" href="next.html" class="mobile-nav-chapters next"
+                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                     
 
                     <div style="clear: both"></div>
@@ -196,7 +233,17 @@
 
         <nav class="nav-wide-wrapper" aria-label="Page navigation">
             
+            <a rel="prev" href="code.html" class="nav-chapters previous" title="Previous chapter"
+                aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            
 
+            
+            <a rel="next" href="next.html" class="nav-chapters next" title="Next chapter"
+                aria-label="Next chapter" aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
             
         </nav>
 

@@ -4,9 +4,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>LFE Quick Start with rebar3</title>
-    
-    <meta name="robots" content="noindex" />
+    <title>LFE Code - LFE Quick Start with rebar3</title>
     
     
 
@@ -95,7 +93,7 @@
 
     <nav id="sidebar" class="sidebar" aria-label="Table of contents">
         <div class="sidebar-scrollbox">
-            <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> LFE Quick Start with rebar3</a></li><li class="chapter-item expanded "><a href="intro/index.html"><strong aria-hidden="true">2.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="intro/lfe.html"><strong aria-hidden="true">2.1.</strong> LFE</a></li><li class="chapter-item expanded "><a href="intro/erlang.html"><strong aria-hidden="true">2.2.</strong> Erlang</a></li><li class="chapter-item expanded "><a href="intro/rebar3.html"><strong aria-hidden="true">2.3.</strong> rebar3</a></li></ol></li><li class="chapter-item expanded "><a href="plaid.html"><strong aria-hidden="true">3.</strong> Going Plaid</a></li><li class="chapter-item expanded "><a href="proj.html"><strong aria-hidden="true">4.</strong> Creating a New Project</a></li><li class="chapter-item expanded "><a href="code.html"><strong aria-hidden="true">5.</strong> LFE Code</a></li><li class="chapter-item expanded "><a href="behind.html"><strong aria-hidden="true">6.</strong> Behind the Scenes</a></li><li class="chapter-item expanded "><a href="next.html"><strong aria-hidden="true">7.</strong> Where Next?</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="feedback.html">Feedback</a></li><li class="chapter-item expanded affix "><a href="redirects/docs.html">LFE Documentation</a></li><li class="chapter-item expanded affix "><a href="redirects/rebar3.html">LFE rebar3 Plugin</a></li><li class="chapter-item expanded affix "><a href="redirects/mdbook.html">Built with mdBook</a></li></ol>
+            <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> LFE Quick Start with rebar3</a></li><li class="chapter-item expanded "><a href="intro/index.html"><strong aria-hidden="true">2.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="intro/lfe.html"><strong aria-hidden="true">2.1.</strong> LFE</a></li><li class="chapter-item expanded "><a href="intro/erlang.html"><strong aria-hidden="true">2.2.</strong> Erlang</a></li><li class="chapter-item expanded "><a href="intro/rebar3.html"><strong aria-hidden="true">2.3.</strong> rebar3</a></li></ol></li><li class="chapter-item expanded "><a href="plaid.html"><strong aria-hidden="true">3.</strong> Going Plaid</a></li><li class="chapter-item expanded "><a href="proj.html"><strong aria-hidden="true">4.</strong> Creating a New Project</a></li><li class="chapter-item expanded "><a href="code.html" class="active"><strong aria-hidden="true">5.</strong> LFE Code</a></li><li class="chapter-item expanded "><a href="behind.html"><strong aria-hidden="true">6.</strong> Behind the Scenes</a></li><li class="chapter-item expanded "><a href="next.html"><strong aria-hidden="true">7.</strong> Where Next?</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="feedback.html">Feedback</a></li><li class="chapter-item expanded affix "><a href="redirects/docs.html">LFE Documentation</a></li><li class="chapter-item expanded affix "><a href="redirects/rebar3.html">LFE rebar3 Plugin</a></li><li class="chapter-item expanded affix "><a href="redirects/mdbook.html">Built with mdBook</a></li></ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -178,98 +176,7 @@
 
             <div id="content" class="content">
                 <main>
-                    <h1><a class="header" href="#quick-start" id="quick-start">Quick Start</a></h1>
-<p><a href="images/cover-large.jpg"><img src="images/cover.jpg" alt="" /></a></p>
-<!-- Named page links below: /-->
-<h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
-<p>This is a version of the LFE quick start that has been re-imagined with
-the LFE rebar3 plugin in mind.</p>
-<p>We will cover the following:</p>
-<ul>
-<li>How to get started quickly with LFE using just <code>rebar3</code> and your local
-installation of Erlang</li>
-<li>Creating a new LFE project</li>
-<li>Looking at LFE code in the REPL and in modules</li>
-<li>Provide a litte insight on how this works</li>
-<li>Leave you with resources for jumping into LFE in more detail</li>
-</ul>
-<h1><a class="header" href="#about-lfe" id="about-lfe">About LFE</a></h1>
-<p>LFE, or &quot;Lisp Flavoured Erlang&quot;, is a Lisp-2 (thus similar to Common Lisp, and
-MACLISP before that) that runs on top of the Erlang VM or &quot;BEAM&quot;. It is the
-oldest sibling of the many BEAM languages that have been released since its
-inception (e.g., Elixir, Joxa, Luerl, Erlog, Haskerl, Clojerl, Hamler, etc.).</p>
-<p>As a Lisp-2, LFE has different namespaces for functions and variables.
-Furthermore, LFE has Erlang's notion of arity, so functions with different
-arity may share the same name.</p>
-<p>Lisps are great, but the thing that makes LFE so incredible is that it runs
-on the Erlang VM and is 100% compatible with Core Erlang.</p>
-<h1><a class="header" href="#about-erlang" id="about-erlang">About Erlang</a></h1>
-<p>Erlang is a programming language used to build massively scalable soft real-time systems with requirements on high availability. Some of its uses are in telecoms, banking, e-commerce, computer telephony and instant messaging. Erlang's runtime system has built-in support for concurrency, distribution and fault tolerance.</p>
-<p>Most real-world Erlang aapplications are built using Erlang/OTP. OTP is set of Erlang libraries and design principles providing middleware to develop these systems. It includes its own distributed database, applications to interface towards other languages, debugging and release handling tools.</p>
-<p>As an LFE programmer, you will have the adbility and freedom to utilize Erlang and OTP libraries directly from a Lisp syntax.</p>
-<p>In order to write LFE scripts, libraries, and applications, you will need to have Erlang installed. There are download links provided on the <a href="https://www.erlang.org/downloads">Erlang site</a>, or you can use a tool such as <a href="https://github.com/kerl/kerl">kerl</a> to download, build, and install multiple versions of Erlang on your system.</p>
-<p>The <a href="https://www.rebar3.org/docs/getting-started">rebar3 site</a> also has a nice intro on getting started quickly with an Erlang installation.</p>
-<h1><a class="header" href="#about-rebar3" id="about-rebar3">About <code>rebar3</code></a></h1>
-<p>Rebar3 is an Erlang tool that makes it easy to create, develop, and release Erlang libraries, applications, and systems in a repeatable manner.</p>
-<p>Rebar3 will:</p>
-<ul>
-<li>respect and enforce standard Erlang/OTP conventions for project
-structure so they are easily reusable by the community;</li>
-<li>manage source dependencies and Erlang <a href="https://hex.pm">packages</a>
-while ensuring repeatable builds;</li>
-<li>handle build artifacts, paths, and libraries such that standard
-development tools can be used without a headache;</li>
-<li>adapt to projects of all sizes on almost any platform;</li>
-<li>treat <a href="https://www.rebar3.org/docs/">documentation</a> as a feature,
-and errors or lack of documentation as a bug.</li>
-</ul>
-<p>Rebar3 is also a self-contained Erlang script. It is easy to distribute or
-embed directly in a project. Tasks or behaviours can be modified or expanded
-with a <a href="https://www.rebar3.org/docs/using-available-plugins">plugin system</a>
-<a href="https://www.rebar3.org/docs/plugins">flexible enough</a> that even other languages
-on the Erlang VM will use it as a build tool.</p>
-<p>The <a href="https://www.rebar3.org/docs/getting-started#installing-binary">rebar3 site</a> provids some nice instructions on installing <code>rebar3</code>.</p>
-<h1><a class="header" href="#going-plaid" id="going-plaid">Going Plaid</a></h1>
-<p><img src="https://raw.githubusercontent.com/lfe/docs/master/docs/current/images/plaid.jpg"
-     style="float: right;">
-The rest of this quick-start assumes that you've followed the links in the previous section and have installed both Erlang as well as <code>rebar3</code>.</p>
-<p>This <em>is</em> a quick-start, though: a blur of color. You're not going to get very many
-details here, but you <em>will</em> get to jump into the LFE REPL and see a little
-code in action.</p>
-<p>For those that would enjoy a more in-depth introduction and would appreciate having the time to see the stars (and not just stunning plaid), you may be
-interested in checking out <a href="http://lfe.io/tutorial/">The LFE Tutorial</a>.</p>
-<h2><a class="header" href="#next-stop" id="next-stop">Next Stop</a></h2>
-<p>Ready for some LFE? Next you'll learn how to create a new LFE project with
-just one command ...</p>
-<h1><a class="header" href="#creating-a-new-project" id="creating-a-new-project">Creating a New Project</a></h1>
-<p><img src="https://raw.githubusercontent.com/lfe/docs/master/docs/current/images/barf.jpg"
-     style="float: right; padding-left: 1em;">A project? Already?! It sounds
-daunting, but it's easier than you might think. Open up a terminal window
-and do this in a directory of your choosing:</p>
-<pre><code class="language-bash">rebar3 new lfe-lib my-test-lib
-</code></pre>
-<p>It might take a minute or two to finish; here's what's happening:</p>
-<ul>
-<li><code>rebar3</code> downloads the LFE plugin</li>
-<li>Finds its dependencies, downloads those too</li>
-<li>Compiles all of them (plugins and dependencies)</li>
-<li><code>rebar3</code> then executes the <code>new</code> command, searches for (and
-finds!) the lfe-lib template</li>
-<li>Creates the project files for the given template</li>
-</ul>
-<p>As that last step executes, you will see the following output:</p>
-<pre><code class="language-text">===&gt; Writing my-test-lib/README.md
-===&gt; Writing my-test-lib/LICENSE
-===&gt; Writing my-test-lib/rebar.config
-===&gt; Writing my-test-lib/.gitignore
-===&gt; Writing my-test-lib/src/my-test-lib.lfe
-===&gt; Writing my-test-lib/src/my-test-lib.app.src
-</code></pre>
-<p>It's as simple as that! Your new project is ready to go :-)</p>
-<h2><a class="header" href="#next-stop-1" id="next-stop-1">Next Stop</a></h2>
-<p>You can taste it, can't you? That <em>LFE flavour</em> coming your way? Yup, you're
-right.  You're going to be looking at LFE code next ...</p>
-<h1><a class="header" href="#hitting-the-code" id="hitting-the-code">Hitting the Code</a></h1>
+                    <h1><a class="header" href="#hitting-the-code" id="hitting-the-code">Hitting the Code</a></h1>
 <p><img src="https://raw.githubusercontent.com/lfe/docs/master/docs/current/images/smash.jpg"
      style="float: right; padding-left: 1em;">It may not seem like it,
 but we're off to a pretty fast start. If you had to do everything we've
@@ -463,74 +370,27 @@ ok
 <p>If you found this last bit interesting and want to step through a tutorial on
 Erlang's light-weight threads in more detail, you may enjoy
 <a href="http://lfe.io/tutorial/concurrent/processes.html">this tutorial</a>.</p>
-<h3><a class="header" href="#next-stop-2" id="next-stop-2">Next Stop</a></h3>
+<h3><a class="header" href="#next-stop" id="next-stop">Next Stop</a></h3>
 <p>We did promise a bit more information, so we're going to do that
 next and then wrap up the quick start and point you in some
 directions for your next LFE adventures ...</p>
-<h1><a class="header" href="#behind-the-scenes" id="behind-the-scenes">Behind the Scenes</a></h1>
-<p><img src="https://raw.githubusercontent.com/lfe/docs/master/docs/current/images/doubles.jpg"
-     style="float: right; padding-left: 1em;"></p>
-<p>As we warned in the beginning, there's a lot going on behind the scenes: in <code>rebar3</code> as well as LFE and Erlang (we haven't even <em>touched</em> OTP here ...!). This guide just gives you a quick taste of the LFE flavour :-) Before parting ways, though, there are some more bits we should share.</p>
-<p>Some of those things are hinted at when just checking the current versions you are
-running using the LFE plugin's <code>versions</code> command (from a terminal where you have
-<code>cd</code>ed into your project directory):</p>
-<pre><code class="language-shell">rebar3 lfe versions
-</code></pre>
-<pre><code class="language-lisp">(#(apps (#(my-test-lib git)))
- #(languages
-   (#(lfe &quot;1.3-dev&quot;)
-    #(erlang &quot;23&quot;)
-    #(emulator &quot;11.0.2&quot;)
-    #(driver_version &quot;3.3&quot;)))
- #(tooling (#(rebar &quot;3.10.0&quot;) #(rebar3_lfe &quot;0.2.0&quot;))))
-</code></pre>
-<p>To give a sense of what you'll entcounter in the cuture: very often Erlamg,
-LFE, and other BEAM language apps include more than just themselves when they
-are shipped. For instance, if you're in the REPL and you type <code>(regs)</code> you will
-see a list of applications that have been registered by name, currently running
-in support of the REPL. Usually, each app will have its own version. There is an
-<a href="http://blog.lfe.io/tutorials/2015/05/23/1720-new-series-lfe-otp-tutorials/">LFE blog series</a>
-on such things, showing you how to create and mess around with different types
-of LFE apps.</p>
-<p>The LFE rebar3 plugin will also help you create OTP apps in LFE and perform
-other key tasks you may wish to integrate into your development workflow.
-You can learn more about those in the plugin's
-<a href="https://lfe-rebar3.github.io/">Command Referencce</a></p>
-<h2><a class="header" href="#next-stop-3" id="next-stop-3">Next Stop</a></h2>
-<p>Where to go from here ...</p>
-<h1><a class="header" href="#where-next" id="where-next">Where Next?</a></h1>
-<p>We've mentioned the following resources so far:</p>
-<ul>
-<li><a href="http://lfe.io/tutorial/">The LFE Tutorial</a></li>
-<li><a href="https://lfe-rebar3.github.io/">The LFE rebar3 Plugin Command Reference</a></li>
-<li><a href="http://blog.lfe.io/">The LFE Blog</a></li>
-</ul>
-<p>But there are also these:</p>
-<ul>
-<li>The old-skool <a href="https://github.com/rvirding/lfe/blob/develop/doc/src/lfe_guide.7.md">LFE User Guide</a></li>
-<li><a href="https://github.com/rvirding/lfe/tree/develop/examples">Example code</a> in the LFE repository</li>
-<li><a href="https://github.com/lfex">LFEX</a> - Community-contributed libraries</li>
-<li><a href="https://github.com/lfe">LFE</a> - Core code, tools, and on-line resources (docs, blog, etc.)</li>
-</ul>
-<p>True mastery of LFE is not matter of syntax, though: it requires a deep
-knowledge of Erlang/OTP and how to best apply that knowledge. The
-<a href="http://erlang.org/">Erlang site</a> has links to great Erlang books you can read.</p>
-<h1><a class="header" href="#feedback-and-docs-bugs" id="feedback-and-docs-bugs">Feedback and Docs Bugs</a></h1>
-<p>If you would like to provide feedback about this guide, we would welcome the
-chance to improve the experience for everyone. Please
-<a href="https://github.com/lfe/rebar3-quick-start/issues/new">create a ticket</a> in the
-Github issue tracker. Be sure to give a full description so that we can best
-help you!</p>
-<meta http-equiv="refresh" content="0; URL=http://docs.lfe.io/" />
-<meta http-equiv="refresh" content="0; URL=https://lfe-rebar3.github.io/" />
-<meta http-equiv="refresh" content="0; URL=https://github.com/rust-lang/mdbook/" />
 
                 </main>
 
                 <nav class="nav-wrapper" aria-label="Page navigation">
                     <!-- Mobile navigation buttons -->
                     
+                    <a rel="prev" href="proj.html" class="mobile-nav-chapters previous"
+                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    
 
+                    
+                    <a rel="next" href="behind.html" class="mobile-nav-chapters next"
+                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                     
 
                     <div style="clear: both"></div>
@@ -540,7 +400,17 @@ help you!</p>
 
         <nav class="nav-wide-wrapper" aria-label="Page navigation">
             
+            <a rel="prev" href="proj.html" class="nav-chapters previous" title="Previous chapter"
+                aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            
 
+            
+            <a rel="next" href="behind.html" class="nav-chapters next" title="Next chapter"
+                aria-label="Next chapter" aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
             
         </nav>
 
@@ -592,14 +462,6 @@ help you!</p>
     <!-- Custom JS scripts -->
     
 
-    
-    
-    <script type="text/javascript">
-        window.addEventListener('load', function () {
-            window.setTimeout(window.print, 100);
-        });
-    </script>
-    
     
 
 </body>

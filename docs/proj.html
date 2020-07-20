@@ -4,10 +4,8 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title></title>
+    <title>Creating a New Project - LFE Quick Start with rebar3</title>
     
-    
-    <base href="/">
     
 
 
@@ -95,7 +93,7 @@
 
     <nav id="sidebar" class="sidebar" aria-label="Table of contents">
         <div class="sidebar-scrollbox">
-            <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> LFE Quick Start with rebar3</a></li><li class="chapter-item expanded "><a href="intro/index.html"><strong aria-hidden="true">2.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="intro/lfe.html"><strong aria-hidden="true">2.1.</strong> LFE</a></li><li class="chapter-item expanded "><a href="intro/erlang.html"><strong aria-hidden="true">2.2.</strong> Erlang</a></li><li class="chapter-item expanded "><a href="intro/rebar3.html"><strong aria-hidden="true">2.3.</strong> rebar3</a></li></ol></li><li class="chapter-item expanded "><a href="plaid.html"><strong aria-hidden="true">3.</strong> Going Plaid</a></li><li class="chapter-item expanded "><a href="proj.html"><strong aria-hidden="true">4.</strong> Creating a New Project</a></li><li class="chapter-item expanded "><a href="code.html"><strong aria-hidden="true">5.</strong> LFE Code</a></li><li class="chapter-item expanded "><a href="behind.html"><strong aria-hidden="true">6.</strong> Behind the Scenes</a></li><li class="chapter-item expanded "><a href="next.html"><strong aria-hidden="true">7.</strong> Where Next?</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="feedback.html">Feedback</a></li><li class="chapter-item expanded affix "><a href="redirects/docs.html">LFE Documentation</a></li><li class="chapter-item expanded affix "><a href="redirects/rebar3.html">LFE rebar3 Plugin</a></li><li class="chapter-item expanded affix "><a href="redirects/mdbook.html">Built with mdBook</a></li></ol>
+            <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> LFE Quick Start with rebar3</a></li><li class="chapter-item expanded "><a href="intro/index.html"><strong aria-hidden="true">2.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="intro/lfe.html"><strong aria-hidden="true">2.1.</strong> LFE</a></li><li class="chapter-item expanded "><a href="intro/erlang.html"><strong aria-hidden="true">2.2.</strong> Erlang</a></li><li class="chapter-item expanded "><a href="intro/rebar3.html"><strong aria-hidden="true">2.3.</strong> rebar3</a></li></ol></li><li class="chapter-item expanded "><a href="plaid.html"><strong aria-hidden="true">3.</strong> Going Plaid</a></li><li class="chapter-item expanded "><a href="proj.html" class="active"><strong aria-hidden="true">4.</strong> Creating a New Project</a></li><li class="chapter-item expanded "><a href="code.html"><strong aria-hidden="true">5.</strong> LFE Code</a></li><li class="chapter-item expanded "><a href="behind.html"><strong aria-hidden="true">6.</strong> Behind the Scenes</a></li><li class="chapter-item expanded "><a href="next.html"><strong aria-hidden="true">7.</strong> Where Next?</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="feedback.html">Feedback</a></li><li class="chapter-item expanded affix "><a href="redirects/docs.html">LFE Documentation</a></li><li class="chapter-item expanded affix "><a href="redirects/rebar3.html">LFE rebar3 Plugin</a></li><li class="chapter-item expanded affix "><a href="redirects/mdbook.html">Built with mdBook</a></li></ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -178,15 +176,51 @@
 
             <div id="content" class="content">
                 <main>
-                    <h1><a class="header" href="#document-not-found-404" id="document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                    <h1><a class="header" href="#creating-a-new-project" id="creating-a-new-project">Creating a New Project</a></h1>
+<p><img src="https://raw.githubusercontent.com/lfe/docs/master/docs/current/images/barf.jpg"
+     style="float: right; padding-left: 1em;">A project? Already?! It sounds
+daunting, but it's easier than you might think. Open up a terminal window
+and do this in a directory of your choosing:</p>
+<pre><code class="language-bash">rebar3 new lfe-lib my-test-lib
+</code></pre>
+<p>It might take a minute or two to finish; here's what's happening:</p>
+<ul>
+<li><code>rebar3</code> downloads the LFE plugin</li>
+<li>Finds its dependencies, downloads those too</li>
+<li>Compiles all of them (plugins and dependencies)</li>
+<li><code>rebar3</code> then executes the <code>new</code> command, searches for (and
+finds!) the lfe-lib template</li>
+<li>Creates the project files for the given template</li>
+</ul>
+<p>As that last step executes, you will see the following output:</p>
+<pre><code class="language-text">===&gt; Writing my-test-lib/README.md
+===&gt; Writing my-test-lib/LICENSE
+===&gt; Writing my-test-lib/rebar.config
+===&gt; Writing my-test-lib/.gitignore
+===&gt; Writing my-test-lib/src/my-test-lib.lfe
+===&gt; Writing my-test-lib/src/my-test-lib.app.src
+</code></pre>
+<p>It's as simple as that! Your new project is ready to go :-)</p>
+<h2><a class="header" href="#next-stop" id="next-stop">Next Stop</a></h2>
+<p>You can taste it, can't you? That <em>LFE flavour</em> coming your way? Yup, you're
+right.  You're going to be looking at LFE code next ...</p>
 
                 </main>
 
                 <nav class="nav-wrapper" aria-label="Page navigation">
                     <!-- Mobile navigation buttons -->
                     
+                    <a rel="prev" href="plaid.html" class="mobile-nav-chapters previous"
+                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    
 
+                    
+                    <a rel="next" href="code.html" class="mobile-nav-chapters next"
+                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                     
 
                     <div style="clear: both"></div>
@@ -196,7 +230,17 @@
 
         <nav class="nav-wide-wrapper" aria-label="Page navigation">
             
+            <a rel="prev" href="plaid.html" class="nav-chapters previous" title="Previous chapter"
+                aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            
 
+            
+            <a rel="next" href="code.html" class="nav-chapters next" title="Next chapter"
+                aria-label="Next chapter" aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
             
         </nav>
 
