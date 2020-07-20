@@ -13,7 +13,7 @@ build-dir = "book/current"
 
 [output.html]
 default-theme = "lfe-pdp"
-preferred-dark-theme = "navy"
+preferred-dark-theme = "lfe-pdp"
 additional-css = ["css/custom.css"]
 git-repository-url = "https://github.com/lfe-rebar3/rebar3_lfe"
 
