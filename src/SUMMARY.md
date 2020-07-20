@@ -35,5 +35,6 @@
 
 --------------------
 
+[Feedback](feedback.md)
 [LFE Documentation](redirects/docs.html)
 [Built with mdBook](redirects/mdbook.html)
