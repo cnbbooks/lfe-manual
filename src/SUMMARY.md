@@ -5,6 +5,7 @@
   * [Features](intro/features.md)
   * [Background](intro/background.md)
   * [Previous Releases](intro/versions.md)
+  * [Related](intro/related.md)
 * [Setup](setup/README.md)
   * [Dependencies](setup/deps.md)
   * [The Plugin](setup/plugin.md)
