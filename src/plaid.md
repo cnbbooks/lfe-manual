@@ -4,7 +4,7 @@
      style="float: right;">
 The rest of this quick-start assumes that you've followed the links in the previous section and have installed both Erlang as well as `rebar3`.
 
-This _is_ a quick-start, though: a blur of color. You're not going to get very many
+This _is_ a quick-start, though: a blur of colour. You're not going to get very many
 details here, but you _will_ get to jump into the LFE REPL and see a little
 code in action.
 

@@ -23,7 +23,7 @@ rebar3 lfe versions
  #(tooling (#(rebar "3.10.0") #(rebar3_lfe "0.2.0"))))
 ```
 
-To give a sense of what you'll entcounter in the cuture: very often Erlamg,
+To give a sense of what you'll encounter in the future: very often Erlang,
 LFE, and other BEAM language apps include more than just themselves when they
 are shipped. For instance, if you're in the REPL and you type `(regs)` you will
 see a list of applications that have been registered by name, currently running
@@ -35,7 +35,7 @@ of LFE apps.
 The LFE rebar3 plugin will also help you create OTP apps in LFE and perform
 other key tasks you may wish to integrate into your development workflow.
 You can learn more about those in the plugin's
-[Command Referencce](https://lfe-rebar3.github.io/)
+[Command Reference](https://lfe-rebar3.github.io/)
 
 ## Next Stop
 

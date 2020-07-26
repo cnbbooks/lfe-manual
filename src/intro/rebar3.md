@@ -7,7 +7,7 @@ Rebar3 will:
   structure so they are easily reusable by the community;
 - manage source dependencies and Erlang [packages](https://hex.pm)
   while ensuring repeatable builds;
-- handle build artifacts, paths, and libraries such that standard
+- handle build artefacts, paths, and libraries such that standard
   development tools can be used without a headache;
 - adapt to projects of all sizes on almost any platform;
 - treat [documentation](https://www.rebar3.org/docs/) as a feature,
@@ -19,4 +19,4 @@ with a [plugin system](https://www.rebar3.org/docs/using-available-plugins)
 [flexible enough](https://www.rebar3.org/docs/plugins) that even other languages
 on the Erlang VM will use it as a build tool.
 
-The [rebar3 site](https://www.rebar3.org/docs/getting-started#installing-binary) provids some nice instructions on installing `rebar3`.
+The [rebar3 site](https://www.rebar3.org/docs/getting-started#installing-binary) provides some nice instructions on installing `rebar3`.

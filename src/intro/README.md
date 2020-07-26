@@ -9,5 +9,5 @@ We will cover the following:
   installation of Erlang
 * Creating a new LFE project
 * Looking at LFE code in the REPL and in modules
-* Provide a litte insight on how this works
+* Provide a little insight on how this works
 * Leave you with resources for jumping into LFE in more detail

@@ -1,8 +1,27 @@
-# Quick Start
+# LFE Quick Start with `rebar3_lfe`
 
-[![][cover]][cover-large]
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+by Duncan McGreggor
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+[![publisher logo][publisher-img]][publisher-site]
 
 <!-- Named page links below: /-->
 
-[cover]: images/cover.jpg
-[cover-large]: images/cover-large.jpg
+[publisher-img]: images/cnbb-pub-logo-1.6.png
+[publisher-site]: https://cnbb.pub/
