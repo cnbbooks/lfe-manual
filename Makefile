@@ -23,7 +23,9 @@ endif
 	$(MAKE) restore-book-git
 
 serve:
+	$(MAKE) backup-book-git
 	@$(GEN) serve
+	$(MAKE) restore-book-git
 
 run: serve
 
