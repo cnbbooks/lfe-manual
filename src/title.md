@@ -24,4 +24,4 @@ by Duncan McGreggor
 <!-- Named page links below: /-->
 
 [publisher-img]: images/cnbb-pub-logo-1.6.png
-[publisher-site]: https://cnbb.pub/
+[publisher-site]: http://cnbb.pub/
