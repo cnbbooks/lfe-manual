@@ -17,7 +17,7 @@ advantage of the LFE rebar3 plugin is add it to the plugins in your global
 ```erlang
 {plugins, [
   {rebar3_lfe,
-    {git, "https://github.com/lfe-rebar3/rebar2_lfe.git", {tag, "0.2.0"}}}
+    {git, "https://github.com/lfe-rebar3/rebar3_lfe.git", {tag, "0.2.0"}}}
 ]}.
 ```
 
@@ -34,6 +34,6 @@ Unstable
 ```erlang
 {plugins, [
   {rebar3_lfe,
-    {git, "https://github.com/lfe-rebar3/rebar2_lfe.git", {branch, "release/0.3.x"}}}
+    {git, "https://github.com/lfe-rebar3/rebar3_lfe.git", {branch, "release/0.3.x"}}}
 ]}.
 ```
