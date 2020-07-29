@@ -12,7 +12,7 @@ First electronic edition published: 2020
 <br/>
 <br/>
 
-&copy; 2013-2020, Duncan McGreggor
+&copy; 2020, Duncan McGreggor
 
 [cc-license]: http://creativecommons.org/licenses/by-sa/4.0/
 [cc-image]: https://i.creativecommons.org/l/by-sa/4.0/88x31.png
