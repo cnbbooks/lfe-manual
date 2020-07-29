@@ -1,6 +1,8 @@
 # Summary
 
 * [The LFE rebar3 Plugin (v0.3.0)](README.md)
+  * [Title Page](title.md)
+  * [Copyright](copyright.md)
 * [Introduction](intro/README.md)
   * [Features](intro/features.md)
   * [Background](intro/background.md)
