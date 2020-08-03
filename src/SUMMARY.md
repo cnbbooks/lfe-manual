@@ -9,7 +9,10 @@
   * [rebar3](intro/rebar3.md)
 * [Going Plaid](plaid.md)
 * [Creating a New Project](proj.md)
-* [LFE Code](code.md)
+* [LFE Code](code/README.md)
+  * [The REPL](code/repl.md)
+  * [Sample Code](code/sample.md)
+  * [Message-Passing](code/msgs.md)
 * [Behind the Scenes](behind.md)
 * [Where Next?](next.md)
 

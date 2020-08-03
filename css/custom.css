@@ -141,3 +141,30 @@ code,
 .alert-warning>td {
     background-color: #F47C3C;
 }
+
+.footnotes {
+    font-size: 10pt;
+    padding-top: 2em;
+    margin-top: 2em;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.footnotes ol,
+.footnotes ol li {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0.6em;
+    margin-right: 0;
+}
+
+.footnotes ol {
+    /* margin-left: -1em; */
+}
+
+.footnotes hr {
+    border: 0;
+    border-bottom: solid 1px #666;
+}
