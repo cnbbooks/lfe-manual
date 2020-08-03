@@ -33,7 +33,9 @@ clean:
 	@rm -f $(PUBLISH_DIR)/README.md
 
 book-init:
-	@git submodule update --init --recursive
+	@git submodule update --init --recursive && \
+	cd $(PUBLISH_DIR) && \
+	git checkout master
 
 backup-book-git:
 	@mkdir -p $(TMP_GIT_DIR)/
