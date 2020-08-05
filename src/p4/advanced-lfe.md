@@ -1,2 +1,0 @@
-# Advanced Techniques in Lisp
-
