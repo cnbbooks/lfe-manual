@@ -1,8 +1,9 @@
-# Summary
+[The LFE Style Guide](README.md)
+[Title Page](title.md)
+[Copyright](copyright.md)
 
-* [LFE Quick Start with rebar3_lfe](README.md)
-  * [Title Page](title.md)
-  * [Copyright](copyright.md)
+--------------------
+
 * [Introduction](intro/README.md)
 
 --------------------

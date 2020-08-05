@@ -1,7 +1,7 @@
 [book]
-title = "LFE Quick Start with rebar3_lfe"
+title = "The LFE Style Guide"
 author = "Duncan McGreggor"
-description = "An Introduction to LFE: Going Ludicrous Speed"
+description = "Recommended styles and basic best practices when programming in LFE"
 language = "en"
 
 [build]
@@ -16,7 +16,7 @@ default-theme = "lfe-pdp"
 preferred-dark-theme = "lfe-pdp"
 additional-css = ["css/custom.css"]
 google-analytics = "UA-38274766-4"
-git-repository-url = "https://github.com/lfe/rebar3-quick-start"
+git-repository-url = "https://github.com/cnbbooks/lfe-style-guide"
 [output.html.search]
 limit-results = 20
 use-boolean-and = true
