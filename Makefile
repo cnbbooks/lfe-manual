@@ -51,7 +51,7 @@ restore-submodule-git:
 	@mv -v $(TMP_GIT_DIR)/.git $(PUBLISH_DIR)/
 
 $(PUBLISH_DIR)/README.md:
-	@echo '# Content for the LFE Style Guide > $(PUBLISH_DIR)/README.md
+	@echo '# Content for the LFE Style Guide' > $(PUBLISH_DIR)/README.md
 	@echo 'Published at [lfe.io/books/style-guide/](https://lfe.io/books/style-guide/)' >> $(PUBLISH_DIR)/README.md
 	@cd $(PUBLISH_DIR) && git add README.md
 
