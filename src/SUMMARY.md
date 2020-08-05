@@ -1,34 +1,35 @@
-# Summary
+[LFE OTPCHINE MANUAL](README.md)
+[Title Page](fm/title-page.md)
+[Copyright](fm/copyright.md)
 
-* [Introduction](README.md)
-* Front Matter
-   * [Title Page](fm/title-page.md)
-   * [Copyright Page](fm/copyright.md)
+--------------------
+
+* [Preface](preface.md)
    * [About the Cover](fm/about-cover.md)
    * [Dedication](fm/dedication.md)
    * [Forward](fm/forward.md)
    * [Acknowledgments](fm/acknowledgments.md)
-   * [Preface](README.md)
-* Part I - (car lfeug)
+* [Introduction](intro/README.md)
    * [About the Book](intro/about.md)
    * [Prerequisites](intro/prereq.md)
    * [An Amazingly Brief History of Computing](intro/computing-history.md)
    * [The Origins of Lisp](intro/lisp-history.md)
    * [The Origins of Erlang](intro/erlang-history.md)
    * [An Overview of LFE](intro/lfe-overview.md)
-* Part II - Lisp and Erlang Basics
    * [Lisp and Erlang Basics](p1/lisp-erlang-basics.md)
-* Part III - Elementary LFE
    * [Elementary LFE](p2/lfe-elemnts.md)
-* Part IV - Intermediate LFE
    * [Intermediate LFE](p3/intermed-lfe.md)
-* Part V - Advanced LFE
    * [Advanced Techniques in Lisp](p4/advanced-lfe.md)
    * [Advanced OTP Systems](p4/advanced-otp.md)
-* Part VI (car (reverse lfeug))
-   * [Epilogue](outro/epilogue.md)
+* [Epilogue](outro/epilogue.md)
    * [Afterword](outro/afterward.md)
    * [Appendices](outro/appendices.md)
    * [Glossary](outro/glossary.md)
    * [Bibliography](outro/bibliography.md)
 
+--------------------
+
+[Feedback](feedback.md)
+[LFE Documentation](redirects/docs.html)
+[LFE rebar3 Plugin](redirects/rebar3.html)
+[Built with mdBook](redirects/mdbook.html)

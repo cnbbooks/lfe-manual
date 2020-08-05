@@ -1,12 +1,12 @@
-# Preface
+# `LFE OTPCHINE MANUAL`
 
-This Gitbook (available [here](http://lfe.gitbooks.io/user-guide/))
-is a work in progress, attempting to synthesize the following elements:
+*The Manual for the Machine that is LFE/OTP*
 
-* The best Lisp books
-* The topics covered in the best Erlang books
-* Elements of the best open source programming language documentation
-* Classic language user guides of the 70s, 80s, and 90s.
+Note: This book is a long-term project and a work in progress.
 
-This is a huge project, and we can use your help! Got an idea? Found a bug?
-[Let us know!]().
+[![][cover]][cover-large]
+
+<!-- Named page links below: /-->
+
+[cover]: src/images/cover.jpg
+[cover-large]: src/images/cover-large.jpg
