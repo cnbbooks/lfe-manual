@@ -32,6 +32,10 @@ run: serve
 clean:
 	@rm -f $(PUBLISH_DIR)/README.md
 
+book-submodule:
+	@git submodule add -b master `git remote get-url --push origin` $(PUBLISH_DIR)
+	@git commit -m "Added master branch as submodule ($(PUBLISH_DIR) dir)."
+
 book-init:
 	@git submodule update --init --recursive && \
 	cd $(PUBLISH_DIR) && \
