@@ -1,13 +1,29 @@
-# LFE User Guide
+# LFE OTPCHINE MANUAL
 
-or
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
-## A Guide for Users of the Lisp Flavoured Erlang Language
+Adatped from multiple sources
+<br/>
+by Duncan McGreggor
 
-for
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
-### The Programming of Digital Computing Devices
+[![publisher logo][publisher-img]][publisher-site]
 
-comprising
+<!-- Named page links below: /-->
 
-#### A Series of Lisp Flavoured Metaprogramming Mystery and Distributed Systems Adventures as they Pertain to the Edification of the Gentle Reader in Her Mastery of Systems of a Timely Sort and Dispositions Quite Tolerant of Faults
+[publisher-img]: ../images/cnbb-pub-logo-1.6.png
+[publisher-site]: http://cnbb.pub/

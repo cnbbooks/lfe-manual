@@ -1,16 +1,30 @@
-A Production of the LFElluminamus
+Published by Cowboys 'N' Beans Books
 
-An Imprint of the Alien Alliance 
+[https://github.com/cnbbooks](https://github.com/cnbbooks) &#9672; [http://cnbb.pub/](http://cnbb.pub/) &#9672; [info@cnbb.pub](mailto:info@cnbb.pub)
 
-1 Recursion Way, Stateless, Land of Lisp
+<br/>
+<br/>
+<br/>
 
-First published in your future but copyrighted in your past, &copy; 2014, 2015
+First electronic edition published: 2020
 
-The LFE Maintainers assert the moral right to be identified as those who have mostly not completely ignored the scribbles contained herein.
+<br/>
+<br/>
+<br/>
 
-A catalogue for this book is not, to the best of our knowledge, available from the British Library.
+Portions &copy; 1992, 1993 Peter Norvig
 
-![Creative Commons Logo](https://i.creativecommons.org/l/by/4.0/88x31.png)
+Portions &copy; 1992, 1993 Kent Pitman
 
-The LFE User Guide by the LFE Maintainers is licensed under a Creative Commons Attribution 4.0 International License.
-Based on a work at http://github.com/lfe/user-guide.
+Portions &copy; 2020, Duncan McGreggor
+
+[cc-license]: http://creativecommons.org/licenses/by-sa/4.0/
+[cc-image]: https://i.creativecommons.org/l/by-sa/4.0/88x31.png
+
+This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License][cc-license]
+
+[![Creative Commons License][cc-image]][cc-license]
+
+<br/>
+<br/>
+<br/>
