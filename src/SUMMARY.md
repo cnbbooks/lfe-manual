@@ -1,6 +1,7 @@
 [The LFE Style Guide](README.md)
 [Title Page](title.md)
 [Copyright](copyright.md)
+[Preface](preface.md)
 
 --------------------
 

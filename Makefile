@@ -15,17 +15,18 @@ Download $(BIN) from $(DOWNLOAD).
 endef
 
 build:
-ifndef GENw
+ifndef GEN
 	$(error $(BINARY_ERROR))
 endif
-	$(MAKE) backup-book-git
+	@echo " >> Rebuilding book ..."
+	@$(MAKE) backup-submodule-git
 	@$(GEN) build
-	$(MAKE) restore-book-git
+	@$(MAKE) restore-submodule-git
 
 serve:
-	$(MAKE) backup-book-git
-	@$(GEN) serve
-	$(MAKE) restore-book-git
+	@bash -c "trap \"$(MAKE) serve-cleanup\" EXIT; $(GEN) serve -p $(PORT)"
+
+serve-cleanup: book-init build
 
 run: serve
 
@@ -37,15 +38,16 @@ book-submodule:
 	@git commit -m "Added master branch as submodule ($(PUBLISH_DIR) dir)."
 
 book-init:
-	@git submodule update --init --recursive && \
-	cd $(PUBLISH_DIR) && \
-	git checkout master
+	@git submodule update --init --recursive
+	@cd $(PUBLISH_DIR) && git checkout master
 
-backup-book-git:
+backup-submodule-git:
+	@echo " >> Backup-up book's git dir ..."
 	@mkdir -p $(TMP_GIT_DIR)/
 	@mv -v $(PUBLISH_DIR)/.git $(TMP_GIT_DIR)/
 
-restore-book-git:
+restore-submodule-git:
+	@echo " >> Restoring book's git dir ..."
 	@mv -v $(TMP_GIT_DIR)/.git $(PUBLISH_DIR)/
 
 $(PUBLISH_DIR)/README.md:
