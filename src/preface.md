@@ -4,6 +4,7 @@ The LFE Style Guide takes inspirection (and often times actual content) directly
 
 * [Google Common Lisp Style Guide](https://google.github.io/styleguide/lispguide.xml)
 * [A Guide to Writing Good, Maintainable Common Lisp Code](https://lisp-lang.org/style-guide/)
+* [Tutorial on Good Lisp Programming Style](http://norvig.com/luv-slides.ps)
 * [Erlang Programming Rules and Conventions](http://www.erlang.se/doc/programming_rules.shtml)
 * [Erlang Coding Standards & Guidelines](https://github.com/inaka/erlang_guidelines)
 * [The Clojure Style Guide](https://github.com/bbatsov/clojure-style-guide)
