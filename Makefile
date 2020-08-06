@@ -35,7 +35,8 @@ clean:
 
 book-submodule:
 	@git submodule add -b master `git remote get-url --push origin` $(PUBLISH_DIR)
-	@git commit -m "Added master branch as submodule ($(PUBLISH_DIR) dir)."
+	@git commit --author "LFE Maintainers <maintainers@lfe.io>" \
+		-m "Added master branch as submodule ($(PUBLISH_DIR) dir)."
 
 book-init:
 	@git submodule update --init --recursive
@@ -58,11 +59,13 @@ $(PUBLISH_DIR)/README.md:
 publish: clean build $(PUBLISH_DIR)/README.md
 	-@cd $(PUBLISH_DIR) && \
 	git add * && \
-	git commit -am "Regenerated book content." > /dev/null && \
+	git commit --author "LFE Maintainers <maintainers@lfe.io>" \
+		-am "Regenerated book content." > /dev/null && \
 	git push origin $(PUBLISH_BRANCH) && \
 	cd -  && \
 	git add $(PUBLISH_DIR) && \
-	git commit -am "Updated submodule for recently generated book content." && \
+	git commit --author "LFE Maintainers <maintainers@lfe.io>" \
+		-am "Updated submodule for recently generated book content." && \
 	git submodule update && \
 	git push origin $(BUILDER_BRANCH)
 
@@ -81,14 +84,14 @@ spell-check:
 
 add-word: WORD ?= ""
 add-word:
-	@echo "*$(WORD)\n#" | aspell -a
+	@echo "*$(WORD)\n#" | aspell -a > /dev/null
 
 add-words: WORDS ?= ""
 add-words:
 	@echo "Adding words:"
 	@for WORD in `echo $(WORDS)| tr "," "\n"| tr "," "\n" | sed -e 's/^[ ]*//' | sed -e 's/[ ]*$$//'`; \
 	do echo "  $$WORD ..."; \
-	echo "*$$WORD\n#" | aspell -a; \
+	echo "*$$WORD\n#" | aspell -a > /dev/null; \
 	done
 	@echo
 
