@@ -7,6 +7,9 @@
 
 * [Introduction](intro/README.md)
 * [Formatting](format/README.md)
+  * [File Headers](format/headers.md)
+  * [Indentation](format/indent.md)
+  * [Whitespace](format/whtsp.md)
   * [Line Length](format/line-len.md)
   * [Spelling and Abbreviations](format/spelling.md)
 * [Naming](names/README.md)
@@ -14,11 +17,12 @@
 * [Data Representation](repr/README.md)
   * [Records](repr/records.md)
 * [Errors](errors/README.md)
-* [Processes, Servers and Messages](psm/README.md)
+* [Processes, Servers & Messages](psm/README.md)
 * [Software Engineering](swe/README.md)
   * [Principles](swe/principles.md)
   * [Priorities](swe/priorities.md)
   * [Architecture](swe/architecture.md)
+
 --------------------
 
 [Feedback](feedback.md)
