@@ -7,13 +7,18 @@
 
 * [Introduction](intro/README.md)
 * [Formatting](format/README.md)
+  * [Line Length](format/line-len.md)
+  * [Spelling and Abbreviations](format/spelling.md)
 * [Naming](names/README.md)
 * [Documentation](docs/README.md)
 * [Data Representation](repr/README.md)
-    * [Records](repr/records.md)
+  * [Records](repr/records.md)
 * [Errors](errors/README.md)
 * [Processes, Servers and Messages](psm/README.md)
-* [Software Engineering]()
+* [Software Engineering](swe/README.md)
+  * [Principles](swe/principles.md)
+  * [Priorities](swe/priorities.md)
+  * [Architecture](swe/architecture.md)
 --------------------
 
 [Feedback](feedback.md)
