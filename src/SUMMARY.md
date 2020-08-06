@@ -1,8 +1,9 @@
-# Summary
+[The LFE rebar3 Plugin (v0.3.0)](README.md)
+[Title Page](title.md)
+[Copyright](copyright.md)
 
-* [The LFE rebar3 Plugin (v0.3.0)](README.md)
-  * [Title Page](title.md)
-  * [Copyright](copyright.md)
+--------------------
+
 * [Introduction](intro/README.md)
   * [Features](intro/features.md)
   * [Background](intro/background.md)
@@ -13,6 +14,7 @@
   * [The Plugin](setup/plugin.md)
 * [Command Reference](command-ref/README.md)
   * [Compiling](command-ref/compiling.md)
+    * [Package Support](command-ref/compiling-packages.md)
   * [REPL](command-ref/repl.md)
   * [Testing](command-ref/testing/README.md)
     * [eunit](command-ref/testing/eunit.md)
