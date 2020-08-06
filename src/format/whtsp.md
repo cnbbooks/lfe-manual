@@ -3,8 +3,8 @@
 You should include one blank line between top-level forms, such as function definitions. Exceptionally, blank lines can be omitted between simple, closely related defining forms of the same kind, such as a group of related type declarations or constant definitions.
 
 ```lisp
-(defun my-pi () 3.14)
-(defun my-e () 2.72)
+(defun +my-pi+ () 3.14)
+(defun +my-e+ () 2.72)
 
 (defun factorial (n)
   (factorial n 1))
