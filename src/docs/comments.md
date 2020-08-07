@@ -19,11 +19,11 @@ For all comments, there should be a space between the semicolon and the text of 
 ;;;; File-level comments or comments for large sections of code.
 (defmodule math-n-things
   (export
-    (utility-function 0)
-    ...
-    (small-prime-number? 1)
-    (large-prime-number? 1)
-    ...))
+   (utility-function 0)
+   ...
+   (small-prime-number? 1)
+   (large-prime-number? 1)
+   ...))
 
 ;;; The functions in this section are utility in nature, supporting others in
 ;;; the module. More details on their intended use cases are availale here:

@@ -22,6 +22,6 @@ In short: write many small libraries.
 
 <ol>
 <li><a name="footnote-1">
-This entire page was adatped from the lisp-lang.org Style Guide's <a href="https://lisp-lang.org/style-guide/#general-guidelines">General Guidelines</a>.
+This entire page was adapted from the lisp-lang.org Style Guide's <a href="https://lisp-lang.org/style-guide/#general-guidelines">General Guidelines</a>.
 </li>
 </ol>

@@ -1,5 +1,7 @@
 # Flow Control
 
+## `if` Branches
+
 Large conditional expressions and deeply nested blocks of code are harder to read, so should be factored out into functions.
 
 For example, this:
@@ -26,3 +28,7 @@ Should be refactored to something like this:
   (launch rocket)
   (! pid `#(err "Aborting launch.")))
 ```
+
+## `case` Branches
+
+Don't write complex `case` statements with deeply nested branching. Instead, split these into functions, too, pattern-matching in the function heads.

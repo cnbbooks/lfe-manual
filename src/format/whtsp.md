@@ -51,7 +51,7 @@ Much better:
 
 You should use only one space between forms.
 
-You should not use spaces to vertically align forms in the middle of consecutive lines. An exception is made when the code possesses an important yet otherwise not visible symmetry that you want to emphasize.
+You should not use spaces to vertically align forms in the middle of consecutive lines. An exception is made when the code possesses an important yet otherwise not visible symmetry that you want to emphasise.
 
 Bad:
 ```text

@@ -14,6 +14,8 @@ Second electronic edition published: 2020
 <br/>
 <br/>
 
+Portions &copy; 1987-2020 Klas Eriksson, Mike Williams, Joe Armstrong
+
 Portions &copy; 1992, 1993 Peter Norvig
 
 Portions &copy; 1992, 1993 Kent Pitman

@@ -1,6 +1,6 @@
 # Priorities
 
-When making decisions about how to write a given piece of code, aim for the following -ilities in this priority order:
+When making decisions about how to write a given piece of code, aim for the following in this priority order:
 
 * Usability by the customer
 * Debuggability/Testability
@@ -16,4 +16,4 @@ For the LFE efficiency point, given two options of equivalent complexity, pick t
 
 Given two options where one is more complex than the other, pick the simpler option and revisit the decision only if profiling shows it to be a performance bottleneck.
 
-However, avoid premature optimization. Don't add complexity to speed up something that runs rarely, since in the long run, it matters less whether such code is fast.
+However, avoid premature optimisation. Don't add complexity to speed up something that runs rarely, since in the long run, it matters less whether such code is fast.

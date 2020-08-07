@@ -2,7 +2,7 @@
 
 In general, use your text editor's indentation capabilities. If you are contributing to a particular library, be sure to ask the maintainers what standard they use, and follow those same guidelines, thus saving everyone from the drudgery of whitespace fixes later.
 
-In particular, you'll want to do everything you can to follow the conventions laid out in the Emacs LFE mode supplied in the [LFE source](https://github.com/rvirding/lfe/tree/develop/emacs). Instructions for use are given in the [LFE Github wiki](https://github.com/rvirding/lfe/wiki/Emacs-setup), but we'll repeat it here. Simply edit your `~/.emacs` file to inlcude the following:
+In particular, you'll want to do everything you can to follow the conventions laid out in the Emacs LFE mode supplied in the [LFE source](https://github.com/rvirding/lfe/tree/develop/emacs). Instructions for use are given in the [LFE Github wiki](https://github.com/rvirding/lfe/wiki/Emacs-setup), but we'll repeat it here. Simply edit your `~/.emacs` file to include the following:
 
 ```lisp
 ;; Prevent tabs being added:
@@ -24,7 +24,7 @@ In general though, indentation is two lines per form, for instance:
     (lfe_io:format "X=~p, Y=~p~n"  (list x y))))
 ```
 
-Note that LFE has many exceptions to this rule, given the complex forms it defines for features inheritied from Erlang (e.g., pattern-matching in function heads). A few examples for the number exceptions to the two-space indentation rule above:
+Note that LFE has many exceptions to this rule, given the complex forms it defines for features inherited from Erlang (e.g., pattern-matching in function heads). A few examples for the number exceptions to the two-space indentation rule above:
 
 ```lisp
 (cond ((lists:member x '(1 2 3)) "First three")
