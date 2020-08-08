@@ -35,20 +35,20 @@ rebar3 lfe repl
 Start the app:
 
 ```lisp
-lfe> (application:ensure_all_started 'myapp)
-#(ok (myapp))
+lfe> (application:ensure_all_started 'otp-lfe)
+#(ok (otp-lfe))
 ```
 
 Make sure the supervisor is running:
 
 ```lisp
-lfe> (erlang:whereis 'myapp-sup)
+lfe> (erlang:whereis 'otp-lfe-sup)
 #Pid<0.205.0>
 ```
 
 Make an API call to the `gen_server`:
 
 ```lisp
-lfe> (myapp:echo "testing the supervised gen_server ...")
+lfe> (otp-lfe:echo "testing the supervised gen_server ...")
 "testing the supervised gen_server ..."
 ```
