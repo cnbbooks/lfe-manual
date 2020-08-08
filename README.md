@@ -1,4 +1,4 @@
-# `LFE OTPCHINE MANUAL`
+# `LFE MACHINE MANUAL`
 
 *The Manual for the Machine that is LFE/OTP*
 

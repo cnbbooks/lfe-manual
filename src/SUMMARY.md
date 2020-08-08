@@ -1,4 +1,4 @@
-[LFE OTPCHINE MANUAL](README.md)
+[LFE MACHINE MANUAL](README.md)
 [Title Page](fm/title-page.md)
 [Copyright](fm/copyright.md)
 

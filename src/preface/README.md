@@ -1,1 +1,7 @@
 # Preface
+
+The original Lisp Machine Manual, the direct spiritiaul ancestor of the LFE Machine Manual, described both the language and the "operating system" of the Lisp Machine. The language was a dialect of Lisp called Zetalisp. Zetalisp was a direct descendant of MACLISP, created as a systems programming language for the MIT Lisp machines. This is of special note since Erlang was created as a systems programming language too. One of it's co-creators, Robert Virding, created Lisp Flavoured Erlang (LFE) based upon his expereinces with Franz Lisp (which based largely upon MACLISP), Portable Standard Lisp (itself an experiment in systems programming), and ultimately in an implementation he made of Lisp Machine Flavors on top of VAX/VMS where he extensively utilized the Lisp Machine Manual.
+
+As such, LFE has a very strong inheritance of systems programming from both parents, as it were. First and foremost, it is a BEAM language written on top of the Erlang VM and from which it strays very little. Secondly, it is a Lisp dialect. It is, however, _entirely_ a systems programming language.
+
+Which brings us back to Zetalisp and the Lisp Machine Manual. It seemed only fitting to base the LFE manual upon the fantastic work and docuentation that was done on Lisp systems programming in the 70s and 80s, work that so many of us treasure and adore and to which we still defer. Thus the machine that is OTP in the context and syntax of the LFE Lisp dialect is extensively documented in the LFE MACHINE MANUAL.

@@ -52,7 +52,7 @@ restore-submodule-git:
 	@mv -v $(TMP_GIT_DIR)/.git $(PUBLISH_DIR)/
 
 $(PUBLISH_DIR)/README.md:
-	@echo '# Content for the LFE OTPCHINE MANUAL' > $(PUBLISH_DIR)/README.md
+	@echo '# Content for the LFE MACHINE MANUAL' > $(PUBLISH_DIR)/README.md
 	@echo 'Published at [lfe.io/books/manual/](https://lfe.io/books/manual/)' >> $(PUBLISH_DIR)/README.md
 	@cd $(PUBLISH_DIR) && git add README.md
 

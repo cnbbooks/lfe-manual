@@ -10,4 +10,4 @@ This manual will not only teach you what all of that means and why you want it i
 
 There is a lot of material here, so just take it section by section. If at any time you feel overwhelmed, simply set down the book, take a deep breath, fix yourself a cuppa, and don't panic.
 
-Welcome to the LFE OTP(ma)CHINE MANUAL, the definitive LFE reference.
+Welcome to the LFE MACHINE MANUAL, the definitive LFE reference.

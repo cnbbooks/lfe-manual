@@ -1,4 +1,4 @@
-# LFE OTPCHINE MANUAL
+# LFE MACHINE MANUAL
 
 <br/>
 <br/>
