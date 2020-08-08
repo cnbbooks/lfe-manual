@@ -12,11 +12,15 @@ First electronic edition published: 2020
 <br/>
 <br/>
 
-Portions &copy; 1992, 1993 Peter Norvig
+Portions &copy; 1979-1981, Daniel Weinreb and David Moon
 
-Portions &copy; 1992, 1993 Kent Pitman
+Portions &copy; 1992-1993, Peter Norvig and Kent Pitman
 
-Portions &copy; 2020, Duncan McGreggor
+Portions &copy; 2008-2012, Robert Virding
+
+Portions &copy; 2010-2020, Steve Klabnik and Carol Nichols
+
+Portions &copy; 2013-2020, Robert Virding and Duncan McGreggor
 
 [cc-license]: http://creativecommons.org/licenses/by-sa/4.0/
 [cc-image]: https://i.creativecommons.org/l/by-sa/4.0/88x31.png
