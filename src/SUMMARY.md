@@ -50,11 +50,12 @@
    * [Releases](part-4/rels/README.md)
    * [Tables and Databases](part-4/data/README.md)
    * [OTP Behaviours](part-4/behaviours/README.md)
+* [Part V - Conclusion]()
+   * [Epilogue](epilogue/epilogue.md)
+   * [Afterword](epilogue/afterward.md)
 
 --------------------
 
-[Epilogue](epilogue/epilogue.md)
-[Afterword](epilogue/afterward.md)
 [Glossary](epilogue/glossary.md)
 [Bibliography](epilogue/bibliography.md)
 [Index](epilogue/index.md)
