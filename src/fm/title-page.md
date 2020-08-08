@@ -8,7 +8,7 @@
 
 Adatped from multiple sources
 <br/>
-by Duncan McGreggor
+by Duncan McGreggor and Robert Virding
 
 <br/>
 <br/>
