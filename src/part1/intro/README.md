@@ -1,6 +1,6 @@
 # Introduction
 
-Far out in the uncharted backwaters of the unfashionable end of computer science known as "distributed systems programming" lies a small red "e". Orbitting this at a distance roughly proportional to the inverse of the likelihood of it being noticed is an utterly insignificant little green mug filled with the morning beverage stimulant equivalent of That Old Janx Spirit. Upon that liquid floats a little yellow "𝛌" whose adherents are so amazingly primitive that they still think `cons`s, `car`, and `cdr` are pretty neat ideas.
+Far out in the uncharted backwaters of the unfashionable end of computer science known as "distributed systems programming" lies a small red _e_. Orbitting this at a distance roughly proportional to the inverse of the likelihood of it being noticed is an utterly insignificant little green mug filled with the morning beverage stimulant equivalent of That Old Janx Spirit. Upon that liquid floats a little yellow _𝛌_ whose adherents are so amazingly primitive that they still think `cons`s, `car`, and `cdr` are pretty neat ideas.
 
 This is their book.
 
