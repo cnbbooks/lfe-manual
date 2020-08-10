@@ -142,6 +142,19 @@ code,
     background-color: #F47C3C;
 }
 
+img.liffy-bot-alert {
+    opacity: 0.60 !important;
+}
+
+h4.alert-heading img.liffy-bot-alert {
+    height: 18px !important;
+}
+
+img.liffy-bot-mascot {
+    height: 100px;
+    float: left;
+}
+
 .footnotes {
     font-size: 10pt;
     padding-top: 2em;
