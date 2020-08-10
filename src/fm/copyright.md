@@ -12,9 +12,17 @@ First electronic edition published: 2020
 <br/>
 <br/>
 
-Portions &copy; 1979-1981, Daniel Weinreb and David Moon
+Portions &copy; 1974, David Moon
+
+Portions &copy; 1978-1981, Daniel Weinreb and David Moon
+
+Portions &copy; 1979-1984, Douglas Adams
+
+Portions &copy; 1983, Kent Pitman
 
 Portions &copy; 1992-1993, Peter Norvig and Kent Pitman
+
+Portions &copy; 2003-2020, Ericsson AB
 
 Portions &copy; 2008-2012, Robert Virding
 
