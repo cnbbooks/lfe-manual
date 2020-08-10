@@ -29,6 +29,8 @@ Note, however, that due to the inclusion of the `lfe>` prompt, care must be take
 
 <img class="liffy-bot-mascot" src="../../images/LiffyBot-5-x500-bold-color.png"/>This is a severly hoopy frood. With an attitude. He pops up from time to time, generally with good advice. 
 
+<br/>
+
 ## Messages of Note
 
 From time to time you will see call-out boxes, aimed at drawing your attention to something of note. There are four differnt types of these:
@@ -48,7 +50,7 @@ These messages will take the following forms:
   <p class="mb-0">
     Here you will see a message of general interest that could have a useful or even positive impact on your experience in programming LFE.
 
-The icon associated with this is the "i" in a circle.
+The icon associated with this type of message is the "i" in a circle.
   </p>
 </div>
 
