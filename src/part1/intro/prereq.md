@@ -8,5 +8,5 @@ This book assumes the reader has the following installed upon their system:
 
 * a package manager for easily installing software (in particular, development tools and supporting libraries)
 * `git`, `make`, and other core open source software development tools
-* a modern version of Erlang (as of the writing of this book, that would include versions 19 through 23)
-* the `rebar3` build tool for Erlang (and other BEAM languages)
+* a modern version of Erlang (as of the writing of this book, that would include versions 19 through 23); the rebar3 documentation has [great suggestions](https://www.rebar3.org/docs/getting-started#installing-erlang) on what to use here, depending upon your need
+* the `rebar3` build tool for Erlang (and other BEAM languages); see [its docs](https://www.rebar3.org/docs/getting-started#installing-binary) for installation instructions

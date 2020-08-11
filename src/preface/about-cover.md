@@ -14,18 +14,17 @@ Bitsavers has a 3rd edition of the Chineual with the full cover
 
 ## The LFE Edition
 
-### The Spine
+### Whole Cover
 
-[![][cover-binding]][cover-binding-large]
+[![][cover-all]][cover-all-large]
 
 ### Back Cover
 
 [![][cover-back]][cover-back-large]
 
-### Whole Cover
+### The Spine
 
-[![][cover-all]][cover-all-large]
-
+[![][cover-binding]][cover-binding-large]
 
 <!-- Named page links below: /-->
 

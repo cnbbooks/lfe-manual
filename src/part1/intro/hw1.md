@@ -1,1 +1,0 @@
-# LFE/OTP 'Hello, World!'

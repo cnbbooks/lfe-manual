@@ -2,6 +2,11 @@
 
 ## Typography
 
+### Key Entry
+
+We use the angle bracket convention to indicated typing actual key entries on the keyboard. For instance, when the reader sees `<ENTER>` they should interpret this as an actual key they should type. That that all keys are given in upper-case. If the reader is expected to use an upper-case "C"  rather than a lower-case "c", they will be presented with the key combination `<SHIFT><C>`.
+
+### Code
 Color syntax highlighting is used in this text to display blocks of code. The formatting of this display is done in such a way as to invoke in the mind of the reader the feeling of a terminal, thus making an obvious visual distinction in the text. For instance:
 
 ```lisp
@@ -54,7 +59,7 @@ The icon associated with this type of message is the "i" in a circle.
   </p>
 </div>
 
-
+<br/>
 
 <div class="alert alert-success">
   <h4 class="alert-heading">
@@ -68,6 +73,7 @@ The icon assocated with this type of message is that of LiffyBot.
   </p>
 </div>
 
+<br/>
 
 <div class="alert alert-warning">
   <h4 class="alert-heading">
@@ -81,6 +87,8 @@ The icon assocated with this type of message is the "!" in a caution triangle.
   </p>
 </div>
 
+<br/>
+
 <div class="alert alert-danger">
   <h4 class="alert-heading">
     <i class="fa fa-minus-circle" aria-hidden="true"></i>
@@ -92,4 +100,3 @@ The icon assocated with this type of message is the "!" in a caution triangle.
 The icon assocated with this type of message is "do not enter".
   </p>
 </div>
-
