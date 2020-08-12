@@ -1,3 +1,0 @@
-# Planning the Game
-
-## State

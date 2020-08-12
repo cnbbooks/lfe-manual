@@ -8,6 +8,8 @@ Their language, Lisp Flavoured Erlang (henceforth "LFE"), lets you use the archa
 
 This manual will not only teach you what all of that means and why you want it in your breakfast cereal, but also: how to create LFE programs; what exactly are the basic elements of the language; the ins-and-outs of extremely efficient and beautiful clients and servers; and much, much more.
 
+Note, however, that the first chapter is a little different than most other books, and is in fact different from the rest of the chapters in this manual. We wrote this chapter with two guiding thoughts: firstly and foremost, we wanted to provide some practical examples of code-in-action as a context in which a programmer new to LFE could continuously refer -- from the very beginning through to the successful end --  while learning the general principles of that language; secondly, most programming language manuals are dry references to individual pieces of a language or system, not representatives of the whole, and we wanted to provide a starting place for those who learn well via examples, who _would_ benefit from a view toward that whole. For those who have already seen plenty of LFE examples, don't need this, and would rather get to down to the nitty-gritty, rest assured we desire your experience to be guilt-free and thus encourage you to jump into next chapter immediately!
+
 This book is divided into 6 parts with the following foci:
 
 * Introductory material
@@ -16,8 +18,6 @@ This book is divided into 6 parts with the following foci:
 * Advanced language features
 * The machine that is OTP
 * Concluding thoughts and summaries
-
-We have written the introduction to provide some code examples, but with very little instruction or explanation. Those will certainly be presented later, but initially we feel it is important to provide a starting place for those who learn best via examples. For those who don't and would rather jump straight into the manual, please have a guilt-free experience and enjoy the next chapter immediately.
 
 There is a lot of material in this book, so just take it section by section. If at any time you feel overwhelmed, simply set down the book, take a deep breath, fix yourself a cuppa, and don't panic.
 
