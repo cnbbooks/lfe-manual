@@ -22,6 +22,18 @@ rebar3 new lfe-release prod-lfe
 ===> Writing prod-lfe/config/vm.args
 ```
 
+Change directoy into your new app: 
+
+```shell
+cd prod-lfe
+```
+
+Build the release:
+
+```shell
+rebar3 release
+```
+
 Start up the application:
 
 ```shell
