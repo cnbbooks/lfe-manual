@@ -1,8 +1,10 @@
 # Integrating into an Application
 
-You're only going to touch one of the files that was generated when you created the `guessing-game` project: `./src/guessing-game.lfe`. You can ignore all the others.
+We're only going to touch one of the files that was generated when you created the `guessing-game` project: `./src/guessing-game.lfe`. You can ignore all the others. Once we've made all the changes summarized below, we will walk through this file at a high level, discussing the changes and how those contribute to the completion of the game.
 
-We need to reflect on the planning we just did, remembering the actions and states that we want to support. There's also another thing to consider, since we're writing this as is an always-up OTP app. With some adjustments for state magagement, it could easily be turned into something that literally millions of users could be accessing simultaneously (and not a single-user CLI example). As such, the server will need to be able to process the following messages:
+First though, we need to reflect on the planning we just did, remembering the actions and states that we want to support. There's also another thing to consider, since we're writing this as is an always-up OTP app. With some adjustments for state magagement, it could easily be turned into something that literally millions of users could be accessing simultaneouslyi. So: how does a game that is usually implemented as a quick CLI toy get transformed in LFE/OTP such that it can be run as a server?
+
+In short, we'll use OTP's `gen_server` capability ("behaviour") and the usual message-passing practices. As such, the server will need to be able to process the following messages:
 
 * `#(start-game true)` (create a record to track game state)
 * `#(stop-game true)` (clear the game state)

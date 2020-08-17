@@ -1,6 +1,6 @@
 # Playing the Game
 
-If you are still in the REPL, quit out of it so that `rebar3` can rebuild out changed module. Then start it up again:
+If you are still in the REPL, quit out of it so that `rebar3` can rebuild our changed module. Then start it up again:
 
 ```shell
 $ rebar3 lfe repl
@@ -65,3 +65,5 @@ ok
 Well-guessed!!
 Game over
 ```
+
+Now that our code is complete and the game is working, let's review the module.

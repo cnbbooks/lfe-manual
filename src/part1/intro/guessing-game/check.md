@@ -23,13 +23,18 @@ lfe>   ((guess) (when (< guess answer))
 lfe>    (io:format "Guess is too low~n")))
 ```
 
+The extra parenthesis around the function's arguments is due to the use of the pattern-matching form of function definition we're using here. We need this form, since we're going to use a guard. The `when` after the function args is called a "guard" in LFE. As you might imagine, we could use any number of these. 
+
 ```lisp
-lfe> (check data)
+lfe> (check 10)
+```
+
+```text
 Guess is too low
 ok
 ```
 
-The extra parenthesis around the function's arguments is due to the use of the pattern-matching form of function definition we're using here. We need this form, since we're going to use a guard. The `when` after the function args is called a "guard" in LFE. As you might imagine, we could use any number of these. Let's add some more:
+Let's add some more guards for the other checks we want to perform:
 
 ```lisp
 lfe> (defun check
