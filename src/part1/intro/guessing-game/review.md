@@ -147,12 +147,12 @@ This is the last file we'll look at, and is the one we'll cover in the most deta
   (gen_server:cast (SERVER) `#(guess ,n)))
 ```
 
-The beginning of the file opens with a declaration of the module: not only its name, but the public functions we want to expose as part of our API.
+The beginning of the file opens with a declaration of the module: not only its name, but the public functions we want to expose as part of our API. This will be covered in Chapter XXX, section XXX.
 
-Next, we have a few constant functions. Functions are necessary here due to the fact that LFE does not have global variables.
+Next, we have a few constant functions. Functions are necessary here due to the fact that LFE does not have global variables. This will be covered in Chapter XXX, section XXX.
 
-Then we define the functions that will be used as this module's implementation of a generic OTP server. There is some boilerplate here that will be discussed when we dive into LFE/OTP.
+Then we define the functions that will be used as this module's implementation of a generic OTP server. There is some boilerplate here that will be discussed when we dive into LFE/OTP. This will be covered in Chapter XXX, section XXX.
 
-After that, we define the functions that are used by the OTP machinery that will run our server. Here you see several examples of pattern matching function heads in LFE, a very powerful feature that lends itself nicely to consise and expressive code.
+After that, we define the functions that are used by the OTP machinery that will run our server. Here you see several examples of pattern matching function heads in LFE, a very powerful feature that lends itself nicely to consise and expressive code. This will be covered in Chapter XXX, section XXX.
 
-Lastly, we define our own API. Most of these functions simply send messages to our running server.
+Lastly, we define our own API. Most of these functions simply send messages to our running server. More on this in Chapter XXX, section XXX.

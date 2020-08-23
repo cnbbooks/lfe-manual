@@ -1,6 +1,6 @@
 # From the REPL
 
-As previously demonstrated, it is possible to start up the LFE read-eval-print-loop (REPL) using `rebar3`:
+As previously demonstrated, it is possible to start up the LFE 'read-eval-print loop' (REPL) using `rebar3`:
 
 ```shell
 $ rebar3 lfe repl
