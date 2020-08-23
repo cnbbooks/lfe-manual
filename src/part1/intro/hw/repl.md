@@ -3,7 +3,7 @@
 As previously demonstrated, it is possible to start up the LFE read-eval-print-loop (REPL) using `rebar3`:
 
 ```shell
-rebar3 lfe repl
+$ rebar3 lfe repl
 ```
 
 Once you are at the LFE prompt, you may write a simple LFE "program" like the following:

@@ -3,14 +3,14 @@
 From your system shell prompt, run the following to create a new project that will let us run a Hello-World program from the command line:
 
 ```shell
-rebar3 new lfe-main hello-world
-cd ./hello-world
+$ rebar3 new lfe-main hello-world
+$ cd ./hello-world
 ```
 
 Once in the project directory, you can actually just do this:
 
 ```shell
-rebar3 lfe run
+$ rebar3 lfe run
 ```
 
 You will see code getting downloaded and compiled, and then your script will run, generating the following output:
@@ -41,7 +41,7 @@ The other code that was created when we executed `rebar3 new lfe-main hello-worl
 You may be wondering about the `args` argument to the `main` function, and the fact that the printed output for the `args` when we ran this was `[]`. Let's try something:
 
 ```shell
-rebar3 lfe run -- Fenchurch 42
+$ rebar3 lfe run -- Fenchurch 42
 ```
 
 ```text

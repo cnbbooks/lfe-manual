@@ -201,7 +201,7 @@ function playground_text(playground) {
     });
 
     if (window.playground_copyable) {
-        Array.from(document.querySelectorAll('pre code')).forEach(function (block) {
+        Array.from(document.querySelectorAll('pre code:not(.plaintext)')).forEach(function (block) {
             var pre_block = block.parentNode;
             if (!pre_block.classList.contains('playground')) {
                 var buttons = pre_block.querySelector(".buttons");
@@ -559,6 +559,18 @@ function playground_text(playground) {
 (function clipboard() {
     var clipButtons = document.querySelectorAll('.clip-button');
 
+    function removePrompts(text) {
+        return text.replaceAll(/^lfe> /mg, '').
+                    replaceAll(/^\$ /mg, '');
+    }
+
+    function removeResultsComments(text) {
+        return text.replaceAll(/^;; .*$/mg, '').
+                    replaceAll(/^# .*$/mg, '').
+                    replaceAll(/^(\r\n|\n)$/mg, '');
+
+    }
+
     function hideTooltip(elem) {
         elem.firstChild.innerText = "";
         elem.className = 'fa fa-copy clip-button';
@@ -573,7 +585,9 @@ function playground_text(playground) {
         text: function (trigger) {
             hideTooltip(trigger);
             let playground = trigger.closest("pre");
-            return playground_text(playground);
+            return removeResultsComments(
+                removePrompts(
+                  playground_text(playground)));
         }
     });
 
