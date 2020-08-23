@@ -37,7 +37,7 @@
       * [Starting LFE](part1/repl/start.md)
       * [REPL (help)](part1/repl/help.md)
       * [readline Support](part1/repl/readline.md)
-      * [Special Commands](part1/repl/special-cmds.md)
+      * [Special Variables](part1/repl/special-vars.md)
       * [Job Control](part1/repl/job-control.md)
 * [Part II - Code as Data]()
    * [Primitive Types](part2/data-types/README.md)
