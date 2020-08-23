@@ -61,13 +61,12 @@ publish: clean build $(PUBLISH_DIR)/README.md
 	git add * && \
 	git commit --author "LFE Maintainers <maintainers@lfe.io>" \
 		-am "Regenerated book content." > /dev/null && \
-	git push origin $(PUBLISH_BRANCH) && \
-	cd -  && \
-	git add $(PUBLISH_DIR) && \
+	git push origin $(PUBLISH_BRANCH)
+	-@git add $(PUBLISH_DIR) && \
 	git commit --author "LFE Maintainers <maintainers@lfe.io>" \
 		-am "Updated submodule for recently generated book content." && \
-	git submodule update && \
-	git push origin $(BUILDER_BRANCH)
+	git submodule update
+	-@git push origin $(BUILDER_BRANCH)
 
 build-publish: build publish
 
