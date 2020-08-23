@@ -12,7 +12,7 @@
 
 --------------------
 
-* [Part I - Getting Started]()
+* [Part I - Getting Started](part1/README.md)
    * [Introduction](part1/intro/README.md)
    * [Prerequisites](part1/intro/prereq.md)
    * [Conventions](part1/intro/conventions.md)
@@ -32,6 +32,12 @@
          * [Finishing Touches](part1/intro/guessing-game/finishing-touches.md)
          * [Playing the Game](part1/intro/guessing-game/play.md)
       * [Code Review](part1/intro/guessing-game/review.md)
+   * [The LFE REPL](part1/repl/README.md)
+      * [Starting LFE](part1/repl/start.md)
+      * [REPL (help)](part1/repl/help.md)
+      * [readline Support](part1/repl/help.md)
+      * [Special Commands](part1/repl/special-cmds.md)
+      * [Job Control](part1/repl/job-control.md)
 * [Part II - Code as Data]()
    * [Primitive Types](part2/data-types/README.md)
    * [Conss](part2/data-types/README.md)
