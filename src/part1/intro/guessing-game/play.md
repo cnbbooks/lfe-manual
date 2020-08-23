@@ -1,9 +1,9 @@
-# Plyaign the Game
+# Playing the Game
 
 If you are still in the REPL, quit out of it so that `rebar3` can rebuild out changed module. Then start it up again:
 
 ```shell
-rebar3 lfe repl
+$ rebar3 lfe repl
 ```
 
 Once at the LFE propmpt, start up the application:

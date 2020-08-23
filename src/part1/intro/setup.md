@@ -6,8 +6,8 @@ Having followed the notes and linked instructions in the [Prerequisites](prereq.
 First, unless you have configured other `rebar3` plugins on your system, you will need to create the configuration directory and the configuration file:
 
 ```shell
-mkdir ~/.config/rebar3
-touch ~/.config/rebar3/rebar.config
+$ mkdir ~/.config/rebar3
+$ touch ~/.config/rebar3/rebar.config
 ```
 
 Next, open up that file in your favourite editor, and give it these contents:
@@ -49,7 +49,7 @@ In particular, starting a REPL in Windows can take a little more effort (an extr
 With the LFE `rebar3` plugin successfully configured, you should be able to start up the LFE REPL anywhere on your system with the following:
 
 ```shell
-rebar3 lfe repl
+$ rebar3 lfe repl
 ```
 ```text
 Erlang/OTP 23 [erts-11.0] [source] [64-bit] [smp:16:16] [ds:16:16:10] [async-threads:1] [hipe]

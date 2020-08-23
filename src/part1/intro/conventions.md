@@ -22,13 +22,24 @@ Examples such as this one are readily copied and may be pasted without edit into
 
 For interactive code, we display the default LFE prompt the reader will see when in the REPL. We also separate out input and output into separate code blocks. For example:
 
-```lisp 
+```lisp
 lfe> (integer_to_list 42 2)
 ```
-```lisp
+```text
 "101010"
 ```
-Note, however, that due to the inclusion of the `lfe>` prompt, care must be taken when copying and pasting these examples. If you copy these, you will almost certainly want to edit the pasted text to remove the prompt.
+
+For shell commands, the commands to enter at the prompt are prefixed by a `$` for the prompt.  Input and any relevant output are also separated out into distinct blocks.
+
+```shell
+$ echo "I am excited to learn LFE"
+```
+```text
+I am excited to learn LFE
+```
+
+Note, however, that due to the inclusion of the `lfe>` or `$` prompts, care must be taken when copying and pasting these examples. If you copy these using the copy buttons in the code blocks the prompts will be removed for you, otherwise, you will almost certainly want to edit the pasted text to remove the prompt.
+
 
 ## LiffyBot
 
