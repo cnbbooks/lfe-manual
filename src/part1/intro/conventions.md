@@ -20,30 +20,25 @@ Color syntax highlighting is used in this text to display blocks of code. The fo
 
 Examples such as this one are readily copied and may be pasted without edit into a file or even the LFE REPL itself.
 
-For interactive code, we display the default LFE prompt the reader will see when in the REPL. We also separate out input and output into separate code blocks. For example:
+For interactive code, we display the default LFE prompt the reader will see when in the REPL:
 
 ```lisp
 lfe> (integer_to_list 42 2)
-```
-```text
-"101010"
+;; "101010"
 ```
 
-For shell commands, the commands to enter at the prompt are prefixed by a `$` for the prompt.  Input and any relevant output are also separated out into distinct blocks.
+We also distinguish the output from the entered LFE code using code comments.
+
+For shell commands, the commands to enter at the prompt are prefixed by a `$` for the prompt. Input and any relevant output are provided as comment strings:
 
 ```shell
 $ echo "I am excited to learn LFE"
+## I am excited to learn LFE
 ```
-```text
-I am excited to learn LFE
-```
-
-Note, however, that due to the inclusion of the `lfe>` or `$` prompts, care must be taken when copying and pasting these examples. If you copy these using the copy buttons in the code blocks the prompts will be removed for you, otherwise, you will almost certainly want to edit the pasted text to remove the prompt.
-
 
 ## LiffyBot
 
-<img class="liffy-bot-mascot" src="../../images/LiffyBot-5-x500-bold-color.png"/>This is a severly hoopy frood. With an attitude. He pops up from time to time, generally with good advice. 
+<img class="liffy-bot-mascot" src="../../images/LiffyBot-5-x500-bold-color.png"/>This is a severly hoopy frood. With an attitude. He pops up from time to time, generally with good advice.
 
 <br/>
 

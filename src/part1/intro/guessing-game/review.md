@@ -1,6 +1,6 @@
 # Code Review
 
-We've got the whole rest of the book ahead of us to cover much of what you've seen in the sample project we've just created with our guessing game. In the coming pages, you will revisit every aspect of what you've seen so far in lots of detail with correspondingly useful insttruction on these matters. 
+We've got the whole rest of the book ahead of us to cover much of what you've seen in the sample project we've just created with our guessing game. In the coming pages, you will revisit every aspect of what you've seen so far in lots of detail with correspondingly useful insttruction on these matters.
 
 That being said, it would be unfair to not at least read through the code together and mention the high-level concepts involved. Since we only touched the code in one file, that will be the one that gets the most of our attention for this short review, but let's touch on the others here, too.
 
@@ -51,7 +51,7 @@ This is the last file we'll look at, and is the one we'll cover in the most deta
    (start-game 0)
    (stop-game 0)
    (guess 1)))
-   
+
 ;;; ----------------
 ;;; config functions
 ;;; ----------------
@@ -73,7 +73,7 @@ This is the last file we'll look at, and is the one we'll cover in the most deta
 
 (defun stop ()
   (gen_server:call (SERVER) 'stop))
-  
+
 ;;; -----------------------
 ;;; callback implementation
 ;;; -----------------------
@@ -126,7 +126,7 @@ This is the last file we'll look at, and is the one we'll cover in the most deta
 
 (defun code_change (_old-version state _extra)
   `#(ok ,state))
-  
+
 ;;; --------------
 ;;; our server API
 ;;; --------------
@@ -146,3 +146,13 @@ This is the last file we'll look at, and is the one we'll cover in the most deta
 (defun guess (n)
   (gen_server:cast (SERVER) `#(guess ,n)))
 ```
+
+The beginning of the file opens with a declaration of the module: not only its name, but the public functions we want to expose as part of our API.
+
+Next, we have a few constant functions. Functions are necessary here due to the fact that LFE does not have global variables.
+
+Then we define the functions that will be used as this module's implementation of a generic OTP server. There is some boilerplate here that will be discussed when we dive into LFE/OTP.
+
+After that, we define the functions that are used by the OTP machinery that will run our server. Here you see several examples of pattern matching function heads in LFE, a very powerful feature that lends itself nicely to consise and expressive code.
+
+Lastly, we define our own API. Most of these functions simply send messages to our running server.

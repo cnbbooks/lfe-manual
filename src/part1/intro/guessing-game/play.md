@@ -16,54 +16,38 @@ With the application and all of its dependencies started, we're ready to start t
 
 ```lisp
 lfe> (guessing-game:start-game)
-```
-
-```
-ok
-Guess the number I have chosen, between 1 and 10.
+;; ok
+;; Guess the number I have chosen, between 1 and 10.
 ```
 
 ```lisp
 lfe> (guessing-game:guess 10)
-```
-
-```
-ok
-Your guess is too high.
+;; ok
+;; Your guess is too high.
 ```
 
 ```lisp
 lfe> (guessing-game:guess 1)
-```
-
-```
-ok
-Your guess is too low.
+;; ok
+;; Your guess is too low.
 ```
 
 ```lisp
 lfe> (guessing-game:guess 5)
-```
-
-```
-ok
-Your guess is too low.
+;; ok
+;; Your guess is too low.
 ```
 
 ```lisp
 lfe> (guessing-game:guess 7)
-```
-```
-ok
-Your guess is too low.
+;; ok
+;; Your guess is too low.
 ```
 ```lisp
 lfe> (guessing-game:guess 8)
-```
-```
-ok
-Well-guessed!!
-Game over
+;; ok
+;; Well-guessed!!
+;; Game over
 ```
 
 Now that our code is complete and the game is working, let's review the module.

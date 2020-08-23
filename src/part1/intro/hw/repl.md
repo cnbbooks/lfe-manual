@@ -33,11 +33,8 @@ We can run it by calling it:
 
 ```lisp
 lfe> (hello-world)
-```
-
-```text
-"Hello, World!"
-ok
+;; "Hello, World!"
+;; ok
 ```
 
 When we execute our `hello-world` function, it prints our message to `standar-output` and then let's us know everything really quite fine. LFE displays `ok` as output for functions that do not return a value.

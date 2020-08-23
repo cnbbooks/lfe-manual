@@ -29,9 +29,7 @@ To start your new hello-world application, use the OTP `application` module:
 
 ```lisp
 lfe> (application:ensure_all_started 'hello-otp-world)
-```
-```lisp
-#(ok (hello-otp-world))
+;; #(ok (hello-otp-world))
 ```
 
 That message lets you know that not only was the `hello-otp-word` application and server started without issue, any applications upon which it depends were also started. Furthermore, there is a supervisor for our server, and it has started as well. Should our Hello-World server crash for any reason, the supervisor will restart it.
@@ -40,9 +38,7 @@ To finish the demonstration, and display the clichéd if classic message:
 
 ```lisp
 (hello-otp-world:echo "Hello, OTP World!")
-```
-```lisp
-"Hello, OTP World!"
+;; "Hello, OTP World!"
 ```
 
 And that, dear reader, is a _true_ LFE/OTP Hello-World program, complete with message-passing and pattern-matching!
