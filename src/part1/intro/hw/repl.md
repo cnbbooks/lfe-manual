@@ -24,7 +24,7 @@ Try this, instead:
 
 ```lisp
 lfe> (defun hello-world ()
-       (io:format "~p~n" '("Hello, World!")))
+lfe>   (io:format "~p~n" '("Hello, World!")))
 ```
 
 This is a simple function definition in LFE.
