@@ -4,7 +4,7 @@
 
 ### Key Entry
 
-We use the angle bracket convention to indicated typing actual key entries on the keyboard. For instance, when the reader sees `<ENTER>` they should interpret this as an actual key they should type. That that all keys are given in upper-case. If the reader is expected to use an upper-case "C"  rather than a lower-case "c", they will be presented with the key combination `<SHIFT><C>`.
+We use the angle bracket convention to indicate typing actual key on the keyboard. For instance, when the reader sees `<ENTER>` they should interpret this as an actual key they should type. Note that all keys are given in upper-case. If the reader is expected to use an upper-case "C"  instead of a lower-case "c", they will be presented with the key combination `<SHIFT><C>`.
 
 ### Code
 Color syntax highlighting is used in this text to display blocks of code. The formatting of this display is done in such a way as to invoke in the mind of the reader the feeling of a terminal, thus making an obvious visual distinction in the text. For instance:
@@ -27,7 +27,7 @@ lfe> (integer_to_list 42 2)
 ;; "101010"
 ```
 
-We also distinguish the output from the entered LFE code using code comments.
+We also distinguish the output from the entered LFE code using code comments displayed afer the command.
 
 For shell commands, the commands to enter at the prompt are prefixed by a `$` for the prompt. Input and any relevant output are provided as comment strings:
 
@@ -38,7 +38,7 @@ $ echo "I am excited to learn LFE"
 
 ## LiffyBot
 
-<img class="liffy-bot-mascot" src="../../images/LiffyBot-5-x500-bold-color.png"/>This is a severly hoopy frood. With an attitude. He pops up from time to time, generally with good advice.
+<img class="liffy-bot-mascot" src="../../images/LiffyBot-5-x500-bold-color.png"/>This is a severly hoopy frood. With an attitude. He pops up from time to time, generally with good advice. Or simply as a marker for something the authors hope you will pay special note.
 
 <br/>
 

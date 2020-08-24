@@ -67,7 +67,7 @@ Erlang/OTP 23 [erts-11.0] [source] [64-bit] [smp:16:16] [ds:16:16:10] [async-thr
 lfe>
 ```
 
-Exit out of the REPL for now with the `<CTRL><G>` and then `<CTRL><C>` key combinations.
+Exit out of the REPL for now by typing `<CTRL><G>` and  thn `<Q>`.
 
 <div class="alert alert-warning">
   <h4 class="alert-heading">

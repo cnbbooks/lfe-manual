@@ -49,8 +49,8 @@ Running script '/usr/local/bin/rebar3' with args [<<"Fenchurch">>,<<"42">>] ...
 'hello-world'
 ```
 
-We have to provide the two dashes to let `rebar3` know that we're done with it, that the follow argsuments are not for it, but rather for the program we want it to start for us. So it passes everything after the `--` to our script.
+We have to provide the two dashes to let `rebar3` know that we're done with it, that the subsequent argsuments are not for it, but rather for the program we want it to start for us. Using it causes everything after the `--` to be passed as arguments to our script.
 
-As for the code itself, it's tiny. But there is a lot going on just with these two files. HAve no fear, though: the remainder of this book will explore all of that and more. For now, know that the main function in the executable is calling the `hello-world` module's `my-fun` function, which takes no arguments. To put another way, what we really have here is a tiny, trivial library project with the addition of a script that calls a function from that library.
+As for the code itself, it's tiny. But there is a lot going on just with these two files. Have no fear, though: the remainder of this book will explore all of that and more. For now, know that the main function in the executable is calling the `hello-world` module's `my-fun` function, which takes no arguments. To put another way, what we really have here is a tiny, trivial library project with the addition of a script that calls a function from that library.
 
-For know just know that an executable file which starts with `#!/usr/bin/env lfescript` and contains a `main` function accepting one argument is an LFE script capable of being executed from the command line -- a we have shown!
+For now just know that an executable file which starts with `#!/usr/bin/env lfescript` and contains a `main` function accepting one argument is an LFE script capable of being executed from the command line -- a we have shown!

@@ -18,9 +18,9 @@ Or, for the terminally lazy:
 lfe> (io:format "~p~n" '("Hello, World!"))
 ```
 
-While technically a program, it is not very interesting; we didn't create a function of our own, nor did we run it from outside the LFE interactive programming environment. Let's address one of those points right now.
+While technically a program, it is not a very interesting one: we didn't create a function of our own, nor did we run it from outside the LFE interactive programming environment.
 
-Try this, instead:
+Let's address one of those points right now. Try this:
 
 ```lisp
 lfe> (defun hello-world ()
@@ -37,8 +37,8 @@ lfe> (hello-world)
 ;; ok
 ```
 
-When we execute our `hello-world` function, it prints our message to `standar-output` and then let's us know everything really quite fine. LFE displays `ok` as output for functions that do not return a value.
+When we execute our `hello-world` function, it prints our message to `standard-output` and then lets us know everything really quite fine with a friendly `ok`. LFE displays `ok` as output for functions that do not return a value.
 
 Now let's address the other point: running a Hello-World programming from outside LFE.
 
-Hit `<CTRL-G><CTRL-C>` to exit the REPL and get back to your terminal.
+Hit `<CTRL-G><Q>` to exit the REPL and get back to your terminal.

@@ -1,10 +1,10 @@
 # LFE/OTP 'Hello, World!'
 
-What has been demonstrated so far is a fairly vanilla Hello-World; there's nothing particularly interesting about it, just like any other Hello-World program. As mentioned before, this is particularly tricking in the case of LFE/OTP, since it lures the prospective developer into the preconception that BEAM languages are just like other programming languages, and they are not.
+What have been demonstrated so far are fairly vanilla Hello-World examples; there's nothing particularly interesting about them, which puts them solidly iin the company of the millions of other Hello-World programs. As mentioned before, this approach is particularly vexing in the case of LFE/OTP, since it lures the prospective developer into the preconception that BEAM languages are just like other programming languages. They most decidfedluy are not.
 
-What makes them, and in this particular case LFE, special is OTP. There's really nothing quite like it, certainly not baked into the heart and soul of another programming language. Most useful applications you will write in LFE/OTP will be composed of some sort of long-running service or server, something that manages that server and restarts it in the event of errors, and lastly, a context that contains both referred to as the "application" itself.
+What makes them, and in this particular case LFE, special is OTP. There's really nothing quite like it, certainly not baked into the heart and soul of another programming language. Most useful applications you will write in LFE/OTP will be composed of some sort of long-running service or server, something that manages that server and restarts it in the event of errors, and lastly, a context that contains both, the latter usually referred to as the "application" itself.
 
-As such, a _real_ Hello-World in LFE would be honest and let the prospective developer know what they are info (and what power will be placed at their fingertips). And that is what we will show now.
+As such, a _real_ Hello-World in LFE would be honest and let the prospective developer know what they are in for (and what power will be placed at their fingertips). _That_ is what we will show now, a _real_ LFE Hello-World example.
 
 If you are still in the directory of the previous Hello-World project, let's get out of that:
 

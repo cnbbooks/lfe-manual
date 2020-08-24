@@ -35,8 +35,9 @@
    * [The LFE REPL](part1/repl/README.md)
       * [Core Features](part1/repl/features.md)
       * [Starting LFE](part1/repl/start.md)
-      * [REPL (help)](part1/repl/help.md)
       * [readline Support](part1/repl/readline.md)
+      * [(help)](part1/repl/help.md)
+      * [Command Interface](part1/repl/c.md)
       * [Special Variables](part1/repl/special-vars.md)
       * [Job Control](part1/repl/job-control.md)
 * [Part II - Code as Data]()
@@ -105,5 +106,4 @@
 
 [Feedback](feedback.md)
 [LFE Documentation](redirects/docs.html)
-[LFE rebar3 Plugin](redirects/rebar3.html)
 [Built with mdBook](redirects/mdbook.html)
