@@ -2,7 +2,7 @@
 
 As previously demonstrated, it is possible to start up the LFE 'read-eval-print loop' (REPL) using `rebar3`:
 
-```shell
+```bash
 $ rebar3 lfe repl
 ```
 

@@ -5,7 +5,7 @@ Having followed the notes and linked instructions in the [Prerequisites](prereq.
 
 First, unless you have configured other `rebar3` plugins on your system, you will need to create the configuration directory and the configuration file:
 
-```shell
+```bash
 $ mkdir ~/.config/rebar3
 $ touch ~/.config/rebar3/rebar.config
 ```

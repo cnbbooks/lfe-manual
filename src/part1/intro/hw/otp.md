@@ -8,20 +8,20 @@ As such, a _real_ Hello-World in LFE would be honest and let the prospective dev
 
 If you are still in the directory of the previous Hello-World project, let's get out of that:
 
-```shell
+```bash
 $ cd ../
 ```
 
 Now we're going to create a new project, one utilising the some very basic OTP patterns:
 
-```shell
+```bash
 $ rebar3 new lfe-app hello-otp-world
 $ cd ./hello-otp-world
 ```
 
 We won't look at the code for this right now, since there are chapters dedicated to that in the second half of the book. But let's brush the surface with a quick run in the REPL:
 
-```shell
+```bash
 $ rebar3 lfe repl
 ```
 

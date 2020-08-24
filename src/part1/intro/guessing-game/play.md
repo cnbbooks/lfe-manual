@@ -2,7 +2,7 @@
 
 If you are still in the REPL, quit out of it so that `rebar3` can rebuild our changed module. Then start it up again:
 
-```shell
+```bash
 $ rebar3 lfe repl
 ```
 

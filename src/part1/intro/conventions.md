@@ -31,9 +31,9 @@ We also distinguish the output from the entered LFE code using code comments.
 
 For shell commands, the commands to enter at the prompt are prefixed by a `$` for the prompt. Input and any relevant output are provided as comment strings:
 
-```shell
+```bash
 $ echo "I am excited to learn LFE"
-## I am excited to learn LFE
+# I am excited to learn LFE
 ```
 
 ## LiffyBot
