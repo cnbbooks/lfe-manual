@@ -2,7 +2,18 @@
 
 We briefly introduced the REPL in the first version of the Hello-World example we wrote, stating that it was an acronym for 'read-eval-print loop' and how to start it with `rebar3`. As an LFE developer, this is one of the primnary tools -- arguably _the_ most powerful -- at your disposal, so we're going to do a more thorough job of introducing its capabilities in this section.
 
-The first Lisp interpreter was created sometime in late 1958 by then-grad student Steve Russell after reading John McCarthy's definition of `eval`. He had the idea that the theoretical description provided there could actually be implemented in machine code. It is uncertain when that expression of `eval` was first combined with `read` and `print`, though the usefulness of this might not have been very significant until video hardware began to replace teletype machines and punched cards in the 1970s.
+<div class="alert alert-info">
+  <h4 class="alert-heading">
+    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    Historical Note
+  </h4>
+  <p class="mb-0">
+    The first Lisp interpreter was created sometime in late 1958 by then-grad student Steve Russell after reading John McCarthy's definition of <code>eval</code>. He had the idea that the theoretical description provided there could actually be implemented in machine code.
+  </p>
+  <p class="mb-0">
+    It is uncertain when that expression of <code>eval</code> was first combined with <code>read</code> and <code>print</code>, though the usefulness of this might not have been very significant until video hardware began to replace teletype machines and punched cards in the 1970s.
+  </p>
+</div>
 
 A basic REPL can be implemented with just four functions; such an implementation could be started with the following:
 

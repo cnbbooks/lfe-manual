@@ -51,4 +51,4 @@ As demonstrated earlier on several occasions, you can start the LFE REPL with th
 $ rebar3 lfe repl
 ```
 
-Since you have updated your global rebar3 settings
+Since you have updated your global rebar3 settings (in the "Prerequisites" section, after following the instructions on the `rebar3` site), you may also start the LFE REPL from anywhere on your machine using the `rebar3` command.
