@@ -11,7 +11,7 @@ We briefly introduced the REPL in the first version of the Hello-World example w
     The first Lisp interpreter was created sometime in late 1958 by then-grad student Steve Russell after reading John McCarthy's definition of <code>eval</code>. He had the idea that the theoretical description provided there could actually be implemented in machine code.
   </p>
   <p class="mb-0">
-    It is uncertain when that expression of <code>eval</code> was first combined with <code>read</code> and <code>print</code>, though the usefulness of this might not have been very significant until video hardware began to replace teletype machines and punched cards in the 1970s.
+    In 1963 L Peter Deutsch, a high school student at the time, combined the <code>read</code>, <code>eval</code>, and <code>print</code> core functions to create the first REPL (or, as he termed it then, the 'READ-EVAL-PRINT cycle'). This was done as part of his successful effort to port Lisp 1.5 from the IBM 7090 to the DEC PDP-1 and is referenced briefly in a <a href="https://www.computerhistory.org/collections/catalog/102650371">written report</a> filed with the Digital Equipment Computer Users Society in 1964.
   </p>
 </div>
 
@@ -25,15 +25,20 @@ LFE has implemented most these functions for us already (and quite robustly), bu
 
 ```lisp
 (defun read ()
-  (let* ((str (io:get_line "myrepl> "))
-         (`#(ok ,expr) (lfe_io:read_string str)))
-    expr))
+  (case (io:get_line "myrepl> ")
+    ("quit\n" "quit")
+    (str (let ((`#(ok ,expr) (lfe_io:read_string str)))
+           expr))))
 
 (defun print (result)
-  (lfe_io:format "~p~n" `(,result)))
+  (lfe_io:format "~p~n" `(,result))
+  result)
 
-(defun loop (code)
-  (loop (print (eval (read)))))
+(defun loop
+  (("quit")
+   'good-bye)
+  ((code)
+   (loop (print (eval (read))))))
 ```
 
 Now we can start our custom REPL inside the LFE REPL:
@@ -55,6 +60,9 @@ myrepl> (+ 1 2 3)
 ;; 6
 myrepl> (* 2 (lists:foldl #'+/2 0 '(1 2 3 4 5 6)))
 ;; 42
+myrepl> quit
+;; good-bye
+lfe>
 ```
 
 Note that writing an evaluator is the hard part, and we've simply re-used the LFE evaluator for this demonstration.
