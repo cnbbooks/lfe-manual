@@ -2,9 +2,12 @@ BIN = mdbook
 GEN := $(shell which $(BIN) 2> /dev/null)
 DOWNLOAD = https://github.com/rust-lang/mdBook/releases
 PUBLISH_DIR = book
+PUBLISH_CONTENT = $(PUBLISH_DIR)/current
 PUBLISH_BRANCH = master
 BUILDER_BRANCH = builder
 TMP_GIT_DIR = /tmp/lfe-style-guide-git
+
+default: build
 
 define BINARY_ERROR
 
@@ -14,24 +17,27 @@ Download $(BIN) from $(DOWNLOAD).
 
 endef
 
-build:
+build: clean-all
 ifndef GEN
 	$(error $(BINARY_ERROR))
 endif
-	@echo " >> Rebuilding book ..."
-	@$(MAKE) backup-submodule-git
-	@$(GEN) build
-	@$(MAKE) restore-submodule-git
+	@echo ">> Rebuilding book ..."
+	@$(GEN) build -d $(PUBLISH_CONTENT)
 
 serve:
-	@bash -c "trap \"$(MAKE) serve-cleanup\" EXIT; $(GEN) serve -p $(PORT)"
+	@echo ">> Preparing to run mdbook server ..."
+	@$(GEN) serve -p $(PORT) -d $(PUBLISH_CONTENT)
 
-serve-cleanup: book-init build
 
 run: serve
 
 clean:
+	@echo ">> Removing auto-generated top-level files ..."
 	@rm -f $(PUBLISH_DIR)/README.md
+
+clean-all: clean
+	@echo ">> Removing previously generated content ..."
+	@rm -rf $(PUBLISH_CONTENT)
 
 book-submodule:
 	@git submodule add -b master `git remote get-url --push origin` $(PUBLISH_DIR)
@@ -42,21 +48,13 @@ book-init:
 	@git submodule update --init --recursive
 	@cd $(PUBLISH_DIR) && git checkout master
 
-backup-submodule-git:
-	@echo " >> Backup-up book's git dir ..."
-	@mkdir -p $(TMP_GIT_DIR)/
-	@mv -v $(PUBLISH_DIR)/.git $(TMP_GIT_DIR)/
-
-restore-submodule-git:
-	@echo " >> Restoring book's git dir ..."
-	@mv -v $(TMP_GIT_DIR)/.git $(PUBLISH_DIR)/
-
 $(PUBLISH_DIR)/README.md:
 	@echo '# Content for the LFE MACHINE MANUAL' > $(PUBLISH_DIR)/README.md
 	@echo 'Published at [lfe.io/books/manual/](https://lfe.io/books/manual/)' >> $(PUBLISH_DIR)/README.md
 	@cd $(PUBLISH_DIR) && git add README.md
 
-publish: clean build $(PUBLISH_DIR)/README.md
+publish: build $(PUBLISH_DIR)/README.md
+	@echo ">> Publishing book content ..."
 	-@cd $(PUBLISH_DIR) && \
 	git add * && \
 	git commit --author "LFE Maintainers <maintainers@lfe.io>" \
