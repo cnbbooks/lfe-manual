@@ -17,7 +17,7 @@ Download $(BIN) from $(DOWNLOAD).
 
 endef
 
-build: clean-all
+build: clean-all $(PUBLISH_DIR)/README.md
 ifndef GEN
 	$(error $(BINARY_ERROR))
 endif
@@ -53,7 +53,7 @@ $(PUBLISH_DIR)/README.md:
 	@echo 'Published at [lfe.io/books/manual/](https://lfe.io/books/manual/)' >> $(PUBLISH_DIR)/README.md
 	@cd $(PUBLISH_DIR) && git add README.md
 
-publish: build $(PUBLISH_DIR)/README.md
+publish: build
 	@echo ">> Publishing book content ..."
 	-@cd $(PUBLISH_DIR) && \
 	git add * && \
