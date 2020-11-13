@@ -1,4 +1,4 @@
-# Code Review
+# Review
 
 We've got the whole rest of the book ahead of us to cover much of what you've seen in the sample project we've just created with our guessing game. In the coming pages, you will revisit every aspect of what you've seen so far in lots of detail with correspondingly useful insttruction on these matters.
 
@@ -10,18 +10,22 @@ That being said, it would be unfair to not at least read through the code togeth
 
 This is the file you need in every LFE project you will write in order to take advantage of the features (and time-savings!) that `rebar3` provides. For this project, the two important parts are:
 
-1. the entry for dependences (only LFE in this case), and
+1. the entry for dependencies (only LFE in this case), and
 1. the plugins entry for the LFE rebar3 plugin.
+
+Project setup will be covered in Chapter XXX, section XXX.
 
 ## Source Files
 
+The source files for our sample program in this walkthrough are for an OTP application. OTP-based projects will be covered in Chapter XXX, section XXX.
+
 ### `.app.src`
 
-This file is mostly used for application metadata. Most of what our app uses in this file is pretty self-explanatory. Every LFE application will have one of these in the project source code.
+This file is mostly used for application metadata. Most of what our app uses in this file is pretty self-explanatory. Every LFE application will have one of these in the project source code. Every LFE library and application needs this file.
 
 ### `guessing-game-app.lfe`
 
-This is the top-level file for our game, an OTP application. It only exports two functions: one to start the app and the other to stop it. The application is responsible for starting up whatever supervisors all your services/servers need. In the guess of this sample application, only one supervisor is needed (with a very simple supervision tree).
+This is the top-level file for our game, an OTP application. It only exports two functions: one to start the app and the other to stop it. The application is responsible for starting up whatever supervisors all your services/servers need. For this sample application, only one supervisor is needed (with a very simple supervision tree).
 
 ### `guessing-game-sup.lfe`
 

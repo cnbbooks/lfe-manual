@@ -51,5 +51,9 @@ lfe> (guessing-game:guess 8)
 ```
 
 <p style="font-size: 16pt;">
-<img class="liffy-bot-mascot" src="../../../images/LiffyBot-5-x500-bold-color.png"/>Success! You've just done something pretty amazing, if still mysterious: you've not only created your first <strong>OTP application</strong> running a <strong>generic server</strong>, you've successully run it through to completion! Until we can dive into all the details of what you've just seen, let's take a quick moment to review what you've done and indicate which parts of this book will provide the remaining missing pieces.
+<img class="liffy-bot-mascot" src="../../../images/LiffyBot-5-x500-bold-color.png"/>Success! You've just done something pretty amazing, if still mysterious: you've not only created your first <strong>OTP application</strong> running a <strong>generic server</strong>, you've successully run it through to completion! 
+</p>
+
+<p style="font-size: 16pt;">
+Until we can dive into all the details of what you've seen in this walkthrough, much of what you've just written will seem strange and maybe even overkill. For now, though, we'll mark a placeholder for those concepts: the next section will briefly review what you've done and indicate which parts of this book will provide the remaining missing pieces.
 </p>

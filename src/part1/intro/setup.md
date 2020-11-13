@@ -21,16 +21,6 @@ Next, open up that file in your favourite editor, and give it these contents:
 
 If you already have a `rebar.config` file with a plugins entry, then simply add a comma after the last plugin listed and paste the `{rebar3_lfe, {...}}` line from above (with no trailing comma!).
 
-<div class="alert alert-warning">
-  <h4 class="alert-heading">
-    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-    For Windows users
-  </h4>
-  <p class="mb-0">
-    XXX
-  </p>
-</div>
-
 <div class="alert alert-info">
   <h4 class="alert-heading">
     <i class="fa fa-info-circle" aria-hidden="true"></i>
