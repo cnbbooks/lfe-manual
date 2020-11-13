@@ -14,6 +14,7 @@
 
 * [Part I - Getting Started](part1/README.md)
    * [Introduction](part1/intro/README.md)
+   * [WIP - About LFE](part1/intro/about.md)
    * [Prerequisites](part1/intro/prereq.md)
    * [Conventions](part1/intro/conventions.md)
    * [Development Setup](part1/intro/setup.md)
@@ -42,6 +43,7 @@
         * [Special Variables](part1/repl/help-special-vars.md)
       * [Command Interface](part1/repl/c.md)
       * [WIP - Job Control](part1/repl/job-control.md)
+      * [Files](part1/repl/files.md)
 * [Part II - Code as Data]()
    * [Variables](part2/vars/README.md)
      * [Bindings](part2/vars/bindings.md)
