@@ -126,15 +126,15 @@ If you prefer the Clojure-style of predicates:
 lfe> (include-lib "lfe/include/clj.lfe")
 lfe> (float? 42.42)
 true
-fe> (float? "forty-two.forty-two")
+lfe> (float? "forty-two.forty-two")
 false
 ```
 
 Of course there is always the Erlang predicate, usable without having to do any includes:
 
 ``` lisp
-(is_float 42.42)
+lfe> (is_float 42.42)
 true
-(is_float "forty-two.forty-two")
+lfe> (is_float "forty-two.forty-two")
 false
 ```

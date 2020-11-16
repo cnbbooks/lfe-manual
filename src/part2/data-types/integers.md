@@ -118,14 +118,6 @@ function calls. These include the following:
 ``` lisp
 lfe> (abs -42)
 42
-lfe> (ceil 42.1)
-43
-lfe> (floor 42.1)
-42
-lfe> (round 42.4)
-42
-lfe> (round 42.5)
-43
 lfe> (min 1 2)
 1
 lfe> (max 1 2)
@@ -197,8 +189,8 @@ false
 Of course there is always the Erlang predicate, usable without having to do any includes:
 
 ``` lisp
-(is_integer 42)
+lfe> (is_integer 42)
 true
-(is_integer "forty-two")
+lfe> (is_integer "forty-two")
 false
 ```

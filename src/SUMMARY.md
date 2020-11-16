@@ -52,7 +52,7 @@
    * [Primitive Types](part2/data-types/README.md)
      * [Integers](part2/data-types/integers.md)
      * [Floats](part2/data-types/floats.md)
-     * [Symbols / Atoms](part2/data-types/atoms.md)
+     * [Atoms (Symbols)](part2/data-types/atoms.md)
      * [Booleans](part2/data-types/bools.md)
      * [Characters](part2/data-types/chars.md)
    * [Cons Cells](part2/data-types/README.md)
