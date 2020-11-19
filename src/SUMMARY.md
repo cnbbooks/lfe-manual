@@ -1,8 +1,11 @@
 # Summary
 
-* [LFE Quick Start with rebar3_lfe](README.md)
-  * [Title Page](title.md)
-  * [Copyright](copyright.md)
+[LFE Quick Start with rebar3_lfe](README.md)
+[Title Page](title.md)
+[Copyright](copyright.md)
+
+--------------------
+
 * [Introduction](intro/README.md)
   * [LFE](intro/lfe.md)
   * [Erlang](intro/erlang.md)
