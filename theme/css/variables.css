@@ -212,28 +212,28 @@
 }
 
 .lfe-pdp {
-    --bg: #ECE5C9;
+    --bg: #D9D8D4;
     --fg: #1E252B;
 
-    --sidebar-bg: #1E252B;
+    --sidebar-bg: #16161A;
     --sidebar-fg: #ECE5C9;
     --sidebar-non-existant: #505254;
-    --sidebar-active: #C47A39;
-    --sidebar-spacer: #45373a;
+    --sidebar-active: #377CA2;
+    --sidebar-spacer: #0B2D3F;
 
     --scrollbar: var(--sidebar-fg);
 
     --icons: #737480;
     --icons-hover: #1E252B;
 
-    --links: #C47A39;
+    --links: #377CA2;
 
-    --inline-code-color: #6e6b5e;
-    --inline-code-background-color: #DDD09C;
+    --inline-code-color: #16455E;
+    --inline-code-background-color: transparent;
 
     --theme-popup-bg: #DDD09C;
     --theme-popup-border: #b38f6b;
-    --theme-hover: #99908a;
+    --theme-hover: #B4BEC4;
 
     --quote-bg: hsl(60, 5%, 75%);
     --quote-border: hsl(60, 5%, 70%);
