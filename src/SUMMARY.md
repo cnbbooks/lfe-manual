@@ -44,11 +44,12 @@
       * [Command Interface](part1/repl/c.md)
       * [WIP - Job Control](part1/repl/job-control.md)
       * [Files](part1/repl/files.md)
+
 * [Part II - Code as Data]()
    * [Variables](part2/vars/README.md)
      * [Bindings](part2/vars/bindings.md)
      * [Pattern-matching Preview](part2/vars/patts.md)
-     * [Process Dictionary](part2/vars/proc-dict.md)
+     * [Globals Revisted](part2/vars/glob-revist.md)
    * [Primitive Types](part2/data-types/README.md)
      * [Integers](part2/data-types/integers.md)
      * [Floats](part2/data-types/floats.md)
@@ -84,6 +85,7 @@
    * [Creating LFE Projects](part3/projects/README.md)
      * [Using rebar3](part3/projects/rebar3.md)
      * [Project Layout Conventions](part3/projects/layout.md)
+
 * [Part IV - Advanced Topics]()
    * [Errors and Debugging](part4/err-debug/README.md)
    * [Writing Unit Tests](part4/unit/README.md)
@@ -95,12 +97,14 @@
    * [Ports and Port Drivers](part4/ports/REAEDME.md)
    * [Servers](part4/servers/REAEDME.md)
    * [Clients](part4/clients/REAEDME.md)
+
 * [Part V - OTP]()
    * [Behaviours](part5/behaviours/README.md)
    * [Applications](part5/apps/README.md)
    * [Releases](part5/rels/README.md)
    * [Tables and Databases](part5/data/README.md)
    * [Example OTP Project](part5/project/README.md)
+
 * [Part VI - Conclusion]()
    * [Epilogue](part6/epilogue.md)
    * [Afterword](part6/afterward.md)

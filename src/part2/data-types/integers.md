@@ -109,6 +109,13 @@ lfe> (rem 10 3)
 1
 ```
 
+As with any functional programming language, these operations may be composed (to any depth):
+
+``` lisp
+lfe> (div (* 12 (+ 1 2 3 4 5 6)) 6)
+42
+```
+
 ## Mathematical Functions
 
 The auto-loaded `erlang` module has several mathematical functions and is
