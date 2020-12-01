@@ -45,7 +45,7 @@
 
 --------------------
 
+[Versions](versions.md)
 [Feedback](feedback.md)
 [LFE Documentation](redirects/docs.html)
-[LFE rebar3 Plugin](redirects/rebar3.html)
 [Built with mdBook](redirects/mdbook.html)
