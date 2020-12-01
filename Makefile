@@ -2,9 +2,11 @@ BIN = mdbook
 GEN := $(shell which $(BIN) 2> /dev/null)
 DOWNLOAD = https://github.com/rust-lang/mdBook/releases
 PUBLISH_DIR = book
+PUBLISH_CONTENT = $(PUBLISH_DIR)/current
 PUBLISH_BRANCH = master
 BUILDER_BRANCH = builder
-TMP_GIT_DIR = /tmp/lfe-rebar3-quick-start-git
+
+default: build
 
 define BINARY_ERROR
 
@@ -14,23 +16,26 @@ Download $(BIN) from $(DOWNLOAD).
 
 endef
 
-build:
+build: clean-all $(PUBLISH_DIR)/README.md
 ifndef GEN
 	$(error $(BINARY_ERROR))
 endif
-	$(MAKE) backup-book-git
-	@$(GEN) build
-	$(MAKE) restore-book-git
+	@echo ">> Rebuilding book ..."
+	@$(GEN) build -d $(PUBLISH_CONTENT)
 
 serve:
-	$(MAKE) backup-book-git
-	@$(GEN) serve
-	$(MAKE) restore-book-git
+	@echo ">> Preparing to run mdbook server ..."
+	@$(GEN) serve -p $(PORT) -d $(PUBLISH_CONTENT)
 
 run: serve
 
 clean:
+	@echo ">> Removing auto-generated top-level files ..."
 	@rm -f $(PUBLISH_DIR)/README.md
+
+clean-all: clean
+	@echo ">> Removing previously generated content ..."
+	@rm -rf $(PUBLISH_CONTENT)
 
 book-submodule:
 	@git submodule add -b master `git remote get-url --push origin` $(PUBLISH_DIR)
@@ -38,34 +43,27 @@ book-submodule:
 		-m "Added master branch as submodule ($(PUBLISH_DIR) dir)."
 
 book-init:
-	@git submodule update --init --recursive && \
-	cd $(PUBLISH_DIR) && \
-	git checkout master
+	@git submodule update --init --recursive
+	@cd $(PUBLISH_DIR) && git checkout master
 
-backup-book-git:
-	@mkdir -p $(TMP_GIT_DIR)/
-	@mv -v $(PUBLISH_DIR)/.git $(TMP_GIT_DIR)/
-
-restore-book-git:
-	@mv -v $(TMP_GIT_DIR)/.git $(PUBLISH_DIR)/
 
 $(PUBLISH_DIR)/README.md:
 	@echo '# Content for LFE + `rebar3_lfe` Quick Start' > $(PUBLISH_DIR)/README.md
 	@echo 'Published at [lfe.io/books/rebar3-quick-start/](https://lfe.io/books/rebar3-quick-start/)' >> $(PUBLISH_DIR)/README.md
 	@cd $(PUBLISH_DIR) && git add README.md
 
-publish: clean build $(PUBLISH_DIR)/README.md
+publish: build
+	@echo ">> Publishing book content ..."
 	-@cd $(PUBLISH_DIR) && \
 	git add * && \
 	git commit --author "LFE Maintainers <maintainers@lfe.io>" \
 		-am "Regenerated book content." > /dev/null && \
-	git push origin $(PUBLISH_BRANCH) && \
-	cd -  && \
-	git add $(PUBLISH_DIR) && \
+	git push origin $(PUBLISH_BRANCH)
+	-@git add $(PUBLISH_DIR) && \
 	git commit --author "LFE Maintainers <maintainers@lfe.io>" \
 		-am "Updated submodule for recently generated book content." && \
-	git submodule update && \
-	git push origin $(BUILDER_BRANCH)
+	git submodule update
+	-@git push origin $(BUILDER_BRANCH)
 
 build-publish: build publish
 
