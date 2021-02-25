@@ -6,6 +6,16 @@ Make sure you've `cd`ed into your new LFE project directory, and then do this:
 $ rebar3 lfe repl
 ```
 
+On windows first enter erlang's repl then  run `lfe_shell:start().`
+```
+D:\Lfe\my-test-lib
+λ rebar3 lfe repl
+===> Verifying dependencies...
+===> Compiling my-test-lib
+Eshell V10.3  (abort with ^G)
+1> lfe_shell:start().
+```
+
 This should give you something that looks like the following:
 
 ```
