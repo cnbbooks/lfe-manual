@@ -26,7 +26,7 @@ For all comments, there should be a space between the semicolon and the text of 
    ...))
 
 ;;; The functions in this section are utility in nature, supporting others in
-;;; the module. More details on their intended use cases are availale here:
+;;; the module. More details on their intended use cases are available here:
 ;;; * https://some.url/
 
 (defun utility-function ()
