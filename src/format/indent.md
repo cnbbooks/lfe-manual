@@ -15,7 +15,7 @@ In particular, you'll want to do everything you can to follow the conventions la
 (require 'lfe-start)
 ```
 
-In general though, indentation is two lines per form, for instance:
+In general though, indentation is two columns per form, for instance:
 
 ```lisp
 (defun f ()
