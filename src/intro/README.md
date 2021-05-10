@@ -15,7 +15,7 @@ It also helps ensure correctness, robustness, and compatibility. Maxims of good 
 * Be explicit
 * Be specific
 * Be concise
-* Be consisten
+* Be consistent
 * Be helpful (anticipate the reader's needs)
 * Be conventional (don't be obscure)
 * Build abstractions at a usable level
@@ -31,7 +31,6 @@ Know the context when reading code:
 
 <ol>
 <li><a name="footnote-1">
-This page was adatped from the <a href="http://norvig.com/luv-slides.ps">Tutorial on Good Lisp Programming Style</a> by Peter Norvig and Kent Pitman.
+This page was adapted from the <a href="http://norvig.com/luv-slides.ps">Tutorial on Good Lisp Programming Style</a> by Peter Norvig and Kent Pitman.
 </li>
 </ol>
-
