@@ -36,8 +36,8 @@ When you're done, the entire file should look like this:
 
 ```lisp
 (defmodule my-test-lib
-  (export (my-fun 0
-          (my-sum 2))))
+  (export (my-fun 0)
+          (my-sum 2)))
 
 ;;; -----------
 ;;; library API
