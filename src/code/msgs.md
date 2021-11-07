@@ -31,7 +31,7 @@ queue in the REPL to find out.
 What, what? Does each ...
 
 Yup, every function in LFE (and Erlang, of course) has an inbox. You can see
-how many messages a give process has by looking at the process' info:
+how many messages a given process has by looking at the process' info:
 
 ```lisp
 lfe> (erlang:process_info (self) 'message_queue_len)
