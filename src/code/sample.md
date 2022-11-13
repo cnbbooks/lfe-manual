@@ -30,7 +30,8 @@ hello-world
 
 Let's add to this module our new `my-sum` function from the REPL jam session
 in the previous section. In another terminal window (or text editor pane) open up the
-`src/my-test-lib.lfe` file and past the `my-sum` function.
+`src/my-test-lib.lfe` file and paste the `my-sum` function at the bottom. Afterwards, 
+add `(my-sum 2)` to the `export` section of `defmodule` at the top.
 
 When you're done, the entire file should look like this:
 
