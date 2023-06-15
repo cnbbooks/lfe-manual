@@ -6,7 +6,7 @@ Make sure you've `cd`ed into your new LFE project directory, and then do this:
 $ rebar3 lfe repl
 ```
 
-On windows first enter erlang's repl then  run `lfe_shell:start().`
+On windows first enter Erlang's repl then  run `lfe_shell:start().`
 ```
 D:\Lfe\my-test-lib
 λ rebar3 lfe repl

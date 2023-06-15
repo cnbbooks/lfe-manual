@@ -1,8 +1,8 @@
 # Message-Passing
 
-We glossed over this in the previous section, but in LFE (and Erlang) you can compile on-the-fly in a REPL session. This is super-conventient when prototyping functionality for a new project where you want to use the REPL, but you also want the benefits of using a file, so you don't loose your work.
+We glossed over this in the previous section, but in LFE (and Erlang) you can compile on-the-fly in a REPL session. This is super-convenient when prototyping functionality for a new project where you want to use the REPL, but you also want the benefits of using a file, so you don't lose your work.
 
-We made some changees to the sample code in the last section; let's compile it and take it for a spin:
+We made some changes to the sample code in the last section; let's compile it and take it for a spin:
 
 ```lisp
 > (c "src/my-test-lib.lfe")
@@ -30,7 +30,7 @@ queue in the REPL to find out.
 
 What, what? Does each ...
 
-Yup, every function in LFE (and Erlang, of course) has an inbox. You can see
+Yup, every process in LFE (and Erlang, of course) has an inbox. You can see
 how many messages a given process has by looking at the process' info:
 
 ```lisp
