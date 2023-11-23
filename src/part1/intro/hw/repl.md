@@ -37,7 +37,17 @@ lfe> (hello-world)
 ;; ok
 ```
 
-When we execute our `hello-world` function, it prints our message to `standard-output` and then lets us know everything really quite fine with a friendly `ok`. LFE displays `ok` as output for functions that do not return a value.
+When we execute our `hello-world` function, it prints our message to `standard-output` and then lets us know everything really quite fine with a friendly `ok`.
+
+<div class="alert alert-info">
+  <h4 class="alert-heading">
+    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    Note
+  </h4>
+  <p class="mb-0">
+    LFE displays `ok` as output for functions that do not return a value.
+  </p>
+</div>
 
 Now let's address the other point: running a Hello-World programming from outside LFE.
 

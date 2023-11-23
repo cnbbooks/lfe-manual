@@ -53,4 +53,4 @@ We have to provide the two dashes to let `rebar3` know that we're done with it, 
 
 As for the code itself, it's tiny. But there is a lot going on just with these two files. Have no fear, though: the remainder of this book will explore all of that and more. For now, know that the main function in the executable is calling the `hello-world` module's `my-fun` function, which takes no arguments. To put another way, what we really have here is a tiny, trivial library project with the addition of a script that calls a function from that library.
 
-For now just know that an executable file which starts with `#!/usr/bin/env lfescript` and contains a `main` function accepting one argument is an LFE script capable of being executed from the command line -- a we have shown!
+For now just know that an executable file which starts with `#!/usr/bin/env lfescript` and contains a `main` function accepting one argument is an LFE script capable of being executed from the command line -- as we have shown!
