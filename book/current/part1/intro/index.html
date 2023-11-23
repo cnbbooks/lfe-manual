@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js lfe-pdp">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>Introduction - LFE MACHINE MANUAL</title>
+
+
+    <!-- Custom HTML head -->
+    
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="The Manual for the Machine that is LFE/OTP">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="icon" href="../../favicon.svg">
+    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/general.css">
+    <link rel="stylesheet" href="../../css/chrome.css">
+    <link rel="stylesheet" href="../../css/print.css" media="print">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../../fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="../../highlight.css">
+    <link rel="stylesheet" href="../../tomorrow-night.css">
+    <link rel="stylesheet" href="../../ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    <link rel="stylesheet" href="../../css/custom.css">
+
+</head>
+
+<body>
+    <!-- Provide site root to javascript -->
+    <script type="text/javascript">
+        var path_to_root = "../../";
+        var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "lfe-pdp" : "lfe-pdp";
+    </script>
+
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script type="text/javascript">
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>
+
+    <!-- Set the theme before any content is loaded, prevents flash -->
+    <script type="text/javascript">
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+        if (theme === null || theme === undefined) { theme = default_theme; }
+        var html = document.querySelector('html');
+        html.classList.remove('no-js')
+        html.classList.remove('lfe-pdp')
+        html.classList.add(theme);
+        html.classList.add('js');
+    </script>
+
+    <!-- Hide / unhide sidebar before it is displayed -->
+    <script type="text/javascript">
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <div class="sidebar-scrollbox">
+            <ol class="chapter"><li class="chapter-item affix "><a href="../../index.html">LFE MACHINE MANUAL</a></li><li class="chapter-item affix "><a href="../../fm/title-page.html">Title Page</a></li><li class="chapter-item affix "><a href="../../fm/copyright.html">Copyright</a></li><li class="spacer"></li><li class="chapter-item affix "><a href="../../preface/index.html">Preface</a></li><li class="chapter-item affix "><a href="../../preface/about-cover.html">About the Cover</a></li><li class="chapter-item affix "><a href="../../preface/dedication.html">Dedication</a></li><li class="chapter-item affix "><a href="../../preface/forward.html">Forward</a></li><li class="chapter-item affix "><a href="../../preface/acknowledgments.html">Acknowledgments</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../../part1/index.html"><strong aria-hidden="true">1.</strong> Part I - Getting Started</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/intro/index.html" class="active"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="chapter-item "><a href="../../part1/intro/about.html"><strong aria-hidden="true">1.2.</strong> WIP - About LFE</a></li><li class="chapter-item "><a href="../../part1/intro/prereq.html"><strong aria-hidden="true">1.3.</strong> Prerequisites</a></li><li class="chapter-item "><a href="../../part1/intro/conventions.html"><strong aria-hidden="true">1.4.</strong> Conventions</a></li><li class="chapter-item "><a href="../../part1/intro/setup.html"><strong aria-hidden="true">1.5.</strong> Development Setup</a></li><li class="chapter-item "><a href="../../part1/intro/hw/index.html"><strong aria-hidden="true">1.6.</strong> 'Hello, World!'</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../part1/intro/hw/repl.html"><strong aria-hidden="true">1.6.1.</strong> Classic, REPL</a></li><li class="chapter-item "><a href="../../part1/intro/hw/main.html"><strong aria-hidden="true">1.6.2.</strong> Classic, main</a></li><li class="chapter-item "><a href="../../part1/intro/hw/otp.html"><strong aria-hidden="true">1.6.3.</strong> LFE/OTP</a></li></ol></li><li class="chapter-item "><a href="../../part1/intro/guessing-game/index.html"><strong aria-hidden="true">1.7.</strong> Walk-through: An LFE Guessing Game</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../part1/intro/guessing-game/planning.html"><strong aria-hidden="true">1.7.1.</strong> Planning the Game</a></li><li class="chapter-item "><a href="../../part1/intro/guessing-game/code.html"><strong aria-hidden="true">1.7.2.</strong> Code Explore</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../part1/intro/guessing-game/input.html"><strong aria-hidden="true">1.7.2.1.</strong> Getting User Input</a></li><li class="chapter-item "><a href="../../part1/intro/guessing-game/check.html"><strong aria-hidden="true">1.7.2.2.</strong> Checking the Input</a></li></ol></li><li class="chapter-item "><a href="../../part1/intro/guessing-game/integrate.html"><strong aria-hidden="true">1.7.3.</strong> Integrating into an Application</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../part1/intro/guessing-game/cast.html"><strong aria-hidden="true">1.7.3.1.</strong> handle_cast</a></li><li class="chapter-item "><a href="../../part1/intro/guessing-game/api.html"><strong aria-hidden="true">1.7.3.2.</strong> Game API</a></li><li class="chapter-item "><a href="../../part1/intro/guessing-game/finishing-touches.html"><strong aria-hidden="true">1.7.3.3.</strong> Finishing Touches</a></li><li class="chapter-item "><a href="../../part1/intro/guessing-game/play.html"><strong aria-hidden="true">1.7.3.4.</strong> Playing the Game</a></li></ol></li><li class="chapter-item "><a href="../../part1/intro/guessing-game/review.html"><strong aria-hidden="true">1.7.4.</strong> WIP - Review</a></li></ol></li><li class="chapter-item "><a href="../../part1/repl/index.html"><strong aria-hidden="true">1.8.</strong> The LFE REPL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../part1/repl/features.html"><strong aria-hidden="true">1.8.1.</strong> Core Features</a></li><li class="chapter-item "><a href="../../part1/repl/start.html"><strong aria-hidden="true">1.8.2.</strong> Starting LFE</a></li><li class="chapter-item "><a href="../../part1/repl/readline.html"><strong aria-hidden="true">1.8.3.</strong> WIP - readline Support</a></li><li class="chapter-item "><a href="../../part1/repl/help.html"><strong aria-hidden="true">1.8.4.</strong> (help)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../part1/repl/help-builtins.html"><strong aria-hidden="true">1.8.4.1.</strong> REPL Functions</a></li><li class="chapter-item "><a href="../../part1/repl/help-cmds.html"><strong aria-hidden="true">1.8.4.2.</strong> REPL Commands</a></li><li class="chapter-item "><a href="../../part1/repl/help-special-vars.html"><strong aria-hidden="true">1.8.4.3.</strong> Special Variables</a></li></ol></li><li class="chapter-item "><a href="../../part1/repl/c.html"><strong aria-hidden="true">1.8.5.</strong> Command Interface</a></li><li class="chapter-item "><a href="../../part1/repl/job-control.html"><strong aria-hidden="true">1.8.6.</strong> WIP - Job Control</a></li><li class="chapter-item "><a href="../../part1/repl/files.html"><strong aria-hidden="true">1.8.7.</strong> Files</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">2.</strong> Part II - Code as Data</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../part2/vars/index.html"><strong aria-hidden="true">2.1.</strong> Variables</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../part2/vars/bindings.html"><strong aria-hidden="true">2.1.1.</strong> Bindings</a></li><li class="chapter-item "><a href="../../part2/vars/patts.html"><strong aria-hidden="true">2.1.2.</strong> Pattern-matching Preview</a></li><li class="chapter-item "><a href="../../part2/vars/glob-revist.html"><strong aria-hidden="true">2.1.3.</strong> Globals Revisted</a></li></ol></li><li class="chapter-item "><a href="../../part2/data-types/index.html"><strong aria-hidden="true">2.2.</strong> Primitive Types</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../part2/data-types/integers.html"><strong aria-hidden="true">2.2.1.</strong> Integers</a></li><li class="chapter-item "><a href="../../part2/data-types/floats.html"><strong aria-hidden="true">2.2.2.</strong> Floats</a></li><li class="chapter-item "><a href="../../part2/data-types/atoms.html"><strong aria-hidden="true">2.2.3.</strong> Atoms (Symbols)</a></li><li class="chapter-item "><a href="../../part2/data-types/bools.html"><strong aria-hidden="true">2.2.4.</strong> Booleans</a></li><li class="chapter-item "><a href="../../part2/data-types/chars.html"><strong aria-hidden="true">2.2.5.</strong> Characters</a></li></ol></li><li class="chapter-item "><a href="../../part2/data-types/index.html"><strong aria-hidden="true">2.3.</strong> Cons Cells</a></li><li class="chapter-item "><a href="../../part2/lists/index.html"><strong aria-hidden="true">2.4.</strong> Lists and Strings</a></li><li class="chapter-item "><a href="../../part2/byte-bin/index.html"><strong aria-hidden="true">2.5.</strong> Bytes and Binaries</a></li><li class="chapter-item "><a href="../../part2/tuples/index.html"><strong aria-hidden="true">2.6.</strong> Tuples</a></li><li class="chapter-item "><a href="../../part2/proplists/index.html"><strong aria-hidden="true">2.7.</strong> Property Lists</a></li><li class="chapter-item "><a href="../../part2/maps/index.html"><strong aria-hidden="true">2.8.</strong> Maps</a></li><li class="chapter-item "><a href="../../part2/arrays/index.html"><strong aria-hidden="true">2.9.</strong> Arrays</a></li><li class="chapter-item "><a href="../../part2/dicts/index.html"><strong aria-hidden="true">2.10.</strong> Dicts</a></li><li class="chapter-item "><a href="../../part2/records/index.html"><strong aria-hidden="true">2.11.</strong> Records</a></li><li class="chapter-item "><a href="../../part2/patterns/index.html"><strong aria-hidden="true">2.12.</strong> Pattern Matching</a></li><li class="chapter-item "><a href="../../part2/gen-seq/index.html"><strong aria-hidden="true">2.13.</strong> Generic Sequence Functions</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">3.</strong> Part III - Data as Code</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../part3/exprs/index.html"><strong aria-hidden="true">3.1.</strong> Expressions</a></li><li class="chapter-item "><a href="../../part3/funs/index.html"><strong aria-hidden="true">3.2.</strong> Functions</a></li><li class="chapter-item "><a href="../../part3/closures/index.html"><strong aria-hidden="true">3.3.</strong> Closures</a></li><li class="chapter-item "><a href="../../part3/eval/index.html"><strong aria-hidden="true">3.4.</strong> Evaluation</a></li><li class="chapter-item "><a href="../../part3/expressioins/index.html"><strong aria-hidden="true">3.5.</strong> Expressions</a></li><li class="chapter-item "><a href="../../part3/processes/index.html"><strong aria-hidden="true">3.6.</strong> Processes</a></li><li class="chapter-item "><a href="../../part3/msgs/index.html"><strong aria-hidden="true">3.7.</strong> Messages and Their Passing</a></li><li class="chapter-item "><a href="../../part3/objects/index.html"><strong aria-hidden="true">3.8.</strong> Objects and Flavors</a></li><li class="chapter-item "><a href="../../part3/io/index.html"><strong aria-hidden="true">3.9.</strong> I/O</a></li><li class="chapter-item "><a href="../../part3/files/index.html"><strong aria-hidden="true">3.10.</strong> Accessing Files</a></li><li class="chapter-item "><a href="../../part3/modules/index.html"><strong aria-hidden="true">3.11.</strong> Modules</a></li><li class="chapter-item "><a href="../../part3/packages/index.html"><strong aria-hidden="true">3.12.</strong> Packages</a></li><li class="chapter-item "><a href="../../part3/scripting/index.html"><strong aria-hidden="true">3.13.</strong> Scripting with LFE</a></li><li class="chapter-item "><a href="../../part3/projects/index.html"><strong aria-hidden="true">3.14.</strong> Creating LFE Projects</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../part3/projects/rebar3.html"><strong aria-hidden="true">3.14.1.</strong> Using rebar3</a></li><li class="chapter-item "><a href="../../part3/projects/layout.html"><strong aria-hidden="true">3.14.2.</strong> Project Layout Conventions</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">4.</strong> Part IV - Advanced Topics</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../part4/err-debug/index.html"><strong aria-hidden="true">4.1.</strong> Errors and Debugging</a></li><li class="chapter-item "><a href="../../part4/unit/index.html"><strong aria-hidden="true">4.2.</strong> Writing Unit Tests</a></li><li class="chapter-item "><a href="../../part4/ct/index.html"><strong aria-hidden="true">4.3.</strong> The Common Test Framework</a></li><li class="chapter-item "><a href="../../part4/propr/index.html"><strong aria-hidden="true">4.4.</strong> The Propr Test Framework</a></li><li class="chapter-item "><a href="../../part4/compiler/index.html"><strong aria-hidden="true">4.5.</strong> The Compiler</a></li><li class="chapter-item "><a href="../../part4/macros/index.html"><strong aria-hidden="true">4.6.</strong> Macros</a></li><li class="chapter-item "><a href="../../part4/dist/index.html"><strong aria-hidden="true">4.7.</strong> Distributed LFE</a></li><li class="chapter-item "><a href="../../part4/ports/REAEDME.html"><strong aria-hidden="true">4.8.</strong> Ports and Port Drivers</a></li><li class="chapter-item "><a href="../../part4/servers/REAEDME.html"><strong aria-hidden="true">4.9.</strong> Servers</a></li><li class="chapter-item "><a href="../../part4/clients/REAEDME.html"><strong aria-hidden="true">4.10.</strong> Clients</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">5.</strong> Part V - OTP</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../part5/behaviours/index.html"><strong aria-hidden="true">5.1.</strong> Behaviours</a></li><li class="chapter-item "><a href="../../part5/apps/index.html"><strong aria-hidden="true">5.2.</strong> Applications</a></li><li class="chapter-item "><a href="../../part5/rels/index.html"><strong aria-hidden="true">5.3.</strong> Releases</a></li><li class="chapter-item "><a href="../../part5/data/index.html"><strong aria-hidden="true">5.4.</strong> Tables and Databases</a></li><li class="chapter-item "><a href="../../part5/project/index.html"><strong aria-hidden="true">5.5.</strong> Example OTP Project</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">6.</strong> Part VI - Conclusion</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../part6/epilogue.html"><strong aria-hidden="true">6.1.</strong> Epilogue</a></li><li class="chapter-item "><a href="../../part6/afterward.html"><strong aria-hidden="true">6.2.</strong> Afterword</a></li><li class="spacer"></li></ol></li><li class="chapter-item "><a href="../../epilogue/glossary.html">Glossary</a></li><li class="chapter-item affix "><a href="../../epilogue/bibliography.html">Bibliography</a></li><li class="chapter-item affix "><a href="../../epilogue/index.html">Index</a></li><li class="spacer"></li><li class="chapter-item affix "><div>Appendices</div></li><li class="chapter-item affix "><a href="../../appendices/lisp-history.html">I - Origins Of Lisp</a></li><li class="chapter-item affix "><a href="../../appendices/erlang-history.html">II - Origins Of Erlang</a></li><li class="chapter-item affix "><a href="../../appendices/lfe-overview.html">III - Origins Of LFE</a></li><li class="spacer"></li><li class="chapter-item affix "><a href="../../versions.html">Versions</a></li><li class="chapter-item affix "><a href="../../feedback.html">Feedback</a></li><li class="chapter-item affix "><a href="../../redirects/docs.html">LFE Documentation</a></li><li class="chapter-item affix "><a href="../../redirects/mdbook.html">Built with mdBook</a></li></ol>
+        </div>
+        <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+
+        <div class="page">
+                        <div id="menu-bar-hover-placeholder"></div>
+            <div id="menu-bar" class="menu-bar sticky bordered">
+                <div class="left-buttons">
+                    <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
+                        aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <button id="theme-toggle" class="icon-button" type="button" title="Change theme"
+                        aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                        <i class="fa fa-paint-brush"></i>
+                    </button>
+                    <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                        <li role="none"><button role="menuitem" class="theme"
+                                id="lfe-pdp">LFE PDP</button></li>
+                        <li role="none"><button role="menuitem" class="theme"
+                                id="light">Light</button></li>
+                        <li role="none"><button role="menuitem" class="theme"
+                                id="rust">Rust</button></li>
+                        <li role="none"><button role="menuitem" class="theme"
+                                id="coal">Coal</button></li>
+                        <li role="none"><button role="menuitem" class="theme"
+                                id="navy">Navy</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button>
+                        </li>
+                    </ul>
+                    <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                        aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
+                        aria-controls="searchbar">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+
+                <h1 class="menu-title">LFE MACHINE MANUAL</h1>
+
+                <div class="right-buttons">
+                    <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                        <i id="print-button" class="fa fa-print"></i>
+                    </a>
+                    <a href="https://github.com/cnbbooks/lfe-manual" title="Git repository" aria-label="Git repository">
+                        <i id="git-repository-button" class="fa fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="search-wrapper" class="hidden">
+                <form id="searchbar-outer" class="searchbar-outer">
+                    <input type="search" name="search" id="searchbar" name="searchbar"
+                        placeholder="Search this book ..." aria-controls="searchresults-outer"
+                        aria-describedby="searchresults-header">
+                </form>
+                <div id="searchresults-outer" class="searchresults-outer hidden">
+                    <div id="searchresults-header" class="searchresults-header"></div>
+                    <ul id="searchresults">
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+            <script type="text/javascript">
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <div id="content" class="content">
+                <main>
+                    <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>Far out in the uncharted backwaters of the unfashionable end of computer science known as &quot;distributed systems programming&quot; lies a small red <em>e</em>. Orbitting this at a distance roughly proportional to the inverse of the likelihood of it being noticed is an utterly insignificant little green mug filled with the morning beverage stimulant equivalent of That Old Janx Spirit. Upon that liquid floats a little yellow <em>𝛌</em> whose adherents are so amazingly primitive that they still think <code>cons</code>s, <code>car</code>, and <code>cdr</code> are pretty neat ideas.</p>
+<p>This is their book.</p>
+<p>Their language, Lisp Flavoured Erlang (henceforth &quot;LFE&quot;), lets you use the archaic and much-beloved S-expressions to write some of the most advanced software on the planet. LFE is a general-purpose, concurrent, functional Lisp whose underlying virtual machine (Erlang) was designed to create distributed, fault-tolerant, soft-realtime, highly-availale, always-up, hot-swappable appliances, applications, and services. In addition to fashionable digital watches, LFE sports immutable data, pattern-matching, eager evaluation, and dynamic typing.</p>
+<p>This manual will not only teach you what all of that means and why you want it in your breakfast cereal, but also: how to create LFE programs; what exactly are the basic elements of the language; the ins-and-outs of extremely efficient and beautiful clients and servers; and much, much more.</p>
+<p>Note, however, that the first chapter is a little different than most other books, and is in fact different from the rest of the chapters in this manual. We wrote this chapter with two guiding thoughts: firstly and foremost, we wanted to provide some practical examples of code-in-action as a context in which a programmer new to LFE could continuously refer -- from the very beginning through to the successful end --  while learning the general principles of that language; secondly, most programming language manuals are dry references to individual pieces of a language or system, not representatives of the whole, and we wanted to provide a starting place for those who learn well via examples, who <em>would</em> benefit from a view toward that whole. For those who have already seen plenty of LFE examples and would rather get to down to the nitty-gritty, rest assured we desire your experience to be guilt-free and thus encourage you to jump into next chapter immediately!</p>
+<p>This book is divided into 6 parts with the following foci:</p>
+<ul>
+<li>Introductory material</li>
+<li>Core data types and capabilities</li>
+<li>The basics of LFE code and projects</li>
+<li>Advanced language features</li>
+<li>The machine that is OTP</li>
+<li>Concluding thoughts and summaries</li>
+</ul>
+<p>There is a lot of material in this book, so just take it section by section. If at any time you feel overwhelmed, simply set down the book, take a deep breath, fix yourself a cuppa, and don't panic.</p>
+<p>Welcome to the LFE MACHINE MANUAL, the definitive LFE reference.</p>
+
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    <a rel="prev" href="../../part1/index.html" class="mobile-nav-chapters previous"
+                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../part1/intro/about.html" class="mobile-nav-chapters next"
+                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            <a rel="prev" href="../../part1/index.html" class="nav-chapters previous" title="Previous chapter"
+                aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+
+            <a rel="next" href="../../part1/intro/about.html" class="nav-chapters next" title="Next chapter"
+                aria-label="Next chapter" aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </nav>
+
+    </div>
+
+
+    <!-- Google Analytics Tag -->
+    <script type="text/javascript">
+        var localAddrs = ["localhost", "127.0.0.1", ""];
+
+        // make sure we don't activate google analytics if the developer is
+        // inspecting the book locally...
+        if (localAddrs.indexOf(document.location.hostname) === -1) {
+            (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-38274766-4', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        window.playground_copyable = true;
+    </script>
+
+
+    <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Custom JS scripts -->
+
+
+</body>
+
+</html>
