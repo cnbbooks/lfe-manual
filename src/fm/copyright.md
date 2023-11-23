@@ -28,7 +28,7 @@ Portions &copy; 2008-2012, Robert Virding
 
 Portions &copy; 2010-2020, Steve Klabnik and Carol Nichols
 
-Portions &copy; 2013-2020, Robert Virding and Duncan McGreggor
+Portions &copy; 2013-2023, Robert Virding and Duncan McGreggor
 
 [cc-license]: http://creativecommons.org/licenses/by-sa/4.0/
 [cc-image]: https://i.creativecommons.org/l/by-sa/4.0/88x31.png
