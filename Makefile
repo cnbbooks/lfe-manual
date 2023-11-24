@@ -6,6 +6,7 @@ PUBLISH_CONTENT = $(PUBLISH_DIR)/current
 PUBLISH_BRANCH = master
 BUILDER_BRANCH = builder
 TMP_GIT_DIR = /tmp/lfe-style-guide-git
+PORT = 5099
 
 default: build
 
