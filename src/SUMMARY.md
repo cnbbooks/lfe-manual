@@ -14,7 +14,7 @@
 
 * [Part I - Getting Started](part1/README.md)
    * [Introduction](part1/intro/README.md)
-   * [WIP - About LFE](part1/intro/about.md)
+   * [About LFE](part1/intro/about.md)
    * [Prerequisites](part1/intro/prereq.md)
    * [Conventions](part1/intro/conventions.md)
    * [Development Setup](part1/intro/setup.md)
