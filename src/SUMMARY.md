@@ -105,9 +105,15 @@
    * [Tables and Databases](part5/data/README.md)
    * [Example OTP Project](part5/project/README.md)
 
-* [Part VI - Conclusion]()
-   * [Epilogue](part6/epilogue.md)
-   * [Afterword](part6/afterward.md)
+* [Part VI - Tooling]()
+   * [WIP](part6/README.md)
+
+* [Part VII - Style Guide]()
+   * [WIP](part7/README.md)
+
+* [Part VIII - Conclusion]()
+   * [Epilogue](part8/epilogue.md)
+   * [Afterword](part8/afterward.md)
 
 --------------------
 
