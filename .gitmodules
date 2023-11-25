@@ -1,4 +1,0 @@
-[submodule "book"]
-	path = book
-	url = git@github.com:cnbbooks/lfe-rebar3-command-reference.git
-	branch = master
