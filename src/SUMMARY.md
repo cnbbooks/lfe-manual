@@ -148,18 +148,12 @@
       * [Architecture](part7/style-guide/swe/architecture.md)
   * [Code of Conduct](part7/code-of-conduct/README.md)
 * [Part VIII - Conclusion](part8/README.md)
-   * [Epilogue](part8/epilogue.md)
-   * [Afterword](part8/afterward.md)
 
 --------------------
 
-[Glossary](epilogue/glossary.md)
-[Bibliography](epilogue/bibliography.md)
-[Index](epilogue/index.md)
-
---------------------
-
-[Versions](versions.md)
 [Feedback](feedback.md)
 [LFE Documentation](redirects/docs.html)
+
+--------------------
+
 [Built with mdBook](redirects/mdbook.html)

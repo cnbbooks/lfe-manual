@@ -1,2 +1,0 @@
-# The Origins of Lisp
-
