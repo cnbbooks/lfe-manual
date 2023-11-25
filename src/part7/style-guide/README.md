@@ -1,1 +1,1 @@
-# Part VII - Style Guide
+# Style Guide
