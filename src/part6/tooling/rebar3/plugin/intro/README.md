@@ -1,7 +1,7 @@
 # Introduction
 
 The `rebar3_lfe` project is a rebar3 plugin for the [LFE language][lfe-wiki].
-It provides many of the conveniences one has come to expext of a programming
+It provides many of the conveniences one has come to expect of a programming
 language's build tool:
 
 * Project Creation
