@@ -5,8 +5,8 @@
 
 --------------------
 
-[Preface](preface/README.md)
 [Dedication](preface/dedication.md)
+[Preface](preface/README.md)
 [Forward](preface/forward.md)
 [Acknowledgments](preface/acknowledgments.md)
 
@@ -147,6 +147,7 @@
       * [Priorities](part7/style-guide/swe/priorities.md)
       * [Architecture](part7/style-guide/swe/architecture.md)
   * [Code of Conduct](part7/code-of-conduct/README.md)
+
 * [Part VIII - Conclusion](part8/README.md)
 
 --------------------

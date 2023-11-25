@@ -1,6 +1,6 @@
 # About the Cover
 
-The LFE "Chineual" cover is based upon the Lisp Machine Manual covers of the early 80s. The Lisp Machine Manual editions we have seen from 1977 and 1979 had only hand-typed title pages, no covers, so we're not sure if the famous graphic/typographic design occurred any earlier than 1982. We've also been unable to discover who the original designer was, but would love to give them credit, should we find out.
+The LFE "Chinenual" cover is based upon the Lisp Machine Manual covers of the early 80s. The Lisp Machine Manual editions we have seen from 1977 and 1979 had only hand-typed title pages, no covers, so we're not sure if the famous graphic/typographic design occurred any earlier than 1982. We've also been unable to discover who the original designer was, but would love to give them credit, should we find out.
 
 ## The Original
 
@@ -8,7 +8,7 @@ The Software Preservation Group has this image on their site:
 
 [![][bw-orig-cover]][swpg-source]
 
-Bitsavers has a 3rd edition of the Chineual with the full cover
+Bitsavers has a 3rd edition of the Chinenual with the full cover
 
 [![][color-orig-cover]][bitsavers]
 

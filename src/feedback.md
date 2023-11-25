@@ -1,4 +1,4 @@
-# Feedback and Documantation Bugs
+# Feedback and Documentation Bugs
 
 If you would like to provide feedback about this guide, we would welcome the
 chance to improve the experience for everyone. Please
