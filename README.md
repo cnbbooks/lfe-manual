@@ -6,9 +6,9 @@ Note: This book is a long-term project and a work in progress.
 
 [![][cover]][cover-large]
 
-Drafts for this book are published irregularly here:
+The book is published/updated here:
 
-* [cnbbooks.github.io/lfe-manual/](https://cnbbooks.github.io/lfe-manual/)
+* https://lfe.io/books/chinenual
 
 The ticket summarizing the approach to generating content for the book is here:
 
