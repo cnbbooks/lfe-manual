@@ -45,7 +45,7 @@
       * [WIP - Job Control](part1/repl/job-control.md)
       * [Files](part1/repl/files.md)
 
-* [Part II - Code as Data]()
+* [Part II - Code as Data](part2/README.md)
    * [Variables](part2/vars/README.md)
      * [Bindings](part2/vars/bindings.md)
      * [Pattern-matching Preview](part2/vars/patts.md)
@@ -68,7 +68,7 @@
    * [Pattern Matching](part2/patterns/README.md)
    * [Generic Sequence Functions](part2/gen-seq/README.md)
 
-* [Part III - Data as Code]()
+* [Part III - Data as Code](part3/README.md)
    * [Expressions](part3/exprs/README.md)
    * [Functions](part3/funs/README.md)
    * [Closures](part3/closures/README.md)
@@ -86,7 +86,7 @@
      * [Using rebar3](part3/projects/rebar3.md)
      * [Project Layout Conventions](part3/projects/layout.md)
 
-* [Part IV - Advanced Topics]()
+* [Part IV - Advanced Topics](part4/README.md)
    * [Errors and Debugging](part4/err-debug/README.md)
    * [Writing Unit Tests](part4/unit/README.md)
    * [The Common Test Framework](part4/ct/README.md)
@@ -98,7 +98,7 @@
    * [Servers](part4/servers/REAEDME.md)
    * [Clients](part4/clients/REAEDME.md)
 
-* [Part V - OTP]()
+* [Part V - OTP](part5/README.md)
    * [Behaviours](part5/behaviours/README.md)
    * [Applications](part5/apps/README.md)
    * [Releases](part5/rels/README.md)
@@ -106,9 +106,8 @@
    * [Example OTP Project](part5/project/README.md)
 
 * [Part VI - Tooling](part6/README.md)
-   * [WIP](part6/README.md)
 
-* [Part VII - Style Guide](part6/style-guide/README.md)
+* [Part VII - Style Guide](part7/style-guide/README.md)
   * [Introduction](part7/style-guide/intro/README.md)
   * [Formatting](part7/style-guide/format/README.md)
     * [File Headers](part7/style-guide/format/headers.md)
@@ -147,7 +146,7 @@
     * [Priorities](part7/style-guide/swe/priorities.md)
     * [Architecture](part7/style-guide/swe/architecture.md)
 
-* [Part VIII - Conclusion]()
+* [Part VIII - Conclusion](part8/README.md)
    * [Epilogue](part8/epilogue.md)
    * [Afterword](part8/afterward.md)
 
@@ -156,13 +155,6 @@
 [Glossary](epilogue/glossary.md)
 [Bibliography](epilogue/bibliography.md)
 [Index](epilogue/index.md)
-
---------------------
-
-[Appendices]()
-[I - Origins Of Lisp](appendices/lisp-history.md)
-[II - Origins Of Erlang](appendices/erlang-history.md)
-[III - Origins Of LFE](appendices/lfe-overview.md)
 
 --------------------
 

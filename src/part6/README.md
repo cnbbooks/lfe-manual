@@ -1,3 +1,1 @@
-# Tooling
-
-WIP
+# Part VI - Tooling
