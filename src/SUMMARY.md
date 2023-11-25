@@ -1,11 +1,11 @@
 [LFE MACHINE MANUAL](README.md)
 [Title Page](fm/title-page.md)
 [Copyright](fm/copyright.md)
+[About the Cover](preface/about-cover.md)
 
 --------------------
 
 [Preface](preface/README.md)
-[About the Cover](preface/about-cover.md)
 [Dedication](preface/dedication.md)
 [Forward](preface/forward.md)
 [Acknowledgments](preface/acknowledgments.md)
