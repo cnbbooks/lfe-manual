@@ -1,4 +1,18 @@
-# About `rebar3`
+# Introduction
+
+This is a version of the LFE quick start that has been re-imagined with
+the LFE rebar3 plugin in mind.
+
+We will cover the following:
+
+* How to get started quickly with LFE using just `rebar3` and your local
+  installation of Erlang
+* Creating a new LFE project
+* Looking at LFE code in the REPL and in modules
+* Provide a little insight on how this works
+* Leave you with resources for jumping into LFE in more detail
+
+## About `rebar3`
 
 Rebar3 is an Erlang tool that makes it easy to create, develop, and release Erlang libraries, applications, and systems in a repeatable manner.
 

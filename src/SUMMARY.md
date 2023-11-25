@@ -106,6 +106,17 @@
    * [Example OTP Project](part5/project/README.md)
 
 * [Part VI - Tooling](part6/README.md)
+  * [rebar3](part6/tooling/rebar3/README.md)
+    * [Quick Start](part6/tooling/rebar3/quick-start/README.md)
+      * [Introduction](part6/tooling/rebar3/quick-start/intro/README.md)
+      * [Going Plaid](part6/tooling/rebar3/quick-start/plaid.md)
+      * [Creating a New Project](part6/tooling/rebar3/quick-start/proj.md)
+      * [LFE Code](part6/tooling/rebar3/quick-start/code/README.md)
+        * [The REPL](part6/tooling/rebar3/quick-start/code/repl.md)
+        * [Sample Code](part6/tooling/rebar3/quick-start/code/sample.md)
+        * [Message-Passing](part6/tooling/rebar3/quick-start/code/msgs.md)
+      * [Behind the Scenes](part6/tooling/rebar3/quick-start/behind.md)
+      * [Where Next?](part6/tooling/rebar3/quick-start/next.md)
 
 * [Part VII - Guides](part7/README.md)
   * [Style Guide](part7/style-guide/README.md)

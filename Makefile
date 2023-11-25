@@ -2,10 +2,7 @@ BIN = mdbook
 GEN := $(shell which $(BIN) 2> /dev/null)
 DOWNLOAD = https://github.com/rust-lang/mdBook/releases
 PUBLISH_DIR = book
-PUBLISH_CONTENT = $(PUBLISH_DIR)/current
-PUBLISH_BRANCH = master
-BUILDER_BRANCH = builder
-TMP_GIT_DIR = /tmp/lfe-style-guide-git
+PUBLISH_CONTENT = $(PUBLISH_DIR)
 PORT = 5099
 
 default: build
@@ -18,7 +15,7 @@ Download $(BIN) from $(DOWNLOAD).
 
 endef
 
-build: clean-all $(PUBLISH_DIR)/README.md
+build: clean-all
 ifndef GEN
 	$(error $(BINARY_ERROR))
 endif
@@ -34,40 +31,10 @@ run: serve
 
 clean:
 	@echo ">> Removing auto-generated top-level files ..."
-	@rm -f $(PUBLISH_DIR)/README.md
 
 clean-all: clean
 	@echo ">> Removing previously generated content ..."
 	@rm -rf $(PUBLISH_CONTENT)
-
-book-submodule:
-	@git submodule add -b master `git remote get-url --push origin` $(PUBLISH_DIR)
-	@git commit --author "LFE Maintainers <maintainers@lfe.io>" \
-		-m "Added master branch as submodule ($(PUBLISH_DIR) dir)."
-
-book-init:
-	@git submodule update --init --recursive
-	@cd $(PUBLISH_DIR) && git checkout master
-
-$(PUBLISH_DIR)/README.md:
-	@echo '# Content for the LFE MACHINE MANUAL' > $(PUBLISH_DIR)/README.md
-	@echo 'Published at [lfe.io/books/manual/](https://lfe.io/books/manual/)' >> $(PUBLISH_DIR)/README.md
-	@cd $(PUBLISH_DIR) && git add README.md
-
-publish: build
-	@echo ">> Publishing book content ..."
-	-@cd $(PUBLISH_DIR) && \
-	git add * && \
-	git commit --author "LFE Maintainers <maintainers@lfe.io>" \
-		-am "Regenerated book content." > /dev/null && \
-	git push origin $(PUBLISH_BRANCH)
-	-@git add $(PUBLISH_DIR) && \
-	git commit --author "LFE Maintainers <maintainers@lfe.io>" \
-		-am "Updated submodule for recently generated book content." && \
-	git submodule update
-	-@git push origin $(BUILDER_BRANCH)
-
-build-publish: build publish
 
 spell-check:
 	@for FILE in `find . -name "*.md"`; do \
