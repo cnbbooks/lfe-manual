@@ -14,12 +14,11 @@ Next, open up that file in your favourite editor, and give it these contents:
 
 ```erlang
 {plugins, [
-  {rebar3_lfe,
-    {git, "https://github.com/lfe-rebar3/rebar3_lfe.git", {branch, "master"}}}
+  {rebar3_lfe, "0.4.8"}
 ]}.
 ```
 
-If you already have a `rebar.config` file with a plugins entry, then simply add a comma after the last plugin listed and paste the `{rebar3_lfe, {...}}` line from above (with no trailing comma!).
+If you already have a `rebar.config` file with a plugins entry, then simply add a comma after the last plugin listed and paste the `{rebar3_lfe, ...}` line from above (with no trailing comma!). When a new version of `rebar3_lfe` is released, you can [follow the instructions in the `rebar3_lfe` repo to upgrade](https://github.com/lfe/rebar3#upgrading-rebar3_lfe-globally).
 
 <div class="alert alert-info">
   <h4 class="alert-heading">
@@ -57,7 +56,7 @@ Erlang/OTP 23 [erts-11.0] [source] [64-bit] [smp:16:16] [ds:16:16:10] [async-thr
 lfe>
 ```
 
-Exit out of the REPL for now by typing `<CTRL><G>` and  thn `<Q>`.
+Exit out of the REPL for now by typing `<CTRL><G>` and then `<Q>`.
 
 <div class="alert alert-warning">
   <h4 class="alert-heading">
