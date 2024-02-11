@@ -48,6 +48,6 @@ For the three guess patterns (well, one pattern, really) since there are three d
 1. guess is greater
 1. guess is less
 
-Note that the pattern for the function argument in these last three didn't change, only the guard is different beptween them.
+Note that the pattern for the function argument in these last three didn't change, only the guard is different between them.
 
 Finally, there's the original "pass-through" or "match-any" pattern (this is used to prevent an error in the event of an unexpected message type).
