@@ -1,6 +1,6 @@
 # Review
 
-We've got the whole rest of the book ahead of us to cover much of what you've seen in the sample project we've just created with our guessing game. In the coming pages, you will revisit every aspect of what you've seen so far in lots of detail with correspondingly useful instruction on these matters.
+We've got the whole rest of the book ahead of us to cover much of what you've seen in the sample project we've just created with our guessing game. In the coming pages, you will revisit every aspect of what you've seen so far in lots of detail with correspondingly useful instructions on these matters.
 
 That being said, it would be unfair to not at least read through the code together and mention the high-level concepts involved. Since we only touched the code in one file, that will be the one that gets the most of our attention for this short review, but let's touch on the others here, too.
 
