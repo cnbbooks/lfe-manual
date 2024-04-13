@@ -24,7 +24,7 @@ Then, in your preferred editor, open that file and add the entry for LFE rebar3 
 ```erlang
 {plugins, [
   {rebar3_lfe,
-    {git, "https://github.com/lfe-rebar3/rebar3_lfe.git", {branch, "master"}}}
+    {git, "https://github.com/lfe-rebar3/rebar3_lfe.git", {branch, "main"}}}
 ]}.
 ```
 
