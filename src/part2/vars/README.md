@@ -14,7 +14,7 @@ There are two contexts for setting variables:
 This distinction is important, not only because the contexts use different
 forms, but because like Erlang, LFE does not support global variables.
 
-This chpater will also introduce the reader to pattern-matching in LFE, as it
+This chapter will also introduce the reader to pattern-matching in LFE, as it
 applies to variable assignment; a fuller discussion is presented in a
 [dedicated chapter](../patterns) as well in the chapters that cover forms
 which support pattern-matching (i.e., compound data types, functions, etc.).
