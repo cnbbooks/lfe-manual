@@ -1,5 +1,3 @@
 # Acknowledgments
 
-TBD
-
-[gonna be a long list ...]
+Thank you Robert Virding for all that you have done to make Lisp Flavoured Erlang a reality.
