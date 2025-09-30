@@ -42,7 +42,7 @@
       * [REPL Commands](part1/repl/help-cmds.md)
       * [Special Variables](part1/repl/help-special-vars.md)
     * [Command Interface](part1/repl/c.md)
-    * [WIP - Job Control](part1/repl/job-control.md)
+    * [Job Control](part1/repl/job-control.md)
     * [Files](part1/repl/files.md)
 
 * [Part II - Code as Data](part2/README.md)
