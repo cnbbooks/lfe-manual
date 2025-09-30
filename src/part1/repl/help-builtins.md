@@ -52,7 +52,7 @@ Documentation for Erlang modules and fucntions is available via the [Command Int
 
 ### LFE Formatting
 
-LFE provides some nice convenience functions for displaying data structions in the REPL. Let's say we had a data structure defined thusly:
+LFE provides some nice convenience functions for displaying data structures in the REPL. Let's say we had a data structure defined thusly:
 
 ```lisp
 lfe> (set data `(#(foo bar baz) #(quux quuz) #(corge grault garply)

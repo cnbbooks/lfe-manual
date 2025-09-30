@@ -1,4 +1,4 @@
-# Global Variables Revisted
+# Global Variables Revisited
 
 ## The Process Dictionary
 
