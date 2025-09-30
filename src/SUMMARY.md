@@ -56,7 +56,7 @@
     * [Atoms (Symbols)](part2/data-types/atoms.md)
     * [Booleans](part2/data-types/bools.md)
     * [Characters](part2/data-types/chars.md)
-  * [Cons Cells](part2/data-types/README.md)
+  * [Cons Cells](part2/cons-cells/README.md)
   * [Lists and Strings](part2/lists/README.md)
   * [Bytes and Binaries](part2/byte-bin/README.md)
   * [Tuples](part2/tuples/README.md)

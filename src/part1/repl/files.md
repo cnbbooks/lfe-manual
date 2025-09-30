@@ -183,7 +183,22 @@ Example include file (`records.lfe`):
   `(io:format "DEBUG: ~p~n" (list ,msg)))
 ```
 
-After including this file, you can use the record and macro definitions in your code.
+After including this file, you can use the record and macro definitions in your code:
+
+```lisp
+lfe> (include-file "records.lfe")
+debug // In LFE, when including a file in the REPL, the last function defined in the file is printed to stdout
+
+lfe> (make-person name "Robert" age 54 email "robert@lfe.io")
+#(person "Robert" 54 "robert@lfe.io")
+lfe>
+```
+
+```lisp
+lfe> (debug "oops")
+DEBUG: "oops"
+ok
+```
 
 ## Module Loading
 
