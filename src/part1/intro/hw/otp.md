@@ -9,20 +9,20 @@ As such, a _real_ Hello-World in LFE would be honest and let the prospective dev
 If you are still in the directory of the previous Hello-World project, let's get out of that:
 
 ```bash
-$ cd ../
+cd ../
 ```
 
 Now we're going to create a new project, one utilising the some very basic OTP patterns:
 
 ```bash
-$ rebar3 new lfe-app hello-otp-world
-$ cd ./hello-otp-world
+rebar3 new lfe-app hello-otp-world
+cd ./hello-otp-world
 ```
 
 We won't look at the code for this right now, since there are chapters dedicated to that in the second half of the book. But let's brush the surface with a quick run in the REPL:
 
 ```bash
-$ rebar3 lfe repl
+rebar3 lfe repl
 ```
 
 To start your new hello-world application, use the OTP `application` module:
@@ -43,4 +43,4 @@ To finish the demonstration, and display the clichéd if classic message:
 
 And that, dear reader, is a _true_ LFE/OTP Hello-World program, complete with message-passing and pattern-matching!
 
-Feel free to poke around in the code that was generated for you, but know that eventually all its mysteries will be revealed, and by the end of this book this program's magic will just seem like ordinary code to you, ordinary, dependable, fault-tolerant, highly-availble, massively-concurrent code.
+Feel free to poke around in the code that was generated for you, but know that eventually all its mysteries will be revealed, and by the end of this book, that program's magic will just seem like ordinary code to you, ordinary, dependable, fault-tolerant, highly-availble, massively-concurrent code.
