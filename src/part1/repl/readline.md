@@ -312,26 +312,3 @@ If the REPL feels sluggish with readline enabled:
 1. Reduce history file size with `shell_history_file_bytes`
 2. Use fewer rlwrap options for minimal overhead
 3. Consider using built-in history only without rlwrap for simple use cases
-
-## Advanced Topics
-
-### Custom Completion
-
-You can create custom completion files for rlwrap to provide LFE-specific function and module completion. This requires creating completion word lists and using rlwrap's `-f` option to specify custom completion files.
-
-### Integration with Development Workflows
-
-Consider integrating readline-enhanced LFE REPLs into your development environment:
-
-- Editor integration (connecting from Emacs, Vim, VS Code)
-- Makefile targets for enhanced REPL startup
-- Docker containers with pre-configured readline support
-- CI/CD pipeline testing with scriptable REPL sessions
-
-### Alternative Tools
-
-While rlwrap is the most common solution, other tools worth considering include:
-
-- **rebel-readline** - A Clojure-inspired readline implementation (primarily for Clojure but demonstrates advanced REPL features)
-- **Term editing libraries** - Some languages provide their own readline-like libraries
-- **Terminal multiplexers** - Tools like tmux and screen provide their own history and line editing features
