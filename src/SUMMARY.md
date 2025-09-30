@@ -44,7 +44,10 @@
     * [Command Interface](part1/repl/c.md)
     * [Job Control](part1/repl/job-control.md)
     * [Files](part1/repl/files.md)
-
+      * [Evaluation](part1/repl/files/eval.md)
+      * [Compilation](part1/repl/files/compile.md)
+      * [Inclusion](part1/repl/files/include.md)
+      * [Loading](part1/repl/files/load.md)
 * [Part II - Code as Data](part2/README.md)
   * [Variables](part2/vars/README.md)
     * [Bindings](part2/vars/bindings.md)
