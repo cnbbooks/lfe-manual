@@ -180,19 +180,19 @@ a core form, it can't be shadowed (see the next section).
 
 ## The Unshadowable
 
-Shadowing does not apply to the supported LFE
-[core forms](https://github.com/rvirding/lfe/blob/develop/doc/src/lfe_guide.7.md#core-forms).
-It may appear that
-your code is shadowing those forms, but the compiler will *always* use
-the core meaning and never an alternative. It does this silently, without
-warning -- so take care and do not be surprised!
-
 <div class="alert alert-info">
   <h4 class="alert-heading">
     <i class="fa fa-info-circle" aria-hidden="true"></i>
     Information
   </h4>
   <p class="mb-0">
-    Core LFE forms are never be shadowed.
+    Core LFE forms can never be shadowed.
   </p>
 </div>
+
+Shadowing does not apply to the supported LFE
+[core forms](https://github.com/lfe/lfe/blob/develop/doc/src/lfe_guide.7.md#core-forms).
+It may appear that
+your code is shadowing those forms, but the compiler will _always_ use
+the core meaning and never an alternative. It does this silently, without
+warning -- so take care and do not be surprised!

@@ -65,7 +65,7 @@ lfe> (m 'my-module)
 <div class="alert alert-warning">
   <h4 class="alert-heading">
     <i class="fa fa-info-circle" aria-hidden="true"></i>
-    Take care
+    Take care!
   </h4>
   <p class="mb-0">
     When using the <code>(c)</code> command in the REPL, compiled <code>.beam</code> files are placed in the current working directory, not in a proper <code>ebin</code> directory. This can lead to serious development issues if not properly managed.

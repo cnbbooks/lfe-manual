@@ -1,1 +1,13 @@
 # Part I - Getting Started
+
+Every programming journey begins with a single step, and in the Lisp tradition, that step is often taken at the REPL—the Read-Eval-Print Loop that transforms programming from a batch process into an interactive conversation with the computer. Part I of this manual guides you through your first steps in LFE (Lisp Flavored Erlang), from understanding what makes this language unique to building your first complete application.
+
+LFE occupies a fascinating position in the programming language landscape. It brings the elegant syntax and powerful abstractions of Lisp to the robust, fault-tolerant world of the Erlang Virtual Machine (BEAM). This combination offers something remarkable: a language that supports both the reflective, code-as-data philosophy of Lisp and the "let it crash" resilience of actor-model concurrency. Whether you're drawn to LFE from the Lisp side or the Erlang side, you'll discover that this synthesis creates new possibilities for building distributed, fault-tolerant systems.
+
+We begin with the traditional "Hello, World!" programs, but in three distinct flavors that showcase LFE's versatility. The REPL version demonstrates immediate interactivity—type an expression, see the result instantly. The main function approach shows how to create standalone programs, while the LFE/OTP version introduces you to the powerful supervision trees and process management that make Erlang applications famously reliable.
+
+The heart of Part I is the guessing game walk-through, a complete project that evolves from simple procedural code to a proper (if very simple) OTP application. This progression mirrors the journey many LFE programs take: starting as interactive explorations at the REPL, growing into functions and modules, and ultimately becoming supervised processes that can handle failures gracefully and scale across multiple machines.
+
+Finally, we dive deep into the REPL itself—not just as a place to test code fragments, but as a powerful development environment. The REPL is where LFE's dual nature as both Lisp and Erlang becomes most apparent. You can manipulate code as data using traditional Lisp techniques, while simultaneously spawning processes, sending messages, and exploring the vast ecosystem of Erlang and OTP libraries.
+
+By the end of Part I, you'll have not just written your first LFE programs, but developed an intuition for the LFE way of thinking—interactive, incremental, and designed for systems that never stop running. You'll understand how to leverage both the immediate feedback of Lisp development and the industrial-strength reliability of the BEAM platform, setting the foundation for the deeper explorations that follow in the subsequent parts of this manual.

@@ -1,4 +1,4 @@
-# Inclusion: Using `include-lib` and `include-file`
+# Inclusion
 
 LFE supports including header files and library files, which is essential for larger projects and when working with Erlang/OTP libraries.
 
