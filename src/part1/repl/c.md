@@ -2,7 +2,7 @@
 
 While many of the functions listed in the LFE `(help)` have their documentation in the [Erlang Command Interface module](http://erlang.org/doc/man/c.html) (CIM), not everything in the CIM has been provided in the LFE REPL, some of which can be useful at times.
 
-Here are some of the more useful functions you may with to be aware of from that module:
+Here are some of the more useful functions you may with to be aware of from that Erlang module:
 
 * `(c:bt pid)` - Stack backtrace for a process. Equivalent to `(erlang:process_display pid 'backtrace)`.
 * `(c:h mod)` - Print the documentation for `mod`
