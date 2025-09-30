@@ -25,6 +25,7 @@ lfe> $ENV
 ```
 
 Key characteristics of `slurp`:
+
 * Only one file can be slurped at a time
 * Slurping a new file automatically removes all data from the previously slurped file
 * Functions and macros become available without module prefixes
@@ -88,6 +89,7 @@ lfe> (c "my-module.lfe")
 ```
 
 This function:
+
 * Compiles the LFE source file
 * Loads the resulting `.beam` file into the current session
 * Makes the module's exported functions available for use
@@ -101,6 +103,7 @@ lfe> (c "my-module.lfe" '(debug_info export_all))
 ```
 
 Common compilation options include:
+
 * `debug_info` - Include debugging information
 * `export_all` - Export all functions (useful for development)
 * `warn_unused_vars` - Warn about unused variables
@@ -162,6 +165,7 @@ The `include-file` directive includes files using relative or absolute paths:
 ### Include File Content
 
 Include files typically contain:
+
 * Record definitions
 * Macro definitions
 * Constant definitions
@@ -195,6 +199,7 @@ lfe> (l 'my-module)
 ```
 
 This is useful when:
+
 * You've recompiled a module and want to reload it
 * You want to load a module that exists but isn't currently loaded
 * You're working with hot code reloading during development
@@ -209,6 +214,7 @@ lfe> (: code ensure_loaded 'my-module)
 ```
 
 This function:
+
 * Loads the module if it's not already loaded
 * Does nothing if the module is already loaded
 * Returns error information if the module can't be found
@@ -285,7 +291,15 @@ This file-based approach to REPL development provides the flexibility to move be
 
 ## Cleanup: Managing Compiled Files
 
-⚠️ **Important**: When using the `(c)` command in the REPL, compiled `.beam` files are placed in the current working directory, not in a proper `ebin` directory. This can lead to serious development issues if not properly managed.
+<div class="alert alert-info">
+  <h4 class="alert-heading">
+    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    Cleanup
+  </h4>
+  <p class="mb-0">
+    When using the <code>(c)</code> command in the REPL, compiled <code>.beam</code> files are placed in the current working directory, not in a proper <code>ebin</code> directory. This can lead to serious development issues if not properly managed.
+  </p>
+</div>
 
 ### The Problem
 
