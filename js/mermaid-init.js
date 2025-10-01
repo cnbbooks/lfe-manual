@@ -4,7 +4,7 @@
 
 (() => {
     const darkThemes = ['ayu', 'navy', 'coal'];
-    const lightThemes = ['light', 'rust'];
+    const lightThemes = ['light', 'rust', 'lfe-pdp'];
 
     const classList = document.getElementsByTagName('html')[0].classList;
 
