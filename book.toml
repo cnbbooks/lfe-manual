@@ -11,11 +11,14 @@ build-dir = "book"
 
 [preprocessor.links]
 
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
 [output.html]
 default-theme = "lfe-pdp"
 preferred-dark-theme = "lfe-pdp"
 additional-css = ["css/custom.css"]
-google-analytics = "UA-38274766-4"
+additional-js = ["js/mermaid.min.js", "js/mermaid-init.js"]
 git-repository-url = "https://github.com/cnbbooks/lfe-manual"
 [output.html.search]
 limit-results = 20
