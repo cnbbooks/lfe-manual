@@ -64,6 +64,8 @@
     * [Erlang Cons Cells](part2/cons-cells/erlang.md)
     * [LFE Cons Cells](part2/cons-cells/lfe.md)
   * [Lists and Strings](part2/lists/README.md)
+    * [Lists](part2/lists/lists.md)
+    * [Strings](part2/lists/strings.md)
   * [Bytes and Binaries](part2/byte-bin/README.md)
   * [Tuples](part2/tuples/README.md)
   * [Property Lists](part2/proplists/README.md)
