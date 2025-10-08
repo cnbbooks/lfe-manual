@@ -198,7 +198,9 @@
       * [Architecture](part7/style-guide/swe/architecture.md)
   * [Code of Conduct](part7/code-of-conduct/README.md)
 
-* [Part VIII - Conclusion](part8/README.md)
+* [Part VIII - LFE for Contributors](part8/README.md)
+
+* [Part IX - Conclusion](part9/README.md)
 
 --------------------
 
