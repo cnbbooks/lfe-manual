@@ -14,7 +14,7 @@ Next, open up that file in your favourite editor, and give it these contents:
 
 ```erlang
 {plugins, [
-  {rebar3_lfe, "0.4.8"}
+  {rebar3_lfe, "0.4.11"}
 ]}.
 ```
 
