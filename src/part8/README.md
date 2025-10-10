@@ -16,3 +16,37 @@ This analysis assumes graduate-level computer science knowledge, including famil
 - Functional programming concepts (closures, higher-order functions, immutability)
 - Virtual machine architectures (BEAM/Erlang VM in particular)
 - Systems programming and concurrent/distributed computing
+
+## Document Navigation Guide
+
+This document can be creativly re-organized for multiple reading paths, per focused need:
+
+**For newcomers** (understanding the system), focus on these sections:
+
+- LFE Architecture
+- Module Reference
+- Erlang Integration
+
+**For contributors** (adding features), focus on these sections:
+
+- Module Reference
+- Component Relationship Graphs
+- Design Patterns & Idioms
+
+**For maintainers** (debugging), focus on these sections:
+
+- Language Subsystems
+- Data Structure Catalog
+- Performance Considerations
+
+**For academics** (research), focus on these sections:
+
+- LFE Architecture
+- Language Subsystems
+- Language Features Matrix
+
+**For integrators** (embedding/extending), focus on these sections:
+
+- Erlang Integration
+- Tooling
+- Future Directions
