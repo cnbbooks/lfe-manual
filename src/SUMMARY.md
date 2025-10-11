@@ -242,12 +242,38 @@
       * [lfe_codegen.erl - Code Generator](part8/mod-ref/comp-mods/codegen.md)
       * [lfe_codelift.erl - Lambda Lifter](part8/mod-ref/comp-mods/codelift.md)
       * [lfe_abstract_code.erl - Debug Info Provider](part8/mod-ref/comp-mods/abstract-code.md)
-    * [Runtime Modules](part8/mod-ref/runtime-mods.md)
-    * [I/O Modules](part8/mod-ref/io-mos.md)
-    * [Shell Modules](part8/mod-ref/shell-mods.md)
+    * [Runtime Modules](part8/mod-ref/runtime-mods/README.md)
+      * [lfe_eval.erl - Expression Evaluator](part8/mod-ref/runtime-mods/eval.md)
+      * [lfe_eval_bits.erl - Binary Evaluation](part8/mod-ref/runtime-mods/eval-bits.md)
+      * [lfe_init.erl - Runtime Initialization](part8/mod-ref/runtime-mods/init.md)
+      * [lfescript.erl - Script Runner](part8/mod-ref/runtime-mods/lfescript.md)
+    * [I/O Modules](part8/mod-ref/io-mods/README.md)
+      * [lfe_io.erl - I/O Interface](part8/mod-ref/io-mods/io.md)
+      * [lfe_io_write.erl - Compact Writer](part8/mod-ref/io-mods/io-write.md)
+      * [lfe_io_pretty.erl - Pretty Printer](part8/mod-ref/io-mods/io-pretty.md)
+      * [lfe_io_format.erl - Formatted Output](part8/mod-ref/io-mods/io-format.md)
+    * [Shell Modules](part8/mod-ref/shell-mods/README.md)
+      * [lfe_shell.erl - REPL Implementation](part8/mod-ref/shell-mods/repl-impl.md)
+      * [lfe_edlin_expand.erl - Command Line Expansion](part8/mod-ref/shell-mods/edlin-expan.md)
     * [Library Modules](part8/mod-ref/lib-mods.md)
+cl.lfe - Common Lisp Compatibility
+clj.lfe - Clojure Compatibility
+scm.erl - Scheme Compatibility
+lfe_bits.erl - Bitstring Specification
+lfe_types.erl - Type System Support
+lfe_ms.erl - Match Specification DSL
+lfe_qlc.erl - Query List Comprehension
+lfe_gen.erl - Dynamic Code Generation
+lfe_struct.erl - Struct Runtime Support
     * [Support Utilities](part8/mod-ref/supp-mods.md)
+lfe.erl - Public API Facade
+lfe_lib.erl - Utility Functions
+lfe_internal.erl - Type and Form Validation
+lfe_env.erl - Environment Management
+lfe_error.erl - Error Formatting
     * [Documentation Modules](part8/mod-ref/doc-mods.md)
+lfe_docs.erl - Documentation Generation
+lfe_shell_docs.erl - Documentation Rendering
   * [Language Features Matrix](part8/lang-ref/README.md)
     * [Core Special Forms](part8/lang-ref/spec.md)
     * [Built-in Functions](part8/lang-ref/built-in.md)
