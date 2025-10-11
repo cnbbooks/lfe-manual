@@ -1,6 +1,6 @@
 # LFE/OTP 'Hello, World!'
 
-What have been demonstrated so far are fairly vanilla Hello-World examples; there's nothing particularly interesting about them, which puts them solidly iin the company of the millions of other Hello-World programs. As mentioned before, this approach is particularly vexing in the case of LFE/OTP, since it lures the prospective developer into the preconception that BEAM languages are just like other programming languages. They most decidedly are not.
+What have been demonstrated so far are fairly vanilla Hello-World examples; there's nothing particularly interesting about them, which puts them solidly in the company of the millions of other Hello-World programs. As mentioned before, this approach is particularly vexing in the case of LFE/OTP, since it lures the prospective developer into the preconception that BEAM languages are just like other programming languages. They most decidedly are not.
 
 What makes them, and in this particular case LFE, special is OTP. There's nothing quite like it, certainly not another language with OTP's feature set baked into its heart and soul. Most useful applications you will write in LFE/OTP will be composed of some sort of long-running service or server, something that manages that server and restarts it in the event of errors, and lastly, a context that contains both -- usually referred to as the "application" itself.
 
