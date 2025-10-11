@@ -2,7 +2,7 @@
 
 As you gain familiarity with the LFE REPL, one of the most useful and convenient references will be the summary of functions, commands, and variablese that come with the LFE REPL.
 
-To see these, simple call the `help` or `h` function:
+To see these, simply call the `help` or `h` function:
 
 ```lisp
 lfe> (help)
