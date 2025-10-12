@@ -66,7 +66,7 @@ not available outside of that scope.
 ## In Functions and Macros
 
 Within functions, variables are lexically scoped and bound with `let` and
-`let*`. One may also define lexically scoped functions _inside_ other fucntions,
+`let*`. One may also define lexically scoped functions _inside_ other functions,
 and this is done with `flet` and `fletrec` (the latter required for defining
 recursive functions inside another function). These will be covered in detail
 [later in the book](../../part3/funs/).
