@@ -18,7 +18,9 @@ command = "mdbook-mermaid"
 default-theme = "lfe-pdp"
 preferred-dark-theme = "lfe-pdp"
 additional-js = ["js/mermaid.min.js", "js/mermaid-init.js"]
+additional-css = ["css/custom.css"]
 git-repository-url = "https://github.com/cnbbooks/lfe-manual"
+
 [output.html.search]
 limit-results = 20
 use-boolean-and = true

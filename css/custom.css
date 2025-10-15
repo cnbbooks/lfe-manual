@@ -1,7 +1,38 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Body text */
+body, p {
+    font-family: 'Cabin', sans-serif;
+    font-size: 16px;
+    line-height: 2;
+}
+
+/* Code */
+code, pre {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.9em;
+}
+
 code,
 :not(pre):not(a)>.hljs {
     background-color: var(--inline-code-background-color);
     color: var(--inline-code-color);
+}
+
+blockquote {
+    font-family: 'Libre Baskerville', serif;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .alert {
@@ -10,6 +41,8 @@ code,
     margin-bottom: 1rem;
     border: 1px solid transparent;
     border-radius: 6px;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .alert-heading {
