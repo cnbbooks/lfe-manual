@@ -17,8 +17,9 @@ body, p {
 
 /* Code */
 code, pre {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace !important;
     font-size: 0.9em;
+    line-height: 1.5;
 }
 
 code,
