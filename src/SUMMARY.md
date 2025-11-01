@@ -255,25 +255,25 @@
     * [Shell Modules](part8/mod-ref/shell-mods/README.md)
       * [lfe_shell.erl - REPL Implementation](part8/mod-ref/shell-mods/repl-impl.md)
       * [lfe_edlin_expand.erl - Command Line Expansion](part8/mod-ref/shell-mods/edlin-expan.md)
-    * [Library Modules](part8/mod-ref/lib-mods.md)
-cl.lfe - Common Lisp Compatibility
-clj.lfe - Clojure Compatibility
-scm.erl - Scheme Compatibility
-lfe_bits.erl - Bitstring Specification
-lfe_types.erl - Type System Support
-lfe_ms.erl - Match Specification DSL
-lfe_qlc.erl - Query List Comprehension
-lfe_gen.erl - Dynamic Code Generation
-lfe_struct.erl - Struct Runtime Support
-    * [Support Utilities](part8/mod-ref/supp-mods.md)
-lfe.erl - Public API Facade
-lfe_lib.erl - Utility Functions
-lfe_internal.erl - Type and Form Validation
-lfe_env.erl - Environment Management
-lfe_error.erl - Error Formatting
-    * [Documentation Modules](part8/mod-ref/doc-mods.md)
-lfe_docs.erl - Documentation Generation
-lfe_shell_docs.erl - Documentation Rendering
+    * [Library Modules](part8/mod-ref/lib-mods/README.md)
+      * [cl.lfe - Common Lisp Compatibility](part8/mod-ref/lib-mods/cl.md)
+      * [clj.lfe - Clojure Compatibility](part8/mod-ref/lib-mods/clj.md)
+      * [scm.erl - Scheme Compatibility](part8/mod-ref/lib-mods/scm.md)
+      * [lfe_bits.erl - Bitstring Specification](part8/mod-ref/lib-mods/bits.md)
+      * [lfe_types.erl - Type System Support](part8/mod-ref/lib-mods/types.md)
+      * [lfe_ms.erl - Match Specification DSL](part8/mod-ref/lib-mods/ms.md)
+      * [lfe_qlc.erl - Query List Comprehension](part8/mod-ref/lib-mods/qlc.md)
+      * [lfe_gen.erl - Dynamic Code Generation](part8/mod-ref/lib-mods/gen.md)
+      * [lfe_struct.erl - Struct Runtime Support](part8/mod-ref/lib-mods/struc.md)
+    * [Support Utilities](part8/mod-ref/supp-mods/README.md)
+      * [lfe.erl - Public API Facade](part8/mod-ref/supp-mods/api.md)
+      * [lfe_lib.erl - Utility Functions](part8/mod-ref/supp-mods/util.md)
+      * [lfe_internal.erl - Type and Form Validation](part8/mod-ref/supp-mods/intern.md)
+      * [lfe_env.erl - Environment Management](part8/mod-ref/supp-mods/env.md)
+      * [lfe_error.erl - Error Formatting](part8/mod-ref/supp-mods/error.md)
+    * [Documentation Modules](part8/mod-ref/doc-mods/README.md)
+      * [lfe_docs.erl - Documentation Generation](part8/mod-ref/doc-mods/gen.md)
+      * [lfe_shell_docs.erl - Documentation Rendering](part8/mod-ref/doc-mods/shell.md)
   * [Language Features Matrix](part8/lang-ref/README.md)
     * [Core Special Forms](part8/lang-ref/spec.md)
     * [Built-in Functions](part8/lang-ref/built-in.md)
