@@ -16,7 +16,7 @@ LFE is a Lisp dialect which is heavily flavoured by the programming language vir
    (cons head (remsp tail))))
 ```
 
-This function removes spaces from a string that it passed to it. We will postpone explanation and analysis of this code, but in a few chapters you will have the knowledge necessary to understand this bit of LFE. 
+This function removes spaces from a string that it passed to it. We will postpone explanation and analysis of this code, but in a few chapters you will have the knowledge necessary to understand this bit of LFE.
 
 Besides the parentheses and prefix notation, other substantial features which LFE shares with Lisp languages include the interchangeability of data with code and the ability to write code which generates new code using the same syntax as the rest of the language. Examples of other Lisps include Common Lisp, Scheme, and Clojure.
 
@@ -96,22 +96,22 @@ remsp([Head|Tail]) ->
 
 The members of the Ericsson lab who were tasked with building the next generation telephone exchange system, and thus involved with the various language experiments made over the course of a few years, came to the following conclusions:
 
-* Small languages seemed better at succinctly addressing the problem space. 
-* The functional programming paradigm was appreciated, if sometimes viewed as awkward. 
-* Logic programming provided the most elegant solutions in the given problem space. 
+* Small languages seemed better at succinctly addressing the problem space.
+* The functional programming paradigm was appreciated, if sometimes viewed as awkward.
+* Logic programming provided the most elegant solutions in the given problem space.
 * Support for concurrency was viewed as essential.
-    
+
 If these were the initial guideposts for Erlang development, its guiding principles were the following:
 
-* To handle high-concurrency 
+* To handle high-concurrency
 * To handle soft real-time constraints
-* To support non-local, distributed computing 
-* To enable hardware interaction 
-* To support very large scale software systems 
-* To support complex interactions 
+* To support non-local, distributed computing
+* To enable hardware interaction
+* To support very large scale software systems
+* To support complex interactions
 * To provide non-stop operation
-* To allow for system updates without downtime 
-* To allow engineers to create systems with only seconds of down-time per year 
+* To allow for system updates without downtime
+* To allow engineers to create systems with only seconds of down-time per year
 * To easily adapt to faults in both hardware and software
 
 These were accomplished using such features as _immutable data structures_, _light weight processes_, no shared memory, message passing, _supervision trees_, and _heartbeats_. Furthermore, having adopted message-passing as the means of providing high-concurrency, Erlang slowly evolved into the exemplar of a programming paradigm that it essentially invented and even today, dominates: _concurrent functional programming_.
@@ -124,12 +124,12 @@ One of the co-inventors of Erlang, and part of the Lab's early efforts in langua
 
 Though the work on Lisps did not become the focus of Erlang development, the seeds of LFE were planted even before Erlang itself had come to be. After 20 years of contributions to the Erlang programming language, these began to bear fruit. In 2007 Virding decided to do something fun in his down time: to see what a Lisp would look like if written on top of the Prolog-inspired Erlang VM. After several months of hacking, he announced a first version of LFE to the Erlang mail list in early 2008.
 
-A few years latter, when asked about the origins of LFE and the motivating elements behind his decision to start the project, Virding shared the following on the LFE mail list: 
+A few years latter, when asked about the origins of LFE and the motivating elements behind his decision to start the project, Virding shared the following on the LFE mail list:
 
 * It had always been a goal of Robert's to make a Lisp which could fully interact with Erlang/OTP, to see what it would look like and how it would run.
-* He was looking for some interesting programming projects that were not too large to do in his spare time. 
+* He was looking for some interesting programming projects that were not too large to do in his spare time.
 * He thought it would be a fun, open-ended problem to solve with many interesting parts.
-* He likes implementing languages. 
+* He likes implementing languages.
 
 We showed an example of LFE at the beginning of this chapter; in keeping with our theme for each language subsection, we present it here again, though in a slightly altered form:
 
@@ -149,7 +149,7 @@ Very few languages have the powerful capabilities which Erlang offers – both i
 
 Similarly, despite the impact that Lisp has had on so many programming languages, its full suite of features is still essentially limited to Lisp dialects. This includes the features we have already mentioned: the ability to treat code as data, easily generate new code from data, as well as the interrelated power of writing macros – the last allows developers to modify the language to suit their needs. These rare features from two different language branches are unified in LFE and there is no well-established language that provides the union of these.
 
-As such, LFE gives developers everything they need to envision, prototype, and then build distributed applications – ones with unique requirements that no platform provides and which can be delivered thanks to LFE's language-building capabilities. 
+As such, LFE gives developers everything they need to envision, prototype, and then build distributed applications – ones with unique requirements that no platform provides and which can be delivered thanks to LFE's language-building capabilities.
 
 To paraphrase and augment the opening of Chapter 1 in _Designing for Scalability with Erlang/OTP_:
 
@@ -161,7 +161,7 @@ LFE has everything you need to realize this dream ... and so much more.
 
 ## In Summary
 
-### What LFE Is!
+### What LFE Is
 
 Here's what you can expect of LFE:
 
@@ -194,35 +194,34 @@ As such, you will not find the following:
 * CL packages or munged names faking packages
 * Access to Java libraries
 
-
 ----
 
 #### Notes
 
-[^1] Robert Virding, the creator of LFE and one of the co-creators of the Erlang programming language, has previously stated that, were he to start again, he would name his Lisp dialect EFL, since it truly is a Lisp with an Erlang flavour, rather than the other way round.
+[^1]: Robert Virding, the creator of LFE and one of the co-creators of the Erlang programming language, has previously stated that, were he to start again, he would name his Lisp dialect EFL, since it truly is a Lisp with an Erlang flavour, rather than the other way round.
 
-[^2] We will be covering prefix notation when we cover symbolic expressions later in the book.
+[^2]: We will be covering prefix notation when we cover symbolic expressions later in the book.
 
-[^3] Alonzo Church was one of McCarthy's professors at Princeton. McCarthy did not use all of the lambda calculus when creating Lisp, as there were many esoteric aspects for which he had no practical need.
+[^3]: Alonzo Church was one of McCarthy's professors at Princeton. McCarthy did not use all of the lambda calculus when creating Lisp, as there were many esoteric aspects for which he had no practical need.
 
-[^4] In the case of Lisp, university students were the primary computer hardware ... and sometimes even high school students (see REPL footnote below).
+[^4]: In the case of Lisp, university students were the primary computer hardware ... and sometimes even high school students (see REPL footnote below).
 
-[^5] This approach was not uncommon at the time: the ALGOL 58 specification defined a syntax for the language reference, one for publications, and a third for implementation.
+[^5]: This approach was not uncommon at the time: the ALGOL 58 specification defined a syntax for the language reference, one for publications, and a third for implementation.
 
-[^6] The single greatest contributor to the ascendance of the S-expression is probably the invention of the REPL by L Peter Deutsch, which allowed for interactive Lisp programming. This was almost trivial in S-expressions, whereas a great deal of effort would have been required to support a similar functionality for M-expressions.
+[^6]: The single greatest contributor to the ascendance of the S-expression is probably the invention of the REPL by L Peter Deutsch, which allowed for interactive Lisp programming. This was almost trivial in S-expressions, whereas a great deal of effort would have been required to support a similar functionality for M-expressions.
 
-[^7] The function we use in this chapter to demonstrate various syntaxes and dialects was copied from the cover of Byte Magazine's August 1979 issue which focused on Lisp and had part of a Lisp 1.5 program on its cover.
+[^7]: The function we use in this chapter to demonstrate various syntaxes and dialects was copied from the cover of Byte Magazine's August 1979 issue which focused on Lisp and had part of a Lisp 1.5 program on its cover.
 
-[^8] The formatting applied to the S-expression version of the function is a modern convention, added here for improved readability. There was originally no formatting, since there was no display – a keypunch was used to enter text on punchcards, 80 characters at a time. As such, a more historically accurate representation would perhaps be: `DEFINE (((REMSP (LAMBDA (STRING) (COND ((NULL STRING) F) ((EQ (CAR STRING) " ") (REMSP (CDR STRING))) (T (CONS (CAR STRING) (REMSP (CDR STRING)))))))))`
+[^8]: The formatting applied to the S-expression version of the function is a modern convention, added here for improved readability. There was originally no formatting, since there was no display – a keypunch was used to enter text on punchcards, 80 characters at a time. As such, a more historically accurate representation would perhaps be: `DEFINE (((REMSP (LAMBDA (STRING) (COND ((NULL STRING) F) ((EQ (CAR STRING) " ") (REMSP (CDR STRING))) (T (CONS (CAR STRING) (REMSP (CDR STRING)))))))))`
 
-[^9] This time period is commonly referred to as the “AI winter”.
+[^9]: This time period is commonly referred to as the “AI winter”.
 
-[^10] Paul Graham sold his Lisp-based e-commerce startup to Yahoo! In 1998.
+[^10]: Paul Graham sold his Lisp-based e-commerce startup to Yahoo! In 1998.
 
-[^11] The majority of this section's content was adapted from Joe Armstrong's paper “A History of Erlang” by, written for the HOPL III conference in 2007.
+[^11]: The majority of this section's content was adapted from Joe Armstrong's paper “A History of Erlang” by, written for the HOPL III conference in 2007.
 
-[^12] The Computer Science Laboratory operated from 1982 to 2002 in Älvsjö, Stockholm.
+[^12]: The Computer Science Laboratory operated from 1982 to 2002 in Älvsjö, Stockholm.
 
-[^13] We've taken the liberty of envisioning the Parlog of 1986 as one that supported pattern matching on characters.
+[^13]: We've taken the liberty of envisioning the Parlog of 1986 as one that supported pattern matching on characters.
 
-[^14] One of Virding's project aims was to gain a deeper understanding of Lisp internals. As part of this, he ported the Lisp Machine Lisp object framework _Flavors_ to Portable Standard Lisp running on UNIX. His work on this project contributed to his decision to use _Flavour_ as part of the name for LFE (spelling divergence intentional).
+[^14]: One of Virding's project aims was to gain a deeper understanding of Lisp internals. As part of this, he ported the Lisp Machine Lisp object framework _Flavors_ to Portable Standard Lisp running on UNIX. His work on this project contributed to his decision to use _Flavour_  as part of the name for LFE (spelling divergence intentional).

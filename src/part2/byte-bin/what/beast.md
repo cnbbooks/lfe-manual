@@ -1,0 +1,7 @@
+# The Nature of the Beast
+
+A binary, in the LFE (and Erlang) universe, is fundamentally a reference to a chunk of raw, untyped memory. If you're coming from a background in higher-level languages where everything must be wrapped in three layers of abstraction and a bow tie before it's considered respectable, this might feel a bit like meeting someone who still knows how to start a fire without matches. Primitive, perhaps, but undeniably useful when you need to cook dinner.
+
+Binaries were originally conceived for a rather specific purpose: loading code over networks in the Erlang runtime system. Imagine trying to send compiled programs between machines in the 1980s, when network bandwidth was measured in units that would make modern developers weep. You needed something efficient, something compact, something that wouldn't spend more time being transferred than actually running. Thus, the binary was born—a data structure optimized for moving large quantities of bits around without the overhead of, say, converting everything to strings and hoping for the best.
+
+What the designers discovered, rather like scientists who set out to invent a better glue and accidentally created Post-It notes, was that binaries were extraordinarily useful for *many* things. Socket-based communication. Protocol parsing. Codec implementation. Any situation where you need to deal with data in its raw, unadorned, byte-level glory.
