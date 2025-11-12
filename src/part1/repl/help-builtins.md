@@ -4,7 +4,7 @@ Most of the LFE REPL functions are documented in stdlib reference for their [Erl
 
 ## Compilation
 
-If you view the Erlang reference manual documentation for compiling files in the shell, you will see differences from what is show in the LFE help text. In particular, `(c)` is for compiling LFE modules and `(ec)` needs to be used for compiling Erlang source files.
+If you view the Erlang reference manual documentation for compiling files in the shell, you will see differences from what is shown in the LFE help text. In particular, `(c)` is for compiling LFE modules and `(ec)` needs to be used for compiling Erlang source files.
 
 In both cases, the resulting `.beam` files are compiled to the current working directory and not to an `ebin` directory. These `.beam` files will be found by LFE, since the current working directory is included in the path, but you'll likely want to perform some cleanup afterward.
 
