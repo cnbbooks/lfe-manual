@@ -8,9 +8,7 @@ language = "en"
 build-dir = "book"
 
 [preprocessor.index]
-
 [preprocessor.links]
-
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
 
@@ -20,6 +18,7 @@ preferred-dark-theme = "lfe-pdp"
 additional-js = ["js/mermaid.min.js", "js/mermaid-init.js"]
 additional-css = ["css/custom.css"]
 git-repository-url = "https://github.com/cnbbooks/lfe-manual"
+mathjax-support = true
 
 [output.html.search]
 limit-results = 20
