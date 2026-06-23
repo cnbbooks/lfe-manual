@@ -1,6 +1,6 @@
 [book]
 title = "LFE MACHINE MANUAL"
-author = "Robert Virding & Duncan McGreggor"
+authors = ["Duncan McGreggor", "Robert Virding"]
 description = "The Manual for the Machine that is LFE/OTP"
 language = "en"
 
