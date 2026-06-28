@@ -69,7 +69,7 @@ entries.
     Danger!
   </h4>
   <p class="mb-0">
-     Uncontrolled autoamtic creation of atoms can crash the VM!
+     Uncontrolled automatic creation of atoms can crash the VM!
   </p>
    <p class="mb-0">
     See the "Caveats" section below for more details.

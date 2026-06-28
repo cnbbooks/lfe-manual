@@ -1,6 +1,6 @@
 # Floats
 
-Real numbers in LFE are represented using the stadnard floating point numbers.
+Real numbers in LFE are represented using the standard floating point numbers.
 
 ```lisp
 lfe> 42.42
