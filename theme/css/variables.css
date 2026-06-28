@@ -1,10 +1,17 @@
+
 /* Globals */
 
 :root {
-    --sidebar-width: 300px;
+    --sidebar-target-width: 300px;
+    --sidebar-width: min(var(--sidebar-target-width), 80vw);
+    --sidebar-resize-indicator-width: 8px;
+    --sidebar-resize-indicator-space: 2px;
     --page-padding: 15px;
     --content-max-width: 750px;
     --menu-bar-height: 50px;
+    --mono-font: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace;
+    --code-font-size: 0.875em; /* please adjust the ace font size accordingly in editor.js */
+    --searchbar-margin-block-start: 5px;
 }
 
 /* Themes */
@@ -49,52 +56,53 @@
     --searchresults-li-bg: #dec2a2;
     --search-mark-bg: #e69f67;
 
-    /* New, custom styles */
+    /* Custom alert styles */
     --alert-primary-fg:  #1a3047;
-    //--alert-primary-bg:  #d6dfe7;
     --alert-primary-bg: #325D88;
     --alert-primary-border:  #c6d2de;
     --alert-primary-hr:  #b6c5d5;
     --alert-primary-link: #0c1722;
 
-
     --alert-secondary-fg:  #4a4945;
-    //--alert-secondary-bg:  #e8e8e6;
     --alert-secondary-bg: #8E8C84;
     --alert-secondary-border:  #b4b465;
     --alert-secondary-hr:  #d3d3d0;
     --alert-secondary-link: #302f2c;
 
-
     --alert-success-fg:  #4c6627;
-    //--alert-success-bg:  #e9f3db;
     --alert-success-bg: #93C54B;
     --alert-success-border:  #94b861;
     --alert-success-hr:  #d5e9ba;
     --alert-success-link: #314119;
 
-
     --alert-info-fg:  #155974;
-    //--alert-info-bg:  #d4eef9;
     --alert-info-bg: #29ABE0;
     --alert-info-border:  #66a6c2;
     --alert-info-hr:  #addef3;
     --alert-info-link: #0d3849;
 
-
     --alert-warning-fg:  #7f401f;
-    //--alert-warning-bg:  #fde5d8;
     --alert-warning-bg: #F47C3C;
     --alert-warning-border:  #ce865f;
     --alert-warning-hr:  #fbcab0;
     --alert-warning-link: #562b15;
 
     --alert-danger-fg:  #712b29;
-    //--alert-danger-bg:  #f7dddc;
     --alert-danger-bg: #d9534f;
     --alert-danger-border:  #c07471;
     --alert-danger-hr:  #efbbb9;
     --alert-danger-link: #4c1d1b;
+
+    --warning-border: #ff8e00;
+
+    --color-scheme: light;
+
+    --copy-button-filter: invert(45%) sepia(6%) saturate(621%) hue-rotate(198deg) brightness(99%) contrast(85%);
+    --copy-button-filter-hover: invert(36%) sepia(70%) saturate(503%) hue-rotate(167deg) brightness(98%) contrast(89%);
+
+    --footnote-highlight: #d3a17a;
+
+    --overlay-bg: rgba(150, 150, 150, 0.25);
 }
 
 .ayu {
@@ -123,6 +131,8 @@
     --quote-bg: hsl(226, 15%, 17%);
     --quote-border: hsl(226, 15%, 22%);
 
+    --warning-border: #ff8e00;
+
     --table-border-color: hsl(210, 25%, 13%);
     --table-header-bg: hsl(210, 25%, 28%);
     --table-alternate-bg: hsl(210, 25%, 11%);
@@ -135,6 +145,17 @@
     --searchresults-border-color: #888;
     --searchresults-li-bg: #252932;
     --search-mark-bg: #e3b171;
+
+    --color-scheme: dark;
+
+    /* Same as `--icons` */
+    --copy-button-filter: invert(45%) sepia(6%) saturate(621%) hue-rotate(198deg) brightness(99%) contrast(85%);
+    /* Same as `--sidebar-active` */
+    --copy-button-filter-hover: invert(68%) sepia(55%) saturate(531%) hue-rotate(341deg) brightness(104%) contrast(101%);
+
+    --footnote-highlight: #2668a6;
+
+    --overlay-bg: rgba(33, 40, 48, 0.4);
 }
 
 .coal {
@@ -155,7 +176,6 @@
     --links: #2b79a2;
 
     --inline-code-color: #c5c8c6;
-    ;
 
     --theme-popup-bg: #141617;
     --theme-popup-border: #43484d;
@@ -163,6 +183,8 @@
 
     --quote-bg: hsl(234, 21%, 18%);
     --quote-border: hsl(234, 21%, 23%);
+
+    --warning-border: #ff8e00;
 
     --table-border-color: hsl(200, 7%, 13%);
     --table-header-bg: hsl(200, 7%, 28%);
@@ -176,26 +198,37 @@
     --searchresults-border-color: #98a3ad;
     --searchresults-li-bg: #2b2b2f;
     --search-mark-bg: #355c7d;
+
+    --color-scheme: dark;
+
+    /* Same as `--icons` */
+    --copy-button-filter: invert(26%) sepia(8%) saturate(575%) hue-rotate(169deg) brightness(87%) contrast(82%);
+    /* Same as `--sidebar-active` */
+    --copy-button-filter-hover: invert(36%) sepia(70%) saturate(503%) hue-rotate(167deg) brightness(98%) contrast(89%);
+
+    --footnote-highlight: #4079ae;
+
+    --overlay-bg: rgba(33, 40, 48, 0.4);
 }
 
-.light {
+.light, html:not(.js) {
     --bg: hsl(0, 0%, 100%);
-    --fg: #333333;
+    --fg: hsl(0, 0%, 0%);
 
     --sidebar-bg: #fafafa;
-    --sidebar-fg: #364149;
+    --sidebar-fg: hsl(0, 0%, 0%);
     --sidebar-non-existant: #aaaaaa;
-    --sidebar-active: #008cff;
+    --sidebar-active: #1f1fff;
     --sidebar-spacer: #f4f4f4;
 
-    --scrollbar: #cccccc;
+    --scrollbar: #8F8F8F;
 
-    --icons: #cccccc;
-    --icons-hover: #333333;
+    --icons: #747474;
+    --icons-hover: #000000;
 
-    --links: #4183c4;
+    --links: #20609f;
 
-    --inline-code-color: #6e6b5e;
+    --inline-code-color: #301900;
 
     --theme-popup-bg: #fafafa;
     --theme-popup-border: #cccccc;
@@ -203,6 +236,8 @@
 
     --quote-bg: hsl(197, 37%, 96%);
     --quote-border: hsl(197, 37%, 91%);
+
+    --warning-border: #ff8e00;
 
     --table-border-color: hsl(0, 0%, 95%);
     --table-header-bg: hsl(0, 0%, 80%);
@@ -216,6 +251,17 @@
     --searchresults-border-color: #888;
     --searchresults-li-bg: #e4f2fe;
     --search-mark-bg: #a2cff5;
+
+    --color-scheme: light;
+
+    /* Same as `--icons` */
+    --copy-button-filter: invert(45.49%);
+    /* Same as `--sidebar-active` */
+    --copy-button-filter-hover: invert(14%) sepia(93%) saturate(4250%) hue-rotate(243deg) brightness(99%) contrast(130%);
+
+    --footnote-highlight: #7e7eff;
+
+    --overlay-bg: rgba(200, 200, 205, 0.4);
 }
 
 .navy {
@@ -236,7 +282,6 @@
     --links: #2b79a2;
 
     --inline-code-color: #c5c8c6;
-    ;
 
     --theme-popup-bg: #161923;
     --theme-popup-border: #737480;
@@ -244,6 +289,8 @@
 
     --quote-bg: hsl(226, 15%, 17%);
     --quote-border: hsl(226, 15%, 22%);
+
+    --warning-border: #ff8e00;
 
     --table-border-color: hsl(226, 23%, 16%);
     --table-header-bg: hsl(226, 23%, 31%);
@@ -257,6 +304,17 @@
     --searchresults-border-color: #5c5c68;
     --searchresults-li-bg: #242430;
     --search-mark-bg: #a2cff5;
+
+    --color-scheme: dark;
+
+    /* Same as `--icons` */
+    --copy-button-filter: invert(51%) sepia(10%) saturate(393%) hue-rotate(198deg) brightness(86%) contrast(87%);
+    /* Same as `--sidebar-active` */
+    --copy-button-filter-hover: invert(46%) sepia(20%) saturate(1537%) hue-rotate(156deg) brightness(85%) contrast(90%);
+
+    --footnote-highlight: #4079ae;
+
+    --overlay-bg: rgba(33, 40, 48, 0.4);
 }
 
 .rust {
@@ -285,6 +343,8 @@
     --quote-bg: hsl(60, 5%, 75%);
     --quote-border: hsl(60, 5%, 70%);
 
+    --warning-border: #ff8e00;
+
     --table-border-color: hsl(60, 9%, 82%);
     --table-header-bg: #b3a497;
     --table-alternate-bg: hsl(60, 9%, 84%);
@@ -297,10 +357,19 @@
     --searchresults-border-color: #888;
     --searchresults-li-bg: #dec2a2;
     --search-mark-bg: #e69f67;
+
+    /* Same as `--icons` */
+    --copy-button-filter: invert(51%) sepia(10%) saturate(393%) hue-rotate(198deg) brightness(86%) contrast(87%);
+    /* Same as `--sidebar-active` */
+    --copy-button-filter-hover: invert(77%) sepia(16%) saturate(1798%) hue-rotate(328deg) brightness(98%) contrast(83%);
+
+    --footnote-highlight: #d3a17a;
+
+    --overlay-bg: rgba(150, 150, 150, 0.25);
 }
 
 @media (prefers-color-scheme: dark) {
-    .light.no-js {
+    html:not(.js) {
         --bg: hsl(200, 7%, 8%);
         --fg: #98a3ad;
 
@@ -318,7 +387,6 @@
         --links: #2b79a2;
 
         --inline-code-color: #c5c8c6;
-        ;
 
         --theme-popup-bg: #141617;
         --theme-popup-border: #43484d;
@@ -326,6 +394,8 @@
 
         --quote-bg: hsl(234, 21%, 18%);
         --quote-border: hsl(234, 21%, 23%);
+
+        --warning-border: #ff8e00;
 
         --table-border-color: hsl(200, 7%, 13%);
         --table-header-bg: hsl(200, 7%, 28%);
@@ -339,5 +409,12 @@
         --searchresults-border-color: #98a3ad;
         --searchresults-li-bg: #2b2b2f;
         --search-mark-bg: #355c7d;
+
+        --color-scheme: dark;
+
+        /* Same as `--icons` */
+        --copy-button-filter: invert(26%) sepia(8%) saturate(575%) hue-rotate(169deg) brightness(87%) contrast(82%);
+        /* Same as `--sidebar-active` */
+        --copy-button-filter-hover: invert(36%) sepia(70%) saturate(503%) hue-rotate(167deg) brightness(98%) contrast(89%);
     }
 }

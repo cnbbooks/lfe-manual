@@ -1,1 +1,7 @@
-# Lists
+# Lists and Strings
+
+In most programming languages, lists and strings are distinct creatures—separate types with their own operations, behaviors, and internal representations. In LFE, however, these two concepts share a rather intimate relationship: a string *is* a list. More precisely, a string is simply a list of integers, where each integer represents the character code of a printable character. This might seem peculiar at first, perhaps even a bit unsettling if you're accustomed to languages where strings are special, privileged types with their own dedicated machinery.
+
+But consider the elegance of this approach: if strings are just lists, then all the wonderful things you can do with lists—pattern matching, recursive processing, higher-order functions—work equally well on strings. Want to reverse a string? Use the same function you'd use to reverse any list. Want to filter characters? Use the same filter function you'd use on a list of numbers or atoms. This unification means fewer concepts to learn, more code reuse, and a consistency that permeates the entire language.
+
+The practical implication is straightforward: when you see `"hello"` in LFE, you're looking at syntactic sugar for `(104 101 108 108 111)`—a list of five integers corresponding to the ASCII values of those letters. The REPL helpfully displays lists of printable character codes as strings, but underneath, it's lists all the way down. This chapter explores both lists and strings, first separately to understand their individual characteristics, then together to appreciate how this design choice shapes the way you write LFE code.

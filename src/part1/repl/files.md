@@ -1,21 +1,10 @@
 # Files
 
-## REPL-Only
+So far, everything we've looked at in the REPL involves typing (or pasting) code. When wanting to use the REPL to experiment with more complicated code, there's a better, time-honoured way: files. There are several ways you can use file-based code in the REPL:
 
-### `slurp`
+* evaluation
+* compilation
+* including
+* loading
 
-### `unslurp`
-
-### Compiling LFE Files
-
-### Compiling Erlang Files
-
-## REPL & Module
-
-## `include-lib`
-
-## `include-file`
-
-## Module Loading
-
-`l` and `code:ensure_loaded`
+Each of these is covered in more detail in the following sub-sections.

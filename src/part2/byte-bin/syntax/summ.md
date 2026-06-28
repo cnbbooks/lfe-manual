@@ -1,0 +1,5 @@
+# Summary
+
+Basic binary construction in LFE is refreshingly straightforward: put integers and strings between `#B(` and `)`, and out comes a binary. Variables work. Nesting works. It's the kind of intuitive design that makes you wonder why other languages make it so complicated. The answer, as is often the case, involves historical accidents, committee decisions, and the fact that once something is in a language specification, removing it requires an act of international treaty negotiation and possibly divine intervention.
+
+For now, we have what we need: a simple, expressive syntax for creating binaries. In the next sections, we'll explore what to do with them once they exist, which is where things get interesting enough that people wrote their doctoral theses on it. Not because it's complicated—it isn't—but because it's *powerful* in ways that aren't immediately obvious until you try to accomplish the same things in languages that don't have bit syntax and realize you've been sent to extract data from a binary format armed only with a toothpick and determination.

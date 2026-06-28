@@ -1,1 +1,9 @@
 # Part II - Code as Data
+
+In the Lisp tradition, all program code is written as s-expressions, or parenthesized lists Lisp, making the primary representation of programs also a data structure in a primitive type of the language itself. This fundamental principle—code as data—means that before we can understand how LFE programs execute, we must first master the data structures from which they are constructed.
+
+Part II explores the foundational data types and structures that form the vocabulary of LFE programming. Every LFE program, from the simplest function call to the most complex macro, is ultimately composed of the primitive types and data structures covered in these chapters. We begin with the atomic elements—integers, floats, atoms, and characters—and progress through increasingly sophisticated composite structures like lists, tuples, maps, and records.
+
+The interchangeability of code and data gives Lisp its instantly recognizable syntax, and LFE inherits this property. When you write (+ 1 2 3) in LFE, you are simultaneously creating a list data structure and expressing a computation. The list contains the atom + followed by three integers, but it also represents the addition of those numbers. This duality is not accidental—it is the essence of homoiconicity that makes LFE programs both readable as data and executable as code.
+
+Understanding these data structures deeply is crucial because data representing code can be passed between the meta and base layer of the program. Pattern matching, one of LFE's most powerful features, allows you to decompose and analyze these structures with precision. By the end of Part II, you will have the tools to construct, manipulate, and understand any LFE data structure—knowledge that directly translates to understanding LFE code itself.

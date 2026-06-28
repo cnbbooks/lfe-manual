@@ -1,0 +1,1 @@
+# Advanced Pattern: Sliding Window

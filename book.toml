@@ -1,6 +1,6 @@
 [book]
 title = "LFE MACHINE MANUAL"
-author = "Robert Virding & Duncan McGreggor"
+authors = ["Duncan McGreggor", "Robert Virding"]
 description = "The Manual for the Machine that is LFE/OTP"
 language = "en"
 
@@ -8,15 +8,18 @@ language = "en"
 build-dir = "book"
 
 [preprocessor.index]
-
 [preprocessor.links]
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
 
 [output.html]
 default-theme = "lfe-pdp"
 preferred-dark-theme = "lfe-pdp"
+additional-js = ["js/mermaid.min.js", "js/mermaid-init.js"]
 additional-css = ["css/custom.css"]
-google-analytics = "UA-38274766-4"
 git-repository-url = "https://github.com/cnbbooks/lfe-manual"
+mathjax-support = true
+
 [output.html.search]
 limit-results = 20
 use-boolean-and = true

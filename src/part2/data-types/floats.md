@@ -103,7 +103,7 @@ lfe> (max 1 2)
 
 ## Predicates
 
-To test if a value is an integer, we will first include some code:
+To test if a value is a float, we will first include some code:
 
 ``` lisp
 lfe> (include-lib "lfe/include/cl.lfe")

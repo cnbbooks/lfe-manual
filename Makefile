@@ -26,8 +26,17 @@ serve:
 	@echo ">> Preparing to run mdbook server ..."
 	@$(GEN) serve -p $(PORT) -d $(PUBLISH_CONTENT)
 
-
 run: serve
+
+install:
+	@echo ">> Installing mdBook ..."
+	cargo install $(BIN)
+
+deps:
+	@echo ">> Installing dependencies ..."
+	-@cargo install mdbook-mermaid
+	@mdbook-mermaid install
+	@mv mermaid*.js ./js/
 
 clean:
 	@echo ">> Removing auto-generated top-level files ..."

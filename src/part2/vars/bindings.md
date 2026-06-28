@@ -66,7 +66,7 @@ not available outside of that scope.
 ## In Functions and Macros
 
 Within functions, variables are lexically scoped and bound with `let` and
-`let*`. One may also define lexically scoped functions _inside_ other fucntions,
+`let*`. One may also define lexically scoped functions _inside_ other functions,
 and this is done with `flet` and `fletrec` (the latter required for defining
 recursive functions inside another function). These will be covered in detail
 [later in the book](../../part3/funs/).
@@ -180,19 +180,19 @@ a core form, it can't be shadowed (see the next section).
 
 ## The Unshadowable
 
-Shadowing does not apply to the supported LFE
-[core forms](https://github.com/rvirding/lfe/blob/develop/doc/src/lfe_guide.7.md#core-forms).
-It may appear that
-your code is shadowing those forms, but the compiler will *always* use
-the core meaning and never an alternative. It does this silently, without
-warning -- so take care and do not be surprised!
-
 <div class="alert alert-info">
   <h4 class="alert-heading">
     <i class="fa fa-info-circle" aria-hidden="true"></i>
     Information
   </h4>
   <p class="mb-0">
-    Core LFE forms are never be shadowed.
+    Core LFE forms can never be shadowed.
   </p>
 </div>
+
+Shadowing does not apply to the supported LFE
+[core forms](https://github.com/lfe/lfe/blob/develop/doc/src/lfe_guide.7.md#core-forms).
+It may appear that
+your code is shadowing those forms, but the compiler will _always_ use
+the core meaning and never an alternative. It does this silently, without
+warning -- so take care and do not be surprised!
