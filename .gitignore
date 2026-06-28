@@ -3,3 +3,6 @@
 *.md~
 /book
 .claude
+.DS_Store
+*.code-workspace
+workbench/
