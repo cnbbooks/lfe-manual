@@ -24,7 +24,7 @@ Operator decisions (2026-06-28): **multi-leaf** structure (expand the ToC);
 | **slice01 — tuples** ✅ CDC-closed 2026-06-28 | Tuples | `workbench/tuples/new-section-tuples.md` (~244 ln) | README + 12 |
 | **slice02 — proplists** ✅ CDC-closed 2026-06-28 | Property Lists | `workbench/proplists/new-section-proplists.md` (~641 ln) | README + 21 |
 | **slice03 — maps** ✅ CDC-closed 2026-06-28 | Maps | `workbench/maps/new-section-maps.md` (~383 ln) | README + 15 |
-| **slice04 — arrays** | Arrays | `workbench/arrays/new-section-arrays.md` (~578 ln) | README + ~14 |
+| **slice04 — arrays** ✅ CDC-closed 2026-06-28 | Arrays | `workbench/arrays/new-section-arrays.md` (~578 ln) | README + 13 |
 | **slice05 — dicts** | Dicts | `workbench/dicts/new-section-dicts.md` (~1168 ln) | README + many (orddict/dict/gb_trees) |
 | **slice06 — records** | Records | `workbench/records/new-section-records.md` (~372 ln) | README + ~18 |
 
@@ -64,9 +64,13 @@ their ToC entries. Added conventions:
   Write that errors "not read yet" means the stub exists at that slug — adopt and
   fill). Do **not** rely on the bash `ls`: the shell sandbox mount of this repo
   is stale and has reported chapter dirs as README-only when the leaf stubs
-  actually exist (observed for `maps/` in slice03). The file tools are ground
-  truth. So far Tuples, Proplists, and Maps were all pre-scaffolded with slugs
-  matching natural heading-derivation.
+  actually exist (observed for `maps/` in slice03). **Use the Write-probe ONLY.**
+  In slice04 a **Read-probe** of 13 arrays slugs + 5 alternates *all* returned
+  "file does not exist" — yet the Write-probe then proved every stub exists. So
+  bash `ls`, glob, AND Read-probe all produce false negatives for never-accessed
+  paths in this repo; the Write guard ("not read yet" ⇒ file exists) is the only
+  reliable signal. Tuples, Proplists, Maps, and Arrays were ALL pre-scaffolded
+  with slugs matching natural heading-derivation (zero orphans across 4 chapters).
 - **§A2.3 — Title consistency.** Use the draft's `##` heading text as **both**
   the leaf `#` title and the SUMMARY link text, so page title == ToC entry.
 - **§A2.4 — README landing page.** The chapter README = the draft's `#` H1
@@ -87,6 +91,14 @@ their ToC entries. Added conventions:
 | A5 | mdBook builds with no broken ToC links (operator build at arc close). | *reproduced* — operator `make run`. |
 
 ## 6. Version History
+
+### v1.4 — 2026-06-28
+slice04 (arrays) CDC-closed — README + 13 leaves + 13 ToC entries, CDC PASS
+(incl. 19 preserved bold sub-labels, 0 stray `lisp` fences). Refined §A2.2: the
+**Write-probe is the only reliable stub-detector** — in slice04 a Read-probe of
+all 13 slugs (+5 alternates) falsely reported "does not exist," but the stubs
+existed. Arrays was pre-scaffolded like the other three; all slugs matched, zero
+orphans. No breakdown/sequencing change. Next: slice05 (dicts — the largest).
 
 ### v1.3 — 2026-06-28
 slice03 (maps) CDC-closed — README + 15 leaves + 15 ToC entries, CDC PASS

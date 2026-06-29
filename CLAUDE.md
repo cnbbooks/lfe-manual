@@ -19,11 +19,12 @@ the operator 2026-06-28 — this project uses the default layout, no overrides.
   chapters (operator's choice), one slice per chapter. arc02 *authors* the ToC
   sub-entries and fills leaf stubs (the prior session pre-scaffolded them — see
   `arc-plan.md` §A2.1–A2.4). **slices 01–02 CDC-closed (2026-06-28)** — Tuples
-  (README + 12), Property Lists (README + 21), and Maps (README + 15) published
-  with their SUMMARY entries. The leaf stubs pre-exist with canonical slugs —
-  use the Read/Write **write-probe** to confirm (both glob AND the bash `ls` are
-  stale/unreliable for this repo; the file tools are ground truth). Next:
-  slice04 (Arrays).
+  (README + 12), Property Lists (README + 21), Maps (README + 15), and Arrays
+  (README + 13) published with their SUMMARY entries. All four had pre-existing
+  leaf stubs with canonical slugs — detect them with the **Write-probe ONLY**
+  (a Write erroring "not read yet" ⇒ the stub exists; Read then Write). bash
+  `ls`, glob, AND Read-probe all give false negatives for never-accessed paths
+  here. Next: slice05 (Dicts — the ~1,170-line omnibus).
 
 ## How this book is structured
 
