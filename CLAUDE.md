@@ -24,7 +24,10 @@ the operator 2026-06-28 — this project uses the default layout, no overrides.
   leaf stubs with canonical slugs — detect them with the **Write-probe ONLY**
   (a Write erroring "not read yet" ⇒ the stub exists; Read then Write). bash
   `ls`, glob, AND Read-probe all give false negatives for never-accessed paths
-  here. Next: slice05 (Dicts — the ~1,170-line omnibus).
+  here. **slice05 (Dicts) CDC-closed (2026-06-28)** — published as a 6-file
+  omnibus (README + orddict/dict/gb-trees/choosing/concl, one leaf per `#`
+  sub-chapter; §A2.5). Dicts was the first un-scaffolded chapter (created leaves;
+  `git ls-files` README-only is a reliable signal). Last: slice06 (Records).
 
 ## How this book is structured
 

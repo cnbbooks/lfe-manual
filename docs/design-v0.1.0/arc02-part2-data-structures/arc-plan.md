@@ -25,7 +25,7 @@ Operator decisions (2026-06-28): **multi-leaf** structure (expand the ToC);
 | **slice02 — proplists** ✅ CDC-closed 2026-06-28 | Property Lists | `workbench/proplists/new-section-proplists.md` (~641 ln) | README + 21 |
 | **slice03 — maps** ✅ CDC-closed 2026-06-28 | Maps | `workbench/maps/new-section-maps.md` (~383 ln) | README + 15 |
 | **slice04 — arrays** ✅ CDC-closed 2026-06-28 | Arrays | `workbench/arrays/new-section-arrays.md` (~578 ln) | README + 13 |
-| **slice05 — dicts** | Dicts | `workbench/dicts/new-section-dicts.md` (~1168 ln) | README + many (orddict/dict/gb_trees) |
+| **slice05 — dicts** ✅ CDC-closed 2026-06-28 | Dicts | `workbench/dicts/new-section-dicts.md` (~1168 ln) | README + 5 (omnibus: one leaf per `#` sub-chapter) |
 | **slice06 — records** | Records | `workbench/records/new-section-records.md` (~372 ln) | README + ~18 |
 
 Leaf counts are estimates; each slice's exact breakdown is derived from its
@@ -91,6 +91,14 @@ their ToC entries. Added conventions:
 | A5 | mdBook builds with no broken ToC links (operator build at arc close). | *reproduced* — operator `make run`. |
 
 ## 6. Version History
+
+### v1.5 — 2026-06-28
+slice05 (dicts) CDC-closed — README + 5 sub-chapter leaves + 5 ToC entries, CDC
+PASS (all 18 `orddict:*` headings, gb_trees smart/naive API, 0 stray fences).
+Added §A2.5: omnibus drafts (multiple `#` sub-chapters) use one-leaf-per-`#`
+grain with internal `##`/`###` preserved. Dicts was the first genuinely
+un-scaffolded chapter (git ls-files README-only; all 5 leaves created new). No
+breakdown/sequencing change. Next and last: slice06 (records).
 
 ### v1.4 — 2026-06-28
 slice04 (arrays) CDC-closed — README + 13 leaves + 13 ToC entries, CDC PASS
