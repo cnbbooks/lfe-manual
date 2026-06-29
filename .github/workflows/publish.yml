@@ -32,7 +32,9 @@ jobs:
       # Pin both tools so deploys are reproducible. Bump these
       # deliberately (and re-test the theme) rather than tracking latest.
       MDBOOK_VERSION: 0.4.52
-      MDBOOK_MERMAID_VERSION: 0.17.0
+      # 0.16.x targets mdBook 0.4.52; 0.17.0 jumped to mdBook 0.5 and is
+      # NOT compatible with the mdBook pinned above.
+      MDBOOK_MERMAID_VERSION: 0.16.2
     steps:
       - uses: actions/checkout@v4
       - uses: cargo-bins/cargo-binstall@main
