@@ -26,7 +26,7 @@ Operator decisions (2026-06-28): **multi-leaf** structure (expand the ToC);
 | **slice03 — maps** ✅ CDC-closed 2026-06-28 | Maps | `workbench/maps/new-section-maps.md` (~383 ln) | README + 15 |
 | **slice04 — arrays** ✅ CDC-closed 2026-06-28 | Arrays | `workbench/arrays/new-section-arrays.md` (~578 ln) | README + 13 |
 | **slice05 — dicts** ✅ CDC-closed 2026-06-28 | Dicts | `workbench/dicts/new-section-dicts.md` (~1168 ln) | README + 5 (omnibus: one leaf per `#` sub-chapter) |
-| **slice06 — records** | Records | `workbench/records/new-section-records.md` (~372 ln) | README + ~18 |
+| **slice06 — records** ✅ CDC-closed 2026-06-28 | Records | `workbench/records/new-section-records.md` (~372 ln) | README + 15 |
 
 Leaf counts are estimates; each slice's exact breakdown is derived from its
 draft's heading structure when the slice is planned (*plan late*). Slices are
@@ -91,6 +91,16 @@ their ToC entries. Added conventions:
 | A5 | mdBook builds with no broken ToC links (operator build at arc close). | *reproduced* — operator `make run`. |
 
 ## 6. Version History
+
+### v1.6 — 2026-06-28
+slice06 (records) CDC-closed — README + 15 leaves + 15 ToC entries, CDC PASS
+(0 bare `>` prompts, 0 stray `lisp` fences). **All six slices closed; arc ready
+for formal close.** Corrected the stub-detection guidance: `git ls-files` joins
+bash `ls`/glob/Read-probe on the false-negative list — it reported records/ as
+README-only, but the Write-probe proved all 15 stubs exist. **The Write-probe is
+the sole reliable stub-detector.** Five chapters were pre-scaffolded (tuples,
+proplists, maps, arrays, records) at natural-derivation slugs; only dicts (the
+omnibus) was genuinely un-scaffolded. Zero orphans arc-wide.
 
 ### v1.5 — 2026-06-28
 slice05 (dicts) CDC-closed — README + 5 sub-chapter leaves + 5 ToC entries, CDC

@@ -14,20 +14,20 @@ the operator 2026-06-28 — this project uses the default layout, no overrides.
   placeholders (`closing-report.md`). Reusable publishing conventions pinned in
   `arc-plan.md` §6. One open item: a local `mdbook build` (the sandbox can't run
   it) closes project-ledger P4. Stray `syntax/fundform.md` is now absent.
-- `arc02-part2-data-structures/` — **ACTIVE.** Publish the six drafted Part II
-  chapters (Tuples, Proplists, Maps, Arrays, Dicts, Records) as **multi-leaf**
-  chapters (operator's choice), one slice per chapter. arc02 *authors* the ToC
-  sub-entries and fills leaf stubs (the prior session pre-scaffolded them — see
-  `arc-plan.md` §A2.1–A2.4). **slices 01–02 CDC-closed (2026-06-28)** — Tuples
-  (README + 12), Property Lists (README + 21), Maps (README + 15), and Arrays
-  (README + 13) published with their SUMMARY entries. All four had pre-existing
-  leaf stubs with canonical slugs — detect them with the **Write-probe ONLY**
-  (a Write erroring "not read yet" ⇒ the stub exists; Read then Write). bash
-  `ls`, glob, AND Read-probe all give false negatives for never-accessed paths
-  here. **slice05 (Dicts) CDC-closed (2026-06-28)** — published as a 6-file
-  omnibus (README + orddict/dict/gb-trees/choosing/concl, one leaf per `#`
-  sub-chapter; §A2.5). Dicts was the first un-scaffolded chapter (created leaves;
-  `git ls-files` README-only is a reliable signal). Last: slice06 (Records).
+- `arc02-part2-data-structures/` — **CLOSED (2026-06-28).** All six drafted
+  Part II chapters published as **multi-leaf** chapters with their SUMMARY
+  sub-entries: Tuples (README+12), Property Lists (README+21), Maps (README+15),
+  Arrays (README+13), Dicts (README+5 omnibus), Records (README+15). Whole-arc
+  sweep: **87 files, 0 placeholders** (`closing-report.md`). Conventions in
+  `arc-plan.md` §6 + §A2.1–A2.5. **Stub detection: Write-probe ONLY** — bash
+  `ls`, glob, Read-probe, AND `git ls-files` all produced false negatives here;
+  the Write guard ("not read yet" ⇒ exists) is ground truth. Five chapters were
+  pre-scaffolded at natural slugs; only Dicts (omnibus) was un-scaffolded.
+- **Project DoD substantively met:** every chapter with a finished `workbench/`
+  draft is now published. One open item: a final local `make run` to validate
+  the Records ToC edit (project-ledger P4). Out-of-scope/future: draft-less
+  Part II chapters (chr-str, graphs, queues, patterns, gen-seq, mani-list),
+  AI-resources pocket reference, Typed LFE chapter.
 
 ## How this book is structured
 

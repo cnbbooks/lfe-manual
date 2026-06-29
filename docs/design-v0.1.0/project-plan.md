@@ -45,7 +45,7 @@ structure) plus the `workbench/` drafts (the source content).
 | Arc | Capability | Depends on | Status |
 |-----|-----------|-----------|--------|
 | **arc01 — binaries-chapter** | The Bits/Bytes/Binaries chapter is fully published from `workbench/bytes/`, no placeholders, reads coherently end to end. | — (resumes interrupted Nov 2025 work) | **✅ CLOSED 2026-06-28** (see `arc01-binaries-chapter/closing-report.md`) |
-| **arc02 — part2-data-structures** | The six drafted Part II data-structure chapters (Tuples, Proplists, Maps, Arrays, Dicts, Records) are published from their workbench drafts. | none (independent of arc01; sequenced after it) | **active next** — roadmap-only, plan in detail when started (adopt arc01's §6 conventions) |
+| **arc02 — part2-data-structures** | The six drafted Part II data-structure chapters (Tuples, Proplists, Maps, Arrays, Dicts, Records) are published from their workbench drafts. | none (independent of arc01; sequenced after it) | **✅ CLOSED 2026-06-28** (see `arc02-part2-data-structures/closing-report.md`) — 6 chapters, 87 files, 0 placeholders |
 
 Arc 2 is deliberately **not** planned in detail yet (*plan late, plan deep*):
 its `arc-plan.md` is written when arc01 closes, so it can absorb anything
@@ -53,18 +53,16 @@ arc01 reveals about the split-from-workbench workflow.
 
 ## 3. Current status
 
-- **arc01 is CLOSED (2026-06-28).** All four slices CDC-closed; the entire
-  Bits/Bytes/Binaries chapter is published. Independent whole-chapter sweep:
-  **153 files, 0 placeholders.** Composition check passed (`arc01-binaries-
-  chapter/closing-report.md`).
-- **arc02 is now the active-next arc** (roadmap-only; plan in detail when
-  started). It will publish the six drafted Part II data-structure chapters
-  (Tuples, Proplists, Maps, Arrays, Dicts, Records) using arc01's proven §6
-  publishing conventions.
-- **One open item, project-scope:** a single `mdbook build` / `make run` on a
-  local checkout (sandbox can't mount the repo). This is the standing close step
-  for documentation arcs here; it closes project-ledger row P4. The stray
-  `syntax/fundform.md` is now absent (resolved).
+- **BOTH ARCS CLOSED (2026-06-28). The project's DoD is substantively met:**
+  every chapter with a finished `workbench/` draft is now published.
+- **arc01 (Binaries) CLOSED** — Bits/Bytes/Binaries chapter, 153 files, 0
+  placeholders (`arc01-binaries-chapter/closing-report.md`).
+- **arc02 (Part II data structures) CLOSED** — six multi-leaf chapters (Tuples,
+  Proplists, Maps, Arrays, Dicts, Records), 87 files, 0 placeholders, with 81
+  new `SUMMARY.md` sub-entries (`arc02-part2-data-structures/closing-report.md`).
+- **One open item, project-scope:** a final `make run` / `mdbook build` on a
+  local checkout to validate the Records ToC edit (P4). Operator builds already
+  confirmed everything through slice05 (Dicts).
 
 ### Known cleanups (carried as ledger rows where they apply)
 
@@ -86,11 +84,23 @@ project's `closing-report.md` at project close. Strengths per
 |---|-----------|-------------------------------|--------|
 | P1 | No placeholder (lone-heading) files remain among the ToC-listed `byte-bin` leaves. | *reproduced* — scan `src/part2/byte-bin/` for files whose only non-blank line is a heading; expect zero. | **CLOSED (arc01)** — sweep: 153 files, 0 placeholders |
 | P2 | Every published byte-bin leaf's content traces to a `workbench/bytes/` source section; no source section silently dropped. | *reconciled* — diff workbench draft headings against published leaves. | **CLOSED (arc01)** — per-slice CDC reconciliations |
-| P3 | The six drafted Part II chapters each have real content (no placeholder README). | *reproduced* — read each `src/part2/<chapter>/README.md`. | open — arc02 |
-| P4 | All in-scope `SUMMARY.md` ToC entries resolve to non-placeholder files; mdBook builds without broken links. | *reproduced* — `mdbook build` (or link check) on the affected chapters. | **CLOSED for byte-bin (2026-06-28)** — operator ran the build: build + page load successful. Re-verify after arc02. |
+| P3 | The six drafted Part II chapters each have real content (no placeholder README). | *reproduced* — read each `src/part2/<chapter>/README.md`. | **CLOSED (arc02)** — whole-arc sweep: 87 files, 0 placeholders across all six chapters |
+| P4 | All in-scope `SUMMARY.md` ToC entries resolve to non-placeholder files; mdBook builds without broken links. | *reproduced* — `mdbook build` (or link check) on the affected chapters. | **byte-bin + arc02 slices 01–05 operator-built OK.** One final `make run` needed to validate the Records (slice06) ToC edit, then fully closed. |
 | P5 | Byte-bin cleanups (P-row scope: `what/README`, stray `fundform.md`) resolved. | *attested* — confirmed in arc01 close. | **CLOSED (arc01)** — `what/README` filled; `fundform.md` absent |
 
 ## 5. Version History
+
+### v1.2 — 2026-06-28
+**arc02 closed; project DoD substantively met.** Bubble-up from
+`arc02-part2-data-structures/closing-report.md`: the six drafted Part II chapters
+published as multi-leaf chapters (87 files, 0 placeholders, 81 new SUMMARY
+entries), so no roadmap change forced. Closed project-ledger row P3; P4 needs
+only a final operator build of the Records ToC edit. With arc01 + arc02 closed,
+every chapter with a finished workbench draft is now published — the publishing
+project is complete pending that build. Out-of-scope items (draft-less Part II
+chapters, AI-resources pocket reference, Typed LFE) remain available as a future
+authoring project, using the hardened §6 / §A2 methodology. Which arc surfaced
+this: arc02.
 
 ### v1.1 — 2026-06-28
 **arc01 closed.** Bubble-up from `arc01-binaries-chapter/closing-report.md`: the
