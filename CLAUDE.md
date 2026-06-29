@@ -8,15 +8,16 @@ the operator 2026-06-28 — this project uses the default layout, no overrides.
 
 - `docs/design-v0.1.0/project-plan.md` — arc roadmap + project ledger (DoD:
   publish the staged `workbench/` drafts into `src/`; new-authoring deferred).
-- `arc01-binaries-chapter/` — active arc: finish the Bits/Bytes/Binaries chapter
-  by splitting `workbench/bytes/00–14` drafts into `src/part2/byte-bin/` leaves.
-  Batched into 4 slices. **slices 01–03 CDC-closed (2026-06-28)** — `bifs/`
-  finished and `bits/`/`types/`/`sizes/`/`ends/`/`patts/`/`comps/`/`bitstrs/`/
-  `ops/` published; byte-bin now ~114/130 real. Last slice: slice04
-  (serialization-realworld: `ser/`, `ser/realwrld/`, `realwrld/`), then arc01
-  closes. Reusable publishing conventions are pinned in `arc-plan.md` §6.
-- `arc02-part2-data-structures/` — roadmap-only (plan late): publish the six
-  drafted Part II chapters (Tuples, Proplists, Maps, Arrays, Dicts, Records).
+- `arc01-binaries-chapter/` — **CLOSED (2026-06-28).** The whole Bits/Bytes/
+  Binaries chapter (`src/part2/byte-bin/`) is published from `workbench/bytes/
+  00–14`. All 4 slices CDC-closed; whole-chapter sweep = 153 files, 0
+  placeholders (`closing-report.md`). Reusable publishing conventions pinned in
+  `arc-plan.md` §6. One open item: a local `mdbook build` (the sandbox can't run
+  it) closes project-ledger P4. Stray `syntax/fundform.md` is now absent.
+- `arc02-part2-data-structures/` — **active next**, roadmap-only (plan in detail
+  when started): publish the six drafted Part II chapters (Tuples, Proplists,
+  Maps, Arrays, Dicts, Records) from `workbench/<chapter>/new-section-*.md`,
+  reusing arc01's §6 conventions.
 
 ## How this book is structured
 

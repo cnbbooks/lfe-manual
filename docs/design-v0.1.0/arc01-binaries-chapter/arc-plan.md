@@ -32,7 +32,7 @@ slice fits one context with iteration headroom: splitting 3–4 drafts of
 | **slice01 — bit-syntax-specifiers** ✅ CDC-closed 2026-06-28 | finish `bifs/` (to-term, byte, bit, summ); `bits/`; `types/`; `sizes/`; + byte-bin cleanups | tail of `03-binary-bifs`, `04-bit-syntax-fundamentals`, `05-type-specifiers`, `06-sizes-README` | establishes the split workflow the later slices reuse |
 | **slice02 — matching-comprehensions** ✅ CDC-closed 2026-06-28 | `ends/`; `patts/`; `comps/` | `07-ends-README`, `08-patts-README`, `09-comps-README` | — |
 | **slice03 — bitstrings-operators** ✅ CDC-closed 2026-06-28 | `bitstrs/`; `ops/` | `10-bitstrs-README`, `11-ops-README` | — |
-| **slice04 — serialization-realworld** | `ser/`; `ser/realwrld/`; `realwrld/` | `12-serialization`, `13-real-world-applications` | closes the chapter; arc composition check runs here |
+| **slice04 — serialization-realworld** ✅ CDC-closed 2026-06-28 | `ser/`; `ser/realwrld/`; `realwrld/` | `12-serialization`, `13-real-world-applications` | closes the chapter; arc composition check runs here |
 
 Already published (not in scope, listed for the composition check): chapter
 `README` (← `00`), `what/` (← `01`), `syntax/` (← `02`), `concl/` (← `14`).
@@ -94,6 +94,13 @@ re-derivation:
    mdBook generates prev/next navigation. (Some drafts have them, some don't.)
 
 ## 5. Version History
+
+### v1.4 — 2026-06-28
+slice04 CDC-closed (`ser/`, `realwrld/`, `ser/realwrld/` — 18 leaves). **All
+four slices now closed.** Whole-chapter composition sweep: 153 files, 0
+placeholders. Arc proceeds to formal close — see `closing-report.md`. The stray
+`syntax/fundform.md` (slice01 deferral) is now absent. Only open item: a single
+`mdbook build` (deferred all along for sandbox/tooling reasons).
 
 ### v1.3 — 2026-06-28
 slice03 CDC-closed (`bitstrs/`, `ops/` — 26 leaves). Clarified §6.8: `###`→leaf
