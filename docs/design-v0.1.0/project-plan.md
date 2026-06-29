@@ -20,14 +20,19 @@ Concretely, "done" means:
 - The six **Part II data-structure** chapters that have finished drafts —
   Tuples, Property Lists, Maps, Arrays, Dicts, Records — are published from
   their `workbench/*/new-section-*.md` sources.
+- **(Added 2026-06-28)** Four **draft-less Part II chapters authored from
+  scratch** and published: **Graphs, Queues, Pattern Matching, Generic Sequence
+  Functions** (arc02 Phase 2). Source/reference material: the `workbench/graphs`
+  & `workbench/queues` PDFs and the `workbench/lfe_*.md` man pages; scope/depth
+  to be driven by the recent whole-book plan.
 - The byte-bin cleanups (below) are resolved.
 - `mdBook` builds the affected chapters with no broken ToC links.
 
 **What this project explicitly does NOT deliver (out of scope, roadmap-only):**
 
-- Authoring the draft-less Part II chapters: Characters & Strings, Graphs,
-  Queues, Pattern Matching, Generic Sequence Functions, Manipulating List
-  Structure. (These have reference PDFs or nothing — original writing.)
+- The other two draft-less Part II chapters: Characters & Strings, Manipulating
+  List Structure. *(was: also Graphs, Queues, Pattern Matching, Generic Sequence
+  Functions — those moved IN-scope 2026-06-28 as arc02 Phase 2.)*
 - The AI-resources Pocket Reference and stdlib inventories (Part VII stubs;
   `workbench/lfe-pocket-reference-project-spec.md` is its seed).
 - The Typed LFE chapter (`workbench/typed-lfe-chapter-bootstrap.md` seed;
@@ -45,7 +50,7 @@ structure) plus the `workbench/` drafts (the source content).
 | Arc | Capability | Depends on | Status |
 |-----|-----------|-----------|--------|
 | **arc01 — binaries-chapter** | The Bits/Bytes/Binaries chapter is fully published from `workbench/bytes/`, no placeholders, reads coherently end to end. | — (resumes interrupted Nov 2025 work) | **✅ CLOSED 2026-06-28** (see `arc01-binaries-chapter/closing-report.md`) |
-| **arc02 — part2-data-structures** | The six drafted Part II data-structure chapters (Tuples, Proplists, Maps, Arrays, Dicts, Records) are published from their workbench drafts. | none (independent of arc01; sequenced after it) | **✅ CLOSED 2026-06-28** (see `arc02-part2-data-structures/closing-report.md`) — 6 chapters, 87 files, 0 placeholders |
+| **arc02 — part2-data-structures** | **Phase 1:** publish the six *drafted* Part II chapters (Tuples, Proplists, Maps, Arrays, Dicts, Records). **Phase 2 (added 2026-06-28):** author & publish the four *draft-less* chapters (Graphs, Queues, Pattern Matching, Generic Sequence Functions). | none (independent of arc01) | **ACTIVE — re-opened & extended.** Phase 1 ✅ delivered (87 files, 0 placeholders). Phase 2 roadmap-only (slices 07–10), pending the whole-book plan. |
 
 Arc 2 is deliberately **not** planned in detail yet (*plan late, plan deep*):
 its `arc-plan.md` is written when arc01 closes, so it can absorb anything
@@ -53,16 +58,20 @@ arc01 reveals about the split-from-workbench workflow.
 
 ## 3. Current status
 
-- **BOTH ARCS CLOSED (2026-06-28). The project's DoD is substantively met:**
-  every chapter with a finished `workbench/` draft is now published.
 - **arc01 (Binaries) CLOSED** — Bits/Bytes/Binaries chapter, 153 files, 0
   placeholders (`arc01-binaries-chapter/closing-report.md`).
-- **arc02 (Part II data structures) CLOSED** — six multi-leaf chapters (Tuples,
-  Proplists, Maps, Arrays, Dicts, Records), 87 files, 0 placeholders, with 81
-  new `SUMMARY.md` sub-entries (`arc02-part2-data-structures/closing-report.md`).
-- **One open item, project-scope:** a final `make run` / `mdbook build` on a
-  local checkout to validate the Records ToC edit (P4). Operator builds already
-  confirmed everything through slice05 (Dicts).
+- **arc02 (Part II data structures) ACTIVE — re-opened & extended (2026-06-28).**
+  - *Phase 1 ✅ delivered:* six drafted chapters published as multi-leaf (87
+    files, 0 placeholders, 81 new SUMMARY entries). Operator-built OK; everything
+    rendered "great".
+  - *Phase 2 (new, pending):* author & publish the four draft-less chapters —
+    **Graphs, Queues, Pattern Matching, Generic Sequence Functions** (slices
+    07–10, roadmap-only). **Blocked on input:** the recent whole-book plan from
+    the Nov-2025 Claude Desktop archive, which should drive each chapter's scope
+    and structure. It is **not** in the project (searched exhaustively).
+- The earlier "project DoD substantively met" note (v1.2) is **superseded**: the
+  DoD now includes Phase 2 authoring. The publishing of all *drafted* material is
+  complete; authoring the 4 new chapters is the remaining work.
 
 ### Known cleanups (carried as ledger rows where they apply)
 
@@ -87,8 +96,20 @@ project's `closing-report.md` at project close. Strengths per
 | P3 | The six drafted Part II chapters each have real content (no placeholder README). | *reproduced* — read each `src/part2/<chapter>/README.md`. | **CLOSED (arc02)** — whole-arc sweep: 87 files, 0 placeholders across all six chapters |
 | P4 | All in-scope `SUMMARY.md` ToC entries resolve to non-placeholder files; mdBook builds without broken links. | *reproduced* — `mdbook build` (or link check) on the affected chapters. | **byte-bin + arc02 slices 01–05 operator-built OK.** One final `make run` needed to validate the Records (slice06) ToC edit, then fully closed. |
 | P5 | Byte-bin cleanups (P-row scope: `what/README`, stray `fundform.md`) resolved. | *attested* — confirmed in arc01 close. | **CLOSED (arc01)** — `what/README` filled; `fundform.md` absent |
+| P6 | The four authored Part II chapters (Graphs, Queues, Pattern Matching, Generic Sequence Functions) are written and published as multi-leaf chapters with ToC entries, no placeholders. | *reproduced* — whole-arc sweep at Phase-2 close. | **open — arc02 Phase 2** (pending whole-book plan) |
 
 ## 5. Version History
+
+### v1.3 — 2026-06-28
+**arc02 re-opened & extended; project scope expanded** (operator request). Added
+arc02 Phase 2: author & publish four draft-less Part II chapters — Graphs,
+Queues, Pattern Matching, Generic Sequence Functions (slices 07–10). Moved those
+four from "out of scope" to in-scope in §1; added project-ledger row **P6**;
+reverted the v1.2 "DoD substantively met" claim (DoD now includes Phase-2
+authoring). Phase 1 (the six drafted chapters) remains delivered. **Phase 2 is
+blocked pending the recent whole-book plan** from the Nov-2025 Claude Desktop
+archive — confirmed absent from the project after an exhaustive search; the
+operator is retrieving it. Which arc surfaced this: operator directive on arc02.
 
 ### v1.2 — 2026-06-28
 **arc02 closed; project DoD substantively met.** Bubble-up from

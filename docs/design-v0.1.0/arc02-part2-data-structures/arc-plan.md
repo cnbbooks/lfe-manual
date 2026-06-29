@@ -6,31 +6,57 @@
 
 ## 1. Capability statement
 
-The six drafted Part II data-structure chapters — **Tuples, Property Lists,
-Maps, Arrays, Dicts, Records** — are published from their
-`workbench/<chapter>/new-section-*.md` drafts as **multi-leaf chapters** (a
-short README landing page plus per-`##`-section leaf files), consistent with the
-finished Part II chapters (data-types, lists, cons-cells, vars). Each chapter's
-sub-sections are added to `src/SUMMARY.md`. No placeholders remain in these six
-chapters.
+> **Status: RE-OPENED & EXTENDED 2026-06-28** (operator request). The arc was
+> closed after Phase 1; it is re-opened with a Phase 2 (authoring) added. The
+> Phase 1 close record is preserved in `closing-report.md` (see its re-open
+> note). A fresh arc-close will be written when Phase 2 lands.
 
-Operator decisions (2026-06-28): **multi-leaf** structure (expand the ToC);
-**one slice per chapter** (6 slices).
+**Phase 1 — publish the drafted chapters (DELIVERED).** The six *drafted* Part
+II data-structure chapters — **Tuples, Property Lists, Maps, Arrays, Dicts,
+Records** — are published from their `workbench/<chapter>/new-section-*.md`
+drafts as **multi-leaf chapters**, with their sub-sections added to
+`src/SUMMARY.md`. No placeholders remain. (Composition check: 87 files, 0
+placeholders — `closing-report.md`.)
 
-## 2. Slice breakdown (6 slices, one per chapter)
+**Phase 2 — author & publish the draft-less chapters (NEW, pending).** The four
+remaining Part II chapters that have **no workbench draft** — **Graphs, Queues,
+Pattern Matching, Generic Sequence Functions** — are written from source/reference
+material and published as multi-leaf chapters with their ToC entries. This is
+*authoring*, not split-and-publish: there is no draft to split, so each slice's
+open set must carry a content outline. **Detailed planning is deliberately
+deferred until the operator supplies the recent whole-book plan** (sought from
+the Nov-2025 Claude Desktop archive) — that plan should drive each chapter's
+scope, depth, and structure.
 
-| Slice | Chapter | Source draft | Approx leaves |
-|-------|---------|--------------|---------------|
+Operator decisions: **multi-leaf** structure; **one slice per chapter**.
+
+## 2. Slice breakdown
+
+### Phase 1 — publishing (6 slices, all closed)
+
+| Slice | Chapter | Source draft | Leaves |
+|-------|---------|--------------|--------|
 | **slice01 — tuples** ✅ CDC-closed 2026-06-28 | Tuples | `workbench/tuples/new-section-tuples.md` (~244 ln) | README + 12 |
 | **slice02 — proplists** ✅ CDC-closed 2026-06-28 | Property Lists | `workbench/proplists/new-section-proplists.md` (~641 ln) | README + 21 |
 | **slice03 — maps** ✅ CDC-closed 2026-06-28 | Maps | `workbench/maps/new-section-maps.md` (~383 ln) | README + 15 |
 | **slice04 — arrays** ✅ CDC-closed 2026-06-28 | Arrays | `workbench/arrays/new-section-arrays.md` (~578 ln) | README + 13 |
-| **slice05 — dicts** ✅ CDC-closed 2026-06-28 | Dicts | `workbench/dicts/new-section-dicts.md` (~1168 ln) | README + 5 (omnibus: one leaf per `#` sub-chapter) |
+| **slice05 — dicts** ✅ CDC-closed 2026-06-28 | Dicts | `workbench/dicts/new-section-dicts.md` (~1168 ln) | README + 5 (omnibus) |
 | **slice06 — records** ✅ CDC-closed 2026-06-28 | Records | `workbench/records/new-section-records.md` (~372 ln) | README + 15 |
 
-Leaf counts are estimates; each slice's exact breakdown is derived from its
-draft's heading structure when the slice is planned (*plan late*). Slices are
-independent (chapters don't depend on each other); listed in ToC order.
+### Phase 2 — authoring (4 slices, roadmap-only; plan in detail after the whole-book plan arrives)
+
+| Slice | Chapter | ToC target | Source/reference material | Status |
+|-------|---------|-----------|---------------------------|--------|
+| **slice07 — graphs** | Graphs | `part2/graphs/README.md` | `workbench/graphs/*.pdf` (Learn You Some Erlang; `digraph`, `digraph_utils` stdlib docs) | roadmap — pending plan |
+| **slice08 — queues** | Queues | `part2/queues/README.md` | `workbench/queues/*.pdf` (Learn You Some Erlang; `queue` stdlib docs) | roadmap — pending plan |
+| **slice09 — pattern-matching** | Pattern Matching | `part2/patterns/README.md` | LFE pattern-matching semantics; man pages in `workbench/lfe_*.md`; cross-refs to existing chapters | roadmap — pending plan |
+| **slice10 — gen-seq** | Generic Sequence Functions | `part2/gen-seq/README.md` | `lists`/sequence ops; `workbench/lfe_gen.3.md`, `lfe_lib.3.md` man pages | roadmap — pending plan |
+
+Phase-1 leaf counts are final; Phase-2 chapters are authoring work — leaf
+breakdown TBD per chapter when planned. Slices are independent; listed in ToC
+order. Out of Part II's draft-less set, **Characters & Strings** and
+**Manipulating List Structure** remain out of scope for now (not in the
+operator's 4-chapter request).
 
 Note: `workbench/proplists/lists.md` is **not** in scope — it is the source for
 the already-published Lists chapter (`src/part2/lists/`), a reconcile-check
@@ -91,6 +117,18 @@ their ToC entries. Added conventions:
 | A5 | mdBook builds with no broken ToC links (operator build at arc close). | *reproduced* — operator `make run`. |
 
 ## 6. Version History
+
+### v1.7 — 2026-06-28
+**Arc RE-OPENED and EXTENDED** at operator request, after the Phase-1 close.
+Added Phase 2: author & publish the four draft-less Part II chapters (Graphs,
+Queues, Pattern Matching, Generic Sequence Functions) as slices 07–10
+(roadmap-only). Capability statement (§1) split into Phase 1 (delivered) and
+Phase 2 (pending). **Phase-2 detailed planning deferred until the operator
+supplies the recent whole-book plan** (Nov-2025 Desktop archive) — not found
+anywhere in the project (searched `workbench/`, `workbench/old/`, loose files,
+`src/`, `docs/`). These are *authoring* slices (no draft to split). Phase 1's
+`closing-report.md` is preserved with a re-open note; a new arc-close covers
+Phase 2 when it lands. Which child surfaced this: operator directive.
 
 ### v1.6 — 2026-06-28
 slice06 (records) CDC-closed — README + 15 leaves + 15 ToC entries, CDC PASS

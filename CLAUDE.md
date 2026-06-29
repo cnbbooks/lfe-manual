@@ -14,19 +14,22 @@ the operator 2026-06-28 — this project uses the default layout, no overrides.
   placeholders (`closing-report.md`). Reusable publishing conventions pinned in
   `arc-plan.md` §6. One open item: a local `mdbook build` (the sandbox can't run
   it) closes project-ledger P4. Stray `syntax/fundform.md` is now absent.
-- `arc02-part2-data-structures/` — **CLOSED (2026-06-28).** All six drafted
-  Part II chapters published as **multi-leaf** chapters with their SUMMARY
-  sub-entries: Tuples (README+12), Property Lists (README+21), Maps (README+15),
-  Arrays (README+13), Dicts (README+5 omnibus), Records (README+15). Whole-arc
-  sweep: **87 files, 0 placeholders** (`closing-report.md`). Conventions in
-  `arc-plan.md` §6 + §A2.1–A2.5. **Stub detection: Write-probe ONLY** — bash
-  `ls`, glob, Read-probe, AND `git ls-files` all produced false negatives here;
-  the Write guard ("not read yet" ⇒ exists) is ground truth. Five chapters were
-  pre-scaffolded at natural slugs; only Dicts (omnibus) was un-scaffolded.
-- **Project DoD substantively met:** every chapter with a finished `workbench/`
-  draft is now published. One open item: a final local `make run` to validate
-  the Records ToC edit (project-ledger P4). Out-of-scope/future: draft-less
-  Part II chapters (chr-str, graphs, queues, patterns, gen-seq, mani-list),
+- `arc02-part2-data-structures/` — **ACTIVE (re-opened & extended 2026-06-28).**
+  - **Phase 1 ✅ delivered:** all six *drafted* chapters published as multi-leaf
+    with SUMMARY sub-entries — Tuples (README+12), Property Lists (README+21),
+    Maps (README+15), Arrays (README+13), Dicts (README+5 omnibus), Records
+    (README+15). Sweep: **87 files, 0 placeholders.** Conventions in `arc-plan.md`
+    §6 + §A2.1–A2.5. **Stub detection: Write-probe ONLY** — bash `ls`, glob,
+    Read-probe, AND `git ls-files` all gave false negatives; the Write guard
+    ("not read yet" ⇒ exists) is ground truth.
+  - **Phase 2 (new, pending):** author & publish four *draft-less* chapters —
+    **Graphs, Queues, Pattern Matching, Generic Sequence Functions** (slices
+    07–10, roadmap-only). This is authoring, not split-publish. **Blocked on the
+    recent whole-book plan** (Nov-2025 Claude Desktop archive) — NOT in the
+    project (searched `workbench/`, `old/`, loose files, `src/`, `docs/`); the
+    operator is retrieving it. Source material: `workbench/graphs|queues/*.pdf`
+    and `workbench/lfe_*.md` man pages.
+- Still out of scope: Characters & Strings, Manipulating List Structure,
   AI-resources pocket reference, Typed LFE chapter.
 
 ## How this book is structured

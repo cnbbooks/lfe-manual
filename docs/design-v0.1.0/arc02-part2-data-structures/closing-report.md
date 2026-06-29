@@ -1,7 +1,16 @@
 # Arc 02 Closing Report — Part II Data Structures
 
-Arc-level close, 2026-06-28. Written when the last slice (slice06, Records) was
-CDC-closed. Composition check + bubble-up to the project.
+> **⚠️ RE-OPENED 2026-06-28 (after this report was written).** This report
+> records the close of **Phase 1** (publishing the six *drafted* chapters), which
+> remains valid and delivered. At operator request the arc was then re-opened and
+> extended with **Phase 2** (authoring the four draft-less chapters: Graphs,
+> Queues, Pattern Matching, Generic Sequence Functions — slices 07–10, see
+> `arc-plan.md` v1.7). The arc is therefore **no longer closed**; a fresh
+> arc-close will be written when Phase 2 lands. Everything below is the accurate
+> Phase-1 record.
+
+Arc-level close (Phase 1), 2026-06-28. Written when the last Phase-1 slice
+(slice06, Records) was CDC-closed. Composition check + bubble-up to the project.
 
 ## 1. Capability, restated — and the verdict
 
