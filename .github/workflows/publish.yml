@@ -29,12 +29,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # Pin both tools so deploys are reproducible. Bump these
-      # deliberately (and re-test the theme) rather than tracking latest.
-      MDBOOK_VERSION: 0.4.52
-      # 0.16.x targets mdBook 0.4.52; 0.17.0 jumped to mdBook 0.5 and is
-      # NOT compatible with the mdBook pinned above.
-      MDBOOK_MERMAID_VERSION: 0.16.2
+      # Pin both tools so deploys are reproducible, matched to the
+      # mdBook we run locally (mdbook v0.5.3). Bump deliberately
+      # (and re-test the theme) rather than tracking latest.
+      MDBOOK_VERSION: 0.5.3
+      # 0.17.0 targets mdBook 0.5 (uses mdbook-preprocessor) -- the
+      # matching mermaid for the mdBook pinned above.
+      # (The 0.16.x line targets mdBook 0.4.52.)
+      MDBOOK_MERMAID_VERSION: 0.17.0
     steps:
       - uses: actions/checkout@v4
       - uses: cargo-bins/cargo-binstall@main
