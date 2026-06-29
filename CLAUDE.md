@@ -14,10 +14,12 @@ the operator 2026-06-28 — this project uses the default layout, no overrides.
   placeholders (`closing-report.md`). Reusable publishing conventions pinned in
   `arc-plan.md` §6. One open item: a local `mdbook build` (the sandbox can't run
   it) closes project-ledger P4. Stray `syntax/fundform.md` is now absent.
-- `arc02-part2-data-structures/` — **active next**, roadmap-only (plan in detail
-  when started): publish the six drafted Part II chapters (Tuples, Proplists,
-  Maps, Arrays, Dicts, Records) from `workbench/<chapter>/new-section-*.md`,
-  reusing arc01's §6 conventions.
+- `arc02-part2-data-structures/` — **ACTIVE.** Publish the six drafted Part II
+  chapters (Tuples, Proplists, Maps, Arrays, Dicts, Records) as **multi-leaf**
+  chapters (operator's choice), one slice per chapter. arc02 *authors* the ToC
+  sub-entries and fills leaf stubs (the prior session pre-scaffolded them — see
+  `arc-plan.md` §A2.1–A2.4). **slice01 (Tuples) CDC-closed (2026-06-28)** —
+  README + 12 leaves + 12 SUMMARY entries. Next: slice02 (Proplists).
 
 ## How this book is structured
 

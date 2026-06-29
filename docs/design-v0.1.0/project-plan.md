@@ -87,7 +87,7 @@ project's `closing-report.md` at project close. Strengths per
 | P1 | No placeholder (lone-heading) files remain among the ToC-listed `byte-bin` leaves. | *reproduced* — scan `src/part2/byte-bin/` for files whose only non-blank line is a heading; expect zero. | **CLOSED (arc01)** — sweep: 153 files, 0 placeholders |
 | P2 | Every published byte-bin leaf's content traces to a `workbench/bytes/` source section; no source section silently dropped. | *reconciled* — diff workbench draft headings against published leaves. | **CLOSED (arc01)** — per-slice CDC reconciliations |
 | P3 | The six drafted Part II chapters each have real content (no placeholder README). | *reproduced* — read each `src/part2/<chapter>/README.md`. | open — arc02 |
-| P4 | All in-scope `SUMMARY.md` ToC entries resolve to non-placeholder files; mdBook builds without broken links. | *reproduced* — `mdbook build` (or link check) on the affected chapters. | **pending operator build** (byte-bin link graph unchanged; arc02 still to come) |
+| P4 | All in-scope `SUMMARY.md` ToC entries resolve to non-placeholder files; mdBook builds without broken links. | *reproduced* — `mdbook build` (or link check) on the affected chapters. | **CLOSED for byte-bin (2026-06-28)** — operator ran the build: build + page load successful. Re-verify after arc02. |
 | P5 | Byte-bin cleanups (P-row scope: `what/README`, stray `fundform.md`) resolved. | *attested* — confirmed in arc01 close. | **CLOSED (arc01)** — `what/README` filled; `fundform.md` absent |
 
 ## 5. Version History
