@@ -29,14 +29,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
+      # Pin both tools so deploys are reproducible. Bump these
+      # deliberately (and re-test the theme) rather than tracking latest.
       MDBOOK_VERSION: 0.4.52
+      MDBOOK_MERMAID_VERSION: 0.17.0
     steps:
       - uses: actions/checkout@v4
       - uses: cargo-bins/cargo-binstall@main
       - name: Install mdBook
-        run: cargo binstall mdbook
+        run: cargo binstall --no-confirm --version ${MDBOOK_VERSION} mdbook
       - name: Install mermaid for mdBook
-        run: cargo binstall mdbook-mermaid
+        run: cargo binstall --no-confirm --version ${MDBOOK_MERMAID_VERSION} mdbook-mermaid
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
