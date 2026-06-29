@@ -23,7 +23,7 @@ Operator decisions (2026-06-28): **multi-leaf** structure (expand the ToC);
 |-------|---------|--------------|---------------|
 | **slice01 — tuples** ✅ CDC-closed 2026-06-28 | Tuples | `workbench/tuples/new-section-tuples.md` (~244 ln) | README + 12 |
 | **slice02 — proplists** ✅ CDC-closed 2026-06-28 | Property Lists | `workbench/proplists/new-section-proplists.md` (~641 ln) | README + 21 |
-| **slice03 — maps** | Maps | `workbench/maps/new-section-maps.md` (~383 ln) | README + ~18 |
+| **slice03 — maps** ✅ CDC-closed 2026-06-28 | Maps | `workbench/maps/new-section-maps.md` (~383 ln) | README + 15 |
 | **slice04 — arrays** | Arrays | `workbench/arrays/new-section-arrays.md` (~578 ln) | README + ~14 |
 | **slice05 — dicts** | Dicts | `workbench/dicts/new-section-dicts.md` (~1168 ln) | README + many (orddict/dict/gb_trees) |
 | **slice06 — records** | Records | `workbench/records/new-section-records.md` (~372 ln) | README + ~18 |
@@ -60,7 +60,13 @@ their ToC entries. Added conventions:
   drift); the files must be `Read` before `Write`. Only if a section has no
   pre-existing stub, derive a short kebab-case slug from its heading. README
   stays `README.md`. (The stubs are not yet in `SUMMARY.md` — §A2.1 still
-  applies.)
+  applies.) **Detection method:** use the Read/Write file tools (write-probe: a
+  Write that errors "not read yet" means the stub exists at that slug — adopt and
+  fill). Do **not** rely on the bash `ls`: the shell sandbox mount of this repo
+  is stale and has reported chapter dirs as README-only when the leaf stubs
+  actually exist (observed for `maps/` in slice03). The file tools are ground
+  truth. So far Tuples, Proplists, and Maps were all pre-scaffolded with slugs
+  matching natural heading-derivation.
 - **§A2.3 — Title consistency.** Use the draft's `##` heading text as **both**
   the leaf `#` title and the SUMMARY link text, so page title == ToC entry.
 - **§A2.4 — README landing page.** The chapter README = the draft's `#` H1
@@ -81,6 +87,14 @@ their ToC entries. Added conventions:
 | A5 | mdBook builds with no broken ToC links (operator build at arc close). | *reproduced* — operator `make run`. |
 
 ## 6. Version History
+
+### v1.3 — 2026-06-28
+slice03 (maps) CDC-closed — README + 15 leaves + 15 ToC entries, CDC PASS
+(incl. the preserved `erlang` comparison fence). Refined §A2.2: the bash `ls`
+is a stale view of this repo and falsely reported maps/arrays/dicts/records as
+README-only; use the Read/Write write-probe to detect pre-scaffolded stubs. Maps
+was in fact pre-scaffolded with matching slugs. No breakdown/sequencing change.
+Next: slice04 (arrays).
 
 ### v1.2 — 2026-06-28
 slice02 (proplists) CDC-closed — README + 21 leaves + 21 ToC entries, CDC PASS.
