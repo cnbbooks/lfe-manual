@@ -1,9 +1,13 @@
-# Project Plan — Publish the staged workbench drafts into the manual
+# Project Plan — Part II: Data Types & Structures (Saga Project P1)
 
-> Plan-of-record (the arc roadmap) for the effort to land the finished
-> drafts sitting in `workbench/` as real chapter content in `src/`.
+> Plan-of-record (the arc roadmap) for **Project P1** in the whole-book Saga
+> (`../book-roadmap.md`) — i.e. **Part II** of the Chineual. Scope began as
+> "publish the finished `workbench/` drafts into `src/`" and was extended
+> (2026-06-28) to also author the four draft-less Part II chapters (arc02
+> Phase 2). The remaining Part II tail (Characters & Strings, Manipulating List
+> Structure) sits in the Saga backlog.
 > Layout per `collaboration-framework/docs/PROJECT-MANAGEMENT.md` v2.1.
-> Design-doc version: v0.1.0.
+> Design-doc version: v0.1.0. Voice: `../writers-guide/cosmic-techno-wit-style-guide.md`.
 
 ## 1. Definition of done and boundaries
 

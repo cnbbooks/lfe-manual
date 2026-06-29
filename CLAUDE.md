@@ -2,12 +2,27 @@
 
 ## Project management
 
-Planning artifacts live under `docs/design-v0.1.0/…`, per the canonical layout
-in `collaboration-framework/docs/PROJECT-MANAGEMENT.md` (v2.1). Confirmed with
-the operator 2026-06-28 — this project uses the default layout, no overrides.
+This is a **living book (a Saga)** of several Projects. Planning layers:
 
-- `docs/design-v0.1.0/project-plan.md` — arc roadmap + project ledger (DoD:
-  publish the staged `workbench/` drafts into `src/`; new-authoring deferred).
+- **`docs/book-roadmap.md`** — the **whole-book Saga roadmap** (vision +
+  living-book principles + by-Part Project roadmap + open backlog). Sits above
+  the per-Project trees. Read this first for the big picture. One Project per
+  Part; sequenced along the reader's path (P1 Part II → P2 Part III → …).
+- **Per-Project design trees** under `docs/<part-slug>/design-vX.Y.Z/…` per the
+  canonical layout in `collaboration-framework/docs/PROJECT-MANAGEMENT.md`
+  (v2.1). Convention confirmed with the operator 2026-06-28. P1 (Part II) is
+  grandfathered at `docs/design-v0.1.0/` (pre-dates the convention; no move
+  forced). Future Projects: e.g. `docs/part3-data-as-code/design-v0.1.0/`.
+- **House voice:** `docs/writers-guide/cosmic-techno-wit-style-guide.md` — the
+  canonical Cosmic Techno-Wit style guide (derived from the published corpus);
+  all new content is authored in this voice.
+
+### Project P1 — Part II (`docs/design-v0.1.0/`)
+
+- `docs/design-v0.1.0/project-plan.md` — arc roadmap + project ledger. Scope:
+  publish the staged `workbench/` Part II drafts, **plus** author the four
+  draft-less Part II chapters (arc02 Phase 2). Part II tail (Characters &
+  Strings, Manipulating List Structure) → Saga backlog.
 - `arc01-binaries-chapter/` — **CLOSED (2026-06-28).** The whole Bits/Bytes/
   Binaries chapter (`src/part2/byte-bin/`) is published from `workbench/bytes/
   00–14`. All 4 slices CDC-closed; whole-chapter sweep = 153 files, 0

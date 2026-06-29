@@ -43,20 +43,99 @@ Operator decisions: **multi-leaf** structure; **one slice per chapter**.
 | **slice05 — dicts** ✅ CDC-closed 2026-06-28 | Dicts | `workbench/dicts/new-section-dicts.md` (~1168 ln) | README + 5 (omnibus) |
 | **slice06 — records** ✅ CDC-closed 2026-06-28 | Records | `workbench/records/new-section-records.md` (~372 ln) | README + 15 |
 
-### Phase 2 — authoring (4 slices, roadmap-only; plan in detail after the whole-book plan arrives)
+### Phase 2 — authoring (4 slices, drawn up 2026-06-28)
 
-| Slice | Chapter | ToC target | Source/reference material | Status |
-|-------|---------|-----------|---------------------------|--------|
-| **slice07 — graphs** | Graphs | `part2/graphs/README.md` | `workbench/graphs/*.pdf` (Learn You Some Erlang; `digraph`, `digraph_utils` stdlib docs) | roadmap — pending plan |
-| **slice08 — queues** | Queues | `part2/queues/README.md` | `workbench/queues/*.pdf` (Learn You Some Erlang; `queue` stdlib docs) | roadmap — pending plan |
-| **slice09 — pattern-matching** | Pattern Matching | `part2/patterns/README.md` | LFE pattern-matching semantics; man pages in `workbench/lfe_*.md`; cross-refs to existing chapters | roadmap — pending plan |
-| **slice10 — gen-seq** | Generic Sequence Functions | `part2/gen-seq/README.md` | `lists`/sequence ops; `workbench/lfe_gen.3.md`, `lfe_lib.3.md` man pages | roadmap — pending plan |
+These are **authoring** slices: there is no workbench draft to split, so each
+slice *writes* a new chapter from source/reference material, in the **Cosmic
+Techno-Wit** voice (`docs/writers-guide/cosmic-techno-wit-style-guide.md`). Each
+is published multi-leaf with its ToC entries, exactly like Phase 1, but the
+content is composed rather than transcribed.
 
-Phase-1 leaf counts are final; Phase-2 chapters are authoring work — leaf
-breakdown TBD per chapter when planned. Slices are independent; listed in ToC
-order. Out of Part II's draft-less set, **Characters & Strings** and
-**Manipulating List Structure** remain out of scope for now (not in the
-operator's 4-chapter request).
+| Slice | Chapter | ToC target | Primary source | Leaves | Status |
+|-------|---------|-----------|----------------|--------|--------|
+| **slice07 — graphs** | Graphs | `part2/graphs/README.md` | `workbench/graphs/*.pdf` (LYSE; `digraph`, `digraph_utils`) | README + ~9 | ⏭️ next — open set written |
+| **slice08 — queues** | Queues | `part2/queues/README.md` | `workbench/queues/*.pdf` (LYSE; `queue`) | README + ~9 | 🗓️ outlined |
+| **slice09 — pattern-matching** | Pattern Matching | `part2/patterns/README.md` | `workbench/lfe_guide.7.md` §Patterns/§Guards + cross-refs | README + ~11 | 🗓️ outlined |
+| **slice10 — gen-seq** | Generic Sequence Functions | `part2/gen-seq/README.md` | Erlang `lists` module + `lfe_guide.7.md` §Predefined functions | README + ~12 | 🗓️ outlined |
+
+Slices are independent; listed in ToC order. Plan-late still applies: the **next**
+slice gets a full open set (slice-doc + ledger + cc-prompt); the outlines below
+firm up when each becomes next. Out of Part II's draft-less set, **Characters &
+Strings** and **Manipulating List Structure** remain in the Saga backlog (not in
+the operator's 4-chapter request).
+
+#### 2.1 Phase-2 chapter outlines (the leaf breakdowns)
+
+**slice07 — Graphs** (`digraph` / `digraph_utils`; the data structure that
+*mutates*). README (what graphs are; the ETS-backed, mutable, reference-typed
+nature — the standout caveat) · `create` (`digraph:new/0,1`; cyclic/acyclic,
+protected/private/public) · `vertices` (add/del/vertex/vertices/no_vertices;
+vertex labels) · `edges` (add_edge/edge/edges/del_edge; the `{V1,V2}` model;
+edge labels) · `paths` (get_path, get_cycle, get_short_path, get_short_cycle) ·
+`utils` (`digraph_utils`: topsort, is_acyclic, reachable/reaching, components,
+strong_components, cyclic_strong_components, arborescence) · `mutability` (the
+big caveat: shared mutable ETS state, ownership, `digraph:delete/1`, not
+immutable, not auto-GC'd) · `example` (worked example — e.g. dependency/build
+order via topsort) · `vs` (when to reach for `digraph` vs hand-rolled maps) ·
+`summ`.
+
+**slice08 — Queues** (`queue`; the double-ended FIFO that is secretly two lists).
+README (what a queue is; the two-lists-back-to-back insight) · `create`
+(new/is_queue/is_empty/len) · `inout` (in/2, out/1, in_r/2, out_r/1 — the FIFO
+and the reverse end) · `amortized` (how two lists yield amortised O(1) — the
+"stroke of genius") · `ops` (reverse, join, split, filter, member) · `convert`
+(to_list, from_list, ordering) · `apis` (the Original / Extended / Okasaki APIs —
+cons/head/tail/snoc/daeh/liat) · `example` (worked example — e.g. a job queue or
+BFS frontier) · `vs` (queue vs plain list vs other; when FIFO matters) · `summ`.
+
+**slice09 — Pattern Matching** (the unifying treatment; you've met it in every
+chapter, here's the whole picture). README (pattern matching as the heart of LFE)
+· `what` (a pattern is a data expression: symbols are variables, `quote` matches
+literals; match vs assignment) · `where` (let, function clauses, `case`,
+`receive`, `lambda`/`match-lambda`, comprehensions, `try`) · `literals-vars`
+(literals via quote; binding; the `_` don't-care that never binds) · `nonlinear`
+(repeated variables + automatic equality) · `aliases` (`(= pattern1 pattern2)` —
+bind the whole and the parts) · `by-type` (tuples, cons/lists, binaries/bitstrings,
+maps, records, structs — cross-ref the dedicated chapters) · `guards` (`(when …)`,
+guard BIFs/type-tests, the empty guard, what's allowed) · `functions` (multi-clause
+`defun` / `match-lambda`; clause order; fall-through) · `failure` (badmatch /
+function_clause; let-it-crash as a feature) · `idioms` (ok/error tuples,
+destructuring returns, head|tail recursion) · `summ`.
+
+**slice10 — Generic Sequence Functions** (the higher-order toolkit over
+sequences — distinct from the Lists & Strings chapter, which is list/string
+*basics*; this is the algorithmic library). README ("not writing the same loop
+twice") · `map` (map; flatmap; mapfoldl) · `filter` (filter, partition,
+takewhile, dropwhile, splitwith) · `fold` (foldl, foldr — the universal
+recursion) · `search` (all, any, member, find, foreach) · `build` (seq,
+duplicate) · `combine` (zip/zip3/zipwith/unzip; append/concat) · `reorder`
+(sort, usort, reverse, sublist, nth/nthtail) · `aggregate` (sum, max, min) ·
+`comprehensions` (list comprehensions as the declarative alternative; cross-ref
+`byte-bin/comps` for binary comps) · `composition` (pipelines, `->`/`->>`, HOF
+style) · `summ`.
+
+#### 2.2 Authoring-slice workflow (§A2.6)
+
+For each Phase-2 slice:
+
+1. **Outline → ToC.** Confirm the leaf breakdown (above) against the source; add
+   the `SUMMARY.md` sub-entries (§A2.1) and write the leaf files (write-probe to
+   detect any pre-existing stubs, §A2.2).
+2. **Author in voice.** Write each leaf from the source material in the Cosmic
+   Techno-Wit voice, per the style guide's Prime Directive (technically correct
+   and complete first; wit on top). All code is **idiomatic LFE** — convert every
+   Erlang example from the source (`digraph`, `queue`, `lists`, LYSE) to LFE
+   syntax.
+3. **Dual verification at close** (this replaces Phase 1's "preserve verbatim"
+   reconciliation — there is no draft to diff against):
+   - **Technical accuracy** — every claim and every code example checked against
+     the stdlib docs / man pages; LFE code is valid and idiomatic. Use the
+     `erlang-guidelines` / LFE knowledge skills and an independent CDC pass.
+   - **Voice conformance** — checked against the style guide's ship-it checklist
+     (§12): explanation-before-joke, precise similes, no punching at the reader,
+     code carries the voice, motifs rationed.
+   - **Structure** — no placeholders; ToC entries match leaf titles and resolve;
+     mdBook build (operator).
 
 Note: `workbench/proplists/lists.md` is **not** in scope — it is the source for
 the already-published Lists chapter (`src/part2/lists/`), a reconcile-check
@@ -117,6 +196,19 @@ their ToC entries. Added conventions:
 | A5 | mdBook builds with no broken ToC links (operator build at arc close). | *reproduced* — operator `make run`. |
 
 ## 6. Version History
+
+### v1.8 — 2026-06-28
+**Phase 2 drawn up.** Fleshed §2 with the four authoring slices' chapter
+outlines (§2.1) and the authoring-slice workflow + dual verification — voice
+(Cosmic Techno-Wit style guide) **and** technical accuracy (stdlib docs / man
+pages; idiomatic LFE) — as §A2.6 (§2.2), since authoring has no draft to diff
+against. Sources grounded: `digraph`/`digraph_utils` (graphs), `queue` (queues),
+`lfe_guide.7.md` §Patterns/§Guards (pattern matching), Erlang `lists` +
+`lfe_guide.7.md` §Predefined functions (gen-seq); confirmed `lfe_gen` is the code
+generator, *not* sequence functions, and that gen-seq must not overlap the
+existing Lists & Strings chapter. slice07 (Graphs) open set written; 08–10
+outlined (plan-late). Decision to proceed on today's roadmap + style guide (the
+Nov-2025 plan was not recoverable).
 
 ### v1.7 — 2026-06-28
 **Arc RE-OPENED and EXTENDED** at operator request, after the Phase-1 close.
