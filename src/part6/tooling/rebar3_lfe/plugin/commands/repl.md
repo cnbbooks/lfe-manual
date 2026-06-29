@@ -30,7 +30,7 @@ lfe>
 
 <div class="alert alert-warning">
   <h4 class="alert-heading">
-    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+    <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
     Known Issue: Erlang 26+!
   </h4>
   <p class="mb-0">

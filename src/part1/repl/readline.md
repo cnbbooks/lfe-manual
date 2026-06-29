@@ -4,7 +4,7 @@ The LFE REPL, being built atop the Erlang shell, can benefit from GNU Readline s
 
 <div class="alert alert-info">
   <h4 class="alert-heading">
-    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-circle-info" aria-hidden="true"></i>
     Background
   </h4>
   <p class="mb-0">
@@ -47,7 +47,7 @@ Where:
 
 <div class="alert alert-warning">
   <h4 class="alert-heading">
-    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+    <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
     Note on String Escaping
   </h4>
   <p class="mb-0">

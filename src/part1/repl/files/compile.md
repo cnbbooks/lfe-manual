@@ -64,7 +64,7 @@ lfe> (m 'my-module)
 
 <div class="alert alert-warning">
   <h4 class="alert-heading">
-    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-circle-info" aria-hidden="true"></i>
     Take care!
   </h4>
   <p class="mb-0">

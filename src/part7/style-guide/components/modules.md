@@ -119,7 +119,7 @@ For new code:
 ----
 
 <ol>
-<li><a name="footnote-1">
+<li><a name="footnote-1"></a>
 Parts of this page were adapted from a <a href="https://gist.github.com/substack/5075355">Github Gist</a> by <a href="https://github.com/substack">James Halliday</a>.
 </li>
 </ol>

@@ -26,7 +26,7 @@ If you already have a `rebar.config` file with a plugins entry, then simply add 
 
 <div class="alert alert-info">
   <h4 class="alert-heading">
-    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-circle-info" aria-hidden="true"></i>
     For Windows users
   </h4>
   <p class="mb-0">Some notes on compatibility:</p>
@@ -64,7 +64,7 @@ Exit out of the REPL for now by typing `<CTRL><G>` and then `<Q>`.
 
 <div class="alert alert-warning">
   <h4 class="alert-heading">
-    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+    <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
     For Windows users
   </h4>
   <p class="mb-0">

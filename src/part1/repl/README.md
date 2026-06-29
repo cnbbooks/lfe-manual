@@ -4,7 +4,7 @@ We briefly introduced the REPL in the first version of the Hello-World example w
 
 <div class="alert alert-info">
   <h4 class="alert-heading">
-    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-circle-info" aria-hidden="true"></i>
     Historical Note
   </h4>
   <p class="mb-0">

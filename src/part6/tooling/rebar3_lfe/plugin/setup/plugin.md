@@ -6,7 +6,7 @@ advantage of the LFE rebar3 plugin is add it to the plugins in your global
 
 <div class="alert alert-success">
   <h4 class="alert-heading">
-    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-circle-info" aria-hidden="true"></i>
     Stable
   </h4>
   <p class="mb-0">
@@ -23,7 +23,7 @@ advantage of the LFE rebar3 plugin is add it to the plugins in your global
 
 <div class="alert alert-warning">
   <h4 class="alert-heading">
-    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+    <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
 Unstable
   </h4>
   <p class="mb-0">

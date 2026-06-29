@@ -182,7 +182,7 @@ a core form, it can't be shadowed (see the next section).
 
 <div class="alert alert-info">
   <h4 class="alert-heading">
-    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-circle-info" aria-hidden="true"></i>
     Information
   </h4>
   <p class="mb-0">

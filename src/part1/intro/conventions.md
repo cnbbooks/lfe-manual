@@ -55,7 +55,7 @@ These messages will take the following forms:
 
 <div class="alert alert-info">
   <h4 class="alert-heading">
-    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-circle-info" aria-hidden="true"></i>
     Information
   </h4>
   <p class="mb-0">
@@ -83,7 +83,7 @@ The icon assocated with this type of message is that of LiffyBot.
 
 <div class="alert alert-warning">
   <h4 class="alert-heading">
-    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+    <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
     Warning!
   </h4>
   <p class="mb-0">
@@ -97,7 +97,7 @@ The icon assocated with this type of message is the "!" in a caution triangle.
 
 <div class="alert alert-danger">
   <h4 class="alert-heading">
-    <i class="fa fa-minus-circle" aria-hidden="true"></i>
+    <i class="fas fa-circle-minus" aria-hidden="true"></i>
     Danger!
   </h4>
   <p class="mb-0">

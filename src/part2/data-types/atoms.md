@@ -65,7 +65,7 @@ entries.
 
 <div class="alert alert-danger">
   <h4 class="alert-heading">
-    <i class="fa fa-minus-circle" aria-hidden="true"></i>
+    <i class="fas fa-circle-minus" aria-hidden="true"></i>
     Danger!
   </h4>
   <p class="mb-0">

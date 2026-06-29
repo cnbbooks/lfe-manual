@@ -4,7 +4,7 @@ In LFE, as in Erlang, strings are simply lists of integers representing characte
 
 <div class="alert alert-info">
   <h4 class="alert-heading">
-    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-circle-info" aria-hidden="true"></i>
     Strings vs. Binaries
   </h4>
   <p class="mb-0">
@@ -236,7 +236,7 @@ hello
 
 <div class="alert alert-warning">
   <h4 class="alert-heading">
-    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+    <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
     Caution: Atom Creation
   </h4>
   <p class="mb-0">
