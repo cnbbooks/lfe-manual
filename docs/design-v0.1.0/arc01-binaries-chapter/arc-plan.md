@@ -31,7 +31,7 @@ slice fits one context with iteration headroom: splitting 3–4 drafts of
 |-------|--------------------|------------------|------------------|
 | **slice01 — bit-syntax-specifiers** ✅ CDC-closed 2026-06-28 | finish `bifs/` (to-term, byte, bit, summ); `bits/`; `types/`; `sizes/`; + byte-bin cleanups | tail of `03-binary-bifs`, `04-bit-syntax-fundamentals`, `05-type-specifiers`, `06-sizes-README` | establishes the split workflow the later slices reuse |
 | **slice02 — matching-comprehensions** ✅ CDC-closed 2026-06-28 | `ends/`; `patts/`; `comps/` | `07-ends-README`, `08-patts-README`, `09-comps-README` | — |
-| **slice03 — bitstrings-operators** | `bitstrs/`; `ops/` | `10-bitstrs-README`, `11-ops-README` | — |
+| **slice03 — bitstrings-operators** ✅ CDC-closed 2026-06-28 | `bitstrs/`; `ops/` | `10-bitstrs-README`, `11-ops-README` | — |
 | **slice04 — serialization-realworld** | `ser/`; `ser/realwrld/`; `realwrld/` | `12-serialization`, `13-real-world-applications` | closes the chapter; arc composition check runs here |
 
 Already published (not in scope, listed for the composition check): chapter
@@ -84,13 +84,23 @@ re-derivation:
    (a file absent from `SUMMARY.md` is not rendered by mdBook).
 8. **The ToC is sometimes finer than the draft's `##` nesting** — a draft `###`
    may be promoted to its own leaf (proven in `comps/`: `xform.md`,
-   `xxx.md`). Per section, diff the SUMMARY leaf list against the draft headings;
-   when a leaf has no `##` match, it's a promoted `###`. Its parent `##` leaf
-   then *excludes* that subsection (no duplication).
+   `xxx.md`; and `ops/pract.md`). Per section, diff the SUMMARY leaf list against
+   the draft headings; when a leaf has no `##` match, it's a promoted `###`. Its
+   parent `##` leaf then *excludes* that subsection (no duplication). Promotions
+   can be **asymmetric**: where several parallel `###`s exist (e.g. each
+   operator's "Practical Use"), the ToC may promote only one and leave the
+   siblings inline — follow the ToC, don't move them all.
 9. **Drop hand-rolled `*Next: …*` navigation footers** from draft tails —
    mdBook generates prev/next navigation. (Some drafts have them, some don't.)
 
 ## 5. Version History
+
+### v1.3 — 2026-06-28
+slice03 CDC-closed (`bitstrs/`, `ops/` — 26 leaves). Clarified §6.8: `###`→leaf
+promotions can be asymmetric (proven in `ops/`, where only the BSR "Practical
+Use" was promoted to `pract.md` while the other operators kept theirs inline).
+No structural change to the slice breakdown. Only slice04 (`ser/`, `realwrld/`)
+remains before arc close.
 
 ### v1.2 — 2026-06-28
 slice02 CDC-closed (`ends/`, `patts/`, `comps/` — 36 leaves). Added conventions
