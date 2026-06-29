@@ -54,13 +54,13 @@ arc01 reveals about the split-from-workbench workflow.
 ## 3. Current status
 
 - **arc01** is the active arc. Detailed plan: `arc01-binaries-chapter/arc-plan.md`.
-  **slice01 — bit-syntax-specifiers — is CDC-closed (2026-06-28).** Next:
-  slice02 (matching-comprehensions).
-- The byte-bin chapter is now **51 of 130 files real** (was 21 at resumption):
-  slice01 published the remaining `bifs/` (4), all `bits/` (9), `types/` (8),
-  `sizes/` (9), and filled `what/README`. Remaining placeholders live in
-  `ends/`, `patts/`, `comps/`, `bitstrs/`, `ops/`, `ser/`, `realwrld/` —
-  slices 02–04.
+  **slices 01 and 02 are CDC-closed (2026-06-28).** Next: slice03
+  (bitstrings-operators).
+- The byte-bin chapter is now **~88 of 130 files real** (was 21 at resumption):
+  slice01 published `bifs/`-tail, `bits/`, `types/`, `sizes/`, `what/README`;
+  slice02 published `ends/` (10), `patts/` (12), `comps/` (14). The only
+  placeholder sections left are `bitstrs/`, `ops/`, `ser/`, `ser/realwrld/`,
+  and `realwrld/` — slices 03–04.
 - Two slice01 deferrals carried to arc close: delete stray
   `syntax/fundform.md` (operator-declined permission); run `mdbook build`
   (sandbox cannot mount the repo).

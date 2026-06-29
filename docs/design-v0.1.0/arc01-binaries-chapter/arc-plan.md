@@ -30,7 +30,7 @@ slice fits one context with iteration headroom: splitting 3–4 drafts of
 | Slice | Sections published | Workbench source | Load-bearing for |
 |-------|--------------------|------------------|------------------|
 | **slice01 — bit-syntax-specifiers** ✅ CDC-closed 2026-06-28 | finish `bifs/` (to-term, byte, bit, summ); `bits/`; `types/`; `sizes/`; + byte-bin cleanups | tail of `03-binary-bifs`, `04-bit-syntax-fundamentals`, `05-type-specifiers`, `06-sizes-README` | establishes the split workflow the later slices reuse |
-| **slice02 — matching-comprehensions** | `ends/`; `patts/`; `comps/` | `07-ends-README`, `08-patts-README`, `09-comps-README` | — |
+| **slice02 — matching-comprehensions** ✅ CDC-closed 2026-06-28 | `ends/`; `patts/`; `comps/` | `07-ends-README`, `08-patts-README`, `09-comps-README` | — |
 | **slice03 — bitstrings-operators** | `bitstrs/`; `ops/` | `10-bitstrs-README`, `11-ops-README` | — |
 | **slice04 — serialization-realworld** | `ser/`; `ser/realwrld/`; `realwrld/` | `12-serialization`, `13-real-world-applications` | closes the chapter; arc composition check runs here |
 
@@ -82,8 +82,22 @@ re-derivation:
    mid-thought, or where a section README has no draft intro (the `what/` case).
 7. **Stray-file cleanups** need operator delete-permission; if declined, defer
    (a file absent from `SUMMARY.md` is not rendered by mdBook).
+8. **The ToC is sometimes finer than the draft's `##` nesting** — a draft `###`
+   may be promoted to its own leaf (proven in `comps/`: `xform.md`,
+   `xxx.md`). Per section, diff the SUMMARY leaf list against the draft headings;
+   when a leaf has no `##` match, it's a promoted `###`. Its parent `##` leaf
+   then *excludes* that subsection (no duplication).
+9. **Drop hand-rolled `*Next: …*` navigation footers** from draft tails —
+   mdBook generates prev/next navigation. (Some drafts have them, some don't.)
 
 ## 5. Version History
+
+### v1.2 — 2026-06-28
+slice02 CDC-closed (`ends/`, `patts/`, `comps/` — 36 leaves). Added conventions
+§6.8 (ToC finer than draft: `###`→leaf promotion, proven in `comps/`) and §6.9
+(strip "Next:" footers), surfaced by slice02's bubble-up for slices 03–04. The
+mdBook-build deferral recurs (tooling) and is confirmed as belonging to arc
+close (ledger A5). No change to slice breakdown or sequencing.
 
 ### v1.1 — 2026-06-28
 slice01 CDC-closed. Added §6 **Publishing conventions** (the reusable split

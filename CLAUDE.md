@@ -10,10 +10,11 @@ the operator 2026-06-28 — this project uses the default layout, no overrides.
   publish the staged `workbench/` drafts into `src/`; new-authoring deferred).
 - `arc01-binaries-chapter/` — active arc: finish the Bits/Bytes/Binaries chapter
   by splitting `workbench/bytes/00–14` drafts into `src/part2/byte-bin/` leaves.
-  Batched into 4 slices. **slice01 CDC-closed (2026-06-28)** — `bifs/` finished
-  and `bits/`/`types/`/`sizes/` published; byte-bin now 51/130 real. Next:
-  slice02 (matching-comprehensions: `ends/`, `patts/`, `comps/`). Reusable
-  publishing conventions are pinned in `arc-plan.md` §6.
+  Batched into 4 slices. **slices 01–02 CDC-closed (2026-06-28)** — `bifs/`
+  finished and `bits/`/`types/`/`sizes/`/`ends/`/`patts/`/`comps/` published;
+  byte-bin now ~88/130 real. Next: slice03 (bitstrings-operators: `bitstrs/`,
+  `ops/`), then slice04 (serialization-realworld: `ser/`, `realwrld/`).
+  Reusable publishing conventions are pinned in `arc-plan.md` §6.
 - `arc02-part2-data-structures/` — roadmap-only (plan late): publish the six
   drafted Part II chapters (Tuples, Proplists, Maps, Arrays, Dicts, Records).
 
