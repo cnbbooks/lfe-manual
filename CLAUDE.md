@@ -18,8 +18,10 @@ the operator 2026-06-28 — this project uses the default layout, no overrides.
   chapters (Tuples, Proplists, Maps, Arrays, Dicts, Records) as **multi-leaf**
   chapters (operator's choice), one slice per chapter. arc02 *authors* the ToC
   sub-entries and fills leaf stubs (the prior session pre-scaffolded them — see
-  `arc-plan.md` §A2.1–A2.4). **slice01 (Tuples) CDC-closed (2026-06-28)** —
-  README + 12 leaves + 12 SUMMARY entries. Next: slice02 (Proplists).
+  `arc-plan.md` §A2.1–A2.4). **slices 01–02 CDC-closed (2026-06-28)** — Tuples
+  (README + 12) and Property Lists (README + 21) published with their SUMMARY
+  entries. The leaf stubs pre-exist with canonical slugs (write-probe to confirm;
+  glob is unreliable here). Next: slice03 (Maps).
 
 ## How this book is structured
 

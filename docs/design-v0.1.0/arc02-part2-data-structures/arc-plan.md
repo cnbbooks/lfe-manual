@@ -22,7 +22,7 @@ Operator decisions (2026-06-28): **multi-leaf** structure (expand the ToC);
 | Slice | Chapter | Source draft | Approx leaves |
 |-------|---------|--------------|---------------|
 | **slice01 — tuples** ✅ CDC-closed 2026-06-28 | Tuples | `workbench/tuples/new-section-tuples.md` (~244 ln) | README + 12 |
-| **slice02 — proplists** | Property Lists | `workbench/proplists/new-section-proplists.md` (~641 ln) | README + ~25 |
+| **slice02 — proplists** ✅ CDC-closed 2026-06-28 | Property Lists | `workbench/proplists/new-section-proplists.md` (~641 ln) | README + 21 |
 | **slice03 — maps** | Maps | `workbench/maps/new-section-maps.md` (~383 ln) | README + ~18 |
 | **slice04 — arrays** | Arrays | `workbench/arrays/new-section-arrays.md` (~578 ln) | README + ~14 |
 | **slice05 — dicts** | Dicts | `workbench/dicts/new-section-dicts.md` (~1168 ln) | README + many (orddict/dict/gb_trees) |
@@ -81,6 +81,12 @@ their ToC entries. Added conventions:
 | A5 | mdBook builds with no broken ToC links (operator build at arc close). | *reproduced* — operator `make run`. |
 
 ## 6. Version History
+
+### v1.2 — 2026-06-28
+slice02 (proplists) CDC-closed — README + 21 leaves + 21 ToC entries, CDC PASS.
+§A2.2 confirmed across a second chapter: the leaf stubs pre-existed with the
+exact planned slugs (zero orphans), so the write-probe reliably substitutes for
+the broken glob. No breakdown/sequencing change. Next: slice03 (maps).
 
 ### v1.1 — 2026-06-28
 slice01 (tuples) CDC-closed — README + 12 leaves + 12 ToC entries, CDC PASS.
