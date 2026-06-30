@@ -53,8 +53,8 @@ content is composed rather than transcribed.
 
 | Slice | Chapter | ToC target | Primary source | Leaves | Status |
 |-------|---------|-----------|----------------|--------|--------|
-| **slice07 — graphs** | Graphs | `part2/graphs/README.md` | `workbench/graphs/*.pdf` (LYSE; `digraph`, `digraph_utils`) | README + ~9 | ⏭️ next — open set written |
-| **slice08 — queues** | Queues | `part2/queues/README.md` | `workbench/queues/*.pdf` (LYSE; `queue`) | README + ~9 | 🗓️ outlined |
+| **slice07 — graphs** | Graphs | `part2/graphs/README.md` | `workbench/graphs/*.pdf` (LYSE; `digraph`, `digraph_utils`) | README + 9 | ✅ CDC-closed 2026-06-28 |
+| **slice08 — queues** | Queues | `part2/queues/README.md` | `workbench/queues/*.pdf` (LYSE; `queue`) | README + ~9 | ⏭️ next — open set written |
 | **slice09 — pattern-matching** | Pattern Matching | `part2/patterns/README.md` | `workbench/lfe_guide.7.md` §Patterns/§Guards + cross-refs | README + ~11 | 🗓️ outlined |
 | **slice10 — gen-seq** | Generic Sequence Functions | `part2/gen-seq/README.md` | Erlang `lists` module + `lfe_guide.7.md` §Predefined functions | README + ~12 | 🗓️ outlined |
 
@@ -143,10 +143,17 @@ only, not new work.
 
 ## 3. Dependencies
 
-- **Consumes:** the six `new-section-*.md` drafts (content) and `src/SUMMARY.md`
-  (target ToC, which this arc *edits* to add sub-entries).
-- **Leaves for later:** the six draft-less Part II chapters (chr-str, graphs,
-  queues, patterns, gen-seq, mani-list) remain out of project scope.
+- **Consumes:** the six `new-section-*.md` drafts (Phase 1) and the Phase-2
+  source material (`workbench/graphs|queues/*.pdf`, `lfe_guide.7.md`, Erlang
+  `lists`); and `src/SUMMARY.md` (target ToC, which this arc *edits*).
+- **Scope clarification (2026-06-28, superseding the original "out of scope"
+  note).** Four of the draft-less Part II chapters — **Graphs, Queues, Pattern
+  Matching, Generic Sequence Functions** — are **in this arc** as Phase 2
+  (slices 07–10), per the operator's re-open directive (v1.7). The remaining
+  two — **Characters & Strings, Manipulating List Structure** — are **not** in
+  this arc; they live in the Saga backlog (`../../book-roadmap.md` §6) for a
+  future Part II push. *(was: "the six draft-less Part II chapters … remain out
+  of project scope" — true only before the v1.7 re-open.)*
 
 ## 4. §6 addendum for arc02 (authoring ToC + files)
 
